@@ -22,10 +22,10 @@ $(function () {
             el: '.swiper-pagination',
             type: 'bullets',
         },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+        // navigation: {
+        //     nextEl: '.swiper-button-next',
+        //     prevEl: '.swiper-button-prev',
+        // },
         // on: {
         //     init: function () {
         //         $('.swiper-progress-bar').removeClass('animate');
@@ -44,25 +44,30 @@ $(function () {
         // }
     });
     // main_bis
-    var swiper02 = new Swiper('.tabcon', {
+    var swiper02 = new Swiper('.main_section_02 .product_item .swiper-container', {
         slidesPerView: 5,
-        spaceBetween: 100,
-        // loop: true,
         touchMoveStopPropagation: true,
-        breakpoints: {
-            1600: {
-                slidesPerView: 3,
-                spaceBetween: 40,
-            },
-            1200: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-            },
-            500: {
-                slidesPerView: 1,
-                spaceBetween: 0,
-            }
-        }
+        observer: true,
+        observeParents: true,
+        loop: true,
+        navigation: {
+            nextEl: '.main_product_arrow.swiper-button-next',
+            prevEl: '.main_product_arrow.swiper-button-prev',
+        },
+        // breakpoints: {
+        //     1600: {
+        //         slidesPerView: 3,
+        //         spaceBetween: 40,
+        //     },
+        //     1200: {
+        //         slidesPerView: 3,
+        //         spaceBetween: 20,
+        //     },
+        //     500: {
+        //         slidesPerView: 1,
+        //         spaceBetween: 0,
+        //     }
+        // }
     });
     // // productThumb
     // let productThumb = new Swiper('.product_thum.swiper-container', {
@@ -252,7 +257,7 @@ $(function () {
         (nowLocation.indexOf('index') >= 0) ? console.log('Home') : $('#header').addClass('active');
         (nowLocation.indexOf('/about/') >= 0) ? null : null;
     }
-    headerScroll();
+    // headerScroll()
     headerHover('.header_center > li', '.depth_01');
     headerClick('.header_lang > ul', '.more_lang');
     headerFullslide();

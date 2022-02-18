@@ -34,6 +34,7 @@ $border-hegith : 185px;
 
 
 @mixin font-M {font-family: 'Montserrat';}
+@mixin font-R {font-family: 'Roboto';}
 
 @mixin font-40 { font-size: 40px;}
 @mixin font-18 { font-size: 18px; letter-spacing: -0.72px;}
@@ -58,29 +59,21 @@ body {
         }
     }
 
-    .btn_white_border {
-        border: 1px solid #fff;
-        width: 160px; height: 43px;
-        border-radius: 20px;
-        display: inline-block;
+    .btn_01 {
         @include transition(.15s);
-        &.black {
-            border: 1px solid #000;
-            span { color: #000; }
-        }
-        &:hover {
-            background: $color-100;
-            border: 1px solid transparent;
-            span {
-                color: #fff;
-            }
-        }
+        width: 160px; height: 50px;
+        display: inline-block;
+        font-size: 14px; font-weight: 600;
+        
+        border: 1px solid $color-100;
+        background-color: $color-100;
+        color: #fff; 
+
         span {
-            display: flex; align-items: center; justify-content: center;
-            width: 100%; height: 100%;
-            font-size: 18px; color: #fff;
             @include font-M();
             @include transition(.15s);
+            @include flexCenter();
+            width: 100%; height: 100%;
         }
     }
 
@@ -682,11 +675,11 @@ body {
     #footer {
         background: #222;
         padding: 40px 0;
-        margin-top: 160px;
+        margin-top: 120px;
         .footer_wrap {
             max-width: 1280px; margin: 0 auto;
             font-size: 14px; color: #888;
-            
+
             .footer_section_01 {
                 display: flex; justify-content: space-between;
                 
@@ -738,39 +731,18 @@ body {
 body {
     // opacity: 0;
     main {
-
         // INDEX MAIN
         &#main_page {
-            .section_01, .section_02 {display: none;}
             .main_section {
-                width: 100%; height: 100%;
+                width: 100%; 
+                /* height: 100%; */
+                height: 100vh;
+                overflow: hidden;
 
-                .main_wrap { width: 100%; height: 100%; overflow: hidden;}
-                .section_title {
-                    color: #fff; text-align: center; padding-top: 240px;
-                    .text_01 {
-                        span {
-                            @include font-M();
-                            display: inline-block;
-                            font-size: 2.2rem; font-weight: bold; letter-spacing: normal; line-height: 1;
-                            padding-bottom: 12px; border-bottom: 2px solid #fff;
-                        }
-                    }
 
-                    .text_02 {
-                        margin-top: 35px;
-                        font-size: 6rem; font-weight: bold; line-height: 0.92; letter-spacing: -2.4px;
-                    }
-
-                    .text_03 {
-                        @include marginTop-30();
-                        font-size: 18px; letter-spacing: -0.72px;
-                    }
-                }
                 &:not(:first-child) {}
 
                 &.main_visual {
-                    height: 100vh;
                     
                     .mv_wrap {
                         .mv {
@@ -848,157 +820,36 @@ body {
 
                 // main_section_01
                 &.main_section_01 {
-                    background: url('../images/main/section_02_01.png')no-repeat center/cover;
-                    height: 100vh;
+                    
+                    .content_wrap {
+                        display: flex;
+                        height: 100%;
+                        > figure {
+                            @include flexCenter();
+                            width: 33.33333333%; height: 100%;
+                            text-align: center; color: #fff;
+                            &.content_01 {background: url('../images/main/img_01_01.png')no-repeat center/cover ;}
+                            &.content_02 {
+                                background: url('../images/main/img_01_02.png')no-repeat center/cover ;}
+                            &.content_03 {background: url('../images/main/img_01_03.png')no-repeat center/cover ;}
 
-                    // main_section_01 active
-                    &.active {
-                        .business_tabcon {
-                            &::before {
-                                animation: barload 3s ease forwards;
-                            }
-                            .tabcon.swiper-container {
-                                @include transition(1s 2.5s);
-                                opacity: 1 !important;
-                            }
-
-                        }
-                    }
-
-                    .business_tabcon {
-                        position: relative;
-                        width: 100%; height: 305px;
-                        margin: 100px auto 0;
-                        padding: 0 100px;
-                        &::before {
-                            content: ""; display: block;
-                            width: 0; height: 2px;
-                            background: rgba(255, 255, 255, 0.6);
-                            position: absolute; left: 0; top: 50%;
-                            margin-top: -1px;
-                        }
-
-                        .swiper-button-prev {
-                            display: inline-block;
-                            cursor: pointer;
-                            width: 22px;
-                            height: 22px;
-                            border-left: 1px solid #fff;
-                            border-bottom: 1px solid #fff;
-                            background: 0;
-                            outline: 0;
-                            transform: rotate(45deg);
-                            left: -110px;
-                            top: 50%;
-                            margin: -11px 0 0 0;
-                            display: none;
-                        }
-
-                        .swiper-button-next {
-                            display: inline-block;
-                            cursor: pointer;
-                            width: 22px;
-                            height: 22px;
-                            border-left: 1px solid #fff;
-                            border-bottom: 1px solid #fff;
-                            background: 0;
-                            outline: 0;
-                            transform: rotate(-135deg);
-                            right: -110px;
-                            top: 50%;
-                            margin: -11px 0 0 0;
-                        }
-
-                        .tabcon.swiper-container {
-                            height: 100%; opacity: 0;
-                            overflow: visible;
-                            .business.swiper-wrapper {
-                                .swiper-slide {
-                                    // hover, active effect business
-                                    &:hover, &:active {
-                                        a {
-                                            .boxwrap {
-                                                &::before {
-                                                    background-color: $color-100;
-                                                }
-                                                .bg {
-                                                    animation: business_ani 5s linear infinite;
-                                                    svg {
-                                                        path {
-                                                            stroke: $color-100;
-                                                        }
-                                                    }
-                                                }
-                                                .ico {
-                                                    svg {
-                                                        line, path, g {
-                                                            fill: $color-100;
-                                                        }
-                                                    }
-                                                }
-
-                                            }
-                                        }
-                                    }
-
-                                    > a {
-                                        display: block; width: 100%; height: 100%;
-                                        .boxwrap {
-                                            position: relative;
-                                            width: 100%;
-                                            height: 100%;
-                                            margin: 0 auto;
-
-                                            &::before {
-                                                display: block;
-                                                content: "";
-                                                width: 9px; height: 9px;
-                                                background: #fff;
-                                                border-radius: 50%;
-                                                position: absolute; left: 50%; top: 50%;
-                                                transform: translate(-50%, -50%);
-                                                @include transition(.15s)
-                                            }
-
-                                            .bg {
-                                                position: absolute; left: 0; top: 0;
-                                                width: 100%; height: 100%;
-                                                /*background:url(/images/main/sec2_guide_bg.png) no-repeat;*/
-                                                transform: rotate(0);
-                                                @include transition(3s);
-
-                                                svg {
-                                                    width: 100%; height: 100%;
-                                                    path {
-                                                        @include transition(.3s)
-                                                    }
-                                                }
-
-                                            }
-
-                                            .ico {
-                                                display: flex; align-items: flex-end; justify-content: center;
-                                                height: 50%;
-                                                svg {
-                                                    margin-bottom: 30px;
-                                                    height: 55px;
-                                                    line, path, g {
-                                                        @include transition(.3s);
-                                                        fill: #fff;
-                                                    }
-                                                }
-                                            }
-                                            .ico_text {
-                                                @include marginTop-30();
-                                                color: #fff;
-                                                font-size: 2.2rem; font-weight: bold;  letter-spacing: -0.88px;
-                                                text-align: center;
-                                                &.text_01 {}
-                                            }
-
-                                        }
-                                    }
+                            &:hover {
+                                a.btn_01 { 
+                                    opacity: 1;
+                                    transform: translateY(0);
                                 }
+                            }
+
+                            .text_01 {font-size: 4rem; font-weight: bold; line-height: 1.15; letter-spacing: -3.2px;}
+                            .text_02 {
+                                margin-top: 20px;
+                                font-size: 18px;  line-height: 1.56; letter-spacing: -1.44px; color: #ddd;
+                            }
+                            a.btn_01 { 
+                                @include transition(.5s);
+                                opacity: 0;
+                                margin-top: 50px; 
+                                transform: translateY(20px);
                             }
                         }
                     }
@@ -1006,23 +857,124 @@ body {
 
                 // main_section_02
                 &.main_section_02 {
-                    background: url('../images/main/section_03.jpg')no-repeat center/cover;
                     position: relative;
-                    height: 100vh;
-                    .section_title {
-                        .text_04 {
-                            margin-top: 70px;
+                    max-width: 1920px; margin: 0 auto;
+
+                    #point_circle {
+                        position: absolute; right: -50%; top: -20%; transform: translateX(-50%);
+                        width: 1000px; height: 1000px;
+                        .circle {
+                            position: absolute; left: 0; top: 0;
+                            width: 100%; height: 100%;
+                            border: 1px solid #ddd; border-radius: 100%;
+                            
+                            &::after {
+                                content: 'asdasd';
+                                position: absolute; left: 0; top:0;
+                                // background: $color-100;
+                                width: 100%; height: 100%; border-radius: 100%;
+                                animation: rotateinfin 10s infinite linear;
+                            }
+
+                            &.circle_01 { border: 1px solid $color-100; } 
+                            &.circle_02 { border: 4px dotted #ddd; transform: translate(100px, 10px) } 
+                            &.circle_03 { border: 2px dashed #ddd; transform: translate(150px, -200px)} 
+                            &.circle_04 { transform: translate(200px, 100px)} 
+
                         }
                     }
-
-                    .wave_container {
-
-                        svg {
-                            width: 100%; height: 200px;
-                            position: absolute; bottom: 0; left: 0;
-                            #main_wave {}
+                    .content_wrap {
+                        @include fixed-layout();
+                        
+                        .product_title {
+                            padding-top: 240px;
+                            .title_wrap {
+                                .text_01 {
+                                    @include font-R();
+                                    font-size: 24px; font-weight: bold; color: $color-100;
+                                }
+                                .text_02 {
+                                    margin-top: 20px;
+                                    font-size: 38px; font-weight: 300; line-height: 1.37; letter-spacing: -3.04px;
+                                }
+                            }
                         }
+
+                        .product_content {
+                            margin-top: 60px;
+                            .product_tab {
+                                display: flex; justify-content: space-between;
+                                > ul { 
+                                    display: flex;
+                                    li {
+                                        a {
+                                            width: 170px;
+                                            background-color: #fff;
+                                            border: 1px solid #ddd;
+                                            color: #ddd; 
+
+                                            &:hover, &.active {
+                                                background-color: $color-100;
+                                                border: 1px solid $color-100;
+                                                color: #fff;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .arrow_wrap{
+                                    width: 80px; 
+                                    position: relative;
+                                    .main_product_arrow {
+                                        width:20px; height:20px; 
+                                        transform: translateY(-50%);
+                                        margin: 0;
+                                        &.swiper-button-prev {background: url('../images/ico/ico_arrow_01_left.svg')no-repeat center/cover; }
+                                        &.swiper-button-next { background: url('../images/ico/ico_arrow_01_right.svg')no-repeat center/cover; }
+                                    }
+
+                                    
+                                    .arrow_bar {
+                                        @include absolute-center();
+                                        width: 1px; height: 20px;
+                                        background-color: #ddd;
+                                    }
+                                }
+                            }
+
+                            .product_item {
+                                margin-top: 40px;
+                                .swiper-container {
+                                    display: none;
+                                    &.active {display: block}
+                                    .swiper-wrapper {
+                                        .swiper-slide {
+                                            .img_wrap {
+                                                @include flexCenter();
+                                                width: 330px; height: 330px;
+                                                background-color: #fff;
+                                                border: 1px solid #ddd; overflow: hidden;
+                                            }
+                                            .text_wrap {
+                                                margin-top: 20px;
+                                                text-align: center;
+                                                .text_01 {
+                                                    font-size: 18px;
+                                                }
+                                            }
+
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+
                     }
+
+
+
+
                 }
 
                 // main_section_03
@@ -1178,6 +1130,8 @@ body {
 
                 }
             }
+
+            #footer { margin-top: 0; }
         }
 
 
@@ -2333,8 +2287,8 @@ body {
 
 
 // ========================== keyframs ==========================
-@keyframes business_ani{
-    0%{transform:rotate(0);}
+@keyframes rotateinfin {
+    0%{transform:rotate(0); }
     100%{transform:rotate(360deg);}
 }
 

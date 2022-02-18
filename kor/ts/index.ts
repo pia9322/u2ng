@@ -30,10 +30,10 @@ $(function () {
             type: 'bullets',
 
         },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+        // navigation: {
+        //     nextEl: '.swiper-button-next',
+        //     prevEl: '.swiper-button-prev',
+        // },
         // on: {
         //     init: function () {
         //         $('.swiper-progress-bar').removeClass('animate');
@@ -53,26 +53,34 @@ $(function () {
     });
 
     // main_bis
-    let swiper02 = new Swiper('.tabcon', {
+    let swiper02 = new Swiper('.main_section_02 .product_item .swiper-container', {
         slidesPerView: 5,
-        spaceBetween: 100,
-        // loop: true,
-
         touchMoveStopPropagation: true,
-        breakpoints: {
-            1600: {
-                slidesPerView: 3,
-                spaceBetween: 40,
-            },
-            1200: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-            },
-            500: {
-                slidesPerView: 1,
-                spaceBetween: 0,
-            }
-        }
+        observer: true,
+        observeParents: true,
+        loop: true,
+
+        navigation: {
+            nextEl: '.main_product_arrow.swiper-button-next',
+            prevEl: '.main_product_arrow.swiper-button-prev',
+        },
+
+        
+
+        // breakpoints: {
+        //     1600: {
+        //         slidesPerView: 3,
+        //         spaceBetween: 40,
+        //     },
+        //     1200: {
+        //         slidesPerView: 3,
+        //         spaceBetween: 20,
+        //     },
+        //     500: {
+        //         slidesPerView: 1,
+        //         spaceBetween: 0,
+        //     }
+        // }
     });
 
     // // productThumb
@@ -104,6 +112,8 @@ $(function () {
         // },
         lazy: { loadPrevNext: true },
         touchMoveStopPropagation: true,
+
+      
 
         breakpoints: {
             1480: {
@@ -196,7 +206,7 @@ $(function () {
     let header = document.querySelector('#header'),
         header_ham = document.querySelector('.header_ham'),
         header_full = document.querySelector('.header_full'),
-        depth_01 = document.querySelectorAll('.header_full_list > li'),
+        depth_01 = document.querySelectorAll('.header_full_list > li')
         
 
 
@@ -304,7 +314,7 @@ $(function () {
 
 
 
-    headerScroll()
+    // headerScroll()
 
     headerHover('.header_center > li', '.depth_01');
     headerClick('.header_lang > ul', '.more_lang');
