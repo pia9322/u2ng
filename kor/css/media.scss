@@ -1,0 +1,2511 @@
+
+// ****************************************default var****************************************
+$search-time: 800ms;
+$reset-time: 150ms;
+$header-heght : 80px;
+$header-height_767: 60px;
+$business_height_767 : 200px;
+
+$color-100 : #f5821f;
+
+// ****************************************default var****************************************
+
+
+// ****************************************default mixin****************************************
+@mixin absolute-center {position: absolute;left: -50%;top: -50%;transform: translate(-50%, -50%);}
+@mixin absolute-x($left, $top) {position: absolute;left: $left;top: $top;transform: translateX(-$left);}
+@mixin absolute-y($left, $top) {position: absolute;left: $left;top: $top;transform: translateY(-$top);}
+@mixin board_text {white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+@mixin transition($x) {transition: $x;-webkit-transition: $x;-moz-transition: $x;-ms-transition: $x;-o-transition: $x;}
+// ****************************************default mixin****************************************
+
+
+// ****************************************jj mixin****************************************
+@mixin fixed-layout {max-width: 1480px; margin: 0 auto;width: 100%;}
+@mixin layoutBoxColor {border: 2px solid #f00;}
+@mixin header-height {height: 80px;}
+@mixin flexCenter { display: flex; justify-content: center; align-items: center; }
+// ****************************************jj mixin****************************************
+
+
+
+// Margin
+@mixin marginTop-120 {margin-top: 120px;}
+@mixin marginTop-100 {margin-top: 100px;}
+@mixin marginTop-70 {margin-top: 70px;}
+@mixin marginTop-40 {margin-top: 40px;}
+@mixin marginTop-30 {margin-top: 30px;}
+
+// Padding
+@mixin paddingTop-70 {padding-top: 70px;}
+@mixin paddingTop-40 {padding-top: 40px;}
+
+
+@mixin font-M {font-family: 'Montserrat';}
+
+
+
+@mixin font-40 { font-size: 40px;}
+@mixin font-18 { font-size: 18px; letter-spacing: -0.72px;}
+
+@mixin section-Title-01 {font-size: 40px; font-weight: bold; line-height: 0.6; letter-spacing: -1.6px; color: #333;}
+@mixin section-Title-02 { font-size: 18px; line-height: 1.33; letter-spacing: -0.72px; color: #666; }
+
+@mixin padding_1480 {padding: 0 5%;}
+// ****************************************jj mixin****************************************
+
+
+
+
+
+// ****************************************4K****************************************
+@media (min-width:2560px) {}
+
+
+
+
+// ****************************************1480px****************************************
+@media (max-width: 1480px) {
+
+    // ****************************************default css****************************************
+    body {
+        // table_공통 게시판
+        #table_default {
+            #table_header {
+                // search
+                .table_text_search {
+                    .search_form {
+                        fieldset {
+                            // form
+                            .form_02_selectbox {
+                                select, .nice-select { width: auto;  }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            #table_body {
+
+                tbody {
+
+                    tr {
+                        td {
+
+                            &.table_num {
+                                .type {
+                                    @include flexCenter();
+                                    width: auto; height: auto; margin: 0 auto;
+                                }
+                            } 
+                        }
+                    }
+                }
+            }
+
+            #table_footer {
+                .num_box {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+
+                .btn_box {
+                    a {width: 15px; height: 15px;}
+                }
+            }
+
+        }
+        
+        .submit_box {
+            &.box_01  {
+                button {
+                    height: 50px; font-size: 16px;
+                }
+            }
+    
+        }
+    
+    }
+    // ****************************************default css****************************************
+        
+
+
+    // **************************************** header, footer ****************************************
+    body {
+        #header {
+            height: $header-heght;
+            >.header_wrap {
+                padding: 0 5%;
+
+                // logo
+                .header_left {
+                    max-width: 90px; margin-top: 0;
+                }
+
+                // center_menu
+                .header_center {
+                    height: $header-heght;
+                    .header_bg {
+                        margin-top: $header-heght;
+                    }
+
+
+                    >li {
+                        width: 15%;
+                        .depth_01 {
+                            padding-top: 30px;
+                        }
+                    }
+                }
+            }
+
+
+
+        }
+
+        #footer {
+            padding: 40px 0;
+            margin-top: 100px;
+            .footer_wrap {
+                @include padding_1480();
+                flex-direction: column;
+
+                .footer_left {
+                    > ul {
+                        > li {
+                            &:first-child {margin-top: 0;}
+                        }
+                        .footer_logo {max-width: 175px;}
+                        
+                        // .footer_select {
+                        //     select {
+                        //         padding: 5px 10px; font-size: 14px;
+                        //     }   
+                        // }
+
+                        .footer_info {
+                            > p {
+                                a {
+                                    font-size: 14px; 
+                                    &:first-child{margin-left: 0;}
+                                    &.a_link {
+                                        @include transition(.15s);
+                                        &:hover {
+                                            color: #f5821f;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .footer_copy {
+                            p {
+                                font-size: 15px; line-height: 1.6; letter-spacing: -0.6px; color: #aaa;
+                            }
+                        }
+                    }
+
+                }
+                .footer_right {
+                    margin-top: 20px;
+                    .content_wrap {
+                        > div {
+                            &.box_02 {
+                                justify-content: flex-start;
+                                .img_wrap {
+                                    margin-right: 10px;
+                                }
+                                .text_wrap {
+                                    .text_01 {
+                                        a {
+                                            font-size: 26px;
+                                        }
+                                    }
+                                    .text_02 {font-size: 14px;}
+                                }
+                            }
+                        }
+                        
+                    }
+                    
+                }
+            }
+        }
+    }
+    // **************************************** header, footer ****************************************
+
+
+    // ****************************************padge css****************************************
+    body {
+    
+        main {
+
+            // Main
+            &#main_page {
+                .main_section {
+                    
+    
+                    .section_title {
+                        padding-top: 200px;
+                        .text_01 {
+                            span {
+                                // font-size: 2.2rem;
+                            }
+                        }
+        
+                        .text_02 {
+                            @include marginTop-30();
+                        }
+        
+                        .text_03 {
+                            @include marginTop-30();
+                            // font-size: 18px;
+                        }
+                    }
+                    &:not(:first-child) {}
+        
+                    &.main_visual {
+                        .mv_wrap {
+                            .mv {
+                                @include padding_1480();
+                                figcaption {
+                                    .mv_text {
+                                        .text_01 {}
+                                        .text_02 {margin-top: 10px;}
+        
+                                        .btn_white_border { margin-top: 40px; }
+
+                                        .swiper-pagination {
+                                            .swiper-pagination-bullet { margin: 0 0 20px 20px; }
+                                        }
+                                    }
+                                }
+        
+                            }
+                        }
+                    }
+
+                    // main_section_01 
+                    &.main_section_01 {
+                        .main_wrap {
+                            .business_tabcon {
+                                // width: 100%; height: 305px;
+                                // 나중에 수정
+                                // margin: 50px auto 0;
+                                padding: 0;
+                                @include padding_1480();
+                                .tabcon.swiper-container {
+                                    .business.swiper-wrapper {
+                                        .swiper-slide {
+
+                                            > a {
+                                                .boxwrap {
+            
+                                                    .ico {
+                                                        svg {
+                                                            height: 50px;
+                                                        }
+
+                                                    }
+                                                    .ico_text {
+                                                        @include marginTop-30();
+                                                        // font-size: 2.2rem;
+                                                    }
+            
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+        
+                    // main_section_02 
+                    &.main_section_02 {
+                        .main_wrap {
+                            @include padding_1480();
+                            .section_title {
+                                .text_04 {
+                                    @include marginTop-40();
+                                }
+                            }
+                            .wave_container {
+                                svg { height: 150px; }
+                            }
+                        }
+
+                    }
+        
+
+                    // main_section_03 
+                    &.main_section_03 {
+                        // margin-bottom: 80px;
+                        .main_wrap {
+                            @include padding_1480();
+                            flex-wrap: wrap;
+                            > div {
+                                width: 100%;
+                                .text_wrap {}
+                                // .text_01 {font-size: 4.6rem;}
+                                .text_02 {margin-top: 10px;/*  font-size: 18px; */}
+                                .margin0 {margin-top: 0;}
+                                // default
+                                &.left_content {
+                                    border: none;
+                                    .content_wrap {
+                                        
+                                        margin-top: 30px;
+                                        display: flex; flex-wrap: wrap;
+                                        .input_box {
+                                            max-width: 45%;
+                                            padding-bottom: 15px;
+                                            margin: 0 0 20px 10px;
+                                            &:nth-child(odd) {margin: 0 0 20px 10px;}
+                                            &.full_size {margin-left: 10px; max-width: 100%;}
+                                            .text_02 {margin-top: 0;}
+                                        }
+            
+                                        .submit_box {
+                                            @include marginTop-30();
+                                        }
+                                    }
+                                }
+            
+                                &.right_content {
+
+                                    &::after {
+                                        content: '';
+                                        position: absolute; top: 0; bottom: 0;
+                                    }
+
+                                    .content_box {
+                                        height: auto; padding: 0;
+                                        @include marginTop-70();
+                                        // &.box_01 {
+                                        //     .client_img {
+                                        //         overflow: auto;
+                                        //         margin-top: 40px;
+                                        //     }
+                                        // }
+                                        &.box_02 {
+                                            padding: 0; border-top: none;
+                                            .table_rec {
+                                                @include marginTop-40();
+                                                padding-bottom: 20px;
+                                                a {
+                                                    p {
+                                                        &.table_text_01 {
+                                                        }
+                                                        &.table_text_02 {
+                                                            i {
+                                                                margin-left: 5px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+        
+        
+        
+                }
+            }
+
+
+                
+            // SUB_PAGE
+            &.sub_page {
+                // sub_navi
+                #sub_navi {
+                    .content_wrap {
+                        padding: 0 5%;
+                        .text_wrap {
+                            .text_01 {
+                                // @include font-40();
+                            }
+                            .text_02 {
+                                // @include font-18();
+                            }
+                        }
+
+                        .bar_wrap {margin: 20px 0;}
+
+                        .link_wrap {
+                            // @include font-18();
+                            margin-bottom: 20px;
+                            > a { margin-right: 30px; }
+                        }
+
+                    }
+
+                    .background_point {
+                        position: absolute; right: -65px; bottom: 0;
+                        p {
+                            &.point_text {
+                                // font-size: 19rem;
+                            }
+                        }
+                    }
+
+                }
+
+                .sub_section {
+                    padding: 0 5%;
+                    &.section_title {
+                        // @include marginTop-120();
+                        .text_wrap {
+                            // .text_01 { @include section-Title-01(); }
+                            .text_02 {
+                                // @include section-Title-02();
+                                margin-top: 20px;
+                            }
+                        }
+
+                    }
+                }
+
+                // product_tab
+                #product_tab {
+                    .product_tab_wrap {
+                        .text_wrap {
+                            justify-content: center;
+                            > a {
+                                // @include font-18();
+                                width: auto; padding: 10px 20px;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+
+                }
+
+                // ABOUT sub_page
+                &.about {
+
+                    // 회사소개
+                    &#company {
+                        .sub_section {
+                            &.section_01 {
+                                // @include marginTop-70();
+                                .content_wrap {
+                                    > figure {
+                                        flex-direction: column;
+                                        .img_wrap {
+                                            background: url('../images/about/about_01.png')no-repeat center/cover;
+                                            width: 100%; height: 300px;
+                                            background-attachment: fixed;
+                                            img {display: none;}
+                                        }
+                                        
+                                        figcaption {
+                                            width: 100%;
+                                            margin: 20px 0 0 0;
+                                            .text_01 {
+                                            }
+                                            .text_02 {
+                                                // @include font-18();
+                                                margin-top: 40px;
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.section_02 {
+                                // @include marginTop-100();
+                                .content_wrap {
+                                    .text_wrap {
+                                        .text_01 {
+                                            // font-size: 24px;
+                                        }
+                                    }
+
+                                    .box_wrap {
+                                        margin-top: 20px;
+                                        justify-content: space-between;
+                                        .box {
+                                            // @include font-18();
+                                            margin: 20px 0 0 0; width: 45%; height: 260px; padding: 50px 40px;
+                                            &:last-child {margin-right: 0;}
+
+                                            .text_02 { margin-top: 10px;}
+                                            .text_03 { margin-top: 5px;}
+                                            // .img_wrap {position: absolute; right: 30px; bottom: 20px;}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // 연혁
+                    &#history {
+                        .section_01 {
+                            .content_wrap {
+                                @include marginTop-100();
+                                .swiper-pagination {
+
+                                    &.type {
+                                        display: none;
+                                    }
+
+                                    &.pagination_progress {
+                                        margin-bottom: 20px;
+                                        > span {
+                                            padding-bottom: 10px;
+                                            font-size: 18px; 
+                                        }
+                                    }
+                                }
+
+                                .swiper-container {
+                                    max-width: 100%;
+                                    .swiper-wrapper {
+
+                                        .swiper-slide {
+                                            .img_wrap {
+                                                text-align: center;
+                                                img {}
+                                            }
+
+                                            figcaption {
+                                                @include font-18();
+                                                margin-top: 40px;
+                                                .text_wrap {
+                                                    > span {
+                                                        &.text_01 { width: 100px; }
+                                                        &.text_02 { margin-left: 0; }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // 브랜드
+                    &#brand {
+                        .sub_section {
+                            &.section_01 {
+                                // @include marginTop-70();
+                                .content_wrap {
+                                    > figure {
+                                        flex-direction: column;
+                                        margin-bottom: 60px;
+                                        &:last-child {margin-bottom: 0;}
+                                        .img_wrap {
+                                            height: 300px;
+                                            img {height: 100%;}
+                                        }
+
+                                        figcaption {
+                                            width: 100%;
+                                            margin: 20px 0 0 0;
+                                            text-align: center;
+                                            .text_01 { font-size: 20px; }
+                                            .text_02 {
+                                                margin-top: 20px;
+                                                // @include font-18(); 
+                                            }
+                                            .ico_wrap {
+                                                justify-content: center; margin-top: 20px;
+                                                a {
+                                                    width: 45px; height: 45px; margin-right: 20px;
+                                                    &:last-child {margin-right: 0;}
+                                                    svg {
+                                                        height: 25px;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    // 협력사
+                    &#partner {
+                        .sub_section {
+                            &.section_01 {
+                                .content_wrap {
+                                    #partner_navi {
+                                        // @include marginTop-70();
+                                        // @include font-18();
+                                        a { margin-right: 20px; }
+
+                                    }
+
+                                    .swiper-container {
+                                        margin-top: 20px;
+
+                                        .swiper-wrapper {
+
+                                            .swiper-slide {
+                                                
+                                                .slide_box {
+                                                    padding: 20px;
+                                                    max-width: calc( 33% - 11px ); width: 100%;
+                                                    margin: 0 20px 30px 0;
+                                                    &:nth-of-type(3n) {margin-right: 0;}
+
+                                                    .slide_head {
+                                                        .text_01 { font-size: 20px;}
+                                                        i {
+                                                            width: 15px; height: 15px;
+                                                        }
+                                                    }
+
+                                                    .slide_body {
+                                                        .text_01 {
+                                                            // @include font-18();
+                                                        }
+                                                        .homepage_ico { img { max-height: 30px; } } 
+
+                                                    }
+                                                }
+                                            }
+
+                                        }
+                                    }
+
+
+
+                                }
+
+                            }
+                        }
+
+                    }
+
+                    // 오시는길
+                    &#direction {
+                        .sub_section {
+                            &.section_01 {
+                                // @include marginTop-70();
+                                .content_wrap {
+                                    flex-direction: column;
+                                    > div {
+                                        &.box_wrap {
+                                            display: flex; flex-wrap: wrap;
+                                            .slide_box {
+                                                padding: 20px;
+                                                width: calc( 50% - 10px );
+                                                margin: 0 20px 20px 0;
+                                                &:nth-of-type(3n) {margin-right: 20px;}
+                                                &:nth-of-type(2n) {margin-right: 0;}
+
+
+                                                .slide_head {
+                                                    .text_01 { font-size: 20px;}
+                                                    i {
+                                                        width: 15px; height: 15px;
+                                                    }
+                                                }
+                                                .slide_body {
+                                                    .text_01 {
+                                                        // @include font-18();
+                                                    }
+                                                    .homepage_ico { img { max-height: 30px; } } 
+
+                                                }
+                                            }
+                                        }
+
+                                        &.map_wrap { margin-left: 0; height: 300px; }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    // 인재상
+                    &#person {
+                        .sub_section {
+                            &.section_01{
+                                // @include marginTop-70();
+                            }
+
+                            &.section_02 {
+                                margin-top: 20px;
+                                .img_wrap {
+                                    figure {
+                                        .img_wrap {
+                                            background: url('../images/about/person_01.png')no-repeat center/cover;
+                                            width: 100%; height: 350px;
+                                            background-attachment: fixed;
+                                            img { display: none; }
+                                        }
+                                        figcaption {
+                                            left: 0; top: 0; transform: translateX(0);
+                                            background-color: rgba($color: #fff, $alpha: .7);
+                                            backdrop-filter: saturate(180%) blur(10px);
+                                            width: 100%; height: 100%;
+                                            @include flexCenter();
+                                            flex-direction: column;
+                                            p {
+                                                background-color: transparent; 
+                                                &.text_01 { padding: 0; font-size: 36px; }
+                                                &.text_02 {
+                                                    margin-top: 30px; // font-size: 18px; 
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.section_03 {
+                                @include marginTop-100();
+                                .team {
+                                    &.swiper-container {
+                                        .swiper-wrapper {
+                                            justify-content: flex-start;
+                                            .swiper-slide {
+                                                font-size: 20px;  margin: 0 20px 0 0;
+                                                &.margin_0 {margin: 0;}
+                                                &.big {
+                                                    margin: 0 40px 0; border: 30px solid transparent; 
+                                                    font-size: 28px; 
+                                                    .logo_svg { }
+                                                    p {
+                                                        margin-top: 10px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.section_04 {
+                                @include marginTop-100();
+                            }
+
+                            &.section_05 {
+                                margin-top: 20px;
+                                .team_info {
+                                    &.swiper-container {
+                                        .swiper-wrapper {
+                                            .swiper-slide {
+                                                figure {
+                                                    .img_wrap {}
+
+                                                    .table_wrap {
+                                                        // margin-top: 60px;
+
+                                                        table {
+                                                            tr {
+                                                                // @include font-18();
+                                                            }
+                                                            th { }
+                                                            td { padding: 20px; }
+
+                                                            thead { height: 50px;}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            // 보류
+
+                            &.section_06 {
+                                @include marginTop-100();
+                                .person_info {
+                                    &.swiper-container {
+                                        overflow: hidden;
+                                        .swiper-wrapper {
+                                            .swiper-slide {
+                                                
+                                                &::after { display: none; }
+                                                .dots { display: none; }
+                                                
+                                                .inline_box {
+                                                    width: 300px; height: 300px;
+                                                    margin: 0 auto;
+                                                    &:hover { border: 2px dotted $color-100; }
+                                                    
+                                                    figure {
+
+                                                        img {
+                                                            height: 55px;
+                                                        }
+                                                        figcaption {
+                                                            // @include font-18();
+                                                            .text_01 {
+                                                                margin-top: 18px;
+                                                            }
+                                                            .text_02 { margin-top: 15px; }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+
+                    
+
+                }
+
+                // CS CENTER
+                &.cscenter {
+                    &#as {
+                        .sub_section {
+                            &.section_01 {
+                                // @include marginTop-70();
+                                .content_wrap {
+                                    .input_wrap  {
+                                        .input_box {
+                                            padding: 15px 0;
+                                            width: calc( 50% - 10px ); max-width: 100%;
+                                            &.margin {margin-right: 20px;}
+                                            // &.full_size {width: 100%; max-width:100%; margin-left: 0;}
+                                            // &:nth-child(odd) {margin-left: 0;}
+                                            &.textarea_box {  height: 250px; }
+
+                                            #search_box {
+                                                width: auto; height: auto; padding: 5px 7px;
+                                                font-size: 14px;
+                                                ion-icon { width: 15px; height: 15px; margin-right: 5px; }
+                                            }
+
+                                            label {
+                                                &.text_02 {font-size: 16px;}
+                                                // width: 50px;
+                                            }
+                                            input, textarea {
+                                                width: 100%;
+                                                margin-left: 20px;
+                                            }
+                                        }
+
+                                        .submit_box {
+                                            &.box_01 {
+                                                // @include marginTop-70();
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                // Product
+                &.product {
+
+                    &#product_list {
+                        .sub_section {
+                            &.section_01 { margin: 100px auto 50px; }
+
+                            &.section_02 {
+                                .product_wrap {
+                                    .product_item {
+                                        width: calc( 33% - 11px );
+                                        margin: 0 20px 60px 0;
+                                        &:nth-child(3n) { margin: 0 0 60px 0;}
+
+                                        .thumb {
+                                            height: 250px;
+                                            img { height: 100%; object-fit: contain; }
+                                        }
+                                        .info {
+                                            padding: 20px;
+                                            p {
+                                                font-size: 16px;
+                                                &.text_01 { font-size: 20px; }
+                                                &.text_02 { margin-top: 5px; }
+                                                &.text_03 { margin-top: 20px; }
+                                                &.more_btn {
+                                                    // @include font-18();
+                                                    margin: 40px auto 0;
+                                                    width: 140px; height: 40px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                            
+                                #table_footer {
+                                    // margin-top: 100px;
+                                    .num_box {
+                                        a { font-size: 14px; }
+                                    }
+
+                                    .btn_box {
+                                        a { width: 15px; height: 15px; }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+
+                    &#product_detail {
+                        .sub_section {
+                            
+                            // product_header
+                            &.section_01 { 
+                                // @include marginTop-100();
+                                .product_header {
+                                    .product_wrap {
+                                        flex-direction: column;
+                                        .product_img {
+                                            .product_thum_wrap {
+                                                max-width: 600px;
+                                                margin: 0 auto;
+                                                .product_thum {
+                                                    max-height: 400px; height: 400px; width: 400px;
+                                                    margin: 0 auto;
+                                                    .thum {
+                                                        img {}
+                                                    }
+                                                }
+                                                .product_small_wrap {
+                                                    .product_small {
+                                                        .small {
+                                                            max-width: 120px; max-height: 120px;
+                                                            width: 120px; height: 120px;
+                                                            img {}
+                                                        }
+                                                    }
+                                                }
+                                               
+                                            }
+                                        }
+                
+                                        .product_info {
+                                            display: inline-block;
+                                            margin-left: 0; 
+                                            .text_wrap {
+                                                text-align: center;
+                                                &.wrap_01 {
+                                                    padding-bottom: 40px;
+                                                    > span {
+                                                        &.text_01 { 
+                                                            margin-top: 40px;
+                                                            // font-size: 20px;
+                                                        }
+                                                        &.text_02 { 
+                                                            margin-top: 20px;
+                                                            // font-size: 36px; 
+                                                        }
+                                                        &.text_03 { 
+                                                            margin-top: 10px;
+                                                            font-size: 20px;
+                                                        }
+                                                    } 
+                                                }
+    
+                                                &.wrap_02 {
+                                                    > span {
+                                                        &.text_01 {
+                                                            // @include font-18(); 
+                                                            margin-top: 30px;
+                                                        }
+                                                    }
+                                                }
+    
+                                                &.wrap_03 {
+                                                    width: 100%; justify-content: center;
+                                                    margin-top: 40px;
+                                                    a {
+                                                        // @include font-18();
+                                                        width: 290px; height: 60px;
+                                                        ion-icon {
+                                                            margin-left: 10px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                            
+                                        }
+                                    }
+                
+                                }
+                            }
+    
+    
+                            // product_table
+                            &.section_02 {
+                                @include marginTop-100();
+                                .product_table_title {
+                                    // font-size: 24px;
+                                }
+                                .product_table_wrap {
+                                    margin-top: 20px;
+                                    padding: 50px;
+                                    .product_table {
+                                        tbody {
+                                            > tr {
+                                                // font-size: 16px;
+                                                th { max-width: 200px; height: auto;}
+                                                td {padding: 10px 0;}
+                                            }
+                                            
+                                        }
+                                    }
+    
+                                    .table_state_btn {
+                                        // @include font-18();
+
+                                        &.active {margin-top: 40px;}
+    
+                                        ion-icon {
+                                            // width: 30px; height: 30px;
+                                        }
+                                    }
+    
+                                }
+    
+                                .product_more {
+                                    margin-top: 20px;
+                                }
+                            }
+    
+                        }
+            
+    
+                    }
+                }
+
+
+
+
+            }
+
+
+            
+        }
+    }
+    // ****************************************padge css****************************************
+
+    
+        
+
+}
+
+
+
+// ****************************************1100****************************************
+@media (max-width: 1100px) {
+
+    // ****************************************default css****************************************
+    body {
+        .view_more {
+
+            &::after {}
+    
+            &:hover {
+                &::after {
+                    height: 100%;
+                }
+            }
+        }
+    
+        #table_default {
+
+            #table_header {
+                .table_company_select {
+                    display: none;
+    
+                    .search_form {
+                        fieldset {
+                            legend {}
+    
+                            .form_01_title {}
+    
+                            .form_01_selectbox {
+                                select {}
+                            }
+                        }
+                    }
+                }
+    
+                .table_text_search {
+                    margin-top: 3rem;
+                    width: 100%;
+    
+                    .search_form {
+                        width: 100%;
+    
+                        fieldset {
+                            width: 100%;
+    
+                            .form_02_selectbox {
+                                display: flex;
+                                width: 100%;
+    
+                                select {}
+    
+                                input[type=text] {
+                                    margin-left: 1.5rem;
+                                    flex: 2;
+                                }
+    
+                                input[type=submit] {
+                                    margin-left: 1.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+            }
+    
+            #table_body {
+    
+                thead {
+                    font-size: 16px;
+                    tr {
+                        th {
+                            &:nth-of-type(1) {}
+    
+                            &:nth-of-type(1) {}
+    
+                            &:nth-of-type(2) {}
+    
+                            &:nth-of-type(3) {}
+    
+                            &:nth-of-type(4),
+                            &:nth-of-type(5) {}
+                        }
+    
+                    }
+                }
+    
+                tbody {
+                    font-size: 15px;
+    
+                    tr {
+                        td {
+                            &:nth-child(2) {
+                                span {}
+                            }
+    
+                            &:nth-child(1) {}
+    
+                            &:nth-child(3) {}
+                        }
+    
+                        .notice_download {
+                            a {
+                                display: block;
+    
+                                img {
+                                    width: 15px;
+                                }
+                            }
+                        }
+                    }
+    
+                    &.active {}
+                }
+    
+    
+    
+    
+            }
+    
+            #table_footer {}
+        }
+    }
+    // ****************************************default css****************************************
+    
+    
+    // **************************************** header, footer ****************************************
+    body {
+        #header {
+    
+            &.active {}
+    
+            a {}
+    
+            .depth_01 {}
+    
+            >.header_wrap {
+                padding: 0 2.5%;
+                
+                &:hover {
+                    border-bottom: none;
+                    background: transparent;
+                }
+    
+                // logo
+                .header_left {
+                    margin-top: 0;
+    
+                    a {}
+                }
+    
+                // center_menu
+                .header_center {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+    
+                // header_right 
+                .header_right {
+    
+                    .header_lang {
+                        display: none;
+    
+                        &.active {
+                            display: block;
+                        }
+    
+                        .fixed_lang {
+                            .lang_arrow {}
+                        }
+    
+                        .depth_lang {
+                            a {
+                                &:hover {}
+                            }
+                        }
+    
+                        &:hover .depth_lang {}
+    
+                        &:hover .lang_arrow {}
+                    }
+    
+    
+    
+                    // header_sns
+                    .header_sns {
+                        display: none;
+    
+                        &.active {
+                            display: block;
+                        }
+    
+                        >ul {
+                            margin-left: 10px;
+    
+                            >li {
+    
+                                a {
+                                    img {}
+                                }
+    
+                                &:not(:first-child) {}
+    
+                                &:hover {}
+                            }
+                        }
+                    }
+    
+    
+                    // header_ham
+                    .header_ham {
+                        margin-left: 25px;
+    
+                        &.active {
+                            span {}
+                        }
+    
+                        span {
+                            &:nth-of-type(1) {}
+    
+                            &:nth-of-type(2) {}
+    
+                            &:nth-of-type(3) {}
+                        }
+                    }
+    
+    
+                    &.active {
+                        span:nth-of-type(1) {}
+    
+                        span:nth-of-type(2) {}
+    
+                        span:nth-of-type(3) {}
+                    }
+                }
+    
+                &:hover {
+                    .header_center {
+                        .depth_01 {
+                            display: none;
+                        }
+    
+                        .header_bg {
+                            display: none;
+                        }
+                    }
+                }
+    
+                // full_header
+                .header_full {
+                    &.active {}
+    
+                    .header_full_wrap {
+                        margin-top: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+    
+                        a {
+                            &:hover {}
+                        }
+    
+                        .header_full_list {
+                            .depth_01 {
+                                width: 100%;
+    
+                                >a {
+                                    padding-top: 15px;
+                                }
+    
+                                &:nth-child(1) {
+                                    >a {}
+                                }
+    
+                                // depth_02
+                                .depth_02 {
+                                    display: none;
+    
+                                    >li {
+                                        >a {
+                                            padding: 15px 0 0 15px;
+                                        }
+    
+                                        // depth_03
+                                        .depth_03 {
+                                            >li {
+                                                >a {
+                                                    padding: 15px 0 0 15px;
+    
+                                                    &:hover {}
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            &.active {
+                // background: transparent;
+            }
+    
+    
+        }
+    }
+    // **************************************** header, footer ****************************************
+
+
+}
+
+
+// ****************************************767****************************************
+@media (max-width: 767px) {
+
+// Margin
+@mixin marginTop-120 {margin-top: 80px;}
+@mixin marginTop-100 {margin-top: 70px;}
+@mixin marginTop-70 {margin-top: 50px;}
+@mixin marginTop-40 {margin-top: 20px;}
+@mixin marginTop-30 {margin-top: 10px;}
+
+// Padding
+@mixin paddingTop-70 {padding-top: 70px;}
+@mixin paddingTop-40 {padding-top: 40px;}
+
+
+@mixin font-M {font-family: 'Montserrat';}
+
+
+
+@mixin font-40 { font-size: 30px;}
+@mixin font-18 { font-size: 16px;}
+
+@mixin section-Title-01 {font-size: 30px;}
+@mixin section-Title-02 { font-size: 16px;}
+
+
+    // **************************************** header, footer ****************************************
+    body {
+        #header {
+            height: $header-height_767;
+            >.header_wrap {
+                
+                &:hover { border-bottom: none; }
+                // logo
+                .header_left {
+                    max-width: 80px;
+                }
+
+                // center_menu
+                .header_center {
+                    display: none;
+                }
+
+                .header_right {
+                    .header_search_btn {
+                        width: 29px; height: 27px;
+                    }
+                }
+            }
+        }
+        
+        #footer {
+            margin-top: 70px;
+            .footer_wrap {
+
+                .footer_left {
+                    > ul {
+                        .footer_info {
+                            > p {
+                                a {
+                                    &::after {
+                                        display: none;
+                                    }
+                                    &.a_link {
+                                        padding: 0;
+                                        padding-right: 5px;
+                                    }
+                                }
+                            }
+                        }
+                        .footer_copy { margin-top: 15px; }
+                    }
+                }
+
+                .footer_right {
+                    .content_wrap {
+                        width: 100%;
+                        > div {
+                            &.box_01 {
+                                figure {
+                                    width: 33%;
+                                }
+
+                            }
+                            &.box_02 {
+                                justify-content: flex-start;
+                                .img_wrap {
+                                    margin-right: 10px;
+                                }
+                                .text_wrap {
+                                    .text_01 {
+                                        a {
+                                            font-size: 20px;
+                                        }
+                                    }
+                                    .text_02 {font-size: 14px;}
+                                }
+                            }
+                        }
+                        
+                    }
+                    
+                }
+            }
+        }
+    }
+    // **************************************** header, footer ****************************************
+
+
+    // ****************************************padge css****************************************
+    body {
+    
+        main {
+
+            // main
+            &#main_page {
+                .main_section {
+                    
+    
+                    .section_title {
+                        padding-top: 100px;
+                        .text_01 {
+                            span {
+                                // font-size: 2.2rem;
+                            }
+                        }
+        
+                        .text_02 {
+                            @include marginTop-30();
+                            font-size: 35px;
+                            line-height: 1.2;
+                        }
+        
+                        .text_03 {
+                            @include marginTop-30();
+                            // font-size: 18px;
+                        }
+                    }
+                    &:not(:first-child) {}
+
+                    // main_section_01 
+                    &.main_section_01 {
+                        .main_wrap {
+                            .section_title {
+                                padding-left: 5%; padding-right: 5%;
+                            }
+                            .business_tabcon {
+                                height: $business_height_767 ;
+                                .tabcon.swiper-container {
+                                    overflow: visible;
+                                    .business.swiper-wrapper {
+                                        .swiper-slide {
+
+                                            > a {
+                                                .boxwrap {
+                                                    // height: $business_height_767;
+            
+                                                    .ico {
+                                                        svg {
+                                                            height: 35px;
+                                                            margin-bottom: 20px;
+                                                        }
+
+                                                    }
+                                                    .ico_text {
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+
+                    // main_section_03 
+                    &.main_section_03 {
+                        // padding: 80px 0;
+                        .main_wrap {
+                            > div {
+                                .text_wrap {}
+                                // default
+                                &.left_content {
+                                    
+                                    .content_wrap {
+                                        .input_box {
+                                            max-width: 100%;
+                                            width: 100%;
+                                            margin: 0;
+                                            padding: 10px 0;
+                                            &:nth-child(odd) {margin: 0;}
+                                            &.full_size {margin-left: 0; max-width: 100%;}
+                                            .text_02 {margin-top: 0;}
+                                            textarea, input { margin-left: 20px; }
+                                            label {vertical-align: top;}
+                                        }
+            
+                                        .submit_box {
+                                            @include marginTop-30();
+                                        }
+                                    }
+                                }
+            
+                                &.right_content {
+                                    &::after { width: 100px; height: 50px; }
+                                    .content_box {
+                                        height: auto; padding: 0;
+                                        @include marginTop-70();
+                                        &.box_01 {
+                                            .client_img {
+                                                overflow: auto;
+                                                margin-top: 40px;
+                                                a {
+                                                    max-width: 100px; max-height: 100px;
+                                                    img {
+                                                        width: 100%;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.box_02 {
+                                            padding: 0; border-top: none;
+                                            .table_rec {
+                                                @include marginTop-40();
+                                                padding-bottom: 20px;
+                                                a {
+                                                    p {
+                                                        font-size: 14px;
+                                                        &.table_text_01 {
+                                                        }
+                                                        &.table_text_02 {
+                                                            i {
+                                                                margin-left: 5px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+        
+        
+        
+                }
+            }
+
+
+                
+            // SUB_PAGE
+            &.sub_page {
+                // sub_navi
+                #sub_navi {
+                    height: auto;
+                    .content_wrap {
+                        margin-top: 100px;
+                        padding: 0 2.5%;
+                        .text_wrap {
+                            .text_01 {
+                                @include font-40();
+                            }
+                            .text_02 {
+                                @include font-18();
+                            }
+                        }
+
+                        .bar_wrap {margin: 10px 0;}
+
+                        .link_wrap {
+                            font-size: 14px;
+                            margin-bottom: 20px;
+                            > a { 
+                                display: inline-block;
+                                margin: 10px 10px 0 0;
+                            }
+                        }
+
+                    }
+
+                    .background_point {display: none;}
+
+                }
+
+                .sub_section {
+                    padding: 0 2.5%;
+                    &.section_title {
+                        @include marginTop-100();
+                        .text_wrap {
+                            .text_01 { @include section-Title-01(); }
+                            .text_02 {
+                                @include section-Title-02();
+                            }
+                        }
+
+                    }
+                }
+
+                    
+                // tab_navi_section
+                .tab_navi_section {
+                    .person_tab {
+                        .text_wrap { @include font-18(); }
+                    }
+                }
+
+                
+                // product_tab
+                #product_tab {
+                    .product_tab_wrap {
+                        .text_wrap {
+                            > a {
+                                @include font-18();
+                                padding: 2px 10px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+
+                }
+
+
+
+                // ABOUT sub_page
+                &.about {
+
+                    // 회사소개
+                    &#company {
+                        .sub_section {
+                            &.section_01 {
+                                @include marginTop-70();
+                                .content_wrap {
+                                    > figure {
+                                        .img_wrap {
+                                            height: 200px;
+                                        }
+                                        
+                                        figcaption {
+                                            width: 100%;
+                                            margin: 20px 0 0 0;
+                                            text-align: center;
+                                            .text_01 {
+                                                font-size: 22px;
+                                            }
+                                            .text_02 {
+                                                @include font-18();
+                                                margin-top: 30px;
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.section_02 {
+                                @include marginTop-100();
+                                .content_wrap {
+                                    .text_wrap {
+                                        .text_01 {
+                                            font-size: 20px;
+                                        }
+                                    }
+
+                                    .box_wrap {
+                                        margin-top: 20px;
+                                        .box {
+                                            @include font-18();
+                                            width: 100%; height: 200px; padding: 20px 30px;
+                                            // .img_wrap {position: absolute; right: 30px; bottom: 20px;}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // 연혁
+                    &#history {
+                        .section_01 {
+                            .content_wrap {
+                                @include marginTop-100();
+                                .swiper-pagination {
+
+                                    &.type {
+                                        display: none;
+                                    }
+
+                                    &.pagination_progress {
+                                        margin-bottom: 10px;
+                                        > span { padding-bottom: 10px; font-size: 15px;  }
+                                    }
+                                }
+
+                                .swiper-container {
+                                    .swiper-wrapper {
+
+                                        .swiper-slide {
+                                            .img_wrap {
+                                                text-align: center;
+                                                img {}
+                                            }
+
+                                            figcaption {
+                                                @include font-18();
+                                                margin-top: 20px;
+                                                .text_wrap {
+                                                    margin-top: 15px;
+                                                    flex-direction: column;
+                                                    > span {
+                                                        &.text_01 { 
+                                                            line-height: 1.5;
+                                                        }
+                                                        &.text_02 { 
+                                                            margin-left: 0;
+                                                            font-size: 14px;
+                                                            line-height: 1.3;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // 브랜드
+                    &#brand {
+                        .sub_section {
+                            &.section_01 {
+                                @include marginTop-70();
+                                .content_wrap {
+                                    > figure {
+                                        .img_wrap {
+                                            height: 225px;
+                                        }
+
+                                        figcaption {
+                                            .text_01 { font-size: 18px; }
+                                            .text_02 {
+                                                margin-top: 15px;
+                                                @include font-18(); 
+                                            }
+                                            .ico_wrap {
+                                                a {
+                                                    width: 40px; height: 40px; margin-right: 15px;
+                                                    svg {
+                                                        height: 20px;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    
+                    // 협력사
+                    &#partner {
+                        .sub_section {
+                            &.section_01 {
+                                .content_wrap {
+                                    #partner_navi {
+                                        @include marginTop-70();
+                                        @include font-18();
+
+                                        a { margin-right: 10px; }
+                                    }
+
+                                    .swiper-container {
+
+                                        .swiper-wrapper {
+
+                                            .swiper-slide {
+                                                
+                                                .slide_box {
+                                                    padding: 15px; max-width: 100%; margin: 0 0 10px 0;
+                                                    &:nth-of-type(3n) {margin-right: 0;}
+
+                                                    .slide_head {
+                                                        cursor: pointer;
+                                                        .text_01 { font-size: 18px;}
+                                                        i {width: 10px; height: 10px;}
+                                                    }
+
+                                                    .slide_body {
+                                                        .text_01 {@include font-18();}
+                                                    }
+                                                }
+                                            }
+
+                                        }
+                                    }
+
+
+
+                                }
+
+                            }
+                        }
+
+                    }
+                    
+                    // 오시는길
+                    &#direction {
+                        .sub_section {
+                            &.section_01 {
+                                @include marginTop-70();
+                                .content_wrap {
+                                    > div {
+                                        &.box_wrap {
+                                            .slide_box {
+                                                padding: 15px; width: 100%; margin: 0 0 20px 0;
+                                                &:nth-of-type(3n) {margin-right: 0;}
+                                                &:nth-of-type(2n) {margin-right: 0;}
+
+
+                                                .slide_head {
+                                                    .text_01 { font-size: 18px;}
+                                                }
+                                                .slide_body {
+                                                    .text_01 { @include font-18(); }
+                                                }
+                                            }
+                                        }
+
+                                        &.map_wrap { margin-left: 0; height: 250px; }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                    
+                    // 인재상
+                    &#person {
+                        .sub_section {
+                            &.section_01{
+                                @include marginTop-70();
+                            }
+
+                            &.section_02 {
+                                @include marginTop-70();
+                                .img_wrap {
+                                    figure {
+                                        .img_wrap {
+                                            display: none;
+                                            // background: url('../images/about/person_01.png')no-repeat center/cover;
+                                            // width: 100%; height: 350px;
+                                            // background-attachment: fixed;
+                                        }
+                                        figcaption {
+                                            position: static;
+                                            // left: 0; top: 0; transform: translateX(0);
+                                            // background-color: rgba($color: #fff, $alpha: .7);
+                                            // backdrop-filter: saturate(180%) blur(10px);
+                                            // width: 100%; height: 100%;
+                                            p {
+                                                background-color: transparent; 
+                                                &.text_01 { padding: 0; font-size: 24px; }
+                                                &.text_02 {
+                                                    margin-top: 30px; // font-size: 18px; 
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.section_03 {
+                                @include marginTop-100();
+                                .team {
+                                    &.swiper-container {
+                                        .swiper-wrapper {
+                                            justify-content: flex-start;
+                                            .swiper-slide {
+                                                width: 100px !important; height: 100px !important;
+                                                font-size: 18px;  margin: 0 10px 0 0;
+                                                &.margin_0 {margin: 0;}
+                                                &.big {
+                                                    width: 250px !important; height: 250px !important; border: 20px solid transparent; margin: 0 20px 0;
+                                                    font-size: 24px; 
+                                                    .logo_svg { }
+                                                    p {
+                                                        margin-top: 10px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.section_04 {
+                                @include marginTop-100();
+                            }
+
+                            &.section_05 {
+                                margin-top: 20px;
+                                .team_info {
+                                    &.swiper-container {
+                                        .swiper-wrapper {
+                                            .swiper-slide {
+                                                figure {
+                                                    .img_wrap {}
+
+                                                    .table_wrap {
+                                                        margin-top:10px;
+                                                        // -webkit-overflow-scrolling: touch;
+                                                        overflow: auto;
+
+                                                        table {
+                                                            min-width: 800px;
+                                                            tr { font-size: 14px; }
+                                                            th {border-top: none; }
+                                                            td { padding: 15px; }
+                                                            thead { height: 50px;}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.section_06 {
+                                @include marginTop-100();
+                                .person_info {
+                                    &.swiper-container {
+                                        overflow: hidden;
+                                        .swiper-wrapper {
+                                            .swiper-slide {
+                                                .inline_box {
+                                                    width: auto; height: auto; border: none;
+                                                    &:hover { border: none;}
+
+                                                    figure {
+
+                                                        img { height: 45px; }
+                                                        figcaption {
+                                                            @include font-18();
+                                                            .text_01 { margin-top: 15px; }
+                                                            .text_02 { margin-top: 5px; text-align: left; }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                
+                // CS CENTER
+                &.cscenter {
+                    &#as {
+                        .sub_section {
+                            &.section_01 {
+                                @include marginTop-70();
+                                .content_wrap {
+                                    .input_wrap  {
+                                        .input_box {
+                                            width: 100%; 
+                                            &.margin {margin-right: 0;}
+                                            // &.full_size {width: 100%; max-width:100%; margin-left: 0;}
+                                            // &:nth-child(odd) {margin-left: 0;}
+                                            &.textarea_box {  height: 200px; }
+
+                                        }
+
+                                        .submit_box {
+                                            &.box_01 { @include marginTop-70(); }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                
+                // Product
+                &.product {
+                    &#product_list {
+                        .sub_section {
+                            &.section_01 { margin: 70px auto 40px; }
+
+                            &.section_02 {
+                                .product_wrap {
+                                    .product_item {
+                                        width: calc( 50% - 10px );
+                                        margin: 0 20px 40px 0;
+                                        &:nth-child(3n) { margin: 0 20px 40px 0;}
+                                        &:nth-child(2n) { margin: 0 0 40px 0;}
+
+                                        .thumb {
+                                            height: 175px;
+                                        }
+                                        .info {
+                                            padding: 15px 10px;
+                                            p {
+                                                &.text_01 { font-size: 18px; }
+                                                &.text_02 { margin-top: 5px; font-size: 14px;}
+                                                &.text_03 { margin-top: 10px; font-size: 14px;}
+                                                &.more_btn {
+                                                    margin: 30px auto 0;
+                                                    font-size: 14px;
+                                                    width: 100px; height: 30px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                            
+                                #table_footer {
+                                    @include marginTop-100();
+                                    .num_box {
+                                        a { 
+                                            margin: 0 10px;
+                                        }
+                                    }
+
+                              
+                                }
+                            }
+                        }
+                    }
+
+
+                    &#product_detail {
+                        .sub_section {
+                            
+                            // product_header
+                            &.section_01 { 
+                                @include marginTop-100();
+                                .product_header {
+                                    .product_wrap {
+                                        .product_img {
+                                            .product_thum_wrap {
+                                                margin: 0 auto;
+                                                .product_thum {
+                                                    max-height: 250px; height: 250px; width: 250px;
+                                                    margin: 0 auto;
+                                                    .thum {
+                                                        img {}
+                                                    }
+                                                }
+                                                .product_small_wrap {
+                                                    overflow: auto;
+                                                    .product_small {
+                                                        justify-content: space-around;
+                                                        min-width: 500px;
+                                                        .small {
+                                                            max-width: 100px; max-height: 100px;
+                                                            width: 100px; height: 100px;
+                                                            img {}
+                                                        }
+                                                    }
+                                                }
+                                                
+                                            }
+                                        }
+                
+                                        .product_info {
+                                            margin-left: 0; 
+                                            .text_wrap {
+                                                &.wrap_01 {
+                                                    padding-bottom: 30px;
+                                                    > span {
+                                                        &.text_01 { 
+                                                            margin-top: 30px;
+                                                            font-size: 16px;
+                                                        }
+                                                        &.text_02 { 
+                                                            margin-top: 15px;
+                                                            font-size: 24px; line-height: 1.3;
+                                                        }
+                                                        &.text_03 { 
+                                                            margin-top: 5px;
+                                                            font-size: 16px;
+                                                        }
+                                                    } 
+                                                }
+    
+                                                &.wrap_02 {
+                                                    > span {
+                                                        &.text_01 {
+                                                            @include font-18(); 
+                                                            margin-top: 30px;
+                                                        }
+                                                    }
+                                                }
+    
+                                                &.wrap_03 {
+                                                    width: 100%; 
+                                                    margin-top: 20px;
+                                                    a {
+                                                        @include font-18(); height: 50px;
+                                                    }
+                                                }
+                                            }
+                            
+                                        }
+                                    }
+                
+                                }
+                            }
+    
+    
+                            // product_table
+                            &.section_02 {
+                                @include marginTop-100();
+                                .product_table_title { font-size: 20px; }
+
+                                .product_table_wrap {
+                                    margin-top: 20px;
+                                    padding: 30px;
+                                    overflow: auto;
+                                    .product_table {
+                                        min-width: 700px;
+                                        tbody {
+                                            > tr {
+                                                font-size: 14px;
+                                                th { max-width: 200px; }
+                                                td { padding: 7px 0;}
+                                            }
+                                        }
+                                    }
+    
+                                    .table_state_btn {
+                                        @include font-18();
+                                        &.active {margin-top: 30px;}
+                                        ion-icon {
+                                            width: 20px; height: 20px;
+                                        }
+                                    }
+    
+                                }
+    
+                                .product_more {
+                                    margin-top: 20px;
+                                }
+                            }
+    
+                        }
+            
+    
+                    }
+                }
+                
+
+
+
+
+
+            }
+
+
+            
+        }
+    }
+    // ****************************************padge css****************************************
+
+    
+
+}
+
+
+// ****************************************479****************************************
+@media (max-width: 479px) {
+
+
+    
+    // ****************************************default css****************************************
+    body {
+        // table_공통 게시판
+        #table_default {
+            #table_header {
+                // search
+                .table_text_search {
+                    .search_form {
+                        fieldset {
+                            // form
+                            .form_02_selectbox {
+                                select, .nice-select { width: auto;  }
+                                input[type=text] {margin: 0;}
+                            }
+                        }
+                    }
+                }
+            }
+
+            #table_body {
+                .table_num {display: none;}
+                .table_state {display: none;}
+                .table_data {width: 20% !important;}
+            }
+
+            #table_footer {margin-top: 60px;}
+
+        }
+    }
+    // ****************************************default css****************************************
+        
+    
+
+    // **************************************** header, footer ****************************************
+    body {
+        main {
+            &#main_page {
+                .main_section {
+                    &.main_visual {
+                        .mv_wrap {
+                            .mv {
+            
+                                figcaption {
+                                    .mv_text {
+                                        .text_01 {
+                                            font-size: 36px;
+                                        }
+            
+                                        .text_02 {}
+            
+                                        .btn_white_border {margin-top: 40px;}
+                                        .swiper-pagination {
+                                            .swiper-pagination-bullet {
+                                                margin: 0 0 20px 10px;
+                                            }
+                                        }
+                                    }
+                                }
+            
+                            }
+                        }
+                    }
+            
+                }
+            }
+        }
+    }
+    // **************************************** header, footer ****************************************
+
+
+    
+    body {
+    
+        main {
+            // SUB_PAGE
+            &.sub_page {
+    
+                // ABOUT sub_page
+                &.about {
+
+                    // 회사소개
+                    &#company {
+                        .sub_section {
+                            &.section_01 {
+                                .content_wrap {
+                                    > figure {
+                                        .img_wrap { display: none; }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+
+
+}
+
+
+
+
+// **************************************** Media-height ****************************************
+// **************************************** Media-height ****************************************
+// **************************************** Media-height ****************************************
+@media (max-height: 800px) {
+    body {
+    
+        main {
+
+            // main
+            &#main_page {
+                .main_section {
+                    .section_title {
+                        padding-top: 75px;
+                        .text_01 {
+                            span {
+                                // font-size: 2.2rem;
+                            }
+                        }
+        
+                        .text_02 {
+                            @include marginTop-30();
+                        }
+        
+                        .text_03 {
+                            @include marginTop-30();
+                            // font-size: 18px;
+                        }
+                    }
+
+                    
+                    // main_section_01 
+                    &.main_section_01 {
+        
+                        // main_section_01 active
+                        &.active {
+                            .business_tabcon {
+                                &::before {
+                                    animation: barload 3s ease forwards;
+                                }
+                                .tabcon.swiper-container {
+                                    @include transition(1s 2.5s);
+                                    opacity: 1 !important;
+                                }
+        
+                            }
+                        }
+        
+                        .business_tabcon {
+                            height: 200px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-height: 600px) {
+    body {
+    
+        main {
+
+            // main
+            &#main_page {
+                .main_section {
+                    .section_title {
+                        padding-top: 75px;
+                        .text_01 {
+                            span {
+                                // font-size: 2.2rem;
+                            }
+                        }
+        
+                        .text_02 {
+                            @include marginTop-30();
+                        }
+        
+                        .text_03 {
+                            @include marginTop-30();
+                            // font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

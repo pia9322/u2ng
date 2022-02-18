@@ -1,0 +1,91 @@
+{
+
+    "partner_weather" : [
+        {"partnerName":"Hyquest solutions","partnerAddr_01":"Oceania","partnerAddr_02":"Austrailia","homepageUrl":"https://www.hyquestsolutions.com.au/"},
+        {"partnerName":"METER Group Inc.","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.metergroup.com/environment/"},
+        {"partnerName":"ZATA","partnerAddr_01":"Asia","partnerAddr_02":"Hongkong","homepageUrl":"https://www.zataiot.com/disdrometer-distrometer-zdm100/"}
+    ],
+
+    "partner_water" : [
+        {"partnerName":"geotech","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.geotechenv.com/"},
+        {"partnerName":"Eijkelkamp Soil & Water","partnerAddr_01":"Europe","partnerAddr_02":"Netherlands","homepageUrl":"https://en.eijkelkamp.com/"},
+        {"partnerName":"Waterra","partnerAddr_01":"North America","partnerAddr_02":"Canada","homepageUrl":"https://waterra.com/"},
+        {"partnerName":"Proactive","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.proactivedirect.biz/"},
+        {"partnerName":"QED","partnerAddr_01":"Europe","partnerAddr_02":"UK","homepageUrl":"https://www.qedenv.com/"},
+        {"partnerName":"ESP","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"http://www.biobailer.com/"},
+        {"partnerName":"BESST inc.","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://besst-inc.com/"},
+        {"partnerName":"Seametrics","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.seametrics.com/"},
+        {"partnerName":"SEBA hydrometri","partnerAddr_01":"Europe","partnerAddr_02":"Germany","homepageUrl":"https://www.seba-hydrometrie.com/"},
+        {"partnerName":"Hydrotechnik","partnerAddr_01":"Europe","partnerAddr_02":"Germany","homepageUrl":"https://www.ht-hydrotechnik.com/de/"},
+        {"partnerName":"EON product inc.","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.eonpro.com/"}
+    ],
+
+    "partner_soil" : [
+        {"partnerName":"Daiki Rika Kogyo Co., Ltd","partnerAddr_01":"Asia","partnerAddr_02":"Japan","homepageUrl":"www.daiki.co.jp"},
+        {"partnerName":"Eijkelkamp Soil & Water","partnerAddr_01":"Europe","partnerAddr_02":"Netherlands","homepageUrl":"https://en.eijkelkamp.com/"},
+        {"partnerName":"IMKO GmbH","partnerAddr_01":"Europe","partnerAddr_02":"Germany","homepageUrl":"https://www.imko.de/en/"},
+        {"partnerName":"Rhizosphere","partnerAddr_01":"Europe","partnerAddr_02":"Netherlands","homepageUrl":"https://www.rhizosphere.com/"},
+        {"partnerName":"METER Group AG","partnerAddr_01":"Europe","partnerAddr_02":"Germany","homepageUrl":"https://www.metergroup.com/environment/"},
+        {"partnerName":"METER Group Inc.","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.metergroup.com/environment/"},
+        {"partnerName":"TruTrack","partnerAddr_01":"Oceania","partnerAddr_02":"New Zealand","homepageUrl":"http://www.trutrack.com/"},
+        {"partnerName":"Soilmoisture Equipment Corp.","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.soilmoisture.com/"},
+        {"partnerName":"AMS","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.ams-samplers.com/"},
+        {"partnerName":"Soil Measurement Systems","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.soilmeasurement.com/"},
+        {"partnerName":"Sampletek","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://sampletek.net/"},
+        {"partnerName":"Irrometer","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.irrometer.com/"},
+        {"partnerName":"Holland Scientific","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://hollandscientific.com/"},
+        {"partnerName":"Gasmet Technologies Oy","partnerAddr_01":"Europe","partnerAddr_02":"Finland","homepageUrl":"https://www.gasmet.com/"},
+        {"partnerName":"Instrotech Australia Pty Ltd","partnerAddr_01":"Oceania","partnerAddr_02":"Australia","homepageUrl":"https://www.instrotech.com.au/"},
+        {"partnerName":"SWAP","partnerAddr_01":"Europe","partnerAddr_02":"Netherlands","homepageUrl":"https://www.swapinstruments.com/"},
+        {"partnerName":"Presens","partnerAddr_01":"Europe","partnerAddr_02":"Germany","homepageUrl":"https://presens.de"},
+        {"partnerName":"Veristech","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://veristech.com"}
+    ],
+
+    "partner_lipid" : [
+        {"partnerName":"IDS GeoRadar","partnerAddr_01":"Europe","partnerAddr_02":"Italia","homepageUrl":"https://idsgeoradar.com/"},
+        {"partnerName":"VISTA CLARA Inc.","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.vista-clara.com/"},
+        {"partnerName":"GEODEVICE","partnerAddr_01":"Asia","partnerAddr_02":"Russia","homepageUrl":"https://geodevice.co/"},
+        {"partnerName":"Uppsala University","partnerAddr_01":"Europe","partnerAddr_02":"Sweden","homepageUrl":""},
+        {"partnerName":"ALT","partnerAddr_01":"Europe","partnerAddr_02":"Luxemburg","homepageUrl":"https://www.alt.lu/"},
+        {"partnerName":"Geometrics","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.geometrics.com/"},
+        {"partnerName":"Park Seismic, LLC","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.parkseismic.com/"},
+        {"partnerName":"Sol Solution","partnerAddr_01":"Europe","partnerAddr_02":"France","homepageUrl":"https://www.sol-solution.com/"},
+        {"partnerName":"Geostuff","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"http://www.geostuff.com/"},
+        {"partnerName":"Allegheny instruments","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://alleghenyinstruments.com/"},
+        {"partnerName":"Inertial Sensing One AB","partnerAddr_01":"Europe","partnerAddr_02":"Sweden","homepageUrl":""},
+        {"partnerName":"Laval underGround Surveys","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://lavalunderground.com/"},
+        {"partnerName":"Geonics Limited","partnerAddr_01":"North America","partnerAddr_02":"Canada","homepageUrl":"http://www.geonics.com/"},
+        {"partnerName":"Geopartner","partnerAddr_01":"Europe","partnerAddr_02":"Poland","homepageUrl":""},
+        {"partnerName":"AGI USA","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.agiusa.com/"},
+        {"partnerName":"MountSopris","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://mountsopris.com/"},
+        {"partnerName":"Argus Electronic GmbH","partnerAddr_01":"Europe","partnerAddr_02":"Germany","homepageUrl":"https://www.argus-electronic.de/"},
+        {"partnerName":"Seamap","partnerAddr_01":"Asia","partnerAddr_02":"Singapore","homepageUrl":"https://www.seamap.com/"},
+        {"partnerName":"Radiation Solutions Inc.","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.radiationsolutions.ca/"},
+        {"partnerName":"OYO Corporation","partnerAddr_01":"Asia","partnerAddr_02":"Japan","homepageUrl":"https://www.oyo.co.jp/english/"},
+        {"partnerName":"HADES SYSTEMS LTD","partnerAddr_01":"Oceania","partnerAddr_02":"Australia","homepageUrl":"https://www.hadessystems.com/"},
+        {"partnerName":"Geo5","partnerAddr_01":"Asia","partnerAddr_02":"Japan","homepageUrl":""},
+        {"partnerName":"Zonge International,Inc","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"http://zonge.com/"},
+        {"partnerName":"Abbytek Enterprises, LLC","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"http://www.abbytek.com/"},
+        {"partnerName":"DAT INSTRUMENTS SRL","partnerAddr_01":"Europe","partnerAddr_02":"Italy","homepageUrl":"https://www.datinstruments.com/en/"},
+        {"partnerName":"IRIS Instruments","partnerAddr_01":"Europe","partnerAddr_02":"France","homepageUrl":"http://www.iris-instruments.com/"},
+        {"partnerName":"Inflatable Packers International Pty Ltd","partnerAddr_01":"Asia","partnerAddr_02":"Singapore","homepageUrl":"https://www.inflatable-packers.com/IPI/index"},
+        {"partnerName":"DECO Geophysical Software Company","partnerAddr_01":"Asia","partnerAddr_02":"Russia","homepageUrl":"http://decogeo.com/en/"},
+        {"partnerName":"SEEQUENT Geosoft Software","partnerAddr_01":"Asia","partnerAddr_02":"Vietnam","homepageUrl":"https://www.seequent.com/products-solutions/geosoft-software/"},
+        {"partnerName":"Geophex, Ltd.","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"http://www.geophex.com/"},
+        {"partnerName":"Geospace Technologies","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.geospace.com/"},
+        {"partnerName":"Aarhus GeoSoftware","partnerAddr_01":"Europe","partnerAddr_02":"Denmark","homepageUrl":"https://www.aarhusgeosoftware.dk/"},
+        {"partnerName":"Roadscanners","partnerAddr_01":"Europe","partnerAddr_02":"Finland","homepageUrl":"https://www.roadscanners.com/"},
+        {"partnerName":"RadExPro Seismic Software","partnerAddr_01":"Asia","partnerAddr_02":"Russia","homepageUrl":"https://radexpro.com/"},
+        {"partnerName":"Intellignt Resources Inc","partnerAddr_01":"North America","partnerAddr_02":"Canada","homepageUrl":"https://www.rayfract.com/"}
+    ],
+
+    "partner_radon" : [
+        {"partnerName":"라돈테스트","partnerAddr_01":"North America","partnerAddr_02":"Canada","homepageUrl":"https://www.rayfract.com/"}
+    ]
+
+    
+    
+
+}   
+
+ 
