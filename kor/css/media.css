@@ -878,9 +878,6 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  body #header > .header_wrap:hover {
-    border-bottom: none;
-  }
   body #header > .header_wrap .header_left {
     max-width: 80px;
   }

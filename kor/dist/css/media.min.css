@@ -229,7 +229,6 @@
 @media (max-width: 767px) { body .btn_01 { width: 120px; height: 30px; }
   body #header { height: 50px; }
   body #header > .header_wrap { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
-  body #header > .header_wrap:hover { border-bottom: none; }
   body #header > .header_wrap .header_left { max-width: 80px; }
   body #header > .header_wrap .header_center { display: none; }
   body #header > .header_wrap .header_right .header_search_btn { width: 29px; height: 27px; }
