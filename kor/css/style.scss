@@ -366,8 +366,6 @@ body {
             a { color: #333; }
 
             .header_wrap {
-     
-    
                 .header_right {
                                
                     .header_lang  {
@@ -397,7 +395,7 @@ body {
             height: 100%;
             display: flex; align-items: center;
             margin: 0 auto; padding: 0 80px;
-            border-bottom: 1px solid #666;
+            border-bottom: 1px solid #ddd;
 
             // logo
             .header_left {
@@ -520,7 +518,7 @@ body {
                         font-size: 14px; font-weight: 500;
                         
                         .fixed_lang {
-                            display: flex;
+                            display: flex; align-items: center;
                             border-bottom: 1px solid #ddd;
                             padding: 0 0 5px 5px;
                             ion-icon {
@@ -691,6 +689,7 @@ body {
                     > p {
                         display: inline-block;
                         margin-right: 20px;
+                        &:last-child {margin-right: 0;}
                         span {
                             display: inline-block;
                             &.text_01 {
@@ -1111,7 +1110,7 @@ body {
 
                             &.right_content {
                                 > div {
-                                    height: 50%;
+                                    width: 100%; height: 50%;
                                     padding: 0 80px;
                                     &.box_01 {
                                         background: url('../images/main/img_03_01.png')no-repeat center/cover;
@@ -1134,32 +1133,36 @@ body {
                                     }
 
                                     &.box_02 {
-                                        table {
-                                            @include fullsize();
-                                            display: flex; justify-content: center; flex-direction: column;
-                                            caption {
-                                                font-size: 24px; font-weight: bold; letter-spacing: -1.92px; color: #222;
-                                                text-align: left;
-                                                display: flex; justify-content: space-between;
-                                                a {
-                                                    &:hover {
-                                                        ion-icon {
-                                                            transform: rotate(90deg);
-                                                        }
-                                                    }
+                                        display: flex; justify-content: center; flex-direction: column;
+                                        .table_tit {
+                                            font-size: 24px; font-weight: bold; letter-spacing: -1.92px; color: #222;
+                                            text-align: left;
+                                            display: flex; justify-content: space-between;
+                                            a {
+                                                &:hover {
                                                     ion-icon {
-                                                        @include transition(.15s);
-                                                        width: 20px; height: 20px;
-                                                        color: #222;
-                                                    }     
+                                                        transform: rotate(90deg);
+                                                    }
                                                 }
+                                                ion-icon {
+                                                    @include transition(.15s);
+                                                    width: 20px; height: 20px;
+                                                    color: #222;
+                                                }     
                                             }
+                                        }
+                                        table {
+                                            margin-top: 40px;
+                                            width: 100%;
                                             tbody {
-                                                margin-top: 40px;
                                                 tr {
+                                                    border-bottom: 1px solid #ddd;
                                                     td {
+                                                        padding: 15px 0;
+                                                        @include font-18(); color: #666; font-weight: 500;
+
                                                         &.table_title { width: 80%; }
-                                                        &.table_data { width: 20%; }
+                                                        &.table_data { width: 20%; text-align: right; }
                                                     }
                                                 }
                                             }

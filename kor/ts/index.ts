@@ -211,7 +211,6 @@ $(function () {
 
 
     function headerScroll() {
-
          $(window).scroll(function() {
             let scroll = $(window).scrollTop(),
                 dh = $(document).height() - $('.main_section_02').height(),
