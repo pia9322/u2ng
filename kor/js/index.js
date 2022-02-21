@@ -54,20 +54,21 @@ $(function () {
             nextEl: '.main_product_arrow.swiper-button-next',
             prevEl: '.main_product_arrow.swiper-button-prev',
         },
-        // breakpoints: {
-        //     1600: {
-        //         slidesPerView: 3,
-        //         spaceBetween: 40,
-        //     },
-        //     1200: {
-        //         slidesPerView: 3,
-        //         spaceBetween: 20,
-        //     },
-        //     500: {
-        //         slidesPerView: 1,
-        //         spaceBetween: 0,
-        //     }
-        // }
+        breakpoints: {
+            1640: {
+                slidesPerView: 4,
+            },
+            1480: {
+                slidesPerView: 3,
+            },
+            1100: {
+                slidesPerView: 2,
+                spaceBetween: 0,
+            },
+            500: {
+                slidesPerView: 1,
+            }
+        }
     });
     // // productThumb
     // let productThumb = new Swiper('.product_thum.swiper-container', {

@@ -6,8 +6,6 @@ $reset-time: 150ms;
 $color-100 : #0a4b90;
 $color-200 : #98afc7;
 
-$border-hegith : 185px;
-
 // ====================================default mixin====================================
 @mixin absolute-center {position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);}
 @mixin absolute-x($left, $top) {position: absolute;left: $left;top: $top;transform: translateX(-$left);}
@@ -22,9 +20,9 @@ $border-hegith : 185px;
 @mixin header-height {height: 100px;}
 @mixin flexCenter { display: flex; justify-content: center; align-items: center; }
 
+@mixin fullsize {width: 100%; height: 100%;}
 
 // Margin
-@mixin fullsize {width: 100%; height: 100%;}
 @mixin marginTop-120 {margin-top: 120px;}
 @mixin marginTop-100 {margin-top: 100px;}
 @mixin marginTop-70 {margin-top: 70px;}
@@ -36,6 +34,7 @@ $border-hegith : 185px;
 @mixin paddingTop-40 {padding-top: 40px;}
 
 
+// FONT
 @mixin font-M {font-family: 'Montserrat';}
 @mixin font-R {font-family: 'Roboto';}
 
@@ -52,14 +51,10 @@ $border-hegith : 185px;
 
 // ====================================default css====================================
 body {
-    i{
-        &.ico_dots_01 {
-            display: inline-block;
-            border-radius: 100%;
-            width: 8px; height: 8px;
-            background: $color-100;
-            vertical-align: middle;
-        }
+    .lity-close {color: $color-100 !important; }
+    a.a_link {
+        @include transition(.15s);
+        &:hover { color: $color-100; }
     }
 
     .btn_01 {
@@ -297,25 +292,6 @@ body {
         }
     }
 
-    .submit_box {
-        &.box_01  {
-            width: 100%; text-align: center;
-            button {
-                @include font-18();
-                cursor: pointer;
-                width: 160px; height: 60px;
-                background: transparent;
-                border-radius: 50px; border: 1px solid #000; color: #000;
-                @include transition(.15s);
-                &:hover, &:active {
-                    background: $color-100; color: #fff;
-                    border-color: transparent;
-                }
-            }
-        }
-
-    }
-
     #search_box_popup {
         z-index: 99999;
         width: 90vw; height: 90vh;
@@ -329,21 +305,6 @@ body {
             img {width: 200px; height: 200px; object-fit: cover;}
         }
     }
-
-    .lity-close {color: $color-100 !important; }
-
-
-    a.a_link {
-        @include transition(.15s);
-        &:hover {
-            color: $color-100; 
-        }
-    }
-
-
-
-
-
 }
 // ====================================default css====================================
 
@@ -758,8 +719,8 @@ body {
                             .mv_img {width: 100%;}
 
                             figcaption {
+                                @include flexCenter();
                                 width: 100%; height: 100%;
-                                display: flex; align-items: center; justify-content: center;
 
                                 .mv_text {
                                     position: relative;
@@ -793,7 +754,7 @@ body {
                         .swiper-pagination {
                             
                             &.main_pagination  {
-                                left: 50px; top: 50%;
+                                left: 50px; top: 50%; transform: translateY(-50%);
                                 display: flex; flex-direction: column;
                                 .swiper-pagination-bullet {
                                     width: 6px; height: 6px;
@@ -829,11 +790,10 @@ body {
                         height: 100%;
                         > figure {
                             @include flexCenter();
-                            width: 33.33333333%; height: 100%;
+                            width: 100%; height: 100%;
                             text-align: center; color: #fff;
                             &.content_01 {background: url('../images/main/img_01_01.png')no-repeat center/cover ;}
-                            &.content_02 {
-                                background: url('../images/main/img_01_02.png')no-repeat center/cover ;}
+                            &.content_02 {background: url('../images/main/img_01_02.png')no-repeat center/cover ;}
                             &.content_03 {background: url('../images/main/img_01_03.png')no-repeat center/cover ;}
 
                             &:hover {

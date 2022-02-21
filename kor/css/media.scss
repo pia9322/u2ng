@@ -2,12 +2,11 @@
 // ****************************************default var****************************************
 $search-time: 800ms;
 $reset-time: 150ms;
-$header-heght : 80px;
-$header-height_767: 60px;
-$business_height_767 : 200px;
+$header-height : 80px;
+$header-height_767: 50px;
 
-$color-100 : #f5821f;
-
+$color-100 : #0a4b90;
+$color-200 : #98afc7;
 // ****************************************default var****************************************
 
 
@@ -29,6 +28,8 @@ $color-100 : #f5821f;
 
 
 
+@mixin fullsize {width: 100%; height: 100%;}
+
 // Margin
 @mixin marginTop-120 {margin-top: 120px;}
 @mixin marginTop-100 {margin-top: 100px;}
@@ -41,10 +42,12 @@ $color-100 : #f5821f;
 @mixin paddingTop-40 {padding-top: 40px;}
 
 
+// FONT
+// style
 @mixin font-M {font-family: 'Montserrat';}
+@mixin font-R {font-family: 'Roboto';}
 
-
-
+// size
 @mixin font-40 { font-size: 40px;}
 @mixin font-18 { font-size: 18px; letter-spacing: -0.72px;}
 
@@ -62,13 +65,272 @@ $color-100 : #f5821f;
 @media (min-width:2560px) {}
 
 
+// ****************************************1640px****************************************
+@media (max-width: 1640px) {
 
+    // ****************************************padge css****************************************
+    body {
+        // opacity: 0;
+        main {
+            // INDEX MAIN
+            &#main_page {
+                .main_section {
+                    &:not(:first-child) {}
+    
+                    &.main_visual {
+                        
+                        .mv_wrap {
+                            .mv {
+    
+                                figcaption {
+    
+                                    .mv_text {
+                                        span { 
+                                            &.text_01 { font-size: 6.4rem; }
+        
+                                            &.text_02 {
+                                                // @include font-18(); // margin-top: 20px;  
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+    
+                            
+                            // pagination
+                            .swiper-pagination {
+                                &.main_pagination {left: 25px;}
+                            }
+                            // pagination
+    
+                        }
+                    }
+    
+                    // main_section_01
+                    &.main_section_01 {
+                        .content_wrap {
+                            > figure {
+    
+                                .text_01 {/* font-size: 4rem;  */}
+                                .text_02 {
+                                    // @include font-18();
+                                    // margin-top: 20px;
+                                }
+                                a.btn_01 { 
+                                    // margin-top: 50px; 
+                                }
+                            }
+                        }
+                    }
+    
+                    // main_section_02
+                    &.main_section_02 {
+                        @include padding_1480(); 
 
+                        #point_circle {
+                            // position: absolute; right: -40%; top: -20%; transform: translateX(-50%);
+                            width: 800px; height: 800px;
+                            .circle {
+                                &.circle_02 {
+                                    // margin: 70px 0 0 20px;
+                                } 
+                                &.circle_03 {
+                                    // margin: -10px 0 0 100px;
+                                } 
+                                &.circle_04 {
+                                    // margin: -200px 0 0 60px;
+                                } 
+                                &.circle_05 {
+                                    // margin: -150px 0 0 400px;
+                                } 
+                            }
+                        }
+                        .content_wrap {
+                            
+                            .product_title {
+                                padding-top: 120px;
+                                .title_wrap {
+                                    .text_01 {
+                                        font-size: 20px;
+                                    }
+                                    .text_02 {
+                                        // margin-top: 20px;
+                                        font-size: 30px; 
+                                    }
+                                }
+                            }
+    
+                            .product_content {
+                                margin-top: 40px;
+                                .product_tab {
+    
+                                    .arrow_wrap{
+                                        position: relative;
+                                        .main_product_arrow {width:25px; height:25px; }
+                                        .arrow_bar {display: none;}
+                                    }
+                                }
+    
+                                .product_item {
+                                    margin-top: 40px;
+                                    .swiper-container {
+                                        .swiper-wrapper {
+                                            .swiper-slide {
+                                                .img_wrap { margin: 0 auto;width: 300px; height: 300px;}
+                                                .text_wrap {
+                                                    // margin-top: 20px;
+                                                    .text_01 {
+                                                        // @include font-18();
+                                                    }
+                                                }
+    
+                                            }
+                                        }
+                                    }
+    
+                                }
+                            }
+    
+                        }
+    
+    
+    
+    
+                    }
+    
+                    // main_section_03
+                    &.main_section_03 {
+                        .content_wrap {
+                            .left_content {
+                                width: 60%;
+                            }
+                            .right_content {
+                                width: 40%;
+                                .text_wrap {
+                                    padding-left: 80px;
+                                    p {
+                                        &.text_01 {
+                                            // font-size: 24px; 
+                                        }
+                                        &.text_02 {
+                                            // margin-top: 20px; font-size: 38px; 
+                                        }
+                                    }
+                                    .text_03 {margin-top: 60px;}
+                                }
+                            }
+                        }
+                        
+    
+                    }
+    
+                    &.main_section_04 {
+                        .content_wrap {
+                            > div {
+                                // width: 50%;
+                                &.left_content {
+                                    .location {}
+    
+                                    #location_tab {
+                                        // height: 140px;
+                                        .tab_title {
+                                            // width: 260px; 
+                                            p {
+                                                // margin-bottom: 15px;
+                                                // font-size: 24px;
+                                                ion-icon {
+                                                    // margin-left: 28px;
+                                                    // width: 20px; height: 20px;
+                                                }
+                                                
+                                            }
+                                        }
+    
+                                        .tab_detail {
+                                            width: 100%;
+                                            padding-left: 30px;
+                                            .detail_wrap {
+                                                p {
+                                                    // @include font-18();
+                                                    // margin-bottom: 8px;
+                                                    ion-icon {
+                                                        // width: 20px; height: 25px;
+                                                        // margin-right: 10px;
+                                                    }
+                                                }
+                                            }
+                                            
+                                        }
+                                    }
+                                }
+    
+                                &.right_content {
+                                    > div {
+                                        // height: 50%;
+                                        // padding: 0 80px;
+                                        &.box_01 {
+                                            .text_wrap {
+                                                .text_01 {
+                                                    // font-size: 24px;
+                                                }
+                                                .text_02 {
+                                                    // margin-top: 10px;
+                                                    // @include font-18();
+                                                }
+                                                .text_03 {
+                                                    margin-top: 40px;
+                                                }
+                                            }
+                                        }
+    
+                                        &.box_02 {
+                                            .table_tit {
+                                                font-size: 24px;
+                                                a {
+                                                    ion-icon {
+                                                        // width: 20px; height: 20px;
+                                                    }     
+                                                }
+                                            }
+                                            table {
+                                                margin-top: 20px;
+                                                tbody {
+                                                    tr {
+                                                        td {
+                                                            padding: 10px 0;
+                                                            // @include font-18();
+                                                            // &.table_title { width: 80%; }
+                                                            // &.table_data { width: 20%; text-align: right; }
+                                                        }
+                                                    }
+                                                }
+                                            }
+    
+                                        }
+                                    }
+                                    
+                                }
+    
+                            }
+                        }
+                    }
+                }
+    
+                #footer { margin-top: 0; }
+            }
+        }
+    }
+
+}
+    
+    
 // ****************************************1480px****************************************
 @media (max-width: 1480px) {
 
     // ****************************************default css****************************************
     body {
+            
+        .btn_01 { width: 140px; height: 40px; }
         // table_공통 게시판
         #table_default {
             #table_header {
@@ -117,16 +379,7 @@ $color-100 : #f5821f;
             }
 
         }
-        
-        .submit_box {
-            &.box_01  {
-                button {
-                    height: 50px; font-size: 16px;
-                }
-            }
-    
-        }
-    
+
     }
     // ****************************************default css****************************************
         
@@ -134,104 +387,68 @@ $color-100 : #f5821f;
 
     // **************************************** header, footer ****************************************
     body {
+        
         #header {
-            height: $header-heght;
-            >.header_wrap {
+            height: $header-height;
+            .header_wrap {
                 padding: 0 5%;
-
                 // logo
-                .header_left {
-                    max-width: 90px; margin-top: 0;
-                }
-
+                .header_left {max-width: 100px;}
+    
                 // center_menu
                 .header_center {
-                    height: $header-heght;
-                    .header_bg {
-                        margin-top: $header-heght;
-                    }
-
-
+                    height: 100%;
+                    margin-left: auto; margin-right: 50px;
+    
                     >li {
-                        width: 15%;
+                        font-size: 16px;
+                        margin-left: 30px;
+    
                         .depth_01 {
-                            padding-top: 30px;
+                            padding: 15px 20px; 
+                            li {
+                                margin-bottom: 10px;
+                                a {font-size: 16px;}
+                            }
+                        }
+                    }
+                }
+    
+                // header_right
+                .header_right {
+    
+                    .header_lang {
+                        margin-right: 50px;
+
+                        > ul {
+                            font-size: 12px; 
+                            .fixed_lang {
+                                ion-icon {padding-left: 10px;}
+                            }
+                        }
+    
+                    }
+                }
+    
+                // full_header
+                .header_full {
+                    &.active {}
+                    .header_full_wrap {
+                        margin-top: $header-height;
+                        .header_full_list {
+                            > li {
+                                .depth_01 {display: none;}
+                            }
                         }
                     }
                 }
             }
-
-
-
         }
-
+    
         #footer {
-            padding: 40px 0;
-            margin-top: 100px;
-            .footer_wrap {
-                @include padding_1480();
-                flex-direction: column;
-
-                .footer_left {
-                    > ul {
-                        > li {
-                            &:first-child {margin-top: 0;}
-                        }
-                        .footer_logo {max-width: 175px;}
-                        
-                        // .footer_select {
-                        //     select {
-                        //         padding: 5px 10px; font-size: 14px;
-                        //     }   
-                        // }
-
-                        .footer_info {
-                            > p {
-                                a {
-                                    font-size: 14px; 
-                                    &:first-child{margin-left: 0;}
-                                    &.a_link {
-                                        @include transition(.15s);
-                                        &:hover {
-                                            color: #f5821f;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        .footer_copy {
-                            p {
-                                font-size: 15px; line-height: 1.6; letter-spacing: -0.6px; color: #aaa;
-                            }
-                        }
-                    }
-
-                }
-                .footer_right {
-                    margin-top: 20px;
-                    .content_wrap {
-                        > div {
-                            &.box_02 {
-                                justify-content: flex-start;
-                                .img_wrap {
-                                    margin-right: 10px;
-                                }
-                                .text_wrap {
-                                    .text_01 {
-                                        a {
-                                            font-size: 26px;
-                                        }
-                                    }
-                                    .text_02 {font-size: 14px;}
-                                }
-                            }
-                        }
-                        
-                    }
-                    
-                }
-            }
+            padding: 40px 5%;
         }
+
     }
     // **************************************** header, footer ****************************************
 
@@ -241,185 +458,226 @@ $color-100 : #f5821f;
     
         main {
 
-            // Main
+            // INDEX MAIN
             &#main_page {
                 .main_section {
-                    
-    
-                    .section_title {
-                        padding-top: 200px;
-                        .text_01 {
-                            span {
-                                // font-size: 2.2rem;
-                            }
-                        }
-        
-                        .text_02 {
-                            @include marginTop-30();
-                        }
-        
-                        .text_03 {
-                            @include marginTop-30();
-                            // font-size: 18px;
-                        }
-                    }
                     &:not(:first-child) {}
-        
+    
                     &.main_visual {
+                        
                         .mv_wrap {
                             .mv {
-                                @include padding_1480();
                                 figcaption {
                                     .mv_text {
-                                        .text_01 {}
-                                        .text_02 {margin-top: 10px;}
-        
-                                        .btn_white_border { margin-top: 40px; }
-
-                                        .swiper-pagination {
-                                            .swiper-pagination-bullet { margin: 0 0 20px 20px; }
+                                        span { 
+                                            &.text_01 { font-size: 40px }
+                                            &.text_02 {
+                                                // @include font-18();
+                                                margin-top: 10px;  
+                                            }
                                         }
                                     }
                                 }
-        
                             }
                         }
                     }
-
-                    // main_section_01 
+    
+                    // main_section_01
                     &.main_section_01 {
-                        .main_wrap {
-                            .business_tabcon {
-                                // width: 100%; height: 305px;
-                                // 나중에 수정
-                                // margin: 50px auto 0;
-                                padding: 0;
-                                @include padding_1480();
-                                .tabcon.swiper-container {
-                                    .business.swiper-wrapper {
-                                        .swiper-slide {
-
-                                            > a {
-                                                .boxwrap {
-            
-                                                    .ico {
-                                                        svg {
-                                                            height: 50px;
-                                                        }
-
-                                                    }
-                                                    .ico_text {
-                                                        @include marginTop-30();
-                                                        // font-size: 2.2rem;
-                                                    }
-            
-                                                }
-                                            }
-                                        }
-                                    }
+                        .content_wrap {
+                            > figure {
+                                .text_01 {font-size: 24px; }
+                                .text_02 {
+                                    // @include font-18();
+                                    // margin-top: 20px;
+                                }
+                                a.btn_01 { 
+                                    // margin-top: 50px;
                                 }
                             }
                         }
-                        
                     }
-        
-                    // main_section_02 
+    
+                    // main_section_02
                     &.main_section_02 {
-                        .main_wrap {
-                            @include padding_1480();
-                            .section_title {
-                                .text_04 {
-                                    @include marginTop-40();
-                                }
-                            }
-                            .wave_container {
-                                svg { height: 150px; }
-                            }
-                        }
 
-                    }
-        
+                        #point_circle {display: none;}
 
-                    // main_section_03 
-                    &.main_section_03 {
-                        // margin-bottom: 80px;
-                        .main_wrap {
-                            @include padding_1480();
-                            flex-wrap: wrap;
-                            > div {
-                                width: 100%;
-                                .text_wrap {}
-                                // .text_01 {font-size: 4.6rem;}
-                                .text_02 {margin-top: 10px;/*  font-size: 18px; */}
-                                .margin0 {margin-top: 0;}
-                                // default
-                                &.left_content {
-                                    border: none;
-                                    .content_wrap {
-                                        
-                                        margin-top: 30px;
-                                        display: flex; flex-wrap: wrap;
-                                        .input_box {
-                                            max-width: 45%;
-                                            padding-bottom: 15px;
-                                            margin: 0 0 20px 10px;
-                                            &:nth-child(odd) {margin: 0 0 20px 10px;}
-                                            &.full_size {margin-left: 10px; max-width: 100%;}
-                                            .text_02 {margin-top: 0;}
-                                        }
-            
-                                        .submit_box {
-                                            @include marginTop-30();
-                                        }
+                        .content_wrap {
+                            .product_title {
+                                padding-top: 90px;
+                                .title_wrap {
+                                    .text_01 {
+                                        font-size: 18px;
+                                    }
+                                    .text_02 {
+                                        margin-top: 10px;
+                                        font-size: 24px; 
                                     }
                                 }
-            
-                                &.right_content {
-
-                                    &::after {
-                                        content: '';
-                                        position: absolute; top: 0; bottom: 0;
+                            }
+    
+                            .product_content {
+                                margin-top: 20px;
+                                .product_tab {
+    
+                                    .arrow_wrap{
+                                        .main_product_arrow {width:20px; height:20px; }
                                     }
-
-                                    .content_box {
-                                        height: auto; padding: 0;
-                                        @include marginTop-70();
-                                        // &.box_01 {
-                                        //     .client_img {
-                                        //         overflow: auto;
-                                        //         margin-top: 40px;
-                                        //     }
-                                        // }
-                                        &.box_02 {
-                                            padding: 0; border-top: none;
-                                            .table_rec {
-                                                @include marginTop-40();
-                                                padding-bottom: 20px;
-                                                a {
-                                                    p {
-                                                        &.table_text_01 {
-                                                        }
-                                                        &.table_text_02 {
-                                                            i {
-                                                                margin-left: 5px;
-                                                            }
-                                                        }
+                                }
+    
+                                .product_item {
+                                    margin-top: 20px;
+                                    .swiper-container {
+                                        .swiper-wrapper {
+                                            .swiper-slide {
+                                                .img_wrap {
+                                                    margin: 0 auto; width: 250px; height: 250px;
+                                                }
+                                                .text_wrap {
+                                                    // margin-top: 20px;
+                                                    .text_01 {
+                                                        // @include font-18();
                                                     }
                                                 }
+    
                                             }
                                         }
                                     }
+    
+                                }
+                            }
+    
+                        }
+    
+    
+    
+    
+                    }
+    
+                    // main_section_03
+                    &.main_section_03 {
+                        .content_wrap {
+                            .left_content {
+                                width: 50%;
+                            }
+                            .right_content {
+                                width: 50%;
+                                .text_wrap {
+                                    // padding-left: 80px;
+                                    p {
+                                        &.text_01 {
+                                            font-size: 20px; 
+                                        }
+                                        &.text_02 {
+                                            margin-top: 10px; font-size: 30px; 
+                                        }
+                                    }
+                                    .text_03 {margin-top: 40px;}
                                 }
                             }
                         }
                         
+    
                     }
-        
-        
-        
+    
+                    &.main_section_04 {
+                        .content_wrap {
+                            flex-direction: column;
+                            > div {
+                                width: 100%; height: 50%;
+                                &.left_content {
+                                    .location {}
+    
+                                    #location_tab {
+                                        height: 75px;
+                                        .tab_title {
+                                            // width: 260px; 
+                                            p {
+                                                margin-bottom: 10px;
+                                                font-size: 16px;
+                                                ion-icon {
+                                                    margin-left: 10px;
+                                                    width: 15px; height: 15px;
+                                                }
+                                                
+                                            }
+                                        }
+    
+                                        .tab_detail {
+                                            width: 100%;
+                                            // padding-left: 30px;
+                                            .detail_wrap {
+                                                p {
+                                                    font-size: 16px;
+                                                    margin-bottom: 5px;
+                                                    ion-icon {
+                                                        width: 15px; height: 15px;
+                                                        // margin-right: 10px;
+                                                    }
+                                                }
+                                            }
+                                            
+                                        }
+                                    }
+                                }
+    
+                                &.right_content {
+                                    display: flex;
+                                    overflow: hidden;
+                                    > div {
+                                        height: 100%;
+                                        padding: 0 40px;
+                                        &.box_01 {
+                                            .text_wrap {
+                                                .text_01 {
+                                                    font-size: 20px;
+                                                }
+                                                .text_02 {
+                                                    margin-top: 5px;
+                                                    font-size: 14px;
+                                                }
+                                                .text_03 {
+                                                    margin-top: 20px;
+                                                }
+                                            }
+                                        }
+    
+                                        &.box_02 {
+                                            .table_tit {
+                                                font-size: 20px;
+                                                a {
+                                                    ion-icon {
+                                                        // width: 20px; height: 20px;
+                                                    }     
+                                                }
+                                            }
+                                            table {
+                                                margin-top: 10px;
+                                                tbody {
+                                                    tr {
+                                                        td {
+                                                            padding: 10px 0;
+                                                            font-size: 14px;
+                                                            // &.table_title { width: 80%; }
+                                                            &.table_data { font-size: 12px;; }
+                                                        }
+                                                    }
+                                                }
+                                            }
+    
+                                        }
+                                    }
+                                    
+                                }
+    
+                            }
+                        }
+                    }
                 }
+    
+                #footer { margin-top: 0; }
             }
-
 
                 
             // SUB_PAGE
@@ -1241,122 +1499,16 @@ $color-100 : #f5821f;
     body {
         #header {
     
-            &.active {}
-    
-            a {}
-    
-            .depth_01 {}
-    
             >.header_wrap {
                 padding: 0 2.5%;
-                
-                &:hover {
-                    border-bottom: none;
-                    background: transparent;
-                }
-    
                 // logo
-                .header_left {
-                    margin-top: 0;
-    
-                    a {}
-                }
-    
+
                 // center_menu
-                .header_center {
-                    opacity: 0;
-                    visibility: hidden;
-                }
-    
+                .header_center { opacity: 0; visibility: hidden; width: 0;}
+
                 // header_right 
                 .header_right {
-    
-                    .header_lang {
-                        display: none;
-    
-                        &.active {
-                            display: block;
-                        }
-    
-                        .fixed_lang {
-                            .lang_arrow {}
-                        }
-    
-                        .depth_lang {
-                            a {
-                                &:hover {}
-                            }
-                        }
-    
-                        &:hover .depth_lang {}
-    
-                        &:hover .lang_arrow {}
-                    }
-    
-    
-    
-                    // header_sns
-                    .header_sns {
-                        display: none;
-    
-                        &.active {
-                            display: block;
-                        }
-    
-                        >ul {
-                            margin-left: 10px;
-    
-                            >li {
-    
-                                a {
-                                    img {}
-                                }
-    
-                                &:not(:first-child) {}
-    
-                                &:hover {}
-                            }
-                        }
-                    }
-    
-    
-                    // header_ham
-                    .header_ham {
-                        margin-left: 25px;
-    
-                        &.active {
-                            span {}
-                        }
-    
-                        span {
-                            &:nth-of-type(1) {}
-    
-                            &:nth-of-type(2) {}
-    
-                            &:nth-of-type(3) {}
-                        }
-                    }
-    
-    
-                    &.active {
-                        span:nth-of-type(1) {}
-    
-                        span:nth-of-type(2) {}
-    
-                        span:nth-of-type(3) {}
-                    }
-                }
-    
-                &:hover {
-                    .header_center {
-                        .depth_01 {
-                            display: none;
-                        }
-    
-                        .header_bg {
-                            display: none;
-                        }
-                    }
+                    .header_lang {margin-right: 25px;}
                 }
     
                 // full_header
@@ -1365,32 +1517,17 @@ $color-100 : #f5821f;
     
                     .header_full_wrap {
                         margin-top: 0;
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-    
-                        a {
-                            &:hover {}
-                        }
+                        @include flexCenter(); @include fullsize();
     
                         .header_full_list {
                             .depth_01 {
                                 width: 100%;
     
-                                >a {
-                                    padding-top: 15px;
-                                }
-    
-                                &:nth-child(1) {
-                                    >a {}
-                                }
+                                >a {padding-top: 15px;}
     
                                 // depth_02
                                 .depth_02 {
                                     display: none;
-    
                                     >li {
                                         >a {
                                             padding: 15px 0 0 15px;
@@ -1413,15 +1550,41 @@ $color-100 : #f5821f;
                     }
                 }
             }
-    
-            &.active {
-                // background: transparent;
+        }
+            
+        #footer {
+            padding: 40px 5%;
+            margin-top: 80px;
+            .footer_wrap {
+                .footer_section_01 {
+                    flex-direction: column;
+                    .footer_left {
+                        order: 2;
+                        margin-top: 20px;
+                        > p {
+                            margin: 0 20px 5px 0;
+                            &:last-child { margin: 0 0 5px 0;}
+                        }
+                    }
+
+                    .footer_right {
+                        order: 1;
+                    }
+
+                }
+
+                .footer_section_02 {
+                    // margin-top:20px; padding-top: 20px;
+                }
+                
             }
-    
-    
         }
     }
     // **************************************** header, footer ****************************************
+
+    
+
+
 
 
 }
@@ -1430,34 +1593,42 @@ $color-100 : #f5821f;
 // ****************************************767****************************************
 @media (max-width: 767px) {
 
-// Margin
-@mixin marginTop-120 {margin-top: 80px;}
-@mixin marginTop-100 {margin-top: 70px;}
-@mixin marginTop-70 {margin-top: 50px;}
-@mixin marginTop-40 {margin-top: 20px;}
-@mixin marginTop-30 {margin-top: 10px;}
+    // Margin
+    @mixin marginTop-120 {margin-top: 80px;}
+    @mixin marginTop-100 {margin-top: 70px;}
+    @mixin marginTop-70 {margin-top: 50px;}
+    @mixin marginTop-40 {margin-top: 20px;}
+    @mixin marginTop-30 {margin-top: 10px;}
 
-// Padding
-@mixin paddingTop-70 {padding-top: 70px;}
-@mixin paddingTop-40 {padding-top: 40px;}
-
-
-@mixin font-M {font-family: 'Montserrat';}
+    // Padding
+    @mixin paddingTop-70 {padding-top: 70px;}
+    @mixin paddingTop-40 {padding-top: 40px;}
 
 
+    @mixin font-M {font-family: 'Montserrat';}
 
-@mixin font-40 { font-size: 30px;}
-@mixin font-18 { font-size: 16px;}
 
-@mixin section-Title-01 {font-size: 30px;}
-@mixin section-Title-02 { font-size: 16px;}
 
+    @mixin font-40 { font-size: 30px;}
+    @mixin font-18 { font-size: 16px;}
+
+    @mixin section-Title-01 {font-size: 30px;}
+    @mixin section-Title-02 { font-size: 16px;}
+
+
+    // ****************************************default css****************************************
+    body {
+        .btn_01 { width: 120px; height: 30px; }
+    }
+    // ****************************************default css****************************************
+    
 
     // **************************************** header, footer ****************************************
     body {
         #header {
             height: $header-height_767;
             >.header_wrap {
+                justify-content: space-between;
                 
                 &:hover { border-bottom: none; }
                 // logo
@@ -1477,827 +1648,245 @@ $color-100 : #f5821f;
                 }
             }
         }
-        
-        #footer {
-            margin-top: 70px;
-            .footer_wrap {
-
-                .footer_left {
-                    > ul {
-                        .footer_info {
-                            > p {
-                                a {
-                                    &::after {
-                                        display: none;
-                                    }
-                                    &.a_link {
-                                        padding: 0;
-                                        padding-right: 5px;
-                                    }
-                                }
-                            }
-                        }
-                        .footer_copy { margin-top: 15px; }
-                    }
-                }
-
-                .footer_right {
-                    .content_wrap {
-                        width: 100%;
-                        > div {
-                            &.box_01 {
-                                figure {
-                                    width: 33%;
-                                }
-
-                            }
-                            &.box_02 {
-                                justify-content: flex-start;
-                                .img_wrap {
-                                    margin-right: 10px;
-                                }
-                                .text_wrap {
-                                    .text_01 {
-                                        a {
-                                            font-size: 20px;
-                                        }
-                                    }
-                                    .text_02 {font-size: 14px;}
-                                }
-                            }
-                        }
-                        
-                    }
-                    
-                }
-            }
-        }
+   
     }
     // **************************************** header, footer ****************************************
 
 
     // ****************************************padge css****************************************
     body {
-    
         main {
 
-            // main
+            // INDEX MAIN
             &#main_page {
                 .main_section {
-                    
-    
-                    .section_title {
-                        padding-top: 100px;
-                        .text_01 {
-                            span {
-                                // font-size: 2.2rem;
-                            }
-                        }
-        
-                        .text_02 {
-                            @include marginTop-30();
-                            font-size: 35px;
-                            line-height: 1.2;
-                        }
-        
-                        .text_03 {
-                            @include marginTop-30();
-                            // font-size: 18px;
-                        }
-                    }
                     &:not(:first-child) {}
+    
+                    &.main_visual {
+                        
+                        .mv_wrap {
+                            .mv {
+                                figcaption {
+                                    .mv_text {
+                                        @include padding_1480();
+                                        span { 
+                                            &.text_01 { font-size: 32px }
+                                            &.text_02 {
+                                                @include font-18();
+                                            }
+                                        }
+                                    }
+                                }
+                            }
 
-                    // main_section_01 
+                            .swiper-pagination {
+                                &.main_pagination  {
+                                    left: 50%; top: auto; transform: translate(-50%, 0); bottom: 30px;
+                                    display: flex; flex-direction:unset;
+                                    .swiper-pagination-bullet {
+                                        margin-bottom: 0;
+                                        margin-right: 20px;
+                                        &:first-child {margin-left: 0;}
+                                        &:last-child {margin-right: 0;}
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    // main_section_01
                     &.main_section_01 {
-                        .main_wrap {
-                            .section_title {
-                                padding-left: 5%; padding-right: 5%;
-                            }
-                            .business_tabcon {
-                                height: $business_height_767 ;
-                                .tabcon.swiper-container {
-                                    overflow: visible;
-                                    .business.swiper-wrapper {
-                                        .swiper-slide {
-
-                                            > a {
-                                                .boxwrap {
-                                                    // height: $business_height_767;
-            
-                                                    .ico {
-                                                        svg {
-                                                            height: 35px;
-                                                            margin-bottom: 20px;
-                                                        }
-
-                                                    }
-                                                    .ico_text {
-                                                    }
-                                                }
-                                            }
-                                        }
+                        .content_wrap {
+                            flex-direction: column; 
+                            > figure {
+                                position: relative;
+                                &:hover {
+                                    a.btn_01 {
+                                        transform: translate(-50%, -20px);
                                     }
                                 }
-                            }
-                        }
-                        
-                    }
-
-                    // main_section_03 
-                    &.main_section_03 {
-                        // padding: 80px 0;
-                        .main_wrap {
-                            > div {
-                                .text_wrap {}
-                                // default
-                                &.left_content {
-                                    
-                                    .content_wrap {
-                                        .input_box {
-                                            max-width: 100%;
-                                            width: 100%;
-                                            margin: 0;
-                                            padding: 10px 0;
-                                            &:nth-child(odd) {margin: 0;}
-                                            &.full_size {margin-left: 0; max-width: 100%;}
-                                            .text_02 {margin-top: 0;}
-                                            textarea, input { margin-left: 20px; }
-                                            label {vertical-align: top;}
-                                        }
-            
-                                        .submit_box {
-                                            @include marginTop-30();
-                                        }
-                                    }
+                                .text_01 {font-size: 18px; }
+                                .text_02 {
+                                    font-size: 14px;
+                                    margin-top: 10px;
                                 }
-            
-                                &.right_content {
-                                    &::after { width: 100px; height: 50px; }
-                                    .content_box {
-                                        height: auto; padding: 0;
-                                        @include marginTop-70();
-                                        &.box_01 {
-                                            .client_img {
-                                                overflow: auto;
-                                                margin-top: 40px;
-                                                a {
-                                                    max-width: 100px; max-height: 100px;
-                                                    img {
-                                                        width: 100%;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        &.box_02 {
-                                            padding: 0; border-top: none;
-                                            .table_rec {
-                                                @include marginTop-40();
-                                                padding-bottom: 20px;
-                                                a {
-                                                    p {
-                                                        font-size: 14px;
-                                                        &.table_text_01 {
-                                                        }
-                                                        &.table_text_02 {
-                                                            i {
-                                                                margin-left: 5px;
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        
-                    }
-        
-        
-        
-                }
-            }
-
-
-                
-            // SUB_PAGE
-            &.sub_page {
-                // sub_navi
-                #sub_navi {
-                    height: auto;
-                    .content_wrap {
-                        margin-top: 100px;
-                        padding: 0 2.5%;
-                        .text_wrap {
-                            .text_01 {
-                                @include font-40();
-                            }
-                            .text_02 {
-                                @include font-18();
-                            }
-                        }
-
-                        .bar_wrap {margin: 10px 0;}
-
-                        .link_wrap {
-                            font-size: 14px;
-                            margin-bottom: 20px;
-                            > a { 
-                                display: inline-block;
-                                margin: 10px 10px 0 0;
-                            }
-                        }
-
-                    }
-
-                    .background_point {display: none;}
-
-                }
-
-                .sub_section {
-                    padding: 0 2.5%;
-                    &.section_title {
-                        @include marginTop-100();
-                        .text_wrap {
-                            .text_01 { @include section-Title-01(); }
-                            .text_02 {
-                                @include section-Title-02();
-                            }
-                        }
-
-                    }
-                }
-
-                    
-                // tab_navi_section
-                .tab_navi_section {
-                    .person_tab {
-                        .text_wrap { @include font-18(); }
-                    }
-                }
-
-                
-                // product_tab
-                #product_tab {
-                    .product_tab_wrap {
-                        .text_wrap {
-                            > a {
-                                @include font-18();
-                                padding: 2px 10px;
-                                margin-bottom: 5px;
-                            }
-                        }
-                    }
-
-                }
-
-
-
-                // ABOUT sub_page
-                &.about {
-
-                    // 회사소개
-                    &#company {
-                        .sub_section {
-                            &.section_01 {
-                                @include marginTop-70();
-                                .content_wrap {
-                                    > figure {
-                                        .img_wrap {
-                                            height: 200px;
-                                        }
-                                        
-                                        figcaption {
-                                            width: 100%;
-                                            margin: 20px 0 0 0;
-                                            text-align: center;
-                                            .text_01 {
-                                                font-size: 22px;
-                                            }
-                                            .text_02 {
-                                                @include font-18();
-                                                margin-top: 30px;
-                                            }
-
-                                        }
-                                    }
-                                }
-                            }
-
-                            &.section_02 {
-                                @include marginTop-100();
-                                .content_wrap {
-                                    .text_wrap {
-                                        .text_01 {
-                                            font-size: 20px;
-                                        }
-                                    }
-
-                                    .box_wrap {
-                                        margin-top: 20px;
-                                        .box {
-                                            @include font-18();
-                                            width: 100%; height: 200px; padding: 20px 30px;
-                                            // .img_wrap {position: absolute; right: 30px; bottom: 20px;}
-                                        }
-                                    }
+                                a.btn_01 { 
+                                    position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 0);
+                                    margin-top: 20px;
+                                    font-size: 13px;
                                 }
                             }
                         }
                     }
+    
+                    // main_section_02
+                    &.main_section_02 {
+                        #point_circle {display: none;}
 
-                    // 연혁
-                    &#history {
-                        .section_01 {
-                            .content_wrap {
-                                @include marginTop-100();
-                                .swiper-pagination {
-
-                                    &.type {
-                                        display: none;
-                                    }
-
-                                    &.pagination_progress {
-                                        margin-bottom: 10px;
-                                        > span { padding-bottom: 10px; font-size: 15px;  }
-                                    }
-                                }
-
-                                .swiper-container {
-                                    .swiper-wrapper {
-
-                                        .swiper-slide {
-                                            .img_wrap {
-                                                text-align: center;
-                                                img {}
-                                            }
-
-                                            figcaption {
-                                                @include font-18();
-                                                margin-top: 20px;
-                                                .text_wrap {
-                                                    margin-top: 15px;
-                                                    flex-direction: column;
-                                                    > span {
-                                                        &.text_01 { 
-                                                            line-height: 1.5;
-                                                        }
-                                                        &.text_02 { 
-                                                            margin-left: 0;
-                                                            font-size: 14px;
-                                                            line-height: 1.3;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
+                        .content_wrap {
+                            .product_title {
+                                padding-top: 70px;
+                                .title_wrap {
+                                    .text_01 {font-size: 14px;}
+                                    .text_02 {
+                                        // margin-top: 10px;
+                                        font-size: 18px; 
                                     }
                                 }
                             }
-                        }
-                    }
-
-                    // 브랜드
-                    &#brand {
-                        .sub_section {
-                            &.section_01 {
-                                @include marginTop-70();
-                                .content_wrap {
-                                    > figure {
-                                        .img_wrap {
-                                            height: 225px;
-                                        }
-
-                                        figcaption {
-                                            .text_01 { font-size: 18px; }
-                                            .text_02 {
-                                                margin-top: 15px;
-                                                @include font-18(); 
-                                            }
-                                            .ico_wrap {
-                                                a {
-                                                    width: 40px; height: 40px; margin-right: 15px;
-                                                    svg {
-                                                        height: 20px;
-                                                    }
-                                                }
-                                            }
-                                        }
-
-                                    }
-
-                                }
-                            }
-                        }
-                    }
-
-                    
-                    // 협력사
-                    &#partner {
-                        .sub_section {
-                            &.section_01 {
-                                .content_wrap {
-                                    #partner_navi {
-                                        @include marginTop-70();
-                                        @include font-18();
-
-                                        a { margin-right: 10px; }
-                                    }
-
-                                    .swiper-container {
-
-                                        .swiper-wrapper {
-
-                                            .swiper-slide {
-                                                
-                                                .slide_box {
-                                                    padding: 15px; max-width: 100%; margin: 0 0 10px 0;
-                                                    &:nth-of-type(3n) {margin-right: 0;}
-
-                                                    .slide_head {
-                                                        cursor: pointer;
-                                                        .text_01 { font-size: 18px;}
-                                                        i {width: 10px; height: 10px;}
-                                                    }
-
-                                                    .slide_body {
-                                                        .text_01 {@include font-18();}
-                                                    }
-                                                }
-                                            }
-
-                                        }
-                                    }
-
-
-
-                                }
-
-                            }
-                        }
-
-                    }
-                    
-                    // 오시는길
-                    &#direction {
-                        .sub_section {
-                            &.section_01 {
-                                @include marginTop-70();
-                                .content_wrap {
-                                    > div {
-                                        &.box_wrap {
-                                            .slide_box {
-                                                padding: 15px; width: 100%; margin: 0 0 20px 0;
-                                                &:nth-of-type(3n) {margin-right: 0;}
-                                                &:nth-of-type(2n) {margin-right: 0;}
-
-
-                                                .slide_head {
-                                                    .text_01 { font-size: 18px;}
-                                                }
-                                                .slide_body {
-                                                    .text_01 { @include font-18(); }
-                                                }
-                                            }
-                                        }
-
-                                        &.map_wrap { margin-left: 0; height: 250px; }
-                                    }
-
-                                }
-                            }
-                        }
-                    }
-                    
-                    // 인재상
-                    &#person {
-                        .sub_section {
-                            &.section_01{
-                                @include marginTop-70();
-                            }
-
-                            &.section_02 {
-                                @include marginTop-70();
-                                .img_wrap {
-                                    figure {
-                                        .img_wrap {
-                                            display: none;
-                                            // background: url('../images/about/person_01.png')no-repeat center/cover;
-                                            // width: 100%; height: 350px;
-                                            // background-attachment: fixed;
-                                        }
-                                        figcaption {
-                                            position: static;
-                                            // left: 0; top: 0; transform: translateX(0);
-                                            // background-color: rgba($color: #fff, $alpha: .7);
-                                            // backdrop-filter: saturate(180%) blur(10px);
-                                            // width: 100%; height: 100%;
-                                            p {
-                                                background-color: transparent; 
-                                                &.text_01 { padding: 0; font-size: 24px; }
-                                                &.text_02 {
-                                                    margin-top: 30px; // font-size: 18px; 
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            &.section_03 {
-                                @include marginTop-100();
-                                .team {
-                                    &.swiper-container {
-                                        .swiper-wrapper {
-                                            justify-content: flex-start;
-                                            .swiper-slide {
-                                                width: 100px !important; height: 100px !important;
-                                                font-size: 18px;  margin: 0 10px 0 0;
-                                                &.margin_0 {margin: 0;}
-                                                &.big {
-                                                    width: 250px !important; height: 250px !important; border: 20px solid transparent; margin: 0 20px 0;
-                                                    font-size: 24px; 
-                                                    .logo_svg { }
-                                                    p {
-                                                        margin-top: 10px;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            &.section_04 {
-                                @include marginTop-100();
-                            }
-
-                            &.section_05 {
+    
+                            .product_content {
                                 margin-top: 20px;
-                                .team_info {
-                                    &.swiper-container {
-                                        .swiper-wrapper {
-                                            .swiper-slide {
-                                                figure {
-                                                    .img_wrap {}
-
-                                                    .table_wrap {
-                                                        margin-top:10px;
-                                                        // -webkit-overflow-scrolling: touch;
-                                                        overflow: auto;
-
-                                                        table {
-                                                            min-width: 800px;
-                                                            tr { font-size: 14px; }
-                                                            th {border-top: none; }
-                                                            td { padding: 15px; }
-                                                            thead { height: 50px;}
-                                                        }
-                                                    }
-                                                }
+                                .product_tab {
+                                    > ul {
+                                        li {
+                                            a {
+                                                width: 100px;
                                             }
                                         }
                                     }
+                                    
+                                    .arrow_wrap{ display: none; }
+                                }
+    
+                                .product_item {
+                                    margin-top: 20px;
+                                    .swiper-container {
+                                        .swiper-wrapper {
+                                            .swiper-slide {
+                                                .img_wrap {width: 175px; height: 175px;}
+                                                .text_wrap {
+                                                    margin-top: 10px;
+                                                    .text_01 {
+                                                        font-size: 14px;
+                                                    }
+                                                }
+    
+                                            }
+                                        }
+                                    }
+    
                                 }
                             }
-
-                            &.section_06 {
-                                @include marginTop-100();
-                                .person_info {
-                                    &.swiper-container {
-                                        overflow: hidden;
-                                        .swiper-wrapper {
-                                            .swiper-slide {
-                                                .inline_box {
-                                                    width: auto; height: auto; border: none;
-                                                    &:hover { border: none;}
-
-                                                    figure {
-
-                                                        img { height: 45px; }
-                                                        figcaption {
-                                                            @include font-18();
-                                                            .text_01 { margin-top: 15px; }
-                                                            .text_02 { margin-top: 5px; text-align: left; }
-                                                        }
-                                                    }
-                                                }
-                                            }
+    
+                        }
+    
+    
+    
+    
+                    }
+    
+                    // main_section_03
+                    &.main_section_03 {
+                        .content_wrap {
+                            flex-direction: column;
+                            .left_content {
+                                width: 100%; height: 50%;
+                            }
+                            .right_content {
+                                width: 100%; height: 50%;
+                                .text_wrap {
+                                    padding: 0 5%;
+                                    p {
+                                        &.text_01 {
+                                            font-size: 14px; 
+                                        }
+                                        &.text_02 {
+                                            margin-top: 10px; font-size: 18px; 
+                                            letter-spacing: -1px;
                                         }
                                     }
+                                    .text_03 {margin-top: 20px;}
                                 }
                             }
                         }
+                        
+    
                     }
-
-                }
-
-                
-                // CS CENTER
-                &.cscenter {
-                    &#as {
-                        .sub_section {
-                            &.section_01 {
-                                @include marginTop-70();
-                                .content_wrap {
-                                    .input_wrap  {
-                                        .input_box {
+    
+                    &.main_section_04 {
+                        .content_wrap {
+                            > div {
+                                &.left_content {
+                                    height: 33%;
+                                    .location {}
+    
+                                    #location_tab {
+                                        height: 40px;
+                                        .tab_title {
                                             width: 100%; 
-                                            &.margin {margin-right: 0;}
-                                            // &.full_size {width: 100%; max-width:100%; margin-left: 0;}
-                                            // &:nth-child(odd) {margin-left: 0;}
-                                            &.textarea_box {  height: 200px; }
-
-                                        }
-
-                                        .submit_box {
-                                            &.box_01 { @include marginTop-70(); }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                    }
-                }
-
-                
-                // Product
-                &.product {
-                    &#product_list {
-                        .sub_section {
-                            &.section_01 { margin: 70px auto 40px; }
-
-                            &.section_02 {
-                                .product_wrap {
-                                    .product_item {
-                                        width: calc( 50% - 10px );
-                                        margin: 0 20px 40px 0;
-                                        &:nth-child(3n) { margin: 0 20px 40px 0;}
-                                        &:nth-child(2n) { margin: 0 0 40px 0;}
-
-                                        .thumb {
-                                            height: 175px;
-                                        }
-                                        .info {
-                                            padding: 15px 10px;
+                                            padding: 0 10px;
+                                            display: flex; flex-direction: row;
                                             p {
-                                                &.text_01 { font-size: 18px; }
-                                                &.text_02 { margin-top: 5px; font-size: 14px;}
-                                                &.text_03 { margin-top: 10px; font-size: 14px;}
-                                                &.more_btn {
-                                                    margin: 30px auto 0;
+                                                margin-bottom: 0; font-size: 14px;
+                                                margin-right: 15px;
+                                                &:last-child { margin-right: 0; }
+                                                ion-icon { margin-left: 5px; width: 10px; height: 10px;}
+                                            }
+                                        }
+    
+                                        .tab_detail {
+                                            display: none;
+                                            width: 100%;
+                                            padding-left: 20px;
+                                            .detail_wrap {
+                                                p {
                                                     font-size: 14px;
-                                                    width: 100px; height: 30px;
+                                                    ion-icon {
+                                                        width: 15px; height: 15px;
+                                                        // margin-right: 10px;
+                                                    }
                                                 }
                                             }
-                                        }
-                                    }
-                                }
                                             
-                                #table_footer {
-                                    @include marginTop-100();
-                                    .num_box {
-                                        a { 
-                                            margin: 0 10px;
                                         }
                                     }
-
-                              
                                 }
-                            }
-                        }
-                    }
-
-
-                    &#product_detail {
-                        .sub_section {
-                            
-                            // product_header
-                            &.section_01 { 
-                                @include marginTop-100();
-                                .product_header {
-                                    .product_wrap {
-                                        .product_img {
-                                            .product_thum_wrap {
-                                                margin: 0 auto;
-                                                .product_thum {
-                                                    max-height: 250px; height: 250px; width: 250px;
-                                                    margin: 0 auto;
-                                                    .thum {
-                                                        img {}
-                                                    }
-                                                }
-                                                .product_small_wrap {
-                                                    overflow: auto;
-                                                    .product_small {
-                                                        justify-content: space-around;
-                                                        min-width: 500px;
-                                                        .small {
-                                                            max-width: 100px; max-height: 100px;
-                                                            width: 100px; height: 100px;
-                                                            img {}
-                                                        }
-                                                    }
-                                                }
-                                                
-                                            }
-                                        }
-                
-                                        .product_info {
-                                            margin-left: 0; 
+    
+                                &.right_content {
+                                    flex-direction: column;
+                                    height: 67%;
+                                    > div {
+                                        height: 50%;
+                                        padding: 0 5%;
+                                        &.box_01 {
                                             .text_wrap {
-                                                &.wrap_01 {
-                                                    padding-bottom: 30px;
-                                                    > span {
-                                                        &.text_01 { 
-                                                            margin-top: 30px;
-                                                            font-size: 16px;
-                                                        }
-                                                        &.text_02 { 
-                                                            margin-top: 15px;
-                                                            font-size: 24px; line-height: 1.3;
-                                                        }
-                                                        &.text_03 { 
-                                                            margin-top: 5px;
-                                                            font-size: 16px;
-                                                        }
-                                                    } 
-                                                }
-    
-                                                &.wrap_02 {
-                                                    > span {
-                                                        &.text_01 {
-                                                            @include font-18(); 
-                                                            margin-top: 30px;
-                                                        }
-                                                    }
-                                                }
-    
-                                                &.wrap_03 {
-                                                    width: 100%; 
-                                                    margin-top: 20px;
-                                                    a {
-                                                        @include font-18(); height: 50px;
-                                                    }
-                                                }
+                                                .text_01 {font-size: 18px;}
+                                                .text_02 {margin-top: 5px;font-size: 14px;}
+                                                .text_03 {margin-top: 20px; }
                                             }
-                            
                                         }
-                                    }
-                
-                                }
-                            }
     
-    
-                            // product_table
-                            &.section_02 {
-                                @include marginTop-100();
-                                .product_table_title { font-size: 20px; }
+                                        &.box_02 {
+                                            .table_tit {
+                                            }
 
-                                .product_table_wrap {
-                                    margin-top: 20px;
-                                    padding: 30px;
-                                    overflow: auto;
-                                    .product_table {
-                                        min-width: 700px;
-                                        tbody {
-                                            > tr {
-                                                font-size: 14px;
-                                                th { max-width: 200px; }
-                                                td { padding: 7px 0;}
+                                            table {
+                                                margin-top: 10px;
+                                                tbody {
+                                                    tr {
+                                                        td {
+                                                            padding: 5px 0;
+                                                            font-size: 14px;
+                                                            // &.table_title { width: 80%; }
+                                                            &.table_data { font-size: 12px;; }
+                                                        }
+                                                    }
+                                                }
                                             }
+    
                                         }
                                     }
-    
-                                    .table_state_btn {
-                                        @include font-18();
-                                        &.active {margin-top: 30px;}
-                                        ion-icon {
-                                            width: 20px; height: 20px;
-                                        }
-                                    }
-    
+                                    
                                 }
     
-                                .product_more {
-                                    margin-top: 20px;
-                                }
                             }
-    
                         }
-            
-    
                     }
                 }
-                
-
-
-
-
-
             }
+
+                
 
 
             
@@ -2350,67 +1939,43 @@ $color-100 : #f5821f;
 
     // **************************************** header, footer ****************************************
     body {
-        main {
-            &#main_page {
-                .main_section {
-                    &.main_visual {
-                        .mv_wrap {
-                            .mv {
             
-                                figcaption {
-                                    .mv_text {
-                                        .text_01 {
-                                            font-size: 36px;
-                                        }
-            
-                                        .text_02 {}
-            
-                                        .btn_white_border {margin-top: 40px;}
-                                        .swiper-pagination {
-                                            .swiper-pagination-bullet {
-                                                margin: 0 0 20px 10px;
-                                            }
-                                        }
-                                    }
+        #footer {
+            padding: 40px 5%;
+            margin-top: 60px;
+            .footer_wrap {
+                .footer_section_01 {
+                    .footer_right {
+                        order: 1;
+                    }
+                    .footer_left {
+                        > p {
+                            margin: 0 20px 10px 0;
+                            &:last-child { margin: 0 20px 0 0; }
+                            span {
+                                &.br {
+                                    background-color: none; height: auto;
+                                    display: block;
                                 }
-            
                             }
                         }
                     }
-            
+
                 }
+
+                .footer_section_02 {
+                    // margin-top:20px; padding-top: 20px;
+                    .footer_copy {
+                        p {  font-size: 12px; text-align: center;}
+                    }
+                }
+                
             }
         }
     }
     // **************************************** header, footer ****************************************
 
 
-    
-    body {
-    
-        main {
-            // SUB_PAGE
-            &.sub_page {
-    
-                // ABOUT sub_page
-                &.about {
-
-                    // 회사소개
-                    &#company {
-                        .sub_section {
-                            &.section_01 {
-                                .content_wrap {
-                                    > figure {
-                                        .img_wrap { display: none; }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
     
 
 
