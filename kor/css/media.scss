@@ -1660,6 +1660,7 @@ $color-200 : #98afc7;
             // INDEX MAIN
             &#main_page {
                 .main_section {
+                    // height: calc( 100vh - $header-height_767 );
                     &:not(:first-child) {}
     
                     &.main_visual {
