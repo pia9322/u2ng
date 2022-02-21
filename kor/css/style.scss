@@ -4,6 +4,8 @@
 $search-time: 800ms;
 $reset-time: 150ms;
 $color-100 : #0a4b90;
+$color-200 : #98afc7;
+
 $border-hegith : 185px;
 
 // ====================================default mixin====================================
@@ -22,6 +24,7 @@ $border-hegith : 185px;
 
 
 // Margin
+@mixin fullsize {width: 100%; height: 100%;}
 @mixin marginTop-120 {margin-top: 120px;}
 @mixin marginTop-100 {margin-top: 100px;}
 @mixin marginTop-70 {margin-top: 70px;}
@@ -298,11 +301,11 @@ body {
         &.box_01  {
             width: 100%; text-align: center;
             button {
+                @include font-18();
                 cursor: pointer;
                 width: 160px; height: 60px;
                 background: transparent;
                 border-radius: 50px; border: 1px solid #000; color: #000;
-                font-size: 18px; letter-spacing: -0.72px;
                 @include transition(.15s);
                 &:hover, &:active {
                     background: $color-100; color: #fff;
@@ -429,7 +432,7 @@ body {
                 >li {
                     @include transition(.3s);
                     position: relative;
-                    font-size: 18px;
+                    @include font-18();
                     margin-left: 60px;
 
                     // &::after {
@@ -466,8 +469,9 @@ body {
                             &:last-child {margin-bottom: 0}
                             a {
                                 @include transition(.15s);
+                                @include font-18();
                                 white-space: nowrap;
-                                font-size: 18px; font-weight: 400; color: #a2acb7; 
+                                font-weight: 400; color: #a2acb7; 
                                 &:hover { color: #fff; font-weight: bold;}
                             }
                         }
@@ -734,9 +738,8 @@ body {
         // INDEX MAIN
         &#main_page {
             .main_section {
-                width: 100%; 
+                width: 100%; height: 100vh;
                 /* height: 100%; */
-                height: 100vh;
                 overflow: hidden;
 
 
@@ -774,7 +777,8 @@ body {
                                         }
     
                                         &.text_02 {
-                                            margin-top: 20px; font-size: 18px; letter-spacing: -1.6px;
+                                            @include font-18();
+                                            margin-top: 20px; 
                                             color: #ddd;
                                         }
     
@@ -842,8 +846,9 @@ body {
 
                             .text_01 {font-size: 4rem; font-weight: bold; line-height: 1.15; letter-spacing: -3.2px;}
                             .text_02 {
+                                @include font-18();
                                 margin-top: 20px;
-                                font-size: 18px;  line-height: 1.56; letter-spacing: -1.44px; color: #ddd;
+                                line-height: 1.56; color: #ddd;
                             }
                             a.btn_01 { 
                                 @include transition(.5s);
@@ -861,25 +866,40 @@ body {
                     max-width: 1920px; margin: 0 auto;
 
                     #point_circle {
-                        position: absolute; right: -50%; top: -20%; transform: translateX(-50%);
+                        position: absolute; right: -40%; top: -20%; transform: translateX(-50%);
                         width: 1000px; height: 1000px;
                         .circle {
+                            animation: rotateinfin 5s infinite linear;
+                            transform-origin: center;
                             position: absolute; left: 0; top: 0;
-                            width: 100%; height: 100%;
-                            border: 1px solid #ddd; border-radius: 100%;
+                            // border: 1px solid #ddd; border-radius: 100%;
                             
-                            &::after {
-                                content: 'asdasd';
-                                position: absolute; left: 0; top:0;
-                                // background: $color-100;
-                                width: 100%; height: 100%; border-radius: 100%;
-                                animation: rotateinfin 10s infinite linear;
-                            }
+                            // &::after {
+                            //     content: 'asdasd';
+                            //     position: absolute; left: 0; top:0;
+                            //     // background: $color-100;
+                            //     width: 100%; height: 100%; border-radius: 100%;
+                            //     animation: rotateinfin 10s infinite linear;
+                            // }
 
-                            &.circle_01 { border: 1px solid $color-100; } 
-                            &.circle_02 { border: 4px dotted #ddd; transform: translate(100px, 10px) } 
-                            &.circle_03 { border: 2px dashed #ddd; transform: translate(150px, -200px)} 
-                            &.circle_04 { transform: translate(200px, 100px)} 
+                            // &.circle_01 { border: 1px solid $color-100; } 
+                            &.circle_02 {
+                                margin: 70px 0 0 20px;
+                                animation: rotateinfin 1s infinite linear;
+                            } 
+                            &.circle_03 {
+                                margin: -10px 0 0 100px;
+                                animation: rotateinfin 8s infinite linear;
+                            } 
+
+                            &.circle_04 {
+                                margin: -200px 0 0 60px;
+                                animation: rotateinfin 6s infinite linear;
+                            } 
+                            &.circle_05 {
+                                margin: -150px 0 0 400px;
+                                animation: rotateinfin 1s infinite linear;
+                            } 
 
                         }
                     }
@@ -887,7 +907,7 @@ body {
                         @include fixed-layout();
                         
                         .product_title {
-                            padding-top: 240px;
+                            padding-top: 140px;
                             .title_wrap {
                                 .text_01 {
                                     @include font-R();
@@ -959,7 +979,7 @@ body {
                                                 margin-top: 20px;
                                                 text-align: center;
                                                 .text_01 {
-                                                    font-size: 18px;
+                                                    @include font-18();
                                                 }
                                             }
 
@@ -979,1292 +999,183 @@ body {
 
                 // main_section_03
                 &.main_section_03 {
-                    display: flex;
-                    @include fixed-layout();
-                    // margin-bottom: 100px;
-                    // padding: 100px 0;
-                    .main_wrap {
+                    .content_wrap {
+                        @include fullsize();
+                        display: flex;
+                        .left_content {
+                            width: 66%;
+                            background: url('../images/main/img_02_01.png')no-repeat center/cover;
+                        }
+                        .right_content {
+                            width: 34%;
+                            background-image: linear-gradient(147deg, #0a4b90 0%, #5c8fd2 100%);
+                            .text_wrap {
+                                @include fullsize();
+                                display: flex; justify-content: center;
+                                flex-direction: column;
+                                padding-left: 90px;
+                                p {
+                                    color: #fff;
+                                    &.text_01 {
+                                        @include font-R();
+                                        font-size: 24px; font-weight: bold;
+                                    }
+                                    &.text_02 {
+                                        margin-top: 20px;
+                                        font-size: 38px; font-weight: 300; line-height: 1.37; letter-spacing: -3.04px;
+                                    }
+                                }
+                                .text_03 {
+                                    margin-top: 60px;
+                                    border: 1px solid #fff;
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                    
+
+                }
+
+                &.main_section_04 {
+                    .content_wrap {
+                        @include fullsize();
                         display: flex;
                         > div {
                             width: 50%;
-                            .text_wrap {
-                                >span {display: block;}
-                                >.text_02 {margin-top: 20px;}
-                            }
-
-                            .text_01 {font-size: 4.6rem;font-weight: bold;line-height: 1.2;letter-spacing: -1.84px; color: #333;}
-                            .text_02 {font-size: 18px;line-height: 1.33;letter-spacing: -0.72px; color: #666;}
-                            .margin0 {margin-top: 0;}
-                            // default
                             &.left_content {
+                                position: relative;
                                 border-right: 1px solid #ddd;
-                                .content_wrap {
-                                    margin-top: 60px;
-                                    display: flex; flex-wrap: wrap;
-                                    .input_box {
-                                        position: relative;
-                                        display: flex; align-items: center;
-                                        width: 50%; max-width: 320px;
-                                        padding: 28px 0 20px;
-                                        border-bottom: 1px solid #ddd;
-                                        &.full_size {width: 100%; max-width: 700px; margin-left: 0;}
-                                        &:nth-child(odd) {margin-left: 0;}
+                                .location {
+                                    display: none;
+                                    @include fullsize();
+                                    // active
+                                    &.active { display: block;}
+                                }
 
-                                        #search_box {
+                                #location_tab {
+                                    position: absolute; left: 0; bottom: 0;
+                                    width: 100%; height: 140px;
+                                    display: flex;
+
+                                    .tab_title {
+                                        @include fullsize();
+                                        @include flexCenter();
+                                        flex-direction: column;
+                                        width: 260px; height: 100%;
+                                        background-color: $color-100;
+                                        p {
+                                            @include transition(.15s);
+                                            margin-bottom: 15px;
                                             cursor: pointer;
-                                            position: absolute; top: calc(50% - 4px); right: 0; transform: translateY(-50%);
+                                            display: flex; align-items: center;
+                                            font-size: 24px; font-weight: 500; line-height: 1.17; color: $color-200;
+                                            &.active, &:hover { color: #fff; }
+                                            &:last-child {margin-bottom: 0;}
+
                                             ion-icon {
-                                                width: 30px; height: 30px;
-                                                color: #000;
+                                                margin-left: 28px;
+                                                width: 20px; height: 20px;
                                             }
-                                            // media
-                                            @media (max-width: 1000px) {
-                                                &#search_box {
-                                                    top: 50%;
-                                                    ion-icon {
-                                                        width: 20px; height: 20px;
-                                                        color: #000;
-                                                    }
-                                                }
-                                            }
-                                            // media
-
+                                            
                                         }
-                                        label {
-                                            vertical-align: top;
-                                            display: inline-block; width: 50px;
-
-                                        }
-                                        input, textarea {
-                                            margin-left: 40px;
-                                            border: none;
-                                            &::placeholder {color: #aaa;}
-                                        }
-                                        textarea {width: 70%;}
                                     }
 
-                                    .submit_box{
-                                        &.box_01 {
-                                            @include marginTop-30();
+                                    .tab_detail {
+                                        display: flex; justify-content: center; flex-direction: column;
+                                        width: 700px;
+                                        padding-left: 60px;
+                                        background-color: #fff;
+                                        .detail_wrap {
+                                            display: none;
+
+                                            // active
+                                            &.active {  display: block;}
+                                            p {
+                                                display: flex; align-items: center;
+                                                @include font-18();
+                                                line-height: 1.44;  color: #666;
+                                                margin-bottom: 8px;
+                                                &:last-child {margin-bottom: 0;}
+                                                ion-icon {
+                                                    width: 20px; height: 25px;
+                                                    color: $color-100;
+                                                    margin-right: 10px;
+                                                }
+                                            }
                                         }
+                                        
                                     }
                                 }
                             }
 
                             &.right_content {
-                                position: relative;
-                                &::after {
-                                    content: '';
-                                    position: absolute; right: 0; bottom: 0;
-                                    width: 220px; height: 110px;
-                                    background: url('../images/ico/logo.svg')no-repeat center/cover;
-                                    opacity: .12;
-                                }
-                                .content_box {
-                                    height: 100%;
-                                    padding: 0 0 70px 70px;
+                                > div {
+                                    height: 50%;
+                                    padding: 0 80px;
+                                    &.box_01 {
+                                        background: url('../images/main/img_03_01.png')no-repeat center/cover;
+                                        .text_wrap {
+                                            display: flex; justify-content: center; flex-direction: column;
+                                            height: 100%;
+                                            .text_01 {
+                                                font-size: 24px; font-weight: 600; letter-spacing: -1.92px; color: #fff;
+                                            }
+                                            .text_02 {
+                                                margin-top: 10px;
+                                                @include font-18(); line-height: 1.44; letter-spacing: -1.44px; color: #ddd;
+                                            }
+                                            .text_03 {
+                                                margin-top: 60px;
+                                                background-color: transparent;
+                                                border: 1px solid #fff;
+                                            }
+                                        }
+                                    }
 
-                                    // &.box_01 {
-                                    //     .client_img {
-                                    //         margin-top: 60px;
-                                    //         display: flex;
-
-                                    //         a {
-                                    //             border: 1px solid transparent;
-                                    //             @include transition(.15s);
-                                    //             // hover, active
-                                    //             &:hover {
-                                    //                 border: 1px solid $color-100;
-                                    //             }
-                                    //         }
-                                    //     }
-                                    // }
                                     &.box_02 {
-                                        padding: 70px;
-                                        // border-top: 1px solid #ddd;
-                                        
-
-                                        .table_rec {
-                                            margin-top: 60px;
-                                            padding-bottom: 25px; border-bottom: 1px solid #ddd;
-                                            @include transition(.15s);
-                                            &:hover, &:active {
-                                                border-bottom: 1px solid $color-100;
-                                            } 
-                                            > a {
-                                                display: flex; justify-content: space-between; align-items: center;
-                                                &:not(:first-child) {margin-top: 15px;}
-                                                p {
-                                                    font-size: 18px; line-height: 1.33; letter-spacing: -0.72px;
-                                                    @include transition(.15s);
-                                                    &.table_text_01 {
-                                                        color: #333;
-                                                    }
-                                                    &.table_text_02 {
-                                                        @include font-M();
-                                                        color: #666;
-                                                        i {
-                                                            @include transition(.3s);
-                                                            margin-left: 13px;
+                                        table {
+                                            @include fullsize();
+                                            display: flex; justify-content: center; flex-direction: column;
+                                            caption {
+                                                font-size: 24px; font-weight: bold; letter-spacing: -1.92px; color: #222;
+                                                text-align: left;
+                                                display: flex; justify-content: space-between;
+                                                a {
+                                                    &:hover {
+                                                        ion-icon {
+                                                            transform: rotate(90deg);
                                                         }
                                                     }
+                                                    ion-icon {
+                                                        @include transition(.15s);
+                                                        width: 20px; height: 20px;
+                                                        color: #222;
+                                                    }     
                                                 }
-                                                &:hover, &:active {
-                                                    p {
-                                                        &.table_text_01 {color: $color-100;}
-                                                        &.table_text_02 {color: #000;}
-                                                        i {
-                                                            animation: dotscolor 2s linear infinite;
-                                                        }
+                                            }
+                                            tbody {
+                                                margin-top: 40px;
+                                                tr {
+                                                    td {
+                                                        &.table_title { width: 80%; }
+                                                        &.table_data { width: 20%; }
                                                     }
                                                 }
                                             }
-
-
                                         }
+
                                     }
                                 }
+                                
                             }
+
                         }
                     }
-
                 }
             }
 
             #footer { margin-top: 0; }
-        }
-
-
-        // SUB_PAGE
-        &.sub_page {
-            // sub_navi
-            #sub_navi {
-                display: flex; align-items: flex-end;
-                position: relative;
-                overflow: hidden;
-                height: 300px;
-                background-image: linear-gradient(to top, #f9f9f9, #fff);
-
-                .content_wrap {
-                    @include fixed-layout();
-                    position: relative; z-index: 1;
-
-                    .text_wrap {
-                        display: flex; align-items: flex-end; line-height: 1;
-                        .text_01 {
-                            @include font-M(); @include font-40(); font-weight: 800;
-                        }
-                        .text_02 {
-                            @include font-18();
-                            margin-left: 20px;
-                        }
-                    }
-
-                    .bar_wrap {
-                        margin: 30px 0;
-                        width: 20px; height: 4px;
-                                background: $color-100;
-
-                    }
-
-                    .link_wrap {
-                        @include font-18();
-                        margin-bottom: 30px;
-                        > a {
-                            margin-right: 40px;
-                            @include transition(.15s);
-
-                            // active, hover
-                            &.active, &:hover {
-                                color: $color-100;
-                                font-weight: bold;
-                            }
-                        }
-                    }
-
-                }
-
-                .background_point {
-                    position: absolute; right: -65px; bottom: 0;
-                    p {
-                        &.point_text {
-                            @include font-M();
-                            font-size: 19rem; font-weight: 900; color: #f1f1f1; line-height: .75;
-                        }
-                    }
-                }
-
-            }
-
-            .sub_section {
-                @include fixed-layout();
-                &.section_title {
-                    @include marginTop-120();
-                    .text_wrap {
-                        text-align: center;
-                        .text_01 {
-                            @include section-Title-01();
-                        }
-                        .text_02 {
-                            @include section-Title-02();
-                            margin-top: 22px;
-                        }
-                    }
-
-                }
-            }
-
-            // tab_navi_section
-            .tab_navi_section {
-                .person_tab {
-                    .text_wrap {
-                        @include font-18();
-                        position: relative; text-align: left;
-                        a, span {
-                            position: relative;
-                            width: auto; height: auto;
-                            background: transparent; border: none;
-                            margin-right: 35px;
-                            color: #666;
-                            @include transition(.15s);
-
-                            &::after {
-                                @include absolute-y(0, 100%);
-                                content: '';
-                                width: 0; height: 2px;
-                                margin-top: 5px;
-                                background-color: $color-100;
-                                @include transition(.3s);
-                            }
-                            &.active, &:hover, &.swiper-pagination-bullet-active {
-                                color: $color-100;
-                                &::after {width: 100%;}
-                            }
-                        }
-                    }
-                    &.tab_01 {}
-                }
-
-            }
-
-            #product_tab {
-                .product_tab_wrap {
-                    display: flex; justify-content: center;
-                    .text_wrap {
-                        display: flex; flex-wrap: wrap;
-                        > a {
-                            @include flexCenter();
-                            @include font-18(); font-weight: 500;
-                            width: 200px; height: 50px; border: 1px solid #ddd;
-                            &.active {
-                                color: $color-100; font-weight: bold;
-                            }
-                        }
-                    }
-                }
-
-            }
-
-
-
-            // ABOUT sub_page
-            &.about {
-
-                // 회사소개
-                &#company {
-                    .sub_section {
-                        &.section_01 {
-                            @include marginTop-70();
-                            .content_wrap {
-                                > figure {
-                                    display: flex; align-items: center;
-
-                                    figcaption {
-                                        margin-left: 110px;
-                                        .text_01 {
-                                            font-size: 4.8rem; font-weight: 300; line-height: 1.33; letter-spacing: -1.92px;
-                                            em {font-weight: normal;}
-                                        }
-                                        .text_02 {
-                                            @include font-18();
-                                            margin-top: 60px;
-                                            font-weight: 300; line-height: 1.67; color: #666;
-                                        }
-
-                                    }
-                                }
-                            }
-                        }
-
-                        &.section_02 {
-                            @include marginTop-100();
-                            .content_wrap {
-                                .text_wrap {
-                                    .text_01 {
-                                        font-size: 24px;
-                                        font-weight: bold;
-                                        font-stretch: normal;
-                                        font-style: normal;
-                                        line-height: 1.25;
-                                        letter-spacing: -0.96px;
-                                    }
-                                }
-
-                                .box_wrap {
-                                    margin-top: 40px;
-                                    display: flex; flex-wrap: wrap;
-                                    .box {
-                                        @include font-18();
-                                        position: relative;
-                                        margin-right: 25px;
-                                        width: 350px; height: 260px;
-                                        padding: 50px 40px 30px 40px;
-                                        background: #f4f4f4;
-                                        color: #666;
-                                        &:last-child {margin-right: 0;}
-
-                                        .text_01 {@include font-M();}
-                                        .text_02 { margin-top: 20px; color: $color-100;}
-                                        .text_03 { margin-top: 10px;}
-                                        .img_wrap {position: absolute; right: 30px; bottom: 20px;}
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                // 연혁
-                &#history {
-                    .section_01 {
-                        .content_wrap {
-                            margin-top: 100px;
-                            display: flex; justify-content: space-between;
-
-                            .swiper-pagination {
-                                &.type {
-                                    position: static;
-                                    > span {
-                                        @include transition(.15s);
-                                        margin-bottom: 60px;
-                                        width: auto; height: auto;
-                                        position: relative; display: block; background: none;
-                                        font-size: 59px; font-weight: 300; letter-spacing: -2.36px; color: #ddd; line-height: 1;
-                                        &:last-child {margin-bottom: 0;}
-
-                                        &::after {
-                                            content: '';
-                                            position: absolute; left: 0; bottom: -10px;
-                                            width: 0; height: 25px;
-                                            background: rgba($color: #f5821f, $alpha: .1);
-                                            @include transition(.3s);
-                                        }
-                                        &.swiper-pagination-bullet-active {
-                                            color: $color-100;  font-weight: 500;
-                                            &::after {
-                                                width: 100%;
-                                            }
-
-                                        }
-                                    }
-                                }
-                                &.pagination_progress {
-                                    position: static;
-                                    display: flex;
-                                    margin-bottom: 40px;
-                                    > span {
-                                        width: 100%; height: auto;
-                                        margin: 0; border-radius: 0;
-                                        background: #fff; border-bottom: 2px solid #ddd; padding-bottom: 20px;
-                                        @include font-M(); font-size: 24px; font-weight: bold; color: #fff;
-                                        @include transition(.3s);
-                                        &.swiper-pagination-bullet-active {
-                                            border-bottom: 2px solid $color-100; color: $color-100;
-                                        }
-                                    }
-                                }
-                            }
-
-                            .swiper-container {
-                                max-width: 1100px;
-                                margin: 0;
-
-                                .swiper-wrapper {
-
-                                    .swiper-slide {
-                                        .img_wrap {
-                                            img {}
-                                        }
-
-                                        figcaption {
-                                            @include font-18();
-                                            line-height: 2.22;
-                                            margin-top: 60px;
-                                            .text_wrap {
-                                                display: flex;
-                                                > span {
-                                                    &.text_01 {
-                                                        @include font-M();
-                                                        width: 73px;
-                                                        font-weight: bold; color: $color-100;
-                                                    }
-                                                    &.text_02 {
-                                                        margin-left: 60px;
-                                                        color: #666;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                    }
-
-                }
-
-                // 브랜드
-                &#brand {
-                    .sub_section {
-                        &.section_01 {
-                            @include marginTop-70();
-                            .content_wrap {
-                                > figure {
-                                    display: flex; align-items: center;
-                                    margin-bottom: 80px;
-                                    &:last-child {margin-bottom: 0;}
-
-                                    .img_wrap {
-                                        img {}
-                                    }
-
-                                    figcaption {
-                                        margin-left: 60px;
-                                        .text_01 {
-                                            font-size: 24px; font-weight: bold; line-height: 1; letter-spacing: -0.96px;
-                                        }
-                                        .text_02 {
-                                            margin-top: 40px;
-                                            @include font-18(); font-weight: 300; letter-spacing: -0.72px; color: #666;
-                                        }
-                                        .ico_wrap {
-                                            margin-top: 40px;
-                                            display: flex; align-items: center;
-                                            a {
-                                                @include flexCenter();
-                                                @include transition(.15s);
-                                                width: 60px; height: 60px;
-                                                background-color: #f4f4f4; border-radius: 100%;
-                                                margin-right: 20px;
-                                                &:last-child {margin-right: 0;}
-                                                svg {
-                                                    max-width: 35px; height: 35px;
-                                                    path {
-                                                        fill: #aaa;
-                                                    }
-                                                }
-                                                &:hover {
-                                                    background-color: $color-100;
-                                                    svg {
-                                                        path {
-                                                            fill: #fff;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-
-                                }
-
-                            }
-                        }
-                    }
-                }
-
-                // 협력사
-                &#partner {
-                    .sub_section {
-                        &.section_01 {
-                            .content_wrap {
-                                #partner_navi {
-                                    @include marginTop-70();
-                                    @include font-18();
-                                    font-weight: 500; color: #666;
-                                    a {
-                                        margin-right: 35px;
-                                        position: relative;
-                                        @include transition(.15s);
-                                        &::after {
-                                            content: '';
-                                            position: absolute; left: 0; bottom: -5px;
-                                            background: $color-100;
-                                            @include transition(.15s);
-                                            width: 0; height: 2px;
-                                        }
-
-                                        &:last-child {margin-right: 0;}
-                                        &.active, &:hover {
-                                            color: $color-100;
-
-                                            &::after {
-                                                width: 100%;
-                                            }
-                                        }
-                                    }
-
-                                }
-
-                                .swiper-container {
-                                    margin-top: 30px;
-                                    .swiper-wrapper {
-
-                                        .swiper-slide {
-                                            display: none;
-
-                                            &.active {
-                                                display: block;
-                                            }
-
-                                            .slide_box {
-                                                display: inline-block;
-                                                border: 1px solid #ddd;
-                                                padding: 30px;
-                                                max-width: 480px; width: 100%;
-                                                margin: 0 17px 30px 0;
-                                                &:nth-of-type(3n) {margin-right: 0;}
-
-                                                &.active {
-                                                    .slide_head {
-                                                        i {
-                                                            span {
-                                                                &:nth-child(2){
-                                                                    top: calc(50% + -1px);
-                                                                    transform: rotate(90deg);
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-
-                                                    .slide_body {
-                                                        display: flex;
-                                                    }
-                                                }
-                                                .slide_head {
-                                                    display: flex; align-items: center; justify-content: space-between;
-                                                    cursor: pointer;
-                                                    .text_01 { font-size: 24px; font-weight: bold; line-height: 1.25; letter-spacing: -0.96px; }
-                                                    i {
-                                                        display: flex;
-                                                        position: relative;
-                                                        width: 20px; height: 20px;
-                                                        span {
-                                                            @include absolute-y(0, 50%);
-                                                            @include transition(.15s);
-                                                            display: flex;
-                                                            width: 100%; height: 2px; background-color: #000;
-                                                        }
-                                                    }
-
-                                                }
-                                                .slide_body {
-                                                    margin-top: 20px;
-                                                    display: none; align-items: center; justify-content: space-between;
-                                                    .text_01 {
-                                                        @include font-18();
-                                                        font-weight: 300; line-height: 1.33; color: #666;
-                                                        em {display: block;}
-                                                    }
-
-                                                    .homepage_ico {
-                                                        a {
-                                                            @include transition(.15s);
-                                                            &:hover {
-                                                                opacity: .5;
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-
-                                    }
-                                }
-
-
-
-                            }
-
-                        }
-                    }
-
-                }
-
-                // 오시는길
-                &#direction {
-                    .sub_section {
-                        &.section_01 {
-                            @include marginTop-70();
-                            .content_wrap {
-                                display: flex;
-                                > div {
-                                    &.box_wrap {
-                                        .slide_box {
-                                            width: 680px;
-                                            border: 1px solid #ddd;
-                                            padding: 30px;
-                                            margin: 0 0 20px 0;
-                                            &:nth-of-type(3n) {margin-right: 0;}
-
-                                            &.active {
-                                                .slide_head {
-                                                    i {
-                                                        span {
-                                                            &:nth-child(2){
-                                                                top: calc(50% + -1px);
-                                                                transform: rotate(90deg);
-                                                            }
-                                                        }
-                                                    }
-                                                }
-
-                                                .slide_body {
-                                                    display: flex;
-                                                }
-                                            }
-                                            .slide_head {
-                                                display: flex; align-items: center; justify-content: space-between;
-                                                cursor: pointer;
-                                                .text_01 { font-size: 24px; font-weight: bold; line-height: 1.25; letter-spacing: -0.96px; }
-                                                i {
-                                                    display: flex;
-                                                    position: relative;
-                                                    width: 20px; height: 20px;
-                                                    span {
-                                                        @include absolute-y(0, 50%);
-                                                        @include transition(.15s);
-                                                        display: flex;
-                                                        width: 100%; height: 2px; background-color: #000;
-                                                    }
-                                                }
-
-                                            }
-                                            .slide_body {
-                                                margin-top: 20px;
-                                                display: none; align-items: center; justify-content: space-between;
-                                                .text_01 {
-                                                    @include font-18();
-                                                    font-weight: 300; line-height: 1.33; color: #666;
-                                                    em {
-                                                        display: block;
-                                                        ion-icon {
-                                                            width: 15px;height: 15px; color: $color-100;
-                                                            margin-right: 10px;
-                                                        }
-                                                    }
-                                                }
-
-                                                .homepage_ico {
-                                                    a {
-                                                        @include transition(.15s);
-                                                        &:hover {
-                                                            opacity: .5;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-
-                                    &.map_wrap {
-                                        margin-left: 55px;
-                                        width: 100%; height: 660px;
-                                    }
-
-                                }
-
-                            }
-                        }
-                    }
-                }
-
-                // 인재상
-                &#person {
-                    .sub_section {
-                        &.section_01{
-                            @include marginTop-70();
-                        }
-
-                        &.section_02 {
-                            margin-top: 30px;
-                            .img_wrap {
-                                figure {
-                                    position: relative;
-                                    img {}
-                                    figcaption {
-                                        position: absolute; left: 50%; top: 62%; transform: translateX(-50%);
-                                        width: 1100px;
-                                        p {
-                                            background-color: #fff; text-align: center;
-                                            &.text_01 {
-                                                padding: 80px 180px 0;
-                                                font-size: 48px; font-weight: 300; line-height: 1.33; letter-spacing: -1.92px; color: #333;
-                                                strong {font-weight: normal;}
-                                            }
-                                            &.text_02 {
-                                                margin-top: 40px;
-                                                font-size: 18px; font-weight: 300; line-height: 1.33; letter-spacing: -0.72px; color: #666;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        &.section_03 {
-                            margin-top: 260px;
-                            .team {
-                                &.swiper-container {
-                                    &::after {
-                                        content: '';
-                                        width: 100%; height: 2px; background: #ddd;
-                                        position: absolute; left: 0; top: 50%;
-                                    }
-                                    .swiper-wrapper {
-                                        align-items: center; justify-content: center;
-                                        .swiper-slide {
-                                            @include flexCenter();
-                                            flex-direction: column;
-                                            width: 130px !important; height: 130px !important; border: 1px solid $color-100; border-radius: 100%;
-                                            background: #fff;
-                                            font-size: 20px; line-height: 1.2; letter-spacing: -0.8px; text-align: center;
-                                            margin: 0 28px 0 0;
-                                            &.margin_0 {margin: 0;}
-
-                                            &.big {
-                                                margin: 0 60px 0;
-                                                width: 350px !important; height:350px !important;
-                                                border: 35px solid transparent;
-                                                background-image: linear-gradient(#fff, #fff),  linear-gradient(to top, #f15113 10%,  #f5811f 100%);
-                                                background-origin: border-box;
-                                                background-clip: content-box, border-box;
-                                                font-size: 28px;line-height: 1.29;letter-spacing: -1.12px;
-                                                .logo_svg {
-                                                    width: 103px; height: 52px;
-                                                }
-                                                p {
-                                                    margin-top: 15px;
-                                                    strong {color: #1a3968;}
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        &.section_04 {
-                            margin-top: 120px;
-                        }
-
-                        &.section_05 {
-                            margin-top: 40px;
-                            .team_info {
-                                &.swiper-container {
-                                    .swiper-wrapper {
-                                        .swiper-slide {
-                                            background: #fff;
-                                            figure {
-                                                .img_wrap {}
-
-                                                .table_wrap {
-                                                    margin-top: 60px;
-
-                                                    table {
-                                                        width: 100%;
-                                                        tr {
-                                                            @include font-18();
-                                                            line-height: 1.5;
-                                                        }
-                                                        th {
-                                                            border: 1px solid #fff;
-                                                            background-color: $color-100;
-                                                            color: #fff; font-weight: 500;
-                                                        }
-                                                        td {
-                                                            border: 1px solid #ddd;
-                                                            color: #666;font-weight: 300;
-                                                            padding: 40px;
-                                                            &.td_01 {text-align: center;}
-                                                            &:first-child {border-left: none;}
-                                                            &:last-child {border-right: none;}
-                                                        }
-
-                                                        thead {
-                                                            height: 60px;
-                                                            tr {
-                                                                th {
-                                                                }
-                                                            }
-                                                        }
-                                                        tbody {
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        &.section_06 {
-                            @include marginTop-120();
-                            .person_info {
-                                &.swiper-container {
-                                    overflow: visible;
-                                    .swiper-wrapper {
-                                        .swiper-slide {
-                                            position: relative;
-                                            &::after {
-                                                content: '';
-                                                position: absolute; 
-                                                width: 100%; height: 100%;
-                                                background: url('../images/about/person_dotted_01.svg') no-repeat ; 
-                                                background-size: contain;
-                                            }
-                                            &:nth-child(odd)::after {left: -20px; top: -20px;}
-                                            &:nth-child(even)::after {transform: rotate(180deg); left: -20px; bottom: -20px;}
-
-                                            .dots {
-                                                position: absolute; left: -24px; top: 50%; transform: translateY(-50%);
-                                                width: 8px; height: 8px; border-radius: 100%;
-                                                background-color: $color-100;
-                                                &.right {
-                                                    left: auto; right: 18px;
-                                                }
-                                            }
-                                            // &:nth-child(odd) .outline_box {border-radius: $border-hegith $border-hegith 0 0 ; border-bottom: none;}
-                                            // &:nth-child(even) .outline_box {border-radius: $border-hegith $border-hegith 0 0 ; border-bottom: none;}
-
-                                            // .outline_box {
-                                            //     position: absolute; left: -15px; top: -15px;
-                                            //     width: 370px; height: $border-hegith;
-                                            //     border: 4px dotted $color-100;
-
-                                            //     &::after,&::before {
-                                            //         content: '';
-                                            //         position: absolute; bottom: 0;
-                                            //         width: 8px; height: 8px; border-radius: 100%;
-                                            //         background-color: $color-100;
-                                            //     }
-                                            //     &::after { left: -6px;  }
-                                            //     &::before { right: -6px;  }
-                                            // }
-                                            
-                                            .inline_box {
-                                                @include flexCenter();
-                                                width: 333px; height: 333px;
-                                                border: 1px solid #ddd; border-radius: 100%;
-                                               
-                                                figure {
-                                                    @include flexCenter();
-                                                    flex-direction: column; text-align: center;
-
-                                                    img { }
-                                                    figcaption {
-                                                        @include font-18();
-                                                        line-height: 1.33;
-                                                        .text_01 {
-                                                            margin-top: 20px;
-                                                            font-weight: 500;
-                                                            color: $color-100;
-                                                        }
-                                                        .text_02 {
-                                                            margin-top: 16px;
-                                                            color: #666;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                &#person_table {
-                    .sub_section {
-                        &.section_01{
-                            @include marginTop-70();
-                        }
-                    }
-                }
-
-
-            }
-
-            // CS CENTER
-            &.cscenter {
-                &#as {
-                    .sub_section {
-                        &.section_01 {
-                            @include marginTop-70();
-                            .content_wrap {
-                                .input_wrap  {
-                                    display: flex; flex-wrap: wrap;
-                                    border-top: 1px solid #333;
-                                    .input_box {
-                                        position: relative;
-                                        display: flex; align-items: center;
-                                        width: 100%; max-width: 720px;
-                                        padding: 28px 0 20px;
-                                        border-bottom: 1px solid #ddd;
-                                        &.margin {margin-right: 40px;}
-                                        &.margin:nth-child(2n) {margin-right: 0;}
-                                        &.full_size {width: 100%; max-width:100%; margin-left: 0;}
-                                        &:nth-child(odd) {margin-left: 0;}
-                                        &.textarea_box {
-                                            align-items: flex-start; height: 300px;
-                                        }
-
-                                        #search_box {
-                                            cursor: pointer;
-                                            @include flexCenter();
-                                            width: 85px; height: 40px;
-                                            position: absolute; top: 50%; right: 0; transform: translateY(-50%);
-                                            background-color: #000;
-                                            color: #fff;
-                                            font-size: 18px; letter-spacing: -0.72px;
-                                            ion-icon {
-                                                width: 20px; height: 20px;
-                                                margin-right: 8px;
-                                                color: #fff;
-                                            }
-                                        }
-
-                                        label {
-                                            &.text_02 {font-size: 18px;line-height: 1.33;letter-spacing: -0.72px; color: #666;}
-                                            vertical-align: top;
-                                            display: inline-block; width: 50px;
-
-                                        }
-                                        input, textarea {
-                                            width: 100%;
-                                            margin-left: 40px;
-                                            border: none;
-                                            &::placeholder {color: #aaa;}
-                                        }
-                                        textarea {width: 100%; height: 100%}
-                                    }
-
-                                    .submit_box {
-                                        &.box_01 {
-                                            @include marginTop-70();
-                                        }
-                                    }
-                                }
-
-
-                            }
-                        }
-                    }
-
-                }
-            }
-
-            &.product {
-                &#product_list {
-                    .sub_section {
-                        &.section_01 {
-                            margin: 120px auto 60px;
-                        }
-
-                        &.section_02 {
-                            .product_wrap {
-                                display: none;
-                                // active
-                                &.active { display: flex; flex-wrap: wrap; }
-
-                                .product_item {
-                                    width: 420px;
-                                    border: 1px solid #ddd;
-                                    margin: 0 100px 80px 0;
-                                    &:nth-child(3n) { margin: 0 0 80px 0;}
-
-                                    .thumb {
-                                        @include flexCenter();
-                                        background-color: #f5f5f5;
-                                        height: 350px;
-                                        img {}
-                                    }
-                                    .info {
-                                        padding: 40px 50px 60px;
-                                        p {
-                                            font-size: 16px;
-                                            &.text_01 {
-                                                font-size: 24px; font-weight: bold;
-                                            }
-                                            &.text_02 {
-                                                margin-top: 10px;
-                                            }
-                                            &.text_03 {
-                                                margin-top: 20px;
-                                                em {
-                                                    &.point_01 {
-                                                        color: #54656c; font-weight: bold
-                                                    }
-                                                }
-                                            }
-                                            &.more_btn {
-                                                @include transition(.15s);
-                                                @include font-18(); letter-spacing: normal;
-                                                margin: 50px auto 0;
-                                                width: 160px; height: 43px;
-                                                border: 1px solid #ddd; border-radius: 20px;
-                                                a {
-                                                    @include flexCenter();
-                                                    width: 100%; height: 100%;
-                                                }
-                                                &:hover {
-                                                    background-color: $color-100; 
-                                                    a {
-                                                        color: #fff;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                                     
-                            #table_footer {
-                                margin-top: 100px;
-                                @include flexCenter();
-
-                                .num_box {
-                                    a {
-                                        @include font-M();
-                                        position: relative;
-                                        font-size: 16px; font-weight: 300; color: #333;
-                                        margin: 0 20px;
-                                        &::after {
-                                            content: '';
-                                            @include transition(.15s);
-                                            position: absolute; left: 50%; top: -10px; transform: translateX(-50%);
-                                            width: 5px; height: 5px; background-color: $color-100; border-radius: 100%;
-                                            opacity: 0;
-                                        }
-
-                                        // active
-                                        &.active {
-                                            color: $color-100; font-weight: bold;
-                                            &::after { opacity: 1; }
-                                        }
-                                    }
-                                }
-
-                                .btn_box {
-                                    display: flex;
-                                    a {
-                                        display: flex; align-items: center; justify-content: center;
-                                        width: 20px; height: 20px;
-                                        margin: 0 5px; color: #666;
-                                    }
-
-                                }
-                            }
-                        }
-                    }
-                }
-
-                &#product_detail {
-
-                    .sub_section {
-                        
-                        // product_header
-                        &.section_01 { 
-                            @include marginTop-100();
-                            .product_header {
-                                .product_wrap {
-                                    display: flex;
-                                    .product_img {
-                                        .product_thum_wrap {
-                                            max-width: 600px;
-                                            text-align: center; 
-                                            .product_thum {
-                                                max-width: 600px; max-height: 600px;
-                                                width: 600px; height: 600px;
-                                                .thum {
-                                                    width: 100%; height: 100%;
-                                                    img { 
-                                                        width: 100%; height: 100%;
-                                                        object-fit: cover;
-                                                    }
-                                                }
-                                            }
-                                            .product_small_wrap {
-                                                .product_small {
-                                                    width: 100%;
-                                                    margin-top: 20px;
-                                                    display: flex; justify-content: space-between;
-                                                    .small {
-                                                        max-width: 134px; max-height: 167px;
-                                                        width: 134px; height: 167px;
-                                                        width: calc( 25% - 11px);
-                                                        background-color: #f5f5f5;
-                                                        img {
-                                                            width: 100%; height: 100%;
-                                                            object-fit: contain;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                            
-                                        }
-                                    }
-            
-                                    .product_info {
-                                        display: inline-block;
-                                        margin-left: 80px; 
-                                        .text_wrap {
-                                            &.wrap_01 {
-                                                padding-bottom: 50px; border-bottom: 1px solid #ddd;
-
-                                                > span {
-                                                    display: block;
-                                                    &.text_01 { 
-                                                        @include font-M(); 
-                                                        margin-top: 80px;
-                                                        font-size: 20px; font-weight: 600; line-height: 1.2;
-                                                    }
-                                                    &.text_02 { 
-                                                        margin-top: 30px;
-                                                        font-size: 36px; font-weight: bold; line-height: 1.53; letter-spacing: -1.44px; color: #f68c31; 
-                                                    }
-                                                    &.text_03 { 
-                                                        margin-top: 10px;
-                                                        @include font-M(); font-size: 20px; font-weight: 500; line-height: 1.2; color: #666;
-                                                    }
-                                                } 
-                                            }
-
-                                            &.wrap_02 {
-                                                > span {
-                                                    display: block;
-                                                    &.text_01 {
-                                                        @include font-18(); 
-                                                        margin-top: 40px; color: #666;
-                                                    }
-                                                }
-                                            }
-
-                                            &.wrap_03 {
-                                                display: flex;
-                                                width: 290px; height: 61px;
-                                                margin-top: 60px;
-                                                a {
-                                                    @include font-M();
-                                                    @include flexCenter();
-                                                    @include font-18();
-                                                    @include transition(.15s);
-                                                    font-weight: 500; color: #666;
-                                                    width: 100%; height: 100%;
-                                                    border: 1px solid #ddd;
-                                                    &:hover {
-                                                        background-color: $color-100;
-                                                        color: #333;
-                                                        ion-icon {color: #333;}
-                                                    }
-                                                    ion-icon {
-                                                        width: 20px; height: 20px;
-                                                        margin-left: 20px;
-                                                    }
-                                                }
-                                            }
-                                        }
-                        
-                                    }
-                                }
-            
-                            }
-                        }
-
-
-                        // product_table
-                        &.section_02 {
-                            margin-top: 130px;
-                            .product_table_title {
-                                @include font-M();
-                                font-size: 24px; font-weight: 600; color: #f68c31;
-                            }
-                            .product_table_wrap {
-                                margin-top: 30px;
-                                padding: 100px 100px 90px;
-                                background-color: #f4f4f4;
-                                .product_table {
-                                    width: 100%;
-                                    border-top: 2px solid #f68c31;
-                                    tbody {
-                                        background-color: #fff;
-                                        > tr {
-                                            border: 1px solid #e0e0e0;
-                                            font-size: 16px;
-                                            th {
-                                                @include font-M();
-                                                background: rgba($color: #f68c31, $alpha: .4);
-                                                width: 250px; height: 240px;
-                                            }
-                                            td {
-                                                color: #666;
-                                                border: 1px solid #e0e0e0;
-                                                padding: 12px 0;
-                                                text-align: center;
-                                            }
-                                        }
-                                        
-                                    }
-                                }
-
-                                .table_state_btn {
-                                    @include flexCenter();
-                                    @include font-18();
-                                    cursor: pointer;
-                                    // active, hover
-                                    &.active {
-                                        margin-top: 60px;
-                                        ion-icon {
-                                            transform: rotate(180deg);
-                                        }
-                                    }
-
-                                    ion-icon {
-                                        @include transition(.15s);
-                                        margin-right: 10px;
-                                        background-color: #ddd; border-radius: 100%;
-                                        width: 30px; height: 30px;
-                                    }
-                                }
-
-                            }
-
-                            .product_more {
-                                margin-top: 30px;
-                            }
-                        }
-
-                    }
-        
-
-                }
-            }
-
-
-
-
         }
     }
 }
