@@ -66,7 +66,7 @@ $(function () {
                 spaceBetween: 0,
             },
             500: {
-                slidesPerView: 1,
+                slidesPerView: 1.7,
             }
         }
     });
