@@ -16,6 +16,7 @@ $color-200 : #98afc7;
 
 // ====================================jj mixin====================================
 @mixin fixed-layout {max-width: 1640px; margin: 0 auto; width: 100%;}
+@mixin fixed-layout-subpage {max-width: 1360px; margin: 0 auto; width: 100%;}
 @mixin layoutBoxColor {border: 2px solid #f00;}
 @mixin header-height {height: 100px;}
 @mixin flexCenter { display: flex; justify-content: center; align-items: center; }
@@ -37,8 +38,10 @@ $color-200 : #98afc7;
 // FONT
 @mixin font-M {font-family: 'Montserrat';}
 @mixin font-R {font-family: 'Roboto';}
+@mixin font-Nanum {font-family: 'Nanum Brush Script';}
 
 @mixin font-40 { font-size: 40px;}
+@mixin font-32 { font-size: 32px;}
 @mixin font-18 { font-size: 18px; letter-spacing: -0.72px;}
 
 
@@ -52,6 +55,7 @@ $color-200 : #98afc7;
 // ====================================default css====================================
 body {
     .lity-close {color: $color-100 !important; }
+
     a.a_link {
         @include transition(.15s);
         &:hover { color: $color-100; }
@@ -663,7 +667,6 @@ body {
     #footer {
         background: #222;
         padding: 40px 0;
-        margin-top: 120px;
         .footer_wrap {
             max-width: 1280px; margin: 0 auto;
             font-size: 14px; color: #888;
@@ -1181,6 +1184,161 @@ body {
 
             #footer { margin-top: 0; }
         }
+
+        &.sub_page {
+            position: relative;
+
+            // SUBPAGE_VISUAL
+            #sub_visual {
+                position: relative; 
+                width:100%; height: 520px;
+                display: flex; flex-direction: column; justify-content: flex-end;
+                &.company {background: url('../images/about/mv.png')no-repeat center/cover;}
+
+                .visual_text {
+                    @include fixed-layout();
+                    height: 100%; margin-bottom: 130px;
+                    display: flex; flex-direction: column; justify-content: flex-end;
+                    color: #fff;
+                    p {
+                        &.text_01 { font-size: 20px; font-weight: bold; letter-spacing: -1.6px; }
+                        &.text_02 { font-size: 42px; font-weight: 900;}
+                    }
+                }
+
+
+                
+            }
+
+            // SUBPAGE_NAVI
+            #sub_navi {
+                position: absolute; left: 0; bottom: 0;
+                width: 100%; height: 60px; 
+                background: #fff; border-bottom: 1px solid #ddd;
+                a { color: #333; }
+
+                .sub_navi_wrap {
+                    @include fullsize(); @include fixed-layout();
+                    display: flex; align-items: center;
+                    .sub_ico {
+                        @include flexCenter();
+                        background-color: $color-100;
+                        width: 60px; height: 100%;
+                        cursor: pointer;
+                        &:hover {img {padding-bottom: 5px;}}
+                        img { transition: all .15s; }
+                    }
+                    
+                    .sub_nav {
+                        cursor: pointer;
+                        position: relative;
+                        width: 260px; height: 100%;
+                        border-right: 1px solid #ddd;
+
+                        // HOVER, ACTIVE
+                        &:hover {
+                            .depth_wrap {
+                                .depth_01 {i {img {transform: rotate(180deg);}}}
+                                .depth_02 {display: block;}
+                            }
+                        }
+                        
+                        .depth_wrap {
+                            display: flex; align-items: center;
+                            @include fullsize();
+                            .depth_01 {
+                                display: flex; justify-content: space-between;
+                                padding: 0 20px; width: 100%;
+                                > a { font-size: 18px;letter-spacing: -1.44px;}
+
+                                > i {
+                                    display: flex; align-items: center;
+                                    img {@include transition(all .15s)}
+                                }
+                            }
+                            
+                            .depth_02 {
+                                display: none; 
+                                position: absolute; left: 0; top: 100%;
+                                width: 100%; background: $color-100;
+
+                                .depth_02_list {
+                                    a {
+                                        @include transition(all .15s);
+                                        display: inline-block; padding: 20px;
+                                        font-size: 16px; color: #fff; text-transform: uppercase; 
+                                    }
+                                }
+                            }
+                        }
+                        
+                        // sub_nav hover,active
+                        
+                    }
+                }
+                
+
+            }
+
+
+            // Page_CSS
+            &#company {
+                .sub_section {
+                    
+                    &.section_01 {
+                        @include fixed-layout-subpage();
+                        @include marginTop-120();
+                        figure {
+                            display: flex;
+                            .img_wrap {
+                                min-width: 700px;
+                            }
+                            figcaption {
+                                margin-left: 80px;
+                                .text_01 {font-size: 40px;font-weight: 300;line-height: 1.45;letter-spacing: -3.2px;}
+                                .text_02 {
+                                    margin-top: 20px;
+                                    font-size: 18px;font-weight: 300;line-height: 1.78;letter-spacing: -1.44px;color: #666;
+                                    em {font-weight: 500;}
+                                }
+                                .text_03 {
+                                    margin-top: 60px;
+                                    display: flex; align-items: center;
+                                    em:nth-of-type(1){font-size: 20px; font-weight: bold; letter-spacing: -1.6px;}
+                                    em:nth-of-type(2){
+                                        @include font-Nanum();
+                                        margin-left: 30px; 
+                                        font-size: 60px; 
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.section_02 {
+                        margin-top: 160px;
+                        height: 800px;
+                        background: url('../images/about/company_02_01.png')no-repeat center/cover;
+                        .content_wrap {
+                            @include flexCenter();
+                            @include fullsize();
+                            .text_wrap {
+                                text-align: center;
+                                .text_01 {@include font-32(); line-height: 1.56;letter-spacing: -2.56px; color: #fff;}
+                                .text_02 {font-size: 20px;font-weight: 300;line-height: 1.6;letter-spacing: -1.6px;color: #d6d6d6;}
+                                .text_bar {
+                                    width: 1px; height: 80px; background: #70799c;
+                                    margin: 40px auto;
+                                }
+                            }
+                        }
+ 
+                    }
+                }
+            }
+        }
+
+
     }
 }
 // ====================================padge css====================================
