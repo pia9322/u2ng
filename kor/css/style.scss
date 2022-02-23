@@ -715,9 +715,18 @@ body {
                             &.mv_02 {background: url("../images/main/mv_02.png") no-repeat center/cover;}
                             &.mv_03 {background: url("../images/main/mv_03.png") no-repeat center/cover;}
                             &.mv_04 {background: url("../images/main/mv_04.png") no-repeat center/cover;}
+                            
+
+                            // active, hover
+                            &.swiper-slide-active {
+                                span {
+                                    transform: translateY(0) !important;
+                                    opacity: 1 !important;
+                                }
+                            }
+
 
                             .mv_img {width: 100%;}
-
                             figcaption {
                                 @include flexCenter();
                                 width: 100%; height: 100%;
@@ -726,8 +735,11 @@ body {
                                     position: relative;
                                     max-width: 1480px; width: 100%; 
                                     span { 
-                                        display: flex;  justify-content: center;
+                                        @include transition(all 1.5s);
+                                        display: flex;  justify-content: center; 
                                         text-align: center;
+
+                                        opacity: 0; transform: translateY(50px);
                                         &.text_01 {
                                             @include font-M();
                                             font-size: 6.4rem;
@@ -737,6 +749,7 @@ body {
                                         }
     
                                         &.text_02 {
+                                            @include transition(all 1s .5s);
                                             @include font-18();
                                             margin-top: 20px; 
                                             color: #ddd;
@@ -823,6 +836,8 @@ body {
                 &.main_section_02 {
                     position: relative;
                     max-width: 1920px; margin: 0 auto;
+                    height: auto;
+                    padding: 140px 0;
 
                     #point_circle {
                         position: absolute; right: -40%; top: -20%; transform: translateX(-50%);
@@ -862,11 +877,11 @@ body {
 
                         }
                     }
+
                     .content_wrap {
                         @include fixed-layout();
                         
                         .product_title {
-                            padding-top: 140px;
                             .title_wrap {
                                 .text_01 {
                                     @include font-R();

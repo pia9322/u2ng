@@ -869,6 +869,12 @@ body main#main_page .main_section.main_visual .mv_wrap .mv.mv_04 {
   background: url("../images/main/mv_04.png") no-repeat center/cover;
 }
 
+body main#main_page .main_section.main_visual .mv_wrap .mv.swiper-slide-active span {
+  -webkit-transform: translateY(0) !important;
+          transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
 body main#main_page .main_section.main_visual .mv_wrap .mv .mv_img {
   width: 100%;
 }
@@ -894,6 +900,11 @@ body main#main_page .main_section.main_visual .mv_wrap .mv figcaption .mv_text {
 }
 
 body main#main_page .main_section.main_visual .mv_wrap .mv figcaption .mv_text span {
+  transition: all 1.5s;
+  -webkit-transition: all 1.5s;
+  -moz-transition: all 1.5s;
+  -ms-transition: all 1.5s;
+  -o-transition: all 1.5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -901,6 +912,9 @@ body main#main_page .main_section.main_visual .mv_wrap .mv figcaption .mv_text s
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
 }
 
 body main#main_page .main_section.main_visual .mv_wrap .mv figcaption .mv_text span.text_01 {
@@ -912,6 +926,11 @@ body main#main_page .main_section.main_visual .mv_wrap .mv figcaption .mv_text s
 }
 
 body main#main_page .main_section.main_visual .mv_wrap .mv figcaption .mv_text span.text_02 {
+  transition: all 1s 0.5s;
+  -webkit-transition: all 1s 0.5s;
+  -moz-transition: all 1s 0.5s;
+  -ms-transition: all 1s 0.5s;
+  -o-transition: all 1s 0.5s;
   font-size: 18px;
   letter-spacing: -0.72px;
   margin-top: 20px;
@@ -1035,6 +1054,8 @@ body main#main_page .main_section.main_section_02 {
   position: relative;
   max-width: 1920px;
   margin: 0 auto;
+  height: auto;
+  padding: 140px 0;
 }
 
 body main#main_page .main_section.main_section_02 #point_circle {
@@ -1085,10 +1106,6 @@ body main#main_page .main_section.main_section_02 .content_wrap {
   max-width: 1640px;
   margin: 0 auto;
   width: 100%;
-}
-
-body main#main_page .main_section.main_section_02 .content_wrap .product_title {
-  padding-top: 140px;
 }
 
 body main#main_page .main_section.main_section_02 .content_wrap .product_title .title_wrap .text_01 {

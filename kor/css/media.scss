@@ -125,7 +125,8 @@ $color-200 : #98afc7;
     
                     // main_section_02
                     &.main_section_02 {
-                        @include padding_1480(); 
+                        padding: 100px 5%;
+                        // @include padding_1480(); 
 
                         #point_circle {
                             // position: absolute; right: -40%; top: -20%; transform: translateX(-50%);
@@ -148,7 +149,7 @@ $color-200 : #98afc7;
                         .content_wrap {
                             
                             .product_title {
-                                padding-top: 120px;
+                                // padding-top: 120px;
                                 .title_wrap {
                                     .text_01 {
                                         font-size: 20px;
@@ -505,7 +506,7 @@ $color-200 : #98afc7;
 
                         .content_wrap {
                             .product_title {
-                                padding-top: 90px;
+                                // padding-top: 90px;
                                 .title_wrap {
                                     .text_01 {
                                         font-size: 18px;
@@ -1726,7 +1727,7 @@ $color-200 : #98afc7;
 
                         .content_wrap {
                             .product_title {
-                                padding-top: 70px;
+                                // padding-top: 70px;
                                 .title_wrap {
                                     .text_01 {font-size: 14px;}
                                     .text_02 {
@@ -1813,7 +1814,7 @@ $color-200 : #98afc7;
                                     .location {}
     
                                     #location_tab {
-                                        height: 40px;
+                                        height: 30px;
                                         .tab_title {
                                             width: 100%; 
                                             padding: 0 10px;
@@ -1948,6 +1949,7 @@ $color-200 : #98afc7;
                 .footer_section_01 {
                     .footer_right {
                         order: 1;
+                        img {width: 80px;}
                     }
                     .footer_left {
                         > p {
