@@ -242,7 +242,7 @@
   body main#main_page .main_section.main_section_01 .content_wrap > figure:hover a.btn_01 { -webkit-transform: translate(-50%, -20px); transform: translate(-50%, -20px); }
   body main#main_page .main_section.main_section_01 .content_wrap > figure .text_01 { font-size: 18px; }
   body main#main_page .main_section.main_section_01 .content_wrap > figure .text_02 { font-size: 14px; margin-top: 10px; }
-  body main#main_page .main_section.main_section_01 .content_wrap > figure a.btn_01 { position: absolute; left: 50%; bottom: 0; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); margin-top: 20px; font-size: 13px; }
+  body main#main_page .main_section.main_section_01 .content_wrap > figure a.btn_01 { position: absolute; left: 50%; bottom: 10px; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); margin-top: 20px; font-size: 13px; }
   body main#main_page .main_section.main_section_02 #point_circle { display: none; }
   body main#main_page .main_section.main_section_02 .content_wrap .product_title .title_wrap .text_01 { font-size: 14px; }
   body main#main_page .main_section.main_section_02 .content_wrap .product_title .title_wrap .text_02 { font-size: 18px; }

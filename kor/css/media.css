@@ -938,7 +938,7 @@
   body main#main_page .main_section.main_section_01 .content_wrap > figure a.btn_01 {
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: 10px;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
     margin-top: 20px;
