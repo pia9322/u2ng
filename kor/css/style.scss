@@ -305,6 +305,31 @@ body {
             img {width: 200px; height: 200px; object-fit: cover;}
         }
     }
+    
+    // 하단우측아이콘
+    #quick_ico_01 {
+        position: fixed; right: 3%; bottom: 5%;
+        z-index: 9999;
+
+        // active, hover
+        &:hover {
+            figure { opacity: .7 }
+        }
+
+        figure {
+            @include transition(.15s);
+            @include flexCenter(); flex-direction: column;
+            width: 100px; height: 100px;
+            background: $color-100; border-radius: 100%;
+            .ico_wrap {}
+
+            .text_01 { 
+                margin-top: 5px;
+                font-size: 14px; font-weight: 500;color: #fff;
+            }
+            
+        }
+    }
 }
 // ====================================default css====================================
 
@@ -683,6 +708,7 @@ body {
             
         }
     }
+    
 }
 // ========================== header, footer ==========================
 

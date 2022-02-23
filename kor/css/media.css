@@ -104,6 +104,22 @@
     width: 15px;
     height: 15px;
   }
+  body #quick_ico_01 {
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+  }
+  body #quick_ico_01 figure {
+    width: 75px;
+    height: 75px;
+  }
+  body #quick_ico_01 figure .img_wrap svg {
+    width: 30px;
+  }
+  body #quick_ico_01 figure .text_01 {
+    margin-top: 0;
+    font-size: 12px;
+  }
   body #header {
     height: 80px;
   }
@@ -863,6 +879,16 @@
   body .btn_01 {
     width: 120px;
     height: 30px;
+  }
+  body #quick_ico_01 figure {
+    width: 45px;
+    height: 45px;
+  }
+  body #quick_ico_01 figure .img_wrap svg {
+    width: 20px;
+  }
+  body #quick_ico_01 figure .text_01 {
+    display: none;
   }
   body #header {
     height: 50px;

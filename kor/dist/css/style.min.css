@@ -95,6 +95,14 @@ body #search_box_popup button[type=submit] { background-color: #0a4b90; border: 
 
 body #search_box_popup .product-inner img { width: 200px; height: 200px; -o-object-fit: cover; object-fit: cover; }
 
+body #quick_ico_01 { position: fixed; right: 3%; bottom: 5%; z-index: 9999; }
+
+body #quick_ico_01:hover figure { opacity: .7; }
+
+body #quick_ico_01 figure { transition: 0.15s; -webkit-transition: 0.15s; -moz-transition: 0.15s; -ms-transition: 0.15s; -o-transition: 0.15s; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 100px; height: 100px; background: #0a4b90; border-radius: 100%; }
+
+body #quick_ico_01 figure .text_01 { margin-top: 5px; font-size: 14px; font-weight: 500; color: #fff; }
+
 body #header { height: 100px; transition: 0.3s; -webkit-transition: 0.3s; -moz-transition: 0.3s; -ms-transition: 0.3s; -o-transition: 0.3s; position: fixed; left: 0; top: 0; z-index: 9990; width: 100%; background: rgba(255, 255, 255, 0); }
 
 body #header a { color: white; }
