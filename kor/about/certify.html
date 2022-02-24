@@ -240,7 +240,7 @@
 
 
     <!-- --------------------------- MAIN --------------------------- -->
-    <main class="sub_page" id="company">
+    <main class="sub_page about" id="certify">
 
         <!-- SUB_VISUAL & NAVI -->
         <section class="sub_visual company" id="sub_visual">
@@ -252,13 +252,8 @@
 
             <article class="sub_navi" id="sub_navi">
                 <div class="sub_navi_wrap">
-
                     <!-- home_ico -->
-                    <nav class="sub_ico">
-                        <a href="../main/index.html">
-                            <img src="../images/ico/ico_home.svg" alt="">
-                        </a>
-                    </nav>
+                    <nav class="sub_ico"><a href="../main/index.html"><img src="../images/ico/ico_home.svg" alt=""></a></nav>
 
                     <nav class="sub_nav sub_nav_01">
                         <ul class="depth_wrap">
@@ -300,91 +295,64 @@
         </section>
 
 
-        <!-- section_01 -->
         <section class="sub_section section_01">
-            <div class="content_wrap">
-                <figure>
-                    <div class="img_wrap"><img src="../images/about/company_01_01.png" alt="노을과 손과 비둘기"></div>
 
-                    <figcaption>
-                        <p class="text_01">
-                            U2NG는 <strong>원자력 산업 최고의
-                                <br class="pc_only">
-                                IT 전문 기업</strong>을 지향합니다.
-                        </p>
-                        <p class="text_02">
-                            안녕하십니까, 유투엔지 대표이사 장경석입니다.
-                            <br class="pc_only">
-                            유투엔지는 2011년 3월 설립된 이래 방사선 관리구역 안전관리시스템제작과 관련
-                            <br class="pc_only">
-                            소프트웨어 개발을 전문적으로 수행해왔습니다. 주요제품은 방사선 관리구역 출입통제시스템과 방사선 선량계 보관관리시스템입니다.
-                            <br class="pc_only">
-                            해당제품은 국내 14개전 원전에
-                            납품실적을 보유하고 있으며 2019년에는 조달청우수제품으로 지정되며 기술력을 인정 받았습니다.
-                            <br class="pc_only">
-                            <br class="pc_only">
-                            <em>당사는 지속적으로 4차산업혁명과 원전운영을 접목하며 원자력발전소내 스마트플랜트
-                                <br class="pc_only">
-                                구현에 기여하고자 합니다.</em>
-                        </p>
-                        <p class="text_03">
-                            <em>U2NG 대표이사</em>
-                            <em>장경석</em>
-                        </p>
-                    </figcaption>
-                </figure>
-            </div>
+            <script>
+                $(function() {
+
+                    $.ajax({
+                        url: '../js/data.json',
+                        success: function(data) {
+
+                            let type, imgSrc, imgAlt, /* imgName_sub, */ imgName = '';
+
+                            function dataFun(ty) {
+                                tagList = '';
+                                let i = 0;
+                                for (idx in data) {
+                                    let tt = data.certify;
+                                    let text_01 = document.querySelectorAll('figcaption .text_01');
+                                    let certifi_list = document.querySelectorAll('.certifi_list');
+
+                                    tt.forEach(function(value, key) {
+                                        if (value.type == ty) {
+
+                                            imgSrc = value.imgSrc;
+                                            imgAlt = value.imgAlt;
+                                            imgName = value.imgName;
+                                            // imgName_sub = value.imgName_sub;
+
+
+                                            tagList = '<figure class="certifi_list" data-aos="fade-up">'
+                                            tagList += '<div class="img_wrap"><img src="../images/certify/' + imgSrc + '.png" alt="' + imgAlt + '"></div>'
+                                            tagList += '<figcaption><span class="text_01">' + imgName + '</span></figcaption>'
+
+                                        }
+                                        $('.content_wrap').eq(i).append(tagList);
+                                    });
+                                    i++;
+                                }
+                            }
+                            dataFun()
+                        }
+                    });
+                });
+            </script>
+
+            <!-- content_01 -->
+
+            <article class="content_wrap">
+                <!-- data.json - certifi -->
+            </article>
+
+
+
         </section>
-
-
-        <!-- section_02 -->
-        <section class="sub_section section_02">
-            <div class="content_wrap">
-                <div class="text_wrap">
-
-                    <p class="text_01">
-                        유투엔지는 원자력 발전소 작업종사자의 안전관리시스템을 제공하여
-                        <br class="pc_only">
-                        그 무엇보다 가치있는 근로자의 안전을 위해
-                        <br class="pc_only">
-                        원자력 발전소 스마트 플랜트 구현에 앞장서겠습니다.
-                    </p>
-                    <p class="text_bar"></p>
-                    <p class="text_02">
-                        유투엔지는 풍부한 경험, 업무 전문성, 높은 책임감, IT 혁신성을 바탕으로 많은 고객사와 함께하고 있습니다.
-                        <br class="pc_only">
-                        다양한 고객들이 현장에서 들려주는 목소리를 경청하고, 고객들이 필요로 하는
-                        <br class="pc_only">
-                        요구사항에 맞춘 최적에 시스템을 구현하고자 변함없이 최선을 다하겠습니다.
-                    </p>
-
-                </div>
-            </div>
-        </section>
-
-
-        <div class="quick_ico_01" id="quick_ico_01">
-
-            <a href="">
-                <figure>
-                    <div class="img_wrap">
-                        <svg width="38" height="32" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M37.8004 27.0001V5.0001C37.8004 2.5801 35.8204 0.600098 33.4004 0.600098H4.80039C2.38039 0.600098 0.400391 2.5801 0.400391 5.0001V27.0001C0.400391 29.4201 2.38039 31.4001 4.80039 31.4001H33.4004C35.8204 31.4001 37.8004 29.4201 37.8004 27.0001ZM13.6004 24.8001V7.2001L26.8004 16.0001L13.6004 24.8001Z" fill="white" />
-                        </svg>
-                    </div>
-                    <figcaption>
-                        <p class="text_01">홍보동영상</p>
-                    </figcaption>
-                </figure>
-            </a>
-
-        </div>
 
     </main>
     <!-- --------------------------- MAIN --------------------------- -->
 
-
-    
+    <!-- <?php include_once('../include/footer_banner_01.html') ?> -->
 
     <!-- --------------------------- FOOTER --------------------------- -->
     <footer class="footer" id="footer">

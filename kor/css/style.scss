@@ -6,15 +6,15 @@ $reset-time: 150ms;
 $color-100 : #0a4b90;
 $color-200 : #98afc7;
 
-// ====================================default mixin====================================
+// ====================================DEFAULT MIXIN====================================
 @mixin absolute-center {position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);}
 @mixin absolute-x($left, $top) {position: absolute;left: $left;top: $top;transform: translateX(-$left);}
 @mixin absolute-y($left, $top) {position: absolute;left: $left;top: $top;transform: translateY(-$top);}
 @mixin board_text {white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 @mixin transition($x) {transition: $x;-webkit-transition: $x;-moz-transition: $x;-ms-transition: $x;-o-transition: $x;}
-// ====================================default mixin====================================
+// ====================================DEFAULT MIXIN====================================
 
-// ====================================jj mixin====================================
+// ====================================JJ MIXIN====================================
 @mixin fixed-layout {max-width: 1640px; margin: 0 auto; width: 100%;}
 @mixin fixed-layout-subpage {max-width: 1360px; margin: 0 auto; width: 100%;}
 @mixin layoutBoxColor {border: 2px solid #f00;}
@@ -48,7 +48,7 @@ $color-200 : #98afc7;
 @mixin section-Title-01 {font-size: 40px; font-weight: bold; line-height: 0.6; letter-spacing: -1.6px; color: #333;}
 @mixin section-Title-02 { font-size: 18px; line-height: 1.33; letter-spacing: -0.72px; color: #666; }
 
-// ====================================jj mixin====================================
+// ====================================JJ MIXIN====================================
 
 
 
@@ -1188,12 +1188,13 @@ body {
         &.sub_page {
             position: relative;
 
-            // SUBPAGE_VISUAL
+            // ------------------------------- subpage_visual & navi -------------------------------
+            &.about #sub_visual {background: url('../images/about/mv.png')no-repeat center/cover;}
+
             #sub_visual {
                 position: relative; 
                 width:100%; height: 520px;
                 display: flex; flex-direction: column; justify-content: flex-end;
-                &.company {background: url('../images/about/mv.png')no-repeat center/cover;}
 
                 .visual_text {
                     @include fixed-layout();
@@ -1205,9 +1206,6 @@ body {
                         &.text_02 { font-size: 42px; font-weight: 900;}
                     }
                 }
-
-
-                
             }
 
             // SUBPAGE_NAVI
@@ -1279,63 +1277,152 @@ body {
                 
 
             }
+            // ------------------------------- subpage_visual & navi -------------------------------
 
 
-            // Page_CSS
-            &#company {
-                .sub_section {
-                    
-                    &.section_01 {
-                        @include fixed-layout-subpage();
-                        @include marginTop-120();
-                        figure {
-                            display: flex;
-                            .img_wrap {
-                                min-width: 700px;
-                            }
-                            figcaption {
-                                margin-left: 80px;
-                                .text_01 {font-size: 40px;font-weight: 300;line-height: 1.45;letter-spacing: -3.2px;}
-                                .text_02 {
-                                    margin-top: 20px;
-                                    font-size: 18px;font-weight: 300;line-height: 1.78;letter-spacing: -1.44px;color: #666;
-                                    em {font-weight: 500;}
+            // ------------------------------- Page_CSS -------------------------------
+            // ------------------------------- about -------------------------------
+            &.about {
+
+                // ------ company ------
+                &#company {
+                    .sub_section {
+                        
+                        &.section_01 {
+                            @include fixed-layout-subpage();
+                            @include marginTop-120();
+                            figure {
+                                display: flex;
+                                .img_wrap {
+                                    min-width: 700px;
                                 }
-                                .text_03 {
-                                    margin-top: 60px;
-                                    display: flex; align-items: center;
-                                    em:nth-of-type(1){font-size: 20px; font-weight: bold; letter-spacing: -1.6px;}
-                                    em:nth-of-type(2){
-                                        @include font-Nanum();
-                                        margin-left: 30px; 
-                                        font-size: 60px; 
+                                figcaption {
+                                    margin-left: 80px;
+                                    .text_01 {font-size: 40px;font-weight: 300;line-height: 1.45;letter-spacing: -3.2px;}
+                                    .text_02 {
+                                        margin-top: 20px;
+                                        font-size: 18px;font-weight: 300;line-height: 1.78;letter-spacing: -1.44px;color: #666;
+                                        em {font-weight: 500;}
+                                    }
+                                    .text_03 {
+                                        margin-top: 60px;
+                                        display: flex; align-items: center;
+                                        em:nth-of-type(1){font-size: 20px; font-weight: bold; letter-spacing: -1.6px;}
+                                        em:nth-of-type(2){
+                                            @include font-Nanum();
+                                            margin-left: 30px; 
+                                            font-size: 60px; 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+    
+                        &.section_02 {
+                            margin-top: 160px;
+                            height: 800px;
+                            background: url('../images/about/company_02_01.png')no-repeat center/cover;
+                            .content_wrap {
+                                @include flexCenter();
+                                @include fullsize();
+                                .text_wrap {
+                                    text-align: center;
+                                    .text_01 {@include font-32(); line-height: 1.56;letter-spacing: -2.56px; color: #fff;}
+                                    .text_02 {font-size: 20px;font-weight: 300;line-height: 1.6;letter-spacing: -1.6px;color: #d6d6d6;}
+                                    .text_bar {
+                                        width: 1px; height: 80px; background: #70799c;
+                                        margin: 40px auto;
+                                    }
+                                }
+                            }
+     
+                        }
+                    }
+                }
+
+                // ------ certify ------
+                &#certify {
+                    .sub_section {
+                        &.section_01 {
+                            @include fixed-layout-subpage();
+                            @include marginTop-120();
+                            .content_wrap {
+                                display: flex; flex-wrap: wrap;
+                                figure {
+                                    width: 300px; margin: 0 50px 80px 0;
+                                    &:last-child {margin: 0;}
+                                    &:nth-of-type(4n) {margin: 0 0 80px 0;}
+                                    .img_wrap {
+                                        width: 100%; height: 400px;
+                                    }
+                                    figcaption {
+                                        padding-top: 20px; text-align: center;
+
+                                        .text_01 {@include font-18(); }
                                     }
                                 }
                             }
                         }
                     }
-
-                    &.section_02 {
-                        margin-top: 160px;
-                        height: 800px;
-                        background: url('../images/about/company_02_01.png')no-repeat center/cover;
-                        .content_wrap {
-                            @include flexCenter();
-                            @include fullsize();
-                            .text_wrap {
-                                text-align: center;
-                                .text_01 {@include font-32(); line-height: 1.56;letter-spacing: -2.56px; color: #fff;}
-                                .text_02 {font-size: 20px;font-weight: 300;line-height: 1.6;letter-spacing: -1.6px;color: #d6d6d6;}
-                                .text_bar {
-                                    width: 1px; height: 80px; background: #70799c;
-                                    margin: 40px auto;
-                                }
-                            }
-                        }
- 
-                    }
                 }
+
+                &#location {
+                    .sub_section {
+                        &.section_01 {
+                            @include fixed-layout-subpage();
+                            @include marginTop-120();
+                            .content_wrap {
+                                display: flex; align-items: center;
+                                .left_content {
+                                    width: 840px; height: 560px;
+                                    .location {
+                                        width: 100%; height: 100%;
+                                        display: none;
+                                        &.active {display: block;}
+                                    }
+                                }
+
+                                .right_content {
+                                    margin-left: 60px;
+                                    .location_tab {
+                                        .tab_wrap {
+                                            .tab {
+                                                cursor: pointer;
+                                                &.tab_01 {padding-bottom: 40px; border-bottom: 1px solid #ddd;}
+                                                &.tab_02 {padding-top: 40px;}
+                                                p {
+                                                    display: flex; align-items: center;
+                                                    ion-icon {width: 35px; height: 35px; color: $color-100;}
+
+                                                    &.text_01 {
+                                                        margin-top: 25px;
+                                                        font-size: 32px;font-weight: bold;line-height: 1;letter-spacing: -2.56px;}
+                                                    &.text_02 {
+                                                        margin-top: 20px;
+                                                        font-size: 18px;font-weight: 300;line-height: 1.44;letter-spacing: -1.44px;}
+                                                        ion-icon {margin-right: 14px;}
+                                                }
+                                            }
+
+                                        }
+                                    }
+                                }
+    
+                            }
+  
+                        }
+                    }
+
+                }
+
+                
+                
+
             }
+
+
+
+
         }
 
 
@@ -1359,7 +1446,7 @@ body {
 
 
 
-// ========================== keyframs ==========================
+// ========================== KEYFRAMES ==========================
 @keyframes rotateinfin {
     0%{transform:rotate(0); }
     100%{transform:rotate(360deg);}
@@ -1390,4 +1477,4 @@ body {
     0% {width: 0}
     100% {width: 100%}
 }
-// ========================== keyframs ==========================
+// ========================== KEYFRAMES ==========================

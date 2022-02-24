@@ -1591,6 +1591,10 @@ body main.sub_page {
   position: relative;
 }
 
+body main.sub_page.about #sub_visual {
+  background: url("../images/about/mv.png") no-repeat center/cover;
+}
+
 body main.sub_page #sub_visual {
   position: relative;
   width: 100%;
@@ -1605,10 +1609,6 @@ body main.sub_page #sub_visual {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-}
-
-body main.sub_page #sub_visual.company {
-  background: url("../images/about/mv.png") no-repeat center/cover;
 }
 
 body main.sub_page #sub_visual .visual_text {
@@ -1777,35 +1777,35 @@ body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_02 .dept
   text-transform: uppercase;
 }
 
-body main.sub_page#company .sub_section.section_01 {
+body main.sub_page.about#company .sub_section.section_01 {
   max-width: 1360px;
   margin: 0 auto;
   width: 100%;
   margin-top: 120px;
 }
 
-body main.sub_page#company .sub_section.section_01 figure {
+body main.sub_page.about#company .sub_section.section_01 figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body main.sub_page#company .sub_section.section_01 figure .img_wrap {
+body main.sub_page.about#company .sub_section.section_01 figure .img_wrap {
   min-width: 700px;
 }
 
-body main.sub_page#company .sub_section.section_01 figure figcaption {
+body main.sub_page.about#company .sub_section.section_01 figure figcaption {
   margin-left: 80px;
 }
 
-body main.sub_page#company .sub_section.section_01 figure figcaption .text_01 {
+body main.sub_page.about#company .sub_section.section_01 figure figcaption .text_01 {
   font-size: 40px;
   font-weight: 300;
   line-height: 1.45;
   letter-spacing: -3.2px;
 }
 
-body main.sub_page#company .sub_section.section_01 figure figcaption .text_02 {
+body main.sub_page.about#company .sub_section.section_01 figure figcaption .text_02 {
   margin-top: 20px;
   font-size: 18px;
   font-weight: 300;
@@ -1814,11 +1814,11 @@ body main.sub_page#company .sub_section.section_01 figure figcaption .text_02 {
   color: #666;
 }
 
-body main.sub_page#company .sub_section.section_01 figure figcaption .text_02 em {
+body main.sub_page.about#company .sub_section.section_01 figure figcaption .text_02 em {
   font-weight: 500;
 }
 
-body main.sub_page#company .sub_section.section_01 figure figcaption .text_03 {
+body main.sub_page.about#company .sub_section.section_01 figure figcaption .text_03 {
   margin-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1828,25 +1828,25 @@ body main.sub_page#company .sub_section.section_01 figure figcaption .text_03 {
           align-items: center;
 }
 
-body main.sub_page#company .sub_section.section_01 figure figcaption .text_03 em:nth-of-type(1) {
+body main.sub_page.about#company .sub_section.section_01 figure figcaption .text_03 em:nth-of-type(1) {
   font-size: 20px;
   font-weight: bold;
   letter-spacing: -1.6px;
 }
 
-body main.sub_page#company .sub_section.section_01 figure figcaption .text_03 em:nth-of-type(2) {
+body main.sub_page.about#company .sub_section.section_01 figure figcaption .text_03 em:nth-of-type(2) {
   font-family: 'Nanum Brush Script';
   margin-left: 30px;
   font-size: 60px;
 }
 
-body main.sub_page#company .sub_section.section_02 {
+body main.sub_page.about#company .sub_section.section_02 {
   margin-top: 160px;
   height: 800px;
   background: url("../images/about/company_02_01.png") no-repeat center/cover;
 }
 
-body main.sub_page#company .sub_section.section_02 .content_wrap {
+body main.sub_page.about#company .sub_section.section_02 .content_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1860,18 +1860,18 @@ body main.sub_page#company .sub_section.section_02 .content_wrap {
   height: 100%;
 }
 
-body main.sub_page#company .sub_section.section_02 .content_wrap .text_wrap {
+body main.sub_page.about#company .sub_section.section_02 .content_wrap .text_wrap {
   text-align: center;
 }
 
-body main.sub_page#company .sub_section.section_02 .content_wrap .text_wrap .text_01 {
+body main.sub_page.about#company .sub_section.section_02 .content_wrap .text_wrap .text_01 {
   font-size: 32px;
   line-height: 1.56;
   letter-spacing: -2.56px;
   color: #fff;
 }
 
-body main.sub_page#company .sub_section.section_02 .content_wrap .text_wrap .text_02 {
+body main.sub_page.about#company .sub_section.section_02 .content_wrap .text_wrap .text_02 {
   font-size: 20px;
   font-weight: 300;
   line-height: 1.6;
@@ -1879,11 +1879,137 @@ body main.sub_page#company .sub_section.section_02 .content_wrap .text_wrap .tex
   color: #d6d6d6;
 }
 
-body main.sub_page#company .sub_section.section_02 .content_wrap .text_wrap .text_bar {
+body main.sub_page.about#company .sub_section.section_02 .content_wrap .text_wrap .text_bar {
   width: 1px;
   height: 80px;
   background: #70799c;
   margin: 40px auto;
+}
+
+body main.sub_page.about#certify .sub_section.section_01 {
+  max-width: 1360px;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 120px;
+}
+
+body main.sub_page.about#certify .sub_section.section_01 .content_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main.sub_page.about#certify .sub_section.section_01 .content_wrap figure {
+  width: 300px;
+  margin: 0 50px 80px 0;
+}
+
+body main.sub_page.about#certify .sub_section.section_01 .content_wrap figure:last-child {
+  margin: 0;
+}
+
+body main.sub_page.about#certify .sub_section.section_01 .content_wrap figure:nth-of-type(4n) {
+  margin: 0 0 80px 0;
+}
+
+body main.sub_page.about#certify .sub_section.section_01 .content_wrap figure .img_wrap {
+  width: 100%;
+  height: 400px;
+}
+
+body main.sub_page.about#certify .sub_section.section_01 .content_wrap figure figcaption {
+  padding-top: 20px;
+  text-align: center;
+}
+
+body main.sub_page.about#certify .sub_section.section_01 .content_wrap figure figcaption .text_01 {
+  font-size: 18px;
+  letter-spacing: -0.72px;
+}
+
+body main.sub_page.about#location .sub_section.section_01 {
+  max-width: 1360px;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 120px;
+}
+
+body main.sub_page.about#location .sub_section.section_01 .content_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main.sub_page.about#location .sub_section.section_01 .content_wrap .left_content {
+  width: 840px;
+  height: 560px;
+}
+
+body main.sub_page.about#location .sub_section.section_01 .content_wrap .left_content .location {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+body main.sub_page.about#location .sub_section.section_01 .content_wrap .left_content .location.active {
+  display: block;
+}
+
+body main.sub_page.about#location .sub_section.section_01 .content_wrap .right_content {
+  margin-left: 60px;
+}
+
+body main.sub_page.about#location .sub_section.section_01 .content_wrap .right_content .location_tab .tab_wrap .tab {
+  cursor: pointer;
+}
+
+body main.sub_page.about#location .sub_section.section_01 .content_wrap .right_content .location_tab .tab_wrap .tab.tab_01 {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+body main.sub_page.about#location .sub_section.section_01 .content_wrap .right_content .location_tab .tab_wrap .tab.tab_02 {
+  padding-top: 40px;
+}
+
+body main.sub_page.about#location .sub_section.section_01 .content_wrap .right_content .location_tab .tab_wrap .tab p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main.sub_page.about#location .sub_section.section_01 .content_wrap .right_content .location_tab .tab_wrap .tab p ion-icon {
+  width: 35px;
+  height: 35px;
+  color: #0a4b90;
+}
+
+body main.sub_page.about#location .sub_section.section_01 .content_wrap .right_content .location_tab .tab_wrap .tab p.text_01 {
+  margin-top: 25px;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: -2.56px;
+}
+
+body main.sub_page.about#location .sub_section.section_01 .content_wrap .right_content .location_tab .tab_wrap .tab p.text_02 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.44;
+  letter-spacing: -1.44px;
+}
+
+body main.sub_page.about#location .sub_section.section_01 .content_wrap .right_content .location_tab .tab_wrap .tab p ion-icon {
+  margin-right: 14px;
 }
 
 @-webkit-keyframes rotateinfin {

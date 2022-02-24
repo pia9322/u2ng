@@ -128,8 +128,6 @@ $(function () {
         }
     });
 
-
-
     // person swiper
     let name = ['기술팀', '기술 영업팀', '솔루션 개발팀']
 
@@ -154,8 +152,6 @@ $(function () {
     });
 
     
-
-
 
     let teamSlide = new Swiper('.team.swiper-container', {
         slidesPerView: 'auto',
