@@ -30,6 +30,9 @@ $color-200 : #98afc7;
 @mixin marginTop-40 {margin-top: 40px;}
 @mixin marginTop-30 {margin-top: 30px;}
 
+@mixin marginBot-120 {margin-bottom: 120px;}
+
+
 // Padding
 @mixin paddingTop-70 {padding-top: 70px;}
 @mixin paddingTop-40 {padding-top: 40px;}
@@ -45,8 +48,7 @@ $color-200 : #98afc7;
 @mixin font-18 { font-size: 18px; letter-spacing: -0.72px;}
 
 
-@mixin section-Title-01 {font-size: 40px; font-weight: bold; line-height: 0.6; letter-spacing: -1.6px; color: #333;}
-@mixin section-Title-02 { font-size: 18px; line-height: 1.33; letter-spacing: -0.72px; color: #666; }
+@mixin swiper-year-title {@include font-M();font-size: 60px;font-weight: bold;color: $color-100; line-height: 1;}
 
 // ====================================JJ MIXIN====================================
 
@@ -1366,11 +1368,13 @@ body {
                     }
                 }
 
+                // ------ location ------
                 &#location {
                     .sub_section {
                         &.section_01 {
                             @include fixed-layout-subpage();
                             @include marginTop-120();
+                            @include marginBot-120();
                             .content_wrap {
                                 display: flex; align-items: center;
                                 .left_content {
@@ -1396,11 +1400,13 @@ body {
 
                                                     &.text_01 {
                                                         margin-top: 25px;
-                                                        font-size: 32px;font-weight: bold;line-height: 1;letter-spacing: -2.56px;}
+                                                        font-size: 32px;font-weight: bold; line-height: 1;letter-spacing: -2.56px;
+                                                    }
                                                     &.text_02 {
                                                         margin-top: 20px;
-                                                        font-size: 18px;font-weight: 300;line-height: 1.44;letter-spacing: -1.44px;}
+                                                        font-size: 18px;font-weight: 300; line-height: 1.44;letter-spacing: -1.44px;
                                                         ion-icon {margin-right: 14px;}
+                                                    }
                                                 }
                                             }
 
@@ -1410,6 +1416,130 @@ body {
     
                             }
   
+                        }
+                    }
+                }
+
+                &#business {
+                    .sub_section {
+                        &.section_01 {
+                            @include fixed-layout-subpage();
+                            @include marginTop-120();
+                            @include marginBot-120();
+                            .content_wrap {
+                                display: flex; flex-wrap: wrap;
+                                .content {
+                                    width: 380px; margin-right: 40px;
+                                    &:last-child {margin-right: 0}
+                                    figcaption {
+                                        p {
+                                            &.text_01 { @include font-32(); font-weight: bold; letter-spacing: -2.56px;
+                                                padding-bottom: 20px;border-bottom: 1px solid #ddd;
+                                            }
+                                            &.text_02 { 
+                                                margin-top: 40px;
+                                                @include font-18(); color: #666; font-weight: 300; line-height: 1.56; letter-spacing: -1.44px;
+                                            }
+                                            &.text_03 {
+                                                margin-top: 15px;
+                                                a {
+                                                    display: flex; align-items: center;
+                                                    @include font-18(); color: #666; font-weight: 500;
+                                                    &:hover { color: $color-100}
+                                                    ion-icon {margin-left: 5px;width: 20px; height: 20px; }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .img_wrap {
+                                        margin-top: 60px;
+                                        img {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &#history {
+                    .sub_section  { 
+                        &.section_01 {
+                            @include marginTop-120();
+                            @include marginBot-120();
+                            .swiper-header-wrap {
+                                position: relative;
+                                @include fixed-layout-subpage();
+                                display: flex; justify-content: space-between;
+                                height: 60px;
+                             
+                                .swiper-prev, .swiper-next  {
+                                    @include flexCenter();
+                                    cursor: pointer;
+                                    width: 60px; height: 100%;
+                                    border: 1px solid #ddd;
+                                    background-color: #fff;z-index: 2;
+                                    ion-icon {width: 30px; height: 30px;}
+                                }
+
+                                .swiper-year { 
+                                    position: relative;
+                                    &::after, &::before {
+                                        content: '';
+                                        position: absolute; top: 50%; transform: translateY(-50%);
+                                        width: 1920px; height: 1px; background: #ddd;
+                                    }
+                                    &::after {left: calc(100% + 40px); }
+                                    &::before {right: calc(100% + 40px);}
+                                    .swiper-pagination-bullet {
+                                        display: none;
+                                        width: auto; height: auto;
+                                        @include swiper-year-title();
+                                        &.swiper-pagination-bullet-active {
+                                            display: block;
+                                            background-color: transparent;
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            .history_swiper {
+                                margin-top: 80px;
+                                .swiper-slide {
+                                    figure {
+                                        .img_wrap {
+                                            @include flexCenter();
+                                            width: 100%; height: 600px;
+                                            .img_text {font-size: 40px;font-weight: bold;line-height: 1.4;letter-spacing: -3.2px;color: #fff;}
+                                        }
+
+                                        figcaption {
+                                            @include fixed-layout-subpage();
+                                            display: flex; margin-top: 100px; background-color: #fff;
+
+                                            .text_title {@include swiper-year-title();white-space: nowrap;}
+
+                                            .text_detail {
+                                                margin-left: 90px;
+                                                .text_wrap {
+                                                    display: flex; align-items: center;
+                                                    border-bottom: 1px solid #ddd; padding-bottom: 12.5px; margin-bottom: 12.5px;
+                                                    @include font-18(); font-weight: 300;  line-height: 1.78; letter-spacing: normal;
+                                                    .text_01 {margin-right: 10px;}
+                                                    .text_02 {color: $color-100; font-weight: bold; margin-right: 60px;}
+                                                    .text_03 {color: #666;   letter-spacing: -1.44px;}
+                                                }
+                                            }
+                                        }
+
+                                    }
+
+                                    &.slide_01 {.img_wrap {background: url('../images/about/history_01_01.png')no-repeat center/cover;}}
+                                    &.slide_02 {.img_wrap {background: url('../images/about/history_01_02.png')no-repeat center/cover;}}
+                                    &.slide_03 {.img_wrap {background: url('../images/about/history_01_03.png')no-repeat center/cover;}}
+                                    &.slide_04 {.img_wrap {background: url('../images/about/history_01_04.png')no-repeat center/cover;}}
+                                }
+                            }
                         }
                     }
 

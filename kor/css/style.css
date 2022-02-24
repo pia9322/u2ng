@@ -1934,6 +1934,7 @@ body main.sub_page.about#location .sub_section.section_01 {
   margin: 0 auto;
   width: 100%;
   margin-top: 120px;
+  margin-bottom: 120px;
 }
 
 body main.sub_page.about#location .sub_section.section_01 .content_wrap {
@@ -2008,8 +2009,261 @@ body main.sub_page.about#location .sub_section.section_01 .content_wrap .right_c
   letter-spacing: -1.44px;
 }
 
-body main.sub_page.about#location .sub_section.section_01 .content_wrap .right_content .location_tab .tab_wrap .tab p ion-icon {
+body main.sub_page.about#location .sub_section.section_01 .content_wrap .right_content .location_tab .tab_wrap .tab p.text_02 ion-icon {
   margin-right: 14px;
+}
+
+body main.sub_page.about#business .sub_section.section_01 {
+  max-width: 1360px;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+body main.sub_page.about#business .sub_section.section_01 .content_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main.sub_page.about#business .sub_section.section_01 .content_wrap .content {
+  width: 380px;
+  margin-right: 40px;
+}
+
+body main.sub_page.about#business .sub_section.section_01 .content_wrap .content:last-child {
+  margin-right: 0;
+}
+
+body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_01 {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: -2.56px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_02 {
+  margin-top: 40px;
+  font-size: 18px;
+  letter-spacing: -0.72px;
+  color: #666;
+  font-weight: 300;
+  line-height: 1.56;
+  letter-spacing: -1.44px;
+}
+
+body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_03 {
+  margin-top: 15px;
+}
+
+body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_03 a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  letter-spacing: -0.72px;
+  color: #666;
+  font-weight: 500;
+}
+
+body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_03 a:hover {
+  color: #0a4b90;
+}
+
+body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_03 a ion-icon {
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+body main.sub_page.about#business .sub_section.section_01 .content_wrap .content .img_wrap {
+  margin-top: 60px;
+}
+
+body main.sub_page.about#history .sub_section.section_01 {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap {
+  position: relative;
+  max-width: 1360px;
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 60px;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-prev, body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  width: 60px;
+  height: 100%;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  z-index: 2;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-prev ion-icon, body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-next ion-icon {
+  width: 30px;
+  height: 30px;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-year {
+  position: relative;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-year::after, body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-year::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 1920px;
+  height: 1px;
+  background: #ddd;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-year::after {
+  left: calc(100% + 40px);
+}
+
+body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-year::before {
+  right: calc(100% + 40px);
+}
+
+body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-year .swiper-pagination-bullet {
+  display: none;
+  width: auto;
+  height: auto;
+  font-family: 'Montserrat';
+  font-size: 60px;
+  font-weight: bold;
+  color: #0a4b90;
+  line-height: 1;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-year .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  display: block;
+  background-color: transparent;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .history_swiper {
+  margin-top: 80px;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure .img_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 600px;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure .img_wrap .img_text {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.4;
+  letter-spacing: -3.2px;
+  color: #fff;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure figcaption {
+  max-width: 1360px;
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 100px;
+  background-color: #fff;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_title {
+  font-family: 'Montserrat';
+  font-size: 60px;
+  font-weight: bold;
+  color: #0a4b90;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_detail {
+  margin-left: 90px;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_detail .text_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 12.5px;
+  margin-bottom: 12.5px;
+  font-size: 18px;
+  letter-spacing: -0.72px;
+  font-weight: 300;
+  line-height: 1.78;
+  letter-spacing: normal;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_detail .text_wrap .text_01 {
+  margin-right: 10px;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_detail .text_wrap .text_02 {
+  color: #0a4b90;
+  font-weight: bold;
+  margin-right: 60px;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_detail .text_wrap .text_03 {
+  color: #666;
+  letter-spacing: -1.44px;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide.slide_01 .img_wrap {
+  background: url("../images/about/history_01_01.png") no-repeat center/cover;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide.slide_02 .img_wrap {
+  background: url("../images/about/history_01_02.png") no-repeat center/cover;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide.slide_03 .img_wrap {
+  background: url("../images/about/history_01_03.png") no-repeat center/cover;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide.slide_04 .img_wrap {
+  background: url("../images/about/history_01_04.png") no-repeat center/cover;
 }
 
 @-webkit-keyframes rotateinfin {

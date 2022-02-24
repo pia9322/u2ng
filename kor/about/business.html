@@ -238,9 +238,8 @@
     <!-- --------------------------- HEADER --------------------------- -->
 
 
-
     <!-- --------------------------- MAIN --------------------------- -->
-    <main class="sub_page about" id="location">
+    <main class="sub_page about" id="business">
 
         <!-- SUB_VISUAL & NAVI -->
         <section class="sub_visual" id="sub_visual">
@@ -281,7 +280,7 @@
                     <nav class="sub_nav sub_nav_02">
                         <ul class="depth_wrap">
                             <li class="depth_01">
-                                <a href="#none">회사개요</a>
+                                <a href="#none">사업분야</a>
                                 <i><img src="../images/ico/ico_arrow_bottom.svg" alt="메뉴1 네비게이션 화살표"> </i>
                             </li>
 
@@ -297,58 +296,70 @@
                 </div>
 
             </article>
-        </section>
 
+        </section>
 
         <!-- section_01 -->
         <section class="sub_section section_01">
             <div class="content_wrap">
 
-                <div class="left_content">
-                    <div class="location active"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12938.154083771065!2d129.2870184!3d35.8357966!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd7b7bb9c9ddf21f8!2z6rK97KO87Iqk66eI7Yq466-465SU7Ja07IS87YSw!5e0!3m2!1sko!2skr!4v1645411105344!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
-                    <div class="location"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1581.642077642487!2d127.04338202681161!3d37.54836852142651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca4993cf8b16d%3A0x5105561154e8f3d6!2z7ISc7Jq47Yq567OE7IucIOyEseuPmeq1rCDslYTssKjsgrDroZwgMTcgMTUwMe2YuA!5e0!3m2!1sko!2skr!4v1645421838865!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
-                </div>
+                <figure class="content content_01">
 
-                <div class="right_content">
+                    <figcaption>
+                        <p class="text_01">원자력시설 출입통제시스템</p>
+                        <p class="text_02">
+                            유투엔지는 국내외 원자력 시설에 작업종사자의 안전을
+                            <br class="pc_only">
+                            위한 안전관리시스템을 개발하여 납품하고 있습니다
+                        </p>
+                        <p class="text_03"><a class="" href="#none">자세히보기<ion-icon name="chevron-forward-outline"></ion-icon></a></p>
+                    </figcaption>
 
-                    <div class="location_tab" id="location_tab">
+                    <div class="img_wrap"><img src="../images/about/business_01_01.png" alt=""></div>
 
-                        <div class="tab_wrap">
-                            <div class="tab tab_01">
-                                <p class="text_01">경주본사</p>
-                                <p class="text_02"> <ion-icon name="location-sharp"></ion-icon><a href="#none" class="">경북 경주시 경감로 587-18 308호  / 천군동 167-13 308호</a></p>
-                                <p class="text_02"><ion-icon name="call"></ion-icon><a href="tel:054-776-6201" class="a_link">054-776-6201</a> </p>
-                            </div>
-                            <div class="tab tab_02">
-                                <p class="text_01">부설연구소</p>
-                                <p class="text_02"><ion-icon name="location-sharp"></ion-icon><a href="#none" class="">서울 성동구 아차산로17길 48 (성수동2가, 성수SKV1CENTERI) 1동 1501호</a></p>
-                                <p class="text_02"><ion-icon name="call"></ion-icon><a href="tel:054-776-6201" class="a_link">054-776-6201</a></p>
-                            </div>
-                        </div>
+                </figure>
 
-                    </div>
+                <figure class="content content_02">
 
-                </div>
+                    <figcaption>
+                        <p class="text_01">원자력시설 SW/HW 개발</p>
+                        <p class="text_02">
+                            원자력시설 SW/HW 개발과 관련된 텍스트가
+                            <br class="pc_only">
+                            들어갑니다.
+                        </p>
+                        <p class="text_03"><a class="" href="#none">자세히보기<ion-icon name="chevron-forward-outline"></ion-icon></a></p>
+                    </figcaption>
+
+                    <div class="img_wrap"><img src="../images/about/business_01_02.png" alt=""></div>
+
+                </figure>
+
+                <figure class="content content_03">
+
+                    <figcaption>
+                        <p class="text_01">Mirion Sales Representative</p>
+                        <p class="text_02">
+                            유투엔지는 Mirion사의 국내 대리점이며, 당사의 제품은 방사선 작업자의 건강과 안전을 보호합니다.
+                        </p>
+                        <p class="text_03"><a class="" href="#none">자세히보기<ion-icon name="chevron-forward-outline"></ion-icon></a></p>
+                    </figcaption>
+
+                    <div class="img_wrap"><img src="../images/about/business_01_03.png" alt=""></div>
+
+                </figure>
 
             </div>
         </section>
 
-        <script>
-            $('#location_tab .tab_wrap .tab').click(function() {
-                let idx = $(this).index();
-                $('#location_tab .tab_wrap .tab, .left_content .location').removeClass('active');
-                $('#location_tab .tab_wrap .tab, .left_content .location').eq(idx).addClass('active');
-            })
-        </script>
-
-
     </main>
     <!-- --------------------------- MAIN --------------------------- -->
+
 
     <!-- <?php include_once('../include/footer_banner_01.html') ?> -->
 
 
-
+    
     <!-- --------------------------- FOOTER --------------------------- -->
     <footer class="footer" id="footer">
 
@@ -436,8 +447,6 @@
 
         </div>
     </footer>
-
-
     <!-- <?php include_once('../include/footer.html') ?> -->
     <!-- --------------------------- FOOTER --------------------------- -->
 
