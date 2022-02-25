@@ -170,19 +170,6 @@ $(function () {
     // ======================================= swiper ======================================= 
     // header_default 
     var header = document.querySelector('#header'), header_ham = document.querySelector('.header_ham'), header_full = document.querySelector('.header_full'), depth_01 = document.querySelectorAll('.header_full_list > li');
-    function headerScroll() {
-        $(window).scroll(function () {
-            var scroll = $(window).scrollTop(), dh = $(document).height() - $('.main_section_02').height(), wh = $(window).height();
-            ($('.main_section_02').offset().top - wh <= scroll) ? $('.main_section_01').addClass('active') : null;
-            ($('.main_section_03').offset().top - wh <= scroll) ? $('#header').addClass('active') : $('#header').removeClass('active');
-        });
-        if ($('#header').hasClass('active')) {
-            $('#header_left img').attr('src', '../images/ico/logo_black.svg');
-        }
-        else {
-            $('#header_left img').attr('src', '../images/ico/logo.svg');
-        }
-    }
     // header hover event
     function headerHover(target01, target02) {
         $(target01).hover(function () {
@@ -195,6 +182,32 @@ $(function () {
     function headerClick(target01, target02) {
         $(target01).click(function () {
             $(this).children(target02).slideToggle("fast");
+        });
+    }
+    // header Scroll event 
+    function headerScroll() {
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop(), wh = $(window).height(), headerHei = $('#header').height();
+            scroll >= headerHei ? $('#header').addClass('active') : $('#header').removeClass('active');
+        });
+        //    if($('#header').hasClass('active')) {
+        //        $('#header_left img').attr('src','../images/ico/logo_black.svg')
+        //    } else {
+        //        $('#header_left img').attr('src','../images/ico/logo.svg')
+        //    }
+    }
+    // window resize reload
+    function windowResize() {
+        window.addEventListener('resize', function () {
+            location.reload();
+        });
+    }
+    // header search box
+    function headerSearch() {
+        $('#header_search_btn').click(function () {
+            $('#header_search_box').slideToggle(function () {
+                $(this).toggleClass('active');
+            });
         });
     }
     // header Full depth
@@ -230,39 +243,29 @@ $(function () {
             }
         });
     }
-    // window resize reload
-    function windowResize() {
-        window.addEventListener('resize', function () {
-            location.reload();
-        });
-    }
-    // header search box
-    function headerSearch() {
-        $('#header_search_btn').click(function () {
-            $('#header_search_box').slideToggle(function () {
-                $(this).toggleClass('active');
-            });
-        });
-    }
     // page check header active
     function pageCheck() {
         var nowLocation = location.href;
-        // let nowIdxOf = nowLocation.indexOf('index');
-        var subNaviEvent = $('#sub_navi .content_wrap .text_02').text();
-        var LinkActive = $('.link_wrap a');
-        // link_wrap auto active
-        LinkActive.each(function (idx) {
-            (subNaviEvent == LinkActive.eq(idx).text()) ? $(this).addClass('active') : null;
-        });
         // location Check
-        (nowLocation.indexOf('index') >= 0) ? console.log('Home') : $('#header').addClass('active');
-        (nowLocation.indexOf('/about/') >= 0) ? null : null;
+        (nowLocation.indexOf('index') >= 0) ? console.log('Home') : headerLogo();
+        // let subNaviEvent = $('#sub_navi .content_wrap .text_02').text();
+        // let LinkActive = $('.link_wrap a');
+        // // link_wrap auto active
+        // LinkActive.each(function (idx) {
+        //     (subNaviEvent == LinkActive.eq(idx).text()) ? $(this).addClass('active') : null;
+        // });
     }
+    function headerLogo() {
+        $('#header_left a img').attr('src', '../images/ico/logo_black.svg');
+        headerScroll();
+    }
+    // header function
     // headerScroll()
     headerHover('.header_center > li', '.depth_01');
     headerClick('.header_lang > ul', '.more_lang');
     headerFullslide();
     headerRight();
+    // page function
     pageCheck();
     // common_js_end
     console.log('common_js_end');

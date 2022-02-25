@@ -1,6 +1,5 @@
 @import url("./common.css");
 
-
 $search-time: 800ms;
 $reset-time: 150ms;
 $color-100 : #0a4b90;
@@ -221,57 +220,29 @@ body {
         margin-top: 50px;
 
         .table_notice {
-            width: 100%;
-            line-height: 1.78;
-            letter-spacing: -0.45px;
             table-layout: fixed;
+            width: 100%;
+            line-height: 1.78;letter-spacing: -0.45px;
 
             thead {
-                letter-spacing: -0.6px;
-                border-top: 1px solid #1e3c5a;
-                border-bottom: 1px solid #e6e6e6;
-                color: #222;
-                font-size: 1.8rem;
+                font-size: 1.8rem;letter-spacing: -0.6px;color: #222;
+                border-top: 1px solid #1e3c5a;border-bottom: 1px solid #e6e6e6;
 
                 tr {
-                    th {
-                        padding: 20px;
-                    }
+                    &:first-child {font-size: 2rem;}
 
-                    td {
-                        a {
-                            display: block;
-                        }
-                    }
+                    th {padding: 20px;}
+                    td {a {display: block;}}
 
-                    .table_notice_title {
-                        font-size: 2rem;
-                        width: auto;
-                        text-align: left;
-                        vertical-align: middle;
-                    }
-
-                    .table_notice_data {
-                        font-size: 1.4rem;
-                        width: 20%;
-                        text-align: right;
-                        color: #999;
-                    }
-
-                    &:first-child {
-                        font-size: 2rem;
-                    }
+                    .table_notice_title {width: auto; font-size: 2rem;text-align: left;vertical-align: middle;}
+                    .table_notice_data {width: 20%; font-size: 1.4rem;text-align: right;color: #999;}
                 }
             }
 
             tbody {
                 tr {
                     border-bottom: 1px solid #e5e5e5;
-
-                    .table_notice_detail {
-                        padding: 20px;
-                        font-size: 1.6rem;
-                    }
+                    .table_notice_detail {font-size: 1.6rem;padding: 20px;}
                 }
             }
             
@@ -279,33 +250,26 @@ body {
 
         .table_notice_more {
             margin-top: 40px;
-            display: flex;
-            justify-content: flex-end;
+            display: flex; justify-content: flex-end;
 
             >a {
-                font-size: 1.6rem;
+                @include transition(.3s);
                 display: inline-block;
-                padding: 10px 26px;
-                color: #fff;
-                transition: all .3s;
+                font-size: 1.6rem; color: #fff;
                 background: $color-100;
+                padding: 10px 26px;
 
-                &:hover {
-                    color: #fff;
-                    background: rgba($color: $color-100, $alpha: .5);
-                }
+                &:hover {color: #fff;background: rgba($color: $color-100, $alpha: .5);}
             }
         }
     }
 
     #search_box_popup {
-        z-index: 99999;
         width: 90vw; height: 90vh;
-        overflow: auto;
+        overflow: auto; z-index: 99999;
         padding: 100px; background: #fff;
         button[type=submit] {
-            background-color: $color-100;
-            border: none
+            border: none; background-color: $color-100;
         }
         .product-inner {
             img {width: 200px; height: 200px; object-fit: cover;}
@@ -318,9 +282,7 @@ body {
         z-index: 9999;
 
         // active, hover
-        &:hover {
-            figure { opacity: .7 }
-        }
+        &:hover {figure { opacity: .7 }}
 
         figure {
             @include transition(.15s);
@@ -349,6 +311,7 @@ body {
         position: fixed; left: 0;top: 0; z-index: 9990;
         width: 100%; 
         background: rgba($color: #fff, $alpha: 0);
+        
         a {color: rgba($color: #fff, $alpha: 1);}
 
         // active
@@ -362,18 +325,12 @@ body {
                                
                     .header_lang  {
                         > ul {
-                            .fixed_lang {
-                                border-bottom: 1px solid #666;
-                            }
-                            .more_lang {
-                                a { color: #fff; }
-                            }
+                            .fixed_lang {border-bottom: 1px solid #666;}
+                            .more_lang {a { color: #fff; }}
                         }
                     }
                     .header_ham {
-                        span {
-                            border-bottom: 1px solid #333;
-                        }
+                        span {border-bottom: 1px solid #333;}
                     }
                 }
             } 
@@ -405,7 +362,6 @@ body {
                 @include transition(.3s);
                 display: flex; justify-content: center; visibility: visible;
                 margin-left: auto; margin-right: 120px;
-                
 
                 // .header_bg {
                 //     @include transition(.3s);
@@ -421,8 +377,8 @@ body {
 
                 >li {
                     @include transition(.3s);
-                    position: relative;
                     @include font-18();
+                    position: relative;
                     margin-left: 60px;
 
                     // &::after {
@@ -951,9 +907,9 @@ body {
                                     width: 80px; 
                                     position: relative;
                                     .main_product_arrow {
+                                        margin: 0;
                                         width:20px; height:20px; 
                                         transform: translateY(-50%);
-                                        margin: 0;
                                         &.swiper-button-prev {background: url('../images/ico/ico_arrow_01_left.svg')no-repeat center/cover; }
                                         &.swiper-button-next { background: url('../images/ico/ico_arrow_01_right.svg')no-repeat center/cover; }
                                     }
@@ -971,7 +927,9 @@ body {
                                 margin-top: 40px;
                                 .swiper-container {
                                     display: none;
+
                                     &.active {display: block}
+
                                     .swiper-wrapper {
                                         .swiper-slide {
                                             .img_wrap {
@@ -983,9 +941,7 @@ body {
                                             .text_wrap {
                                                 margin-top: 20px;
                                                 text-align: center;
-                                                .text_01 {
-                                                    @include font-18();
-                                                }
+                                                .text_01 {@include font-18();}
                                             }
 
                                         }
@@ -1021,20 +977,11 @@ body {
                                 padding-left: 90px;
                                 p {
                                     color: #fff;
-                                    &.text_01 {
-                                        @include font-R();
-                                        font-size: 24px; font-weight: bold;
-                                    }
-                                    &.text_02 {
-                                        margin-top: 20px;
-                                        font-size: 38px; font-weight: 300; line-height: 1.37; letter-spacing: -3.04px;
-                                    }
+                                    &.text_01 {@include font-R();font-size: 24px; font-weight: bold;}
+                                    &.text_02 {margin-top: 20px;font-size: 38px; font-weight: 300; line-height: 1.37; letter-spacing: -3.04px;}
                                 }
-                                .text_03 {
-                                    margin-top: 60px;
-                                    border: 1px solid #fff;
-                                    background-color: transparent;
-                                }
+
+                                .text_03 {margin-top: 60px;border: 1px solid #fff;background-color: transparent;}
                             }
                         }
                     }
@@ -1052,8 +999,8 @@ body {
                                 position: relative;
                                 border-right: 1px solid #ddd;
                                 .location {
-                                    display: none;
                                     @include fullsize();
+                                    display: none;
                                     // active
                                     &.active { display: block;}
                                 }
@@ -1078,10 +1025,7 @@ body {
                                             &.active, &:hover { color: #fff; }
                                             &:last-child {margin-bottom: 0;}
 
-                                            ion-icon {
-                                                margin-left: 28px;
-                                                width: 20px; height: 20px;
-                                            }
+                                            ion-icon {margin-left: 28px; width: 20px; height: 20px;}
                                             
                                         }
                                     }
@@ -1481,6 +1425,12 @@ body {
                                     border: 1px solid #ddd;
                                     background-color: #fff; z-index: 2;
                                     ion-icon {width: 30px; height: 30px;}
+
+                                    // hover
+                                    &:hover {
+                                        background: $color-100;
+                                        ion-icon {color: #fff;}
+                                    }
                                 }
 
                                 .swiper-year { 
@@ -1543,12 +1493,7 @@ body {
                             }
                         }
                     }
-
                 }
-
-                
-                
-
             }
 
 

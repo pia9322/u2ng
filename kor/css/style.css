@@ -267,18 +267,22 @@ body .table_wrap_more {
 }
 
 body .table_wrap_more .table_notice {
+  table-layout: fixed;
   width: 100%;
   line-height: 1.78;
   letter-spacing: -0.45px;
-  table-layout: fixed;
 }
 
 body .table_wrap_more .table_notice thead {
+  font-size: 1.8rem;
   letter-spacing: -0.6px;
+  color: #222;
   border-top: 1px solid #1e3c5a;
   border-bottom: 1px solid #e6e6e6;
-  color: #222;
-  font-size: 1.8rem;
+}
+
+body .table_wrap_more .table_notice thead tr:first-child {
+  font-size: 2rem;
 }
 
 body .table_wrap_more .table_notice thead tr th {
@@ -290,21 +294,17 @@ body .table_wrap_more .table_notice thead tr td a {
 }
 
 body .table_wrap_more .table_notice thead tr .table_notice_title {
-  font-size: 2rem;
   width: auto;
+  font-size: 2rem;
   text-align: left;
   vertical-align: middle;
 }
 
 body .table_wrap_more .table_notice thead tr .table_notice_data {
-  font-size: 1.4rem;
   width: 20%;
+  font-size: 1.4rem;
   text-align: right;
   color: #999;
-}
-
-body .table_wrap_more .table_notice thead tr:first-child {
-  font-size: 2rem;
 }
 
 body .table_wrap_more .table_notice tbody tr {
@@ -312,8 +312,8 @@ body .table_wrap_more .table_notice tbody tr {
 }
 
 body .table_wrap_more .table_notice tbody tr .table_notice_detail {
-  padding: 20px;
   font-size: 1.6rem;
+  padding: 20px;
 }
 
 body .table_wrap_more .table_notice_more {
@@ -327,13 +327,16 @@ body .table_wrap_more .table_notice_more {
 }
 
 body .table_wrap_more .table_notice_more > a {
-  font-size: 1.6rem;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
   display: inline-block;
-  padding: 10px 26px;
+  font-size: 1.6rem;
   color: #fff;
-  -webkit-transition: all .3s;
-  transition: all .3s;
   background: #0a4b90;
+  padding: 10px 26px;
 }
 
 body .table_wrap_more .table_notice_more > a:hover {
@@ -342,17 +345,17 @@ body .table_wrap_more .table_notice_more > a:hover {
 }
 
 body #search_box_popup {
-  z-index: 99999;
   width: 90vw;
   height: 90vh;
   overflow: auto;
+  z-index: 99999;
   padding: 100px;
   background: #fff;
 }
 
 body #search_box_popup button[type=submit] {
-  background-color: #0a4b90;
   border: none;
+  background-color: #0a4b90;
 }
 
 body #search_box_popup .product-inner img {
@@ -502,9 +505,9 @@ body #header .header_wrap .header_center > li {
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
-  position: relative;
   font-size: 18px;
   letter-spacing: -0.72px;
+  position: relative;
   margin-left: 60px;
 }
 
@@ -1203,11 +1206,11 @@ body main#main_page .main_section.main_section_02 .content_wrap .product_content
 }
 
 body main#main_page .main_section.main_section_02 .content_wrap .product_content .product_tab .arrow_wrap .main_product_arrow {
+  margin: 0;
   width: 20px;
   height: 20px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  margin: 0;
 }
 
 body main#main_page .main_section.main_section_02 .content_wrap .product_content .product_tab .arrow_wrap .main_product_arrow.swiper-button-prev {
@@ -1344,9 +1347,9 @@ body main#main_page .main_section.main_section_04 .content_wrap > div.left_conte
 }
 
 body main#main_page .main_section.main_section_04 .content_wrap > div.left_content .location {
-  display: none;
   width: 100%;
   height: 100%;
+  display: none;
 }
 
 body main#main_page .main_section.main_section_04 .content_wrap > div.left_content .location.active {
@@ -2132,6 +2135,14 @@ body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .sw
 body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-prev ion-icon, body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-next ion-icon {
   width: 30px;
   height: 30px;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-prev:hover, body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-next:hover {
+  background: #0a4b90;
+}
+
+body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-prev:hover ion-icon, body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-next:hover ion-icon {
+  color: #fff;
 }
 
 body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-year {
