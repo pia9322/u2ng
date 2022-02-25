@@ -694,7 +694,7 @@ body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_bo
 
 body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info::after { content: ''; position: absolute; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 52px; height: 52px; border-radius: 100%; top: calc(100% + 35px); background: rgba(10, 75, 144, 0.06); -webkit-animation: mapCircle_01 2s infinite linear; animation: mapCircle_01 2s infinite linear; }
 
-body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info::before { content: ''; position: absolute; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 20px; height: 20px; border-radius: 100%; top: calc(100% - -52px); background-color: rgba(10, 75, 144, 0.2); -webkit-animation: mapCircle_01 1.5s .5s infinite linear; animation: mapCircle_01 1.5s .5s infinite linear; }
+body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info::before { content: ''; position: absolute; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 20px; height: 20px; border-radius: 100%; top: calc(100% - -52px); background-color: rgba(10, 75, 144, 0.2); -webkit-animation: mapCircle_01 2s .3s infinite linear; animation: mapCircle_01 2s .3s infinite linear; }
 
 body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info .map { cursor: pointer; transition: 0.15s; -webkit-transition: 0.15s; -moz-transition: 0.15s; -ms-transition: 0.15s; -o-transition: 0.15s; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 60px; border-radius: 80px; background-color: #fff; position: relative; background-color: #0a4b90 !important; }
 
@@ -702,9 +702,9 @@ body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_bo
 
 body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info .map .text_tit { margin-left: 14px; font-size: 18px; font-weight: 500; letter-spacing: -1.44px; color: #fff !important; font-weight: 500 !important; }
 
-body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info .map::after { content: ''; position: absolute; left: 50%; top: 100%; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 1px; height: 60px; background-color: #0a4b90; }
+body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info .map::after { content: ''; position: absolute; left: 50%; top: 100%; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 1px; height: 60px; background-color: #0a4b90; -webkit-animation: mapline_01 2s 1s infinite linear; animation: mapline_01 2s 1s infinite linear; }
 
-body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info .map::before { content: ''; position: absolute; left: 50%; top: 100%; -webkit-transform: translateX(-50%); transform: translateX(-50%); top: calc(100% + 60px); width: 5px; height: 5px; border-radius: 100%; background-color: #0a4b90; }
+body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info .map::before { content: ''; position: absolute; left: 50%; top: 100%; -webkit-transform: translateX(-50%); transform: translateX(-50%); top: calc(100% + 60px); width: 5px; height: 5px; border-radius: 100%; background-color: #0a4b90; -webkit-animation: mapCircle_01 2s .5s infinite linear; animation: mapCircle_01 2s .5s infinite linear; }
 
 body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info.info_01 { left: 20px; bottom: 244px; }
 
@@ -757,4 +757,10 @@ body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_bo
 @keyframes mapCircle_01 { 0% { opacity: 0; }
   50% { opacity: 1; }
   100% { opacity: 0; } }
+
+@-webkit-keyframes mapline_01 { 0% { height: 0; }
+  100% { height: 60px; } }
+
+@keyframes mapline_01 { 0% { height: 0; }
+  100% { height: 60px; } }
 /*# sourceMappingURL=style.min.css.map */

@@ -2584,8 +2584,8 @@ body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_bo
   border-radius: 100%;
   top: calc(100% - -52px);
   background-color: rgba(10, 75, 144, 0.2);
-  -webkit-animation: mapCircle_01 1.5s .5s infinite linear;
-          animation: mapCircle_01 1.5s .5s infinite linear;
+  -webkit-animation: mapCircle_01 2s .3s infinite linear;
+          animation: mapCircle_01 2s .3s infinite linear;
 }
 
 body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info .map {
@@ -2651,6 +2651,8 @@ body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_bo
   width: 1px;
   height: 60px;
   background-color: #0a4b90;
+  -webkit-animation: mapline_01 2s 1s infinite linear;
+          animation: mapline_01 2s 1s infinite linear;
 }
 
 body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info .map::before {
@@ -2665,6 +2667,8 @@ body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_bo
   height: 5px;
   border-radius: 100%;
   background-color: #0a4b90;
+  -webkit-animation: mapCircle_01 2s .5s infinite linear;
+          animation: mapCircle_01 2s .5s infinite linear;
 }
 
 body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info.info_01 {
@@ -2823,6 +2827,24 @@ body main.sub_page.rnd#project .sub_section.section_01 .section_detail .right_bo
   }
   100% {
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes mapline_01 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 60px;
+  }
+}
+
+@keyframes mapline_01 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 60px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1703,7 +1703,7 @@ body {
                                                     @include map-circle(20px);
                                                     top: calc(100% - -52px);
                                                     background-color: rgba(10, 75, 144, 0.2);
-                                                    animation: mapCircle_01 1.5s .5s infinite linear;
+                                                    animation: mapCircle_01 2s .3s infinite linear;
                                                 }
 
                                                 .map {
@@ -1719,6 +1719,7 @@ body {
                                                         @include absolute-x(50%, 100%);
                                                         width: 1px; height: 60px;
                                                         background-color: $color-100;
+                                                        animation: mapline_01 2s 1s infinite linear;
                                                     }
 
                                                     // line_circle
@@ -1729,6 +1730,7 @@ body {
                                                         width: 5px; height: 5px;
                                                         border-radius: 100%;
                                                         background-color: $color-100;
+                                                        animation: mapCircle_01 2s .5s infinite linear;
                                                     }
                                                 }
 
@@ -1811,6 +1813,10 @@ body {
     0% {opacity: 0;}
     50% {opacity: 1;}
     100% {opacity: 0;}
+}
+@keyframes mapline_01 {
+    0% {height: 0;}
+    100% {height: 60px;}
 }
 
 // ========================== KEYFRAMES ==========================
