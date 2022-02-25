@@ -567,7 +567,7 @@ body main.sub_page.about#history .sub_section.section_01 { margin-top: 120px; ma
 
 body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap { position: relative; max-width: 1360px; margin: 0 auto; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; height: 60px; }
 
-body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-prev, body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-next { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; cursor: pointer; width: 60px; height: 100%; border: 1px solid #ddd; background-color: #fff; z-index: 2; }
+body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-prev, body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-next { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; transition: 0.15s; -webkit-transition: 0.15s; -moz-transition: 0.15s; -ms-transition: 0.15s; -o-transition: 0.15s; cursor: pointer; width: 60px; height: 100%; border: 1px solid #ddd; background-color: #fff; z-index: 2; }
 
 body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-prev ion-icon, body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-next ion-icon { width: 30px; height: 30px; }
 

@@ -2116,6 +2116,11 @@ body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .sw
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
   cursor: pointer;
   width: 60px;
   height: 100%;

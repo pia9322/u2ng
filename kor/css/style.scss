@@ -1475,10 +1475,11 @@ body {
                              
                                 .swiper-prev, .swiper-next  {
                                     @include flexCenter();
+                                    @include transition(.15s);
                                     cursor: pointer;
                                     width: 60px; height: 100%;
                                     border: 1px solid #ddd;
-                                    background-color: #fff;z-index: 2;
+                                    background-color: #fff; z-index: 2;
                                     ion-icon {width: 30px; height: 30px;}
                                 }
 
