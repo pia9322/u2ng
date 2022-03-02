@@ -13,12 +13,13 @@ body {
     */
   /* 
         table_공통 게시판
-        #table_header
+        
+            #table_header
 
-        #table_body - list type
-        #table_gallery - gallery type
+            #table_body - list type
+            #table_gallery - gallery type
 
-        #table_footer
+            #table_footer
     */
   /* 
         table_공통 상세보기
@@ -29,7 +30,7 @@ body {
   /* 
         fixed_quick ico.
 
-        #quick_ico_01 - footer_video_banner
+            #quick_ico_01 - footer_video_banner
     */
 }
 

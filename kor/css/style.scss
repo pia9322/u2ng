@@ -34,6 +34,13 @@ $color-200 : #98afc7;
       -webkit-line-clamp: $line;
     }
 }
+  @mixin clearfix {
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
 // ====================================DEFAULT MIXIN====================================
 
 // ====================================JJ MIXIN====================================
@@ -144,12 +151,13 @@ body {
 
     /* 
         table_공통 게시판
-        #table_header
+        
+            #table_header
 
-        #table_body - list type
-        #table_gallery - gallery type
+            #table_body - list type
+            #table_gallery - gallery type
 
-        #table_footer
+            #table_footer
     */
 
     #table_default {
@@ -406,7 +414,7 @@ body {
     /* 
         fixed_quick ico.
 
-        #quick_ico_01 - footer_video_banner
+            #quick_ico_01 - footer_video_banner
     */
     #quick_ico_01 {
         position: fixed; right: 3%; bottom: 5%;
@@ -653,10 +661,7 @@ body {
                 background: #18242e;
                 @include transition(.3s);
 
-                &.active {
-                    left: 0;
-                    visibility: visible; opacity: 1;
-                }
+                &.active {left: 0;visibility: visible; opacity: 1;}
 
                 .header_full_wrap {
                     margin-top: 90px;
@@ -667,9 +672,7 @@ body {
                         text-align: center;
                         line-height: 1;
 
-                        &:hover {
-                            color: $color-100;
-                        }
+                        &:hover {color: $color-100;}
                     }
 
                     .header_full_list {
