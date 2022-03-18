@@ -1,11 +1,7 @@
 @charset "UTF-8";
 @import url("./common.css");
-/* 
-    ms
-*/
-/* 
-    color-100 : cc
-*/
+/* ms*/
+/* color-100 : cc*/
 body { /*  lity.js close_btn primary $color */ /*  table_공통 게시판 #table_header #table_body - list type #table_gallery - gallery type #table_footer */ /*  table_공통 상세보기 */ /* search box  */ /*  fixed_quick ico. #quick_ico_01 - footer_video_banner */ }
 
 body .lity-close { color: #0a4b90 !important; }
@@ -332,15 +328,15 @@ body main#main_page .main_section.main_section_02 { position: relative; max-widt
 
 body main#main_page .main_section.main_section_02 #point_circle { position: absolute; right: -40%; top: -20%; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 1000px; height: 1000px; }
 
-body main#main_page .main_section.main_section_02 #point_circle .circle { -webkit-animation: rotateinfin 5s infinite linear; animation: rotateinfin 5s infinite linear; -webkit-transform-origin: center; transform-origin: center; position: absolute; left: 0; top: 0; }
+body main#main_page .main_section.main_section_02 #point_circle .circle { -webkit-animation: rotateinfin 15s infinite linear; animation: rotateinfin 15s infinite linear; -webkit-transform-origin: center; transform-origin: center; position: absolute; left: 0; top: 0; }
 
-body main#main_page .main_section.main_section_02 #point_circle .circle.circle_02 { margin: 70px 0 0 20px; -webkit-animation: rotateinfin 1s infinite linear; animation: rotateinfin 1s infinite linear; }
+body main#main_page .main_section.main_section_02 #point_circle .circle.circle_02 { margin: 70px 0 0 20px; -webkit-animation: rotateinfin 11s infinite linear; animation: rotateinfin 11s infinite linear; }
 
-body main#main_page .main_section.main_section_02 #point_circle .circle.circle_03 { margin: -10px 0 0 100px; -webkit-animation: rotateinfin 8s infinite linear; animation: rotateinfin 8s infinite linear; }
+body main#main_page .main_section.main_section_02 #point_circle .circle.circle_03 { margin: -10px 0 0 100px; -webkit-animation: rotateinfin 18s infinite linear; animation: rotateinfin 18s infinite linear; }
 
-body main#main_page .main_section.main_section_02 #point_circle .circle.circle_04 { margin: -200px 0 0 60px; -webkit-animation: rotateinfin 6s infinite linear; animation: rotateinfin 6s infinite linear; }
+body main#main_page .main_section.main_section_02 #point_circle .circle.circle_04 { margin: -200px 0 0 60px; -webkit-animation: rotateinfin 16s infinite linear; animation: rotateinfin 16s infinite linear; }
 
-body main#main_page .main_section.main_section_02 #point_circle .circle.circle_05 { margin: -150px 0 0 400px; -webkit-animation: rotateinfin 1s infinite linear; animation: rotateinfin 1s infinite linear; }
+body main#main_page .main_section.main_section_02 #point_circle .circle.circle_05 { margin: -150px 0 0 400px; -webkit-animation: rotateinfin 11s infinite linear; animation: rotateinfin 11s infinite linear; }
 
 body main#main_page .main_section.main_section_02 .content_wrap { max-width: 1640px; width: 100%; margin: 0 auto; }
 

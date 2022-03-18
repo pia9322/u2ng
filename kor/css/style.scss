@@ -1,16 +1,12 @@
 @import url("./common.css");
 
 
-/* 
-    ms
-*/
+/* ms*/
 $search-time: 800ms;
 $reset-time: 150ms;
 
 
-/* 
-    color-100 : cc
-*/
+/* color-100 : cc*/
 $color-100 : #0a4b90;
 $color-200 : #98afc7;
 
@@ -961,7 +957,7 @@ body {
                         position: absolute; right: -40%; top: -20%; transform: translateX(-50%);
                         width: 1000px; height: 1000px;
                         .circle {
-                            animation: rotateinfin 5s infinite linear;
+                            animation: rotateinfin 15s infinite linear;
                             transform-origin: center;
                             position: absolute; left: 0; top: 0;
                             // border: 1px solid #ddd; border-radius: 100%;
@@ -977,20 +973,20 @@ body {
                             // &.circle_01 { border: 1px solid $color-100; } 
                             &.circle_02 {
                                 margin: 70px 0 0 20px;
-                                animation: rotateinfin 1s infinite linear;
+                                animation: rotateinfin 11s infinite linear;
                             } 
                             &.circle_03 {
                                 margin: -10px 0 0 100px;
-                                animation: rotateinfin 8s infinite linear;
+                                animation: rotateinfin 18s infinite linear;
                             } 
 
                             &.circle_04 {
                                 margin: -200px 0 0 60px;
-                                animation: rotateinfin 6s infinite linear;
+                                animation: rotateinfin 16s infinite linear;
                             } 
                             &.circle_05 {
                                 margin: -150px 0 0 400px;
-                                animation: rotateinfin 1s infinite linear;
+                                animation: rotateinfin 11s infinite linear;
                             } 
 
                         }
