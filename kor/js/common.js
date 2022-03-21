@@ -120,71 +120,12 @@ $(function () {
 
 
 
-    // person swiper
-    let name = ['기술팀', '기술 영업팀', '솔루션 개발팀']
-
-    let teamTab = new Swiper(".team_info.swiper-container", {
-        autoHeight: true,
-        effect: "fade",
-
-        pagination: {
-            el: ".swiper-pagination.tab_02_list",
-            clickable: true,
-            renderBullet: function(index, className) {
-                return '<span class="' + className + '">' + (name[index]) + '</span>';
-            },
-        },
-    });
-
-    let teamSlide = new Swiper('.team.swiper-container', {
-        slidesPerView: 'auto',
-        // centeredSlides: true,
-        // loop: true,
-        // touchMoveStopPropagation: true,
-        breakpoints: {
-            // 1480: {
-            //     slidesPerView: 2,
-            // },
-        }
-    });
-
-    let personInfo = new Swiper('.person_info.swiper-container', {
-        slidesPerView: '4',
-        // centeredSlides: true,
-        touchMoveStopPropagation: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        breakpoints: {
-            1480: {
-                slidesPerView: 3,
-                loop: true,
-
-            },
-            1120: {
-                slidesPerView: 2.5,
-            },
-            950: {
-                slidesPerView: 2,
-                spaceBetween: 0,
-            },
-            767: {
-                slidesPerView: 1,
-                spaceBetween: 0,
-            }
-        }
-    });
-    // person swiper
-
-
-
-
     // ============= swiper ============= 
 
 
 
     // header_default 
+
     let header = document.querySelector('#header'),
         header_ham = document.querySelector('.header_ham'),
         header_full = document.querySelector('.header_full'),
@@ -230,57 +171,9 @@ $(function () {
     }
 
 
-
     // sub_manu_navi 
     let sub_depth = document.querySelector('#sub_depth');
 
-
-
-    // jj fullpage
-    let delta, loop, num = 0, pos = [],
-        mainLen = ($(".fullpage_wrap > section").length),
-        y = { sy: 0, ey: 0 }
-
-
-
-    function mainWrap() {
-        $(".fullpage_wrap > section").each(function (i) {
-            pos.push($(".fullpage_wrap > section").eq(i).offset().top)
-        });
-
-
-        $(".fullpage_wrap").on('scroll touchstart touchmove mousewheel DOMMouseScroll', function (e) {
-            if (e.type == 'touchstart') {
-                y.sy = e.targetTouches[0].clientY;
-            } else if (e.type == 'touchmove') {
-                y.ey = e.targetTouches[0].clientY;
-                delta = (y.sy > y.ey) ? -1 : 1;
-            } else {
-                delta = e.originalEvent.wheelDelta || -e.originalEvent.detail
-            }
-
-            clearTimeout(loop);
-            loop = setTimeout(function () {
-                if (delta < 0) {
-                    if (num < mainLen) num++;
-                } else {
-                    if (num != 0) num--;
-                };
-
-                $(".fullpage_wrap").animate({ marginTop: -pos[num] }, "slow")
-            }, 300);
-
-            (num <= 2) ? $('.main_wrap').addClass('active') : null;
-            (num == 0 || num == 2) ? $('.main_section_01').addClass('active') : $('.main_section_01').removeClass('active');
-            (num == 2 && delta <= 120) ? $('.main_wrap').removeClass('active') : null;
-
-
-            console.log(num, delta);
-            // 터치위치까지 구함
-        });
-    };
-    // mainWrap()
-    // jj fullpage
 
 
 
@@ -319,11 +212,17 @@ $(function () {
     }
 
 
+    
+
 
 
     pageCheck()
     headerRight()
+
+    
     // common_js_end
     console.log('common_js_end')
 });
+
+
 

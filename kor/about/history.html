@@ -50,9 +50,8 @@
     <script src="../js/swiper.js"></script>
     <script src="../js/aos.js"></script>
     <script src="../js/fullpage.min.js"></script>
-    <!-- <script src="../js/gsap.min.js"></script> -->
-    <!-- <script src="../js/wave.js"></script> -->
-    <!-- <script src="../js/lity.js"></script> -->
+    <script src="../js/gsap.min.js"></script>
+    <script src="../js/ScrollTrigger.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
@@ -280,7 +279,7 @@
                     <nav class="sub_nav sub_nav_02">
                         <ul class="depth_wrap">
                             <li class="depth_01">
-                                <a href="#none">사업분야</a>
+                                <a href="#none">연혁</a>
                                 <i><img src="../images/ico/ico_arrow_bottom.svg" alt="메뉴1 네비게이션 화살표"> </i>
                             </li>
 
@@ -304,270 +303,371 @@
         <section class="sub_section section_01">
             <div class="content_wrap">
 
-                <div class="swiper-header-wrap draggable_off">
-                    <div class="swiper-prev">
-                        <ion-icon name="chevron-back-outline"></ion-icon>
+                <div class="text_wrap">
+                    <p class="text_01">
+                        유투엔지는 2011년 창립 이후로 끊임없는 도전과 혁신으로
+                        <br class="pc_only">
+                        <strong>꾸준히 성장해오고 있습니다.</strong>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="sub_section section_02 no_padding">
+            <div class="content_wrap">
+
+
+                <!-- 2019 -->
+                <div class="his_list">
+                    <div>
+                        <div class="img_wrap">
+                            <div class="img_area">
+                                <div class="txt">
+                                    2019
+                                    <br>
+                                    ~
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="swiper-year"></div>
-                    <div class="swiper-next">
-                        <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                    <div class="txt_wrap">
+
+                        <div class="inner">
+
+                            <div class="event_wrap">
+
+                                <div class="list_wrap">
+
+                                    <div class="year_wrap">
+                                        <div class="year">2021</div>
+                                    </div>
+
+                                    <div class="detail_wrap">
+
+                                        <div class="list">
+                                            <div class="month">04</div>
+                                            <div class="detail">
+                                                산업통상자원부 범부처연계형 기술사업화 이어달리기 사업 “PS-LTE 기반의 원자력시설 작업종사자용 지능형 IoT 디바이스 및 방사선안전관리 시스템” 과제 선정 및 수행
+                                            </div>
+                                        </div>
+
+                                        <div class="list">
+                                            <div class="month">01</div>
+                                            <div class="detail">
+                                                기업부설연구소 이전 (서울시 성동구 소재)
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="list_wrap">
+
+                                    <div class="year_wrap">
+                                        <div class="year">2020</div>
+                                    </div>
+
+                                    <div class="detail_wrap">
+
+                                        <div class="list">
+                                            <div class="month">10</div>
+                                            <div class="detail">
+                                                기술혁신형 중소기업(Inno-Biz) 인증
+                                            </div>
+                                        </div>
+
+                                        <div class="list">
+                                            <div class="month">10</div>
+                                            <div class="detail">
+                                                중소벤처기업부 구매조건부 신제품 개발사업 공동투자형 과제 “충전식 공기시료 채집기 & 저용적 공기시료채집기 국산화 및 성능 개선”
+                                                과제 선정 및 수행
+                                            </div>
+                                        </div>
+
+                                        <div class="list">
+                                            <div class="month">10</div>
+                                            <div class="detail">
+                                                중소벤처기업부 해외인증규격 적합제품 기술 개발사업 “수출경쟁력을 강화시킨 유지보수가 용이한 모듈방식의 개인선량계 통합형 중앙 제어 보관 관리 시스템 개발” 수행
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="list_wrap">
+
+                                    <div class="year_wrap">
+                                        <div class="year">2019</div>
+                                    </div>
+
+                                    <div class="detail_wrap">
+
+                                        <div class="list">
+                                            <div class="month">07</div>
+                                            <div class="detail">
+                                                중소벤처기업청 수출유망중소기업 지정
+                                            </div>
+                                        </div>
+
+                                        <div class="list">
+                                            <div class="month">03</div>
+                                            <div class="detail">
+                                                TLD보관관리시스템 조달청 우수제품지정 [지정번호:2019018]
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
 
-                <div class="history_swiper swiper-container">
-
-                    <div class="swiper-wrapper">
-
-                        <!-- 2011 ~ 2013 -->
-                        <div class="swiper-slide slide_01">
-                            <figure>
-                                <div class="img_wrap">
-                                    <!-- background_img -->
-                                    <p class="img_text">유투엔지의 비지니스 영역 확대</p>
+                <!-- 2016~2018 -->
+                <div class="his_list">
+                    <div>
+                        <div class="img_wrap" >
+                            <div class="img_area">
+                                <div class="txt">
+                                    2016
+                                    <br>
+                                    ~
+                                    <br>
+                                    2018
                                 </div>
+                            </div>
+                        </div>
+                    </div>
 
-                                <figcaption>
-                                    <div class="text_title">2011 ~ 2013</div>
+                    <div class="txt_wrap">
 
-                                    <div class="text_detail">
-                                        <p class="text_wrap">
-                                            <span class="text_01">2013</span>
-                                            <span class="text_02">08</span>
-                                            <span class="text_03">에너지기술개발 사업 원자력융합기술 “위치 기반 지능형 Active Tag 를 부착한 TLD보관관리시스템” 과제 선정 수행</span>
-                                        </p>
+                        <div class="inner">
+                            <div class="event_wrap">
 
-                                        <p class="text_wrap">
-                                            <span class="text_01">2013</span>
-                                            <span class="text_02">07</span>
-                                            <span class="text_03">중소기업청 창업성장과제 “통합 전자식 개인선량계 판독기(Reader)” 개발 과제 수행</span>
-                                        </p>
+                                <!-- 2018 -->
+                                <div class="list_wrap">
 
-                                        <p class="text_wrap">
-                                            <span class="text_01">2011</span>
-                                            <span class="text_02">09</span>
-                                            <span class="text_03">벤처기업 인증</span>
-                                        </p>
-
-                                        <p class="text_wrap">
-                                            <span class="text_01">2011</span>
-                                            <span class="text_02">03</span>
-                                            <span class="text_03">㈜유투엔지 창립</span>
-                                        </p>
+                                    <div class="year_wrap">
+                                        <div class="year">2018</div>
                                     </div>
 
-                                </figcaption>
-                            </figure>
-                        </div>
+                                    <div class="detail_wrap">
 
-                        <div class="swiper-slide slide_02">
-                            <figure>
-                                <div class="img_wrap">
-                                    <!-- background_img -->
-                                    <p class="img_text">유투엔지의 끊임없는 도전과 혁신</p>
+                                        <div class="list">
+                                            <div class="month">12</div>
+                                            <div class="detail">
+                                                수출 1,000,000달러 달성
+                                            </div>
+                                        </div>
+
+                                        <div class="list">
+                                            <div class="month">11</div>
+                                            <div class="detail">
+                                                국내 14개 전 원전 방사선관리구역 출입통제시스템 납품 실적 달성
+                                            </div>
+                                        </div>
+
+                                        <div class="list">
+                                            <div class="month">09</div>
+                                            <div class="detail">
+                                                해외조달시장 진출유망기업 선정
+                                            </div>
+                                        </div>
+                                        <div class="list">
+                                            <div class="month">07</div>
+                                            <div class="detail">
+                                                UAE Nawah사에 방사선관리구역 출입통제시스템
+                                                <br>
+                                                교육용시스템 수출
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
 
-                                <figcaption>
-                                    <div class="text_title">2014 ~ 2016</div>
+                                <!-- 2017 -->
+                                <div class="list_wrap">
 
-                                    <div class="text_detail">
-                                        <p class="text_wrap">
-                                            <span class="text_01">2014</span>
-                                            <span class="text_02">03</span>
-                                            <span class="text_03">기업부설연구소 이전 (서울시 금천구 소재)</span>
-                                        </p>
-
-                                        <p class="text_wrap">
-                                            <span class="text_01">2015</span>
-                                            <span class="text_02">06</span>
-                                            <span class="text_03">중소기업청 창업성장과제 “IoT 6LowPan기반의 지능형 무선피폭선량 안전관리시스템” 개발 과제 수행</span>
-                                        </p>
-
-                                        <p class="text_wrap">
-                                            <span class="text_01">2016</span>
-                                            <span class="text_02">06</span>
-                                            <span class="text_03">UAE Barakah Nuclear Power Plant 1,2호기에 방사선관리구역 출입통제시스템 수출</span>
-                                        </p>
-
-                                        <p class="text_wrap">
-                                            <span class="text_01">2016</span>
-                                            <span class="text_02">06</span>
-                                            <span class="text_03">프랑스 Mirion Technologies사의 국내 원자력시장 보건물리장비 공급업체 계약 체결</span>
-                                        </p>
+                                    <div class="year_wrap">
+                                        <div class="year">2017</div>
                                     </div>
 
-                                </figcaption>
+                                    <div class="detail_wrap">
 
-                            </figure>
-                        </div>
+                                        <div class="list">
+                                            <div class="month">06</div>
+                                            <div class="detail">
+                                                UAE Barakah Nuclear Power Plant 3,4호기에 방사선관리구역
+                                                <br>
+                                                출입통제시스템 수출
+                                            </div>
+                                        </div>
 
-                        <div class="swiper-slide slide_03">
-                            <figure>
-                                <div class="img_wrap">
-                                    <!-- background_img -->
-                                    <p class="img_text">유투엔지의 끊임없는 도전과 혁신</p>
+                                        <div class="list">
+                                            <div class="month">06</div>
+                                            <div class="detail">
+                                                프랑스 Mirion Technologies사의 국내 원자력시장 보건물리장비
+                                                <br>
+                                                공급업체 계약 체결
+                                            </div>
+                                        </div>
+
+
+                                    </div>
                                 </div>
 
-                                <figcaption>
-                                    <div class="text_title">2017 ~ 2019</div>
+                                <!-- 2016 -->
+                                <div class="list_wrap">
 
-                                    <div class="text_detail">
-                                        <p class="text_wrap">
-                                            <span class="text_01">2017</span>
-                                            <span class="text_02">06</span>
-                                            <span class="text_03">프랑스 Mirion Technologies사의 국내 원자력시장 보건물리장비 공급업체 계약 체결</span>
-                                        </p>
-
-                                        <p class="text_wrap">
-                                            <span class="text_01">2017</span>
-                                            <span class="text_02">06</span>
-                                            <span class="text_03">UAE Barakah Nuclear Power Plant 3,4호기에 방사선관리구역 출입통제시스템 수출</span>
-                                        </p>
-
-                                        <p class="text_wrap">
-                                            <span class="text_01">2018</span>
-                                            <span class="text_02">07</span>
-                                            <span class="text_03">UAE Nawah사에 방사선관리구역 출입통제시스템 교육용시스템 수출</span>
-                                        </p>
-
-                                        <p class="text_wrap">
-                                            <span class="text_01">2017</span>
-                                            <span class="text_02">06</span>
-                                            <span class="text_03">UAE Barakah Nuclear Power Plant 3,4호기에 방사선관리구역 출입통제시스템 수출</span>
-                                        </p>
-
-                                        <p class="text_wrap">
-                                            <span class="text_01">2018</span>
-                                            <span class="text_02">09</span>
-                                            <span class="text_03">해외조달시장 진출유망기업 선정</span>
-                                        </p>
-
-                                        <p class="text_wrap">
-                                            <span class="text_01">2018</span>
-                                            <span class="text_02">11</span>
-                                            <span class="text_03">국내 14개 전 원전 방사선관리구역 출입통제시스템 납품 실적 달성</span>
-                                        </p>
-
-                                        <p class="text_wrap">
-                                            <span class="text_01">2018</span>
-                                            <span class="text_02">12</span>
-                                            <span class="text_03">수출 1,000,000달러 달성</span>
-                                        </p>
-
-                                        <p class="text_wrap">
-                                            <span class="text_01">2019</span>
-                                            <span class="text_02">03</span>
-                                            <span class="text_03">TLD보관관리시스템 조달청 우수제품지정 [지정번호:2019018]</span>
-                                        </p>
-
-                                        <p class="text_wrap">
-                                            <span class="text_01">2019</span>
-                                            <span class="text_02">07</span>
-                                            <span class="text_03">중소벤처기업청 수출유망중소기업 지정</span>
-                                        </p>
+                                    <div class="year_wrap">
+                                        <div class="year">2016</div>
                                     </div>
 
-                                </figcaption>
+                                    <div class="detail_wrap">
+                                        <div class="list">
+                                            <div class="month">06</div>
+                                            <div class="detail">
+                                                UAE Barakah Nuclear Power Plant 1,2호기에 방사선관리구역
+                                                <br>
+                                                출입통제시스템 수출
+                                            </div>
+                                        </div>
 
-                            </figure>
-                        </div>
-                        
-                        <div class="swiper-slide slide_04">
-                            <figure>
-                                <div class="img_wrap">
-                                    <!-- background_img -->
-                                    <p class="img_text">유투엔지의 원자력 산업 최고의 IT 전문기업</p>
+                                    </div>
                                 </div>
 
-                                <figcaption>
-                                    <div class="text_title">2020 ~ 현재</div>
-
-                                    <div class="text_detail">
-                                        <p class="text_wrap">
-                                            <span class="text_01">2020</span>
-                                            <span class="text_02">10</span>
-                                            <span class="text_03">중소벤처기업부 해외인증규격 적합제품 기술 개발사업 “수출경쟁력을 강화시킨  유지보수가 용이한 모듈방식의 개인선량계 통합형 중앙 제어 보관 관리 시스템 개발” 과제 선정 및 수행</span>
-                                        </p>
-                                        <p class="text_wrap">
-                                            <span class="text_01">2020</span>
-                                            <span class="text_02">10</span>
-                                            <span class="text_03">기술혁신형 중소기업(Inno-Biz) 인증</span>
-                                        </p>
-                                        <p class="text_wrap">
-                                            <span class="text_01">2021</span>
-                                            <span class="text_02">01</span>
-                                            <span class="text_03">기업부설연구소 이전  (서울시 성동구 소재)</span>
-                                        </p>
-                                        <p class="text_wrap">
-                                            <span class="text_01">2021</span>
-                                            <span class="text_02">04</span>
-                                            <span class="text_03">산업통상자원부 범부처연계형 기술사업화 이어달리기 사업 “PS-LTE 기반의 2021.04     원자력시설 작업종사자용 지능형 IoT 디바이스 및 방사선안전관리 시스템” 과제 선정 및 수행</span>
-                                        </p>
-
-                                  
-                                    </div>
-
-                                </figcaption>
-
-                            </figure>
+                            </div>
                         </div>
-
                     </div>
                 </div>
 
 
+                <!-- 2015~2011 -->
+                <div class="his_list">
+                    <div>
+                        <div class="img_wrap" >
+                            <div class="img_area">
+                                <div class="txt">
+                                    2015
+                                    <br>
+                                    ~
+                                    <br>
+                                    2011
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="txt_wrap">
+
+                        <div class="inner">
+                            <div class="event_wrap">
+
+                                <!-- 2015 -->
+                                <div class="list_wrap">
+
+                                    <div class="year_wrap">
+                                        <div class="year">2015</div>
+                                    </div>
+
+                                    <div class="detail_wrap">
+
+                                        <div class="list">
+                                            <div class="month">06</div>
+                                            <div class="detail">
+                                                중소기업청 창업성장과제 “IoT 6LowPan기반의 지능형 무선피폭선량 안전관리시스템” 개발 과제 수행
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- 2014 -->
+                                <div class="list_wrap">
+
+                                    <div class="year_wrap">
+                                        <div class="year">2014</div>
+                                    </div>
+
+                                    <div class="detail_wrap">
+
+                                        <div class="list">
+                                            <div class="month">03</div>
+                                            <div class="detail">
+                                                기업부설연구소 이전 (서울시 금천구 소재)
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- 2013 -->
+                                <div class="list_wrap">
+
+                                    <div class="year_wrap">
+                                        <div class="year">2013</div>
+                                    </div>
+
+                                    <div class="detail_wrap">
+
+                                        <div class="list">
+                                            <div class="month">08</div>
+                                            <div class="detail">
+                                                에너지기술개발 사업 원자력융합기술 “위치 기반 지능형 Active Tag 를 부착한 TLD보관관리시스템” 과제 선정 수행
+                                            </div>
+                                        </div>
+
+                                        <div class="list">
+                                            <div class="month">07</div>
+                                            <div class="detail">
+                                                중소기업청 창업성장과제 “통합 전자식 개인선량계 판독기(Reader)” 개발 과제 수행
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <!-- 2011 -->
+                                <div class="list_wrap">
+
+                                    <div class="year_wrap">
+                                        <div class="year">2011</div>
+                                    </div>
+
+                                    <div class="detail_wrap">
+
+                                        <div class="list">
+                                            <div class="month">09</div>
+                                            <div class="detail">
+                                                벤처기업 인증
+                                            </div>
+                                        </div>
+
+                                        <div class="list">
+                                            <div class="month">03</div>
+                                            <div class="detail">
+                                                ㈜유투엔지 창립
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </section>
 
-        <script>
-            $(function() {
-                // sub_his
-                let type = ['2011 ~ 2013', '2014 ~ 2016', '2017 ~ 2019', '2020 ~ 현재']
-                var historySwiper = new Swiper('.history_swiper', {
-                    effect: "fade",
-                    slidesPerView: 1,
-                    // loop: true,
-                    // loopAdditionalSlides: 1,
-                    autoHeight: true,
-                    autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    },
-                    lazy: {
-                        loadPrevNext: true
-                    },
-                    touchMoveStopPropagation: true,
-
-                    pagination: {
-                        el: '.swiper-year',
-                        clickable: true,
-                        renderBullet: function(index, className) {
-                            return '<span class="' + className + '">' + (type[index]) + '</span>';
-                        },
-                    },
-
-                    navigation: {
-                        nextEl: '.swiper-next',
-                        prevEl: '.swiper-prev',
-                    },
-                });
-
-                // bar
-                // let year = ['1994~2005', '2007~2011', '2012~2017', '2018~']
-                // var pagingSwiper = new Swiper(".history_swiper", {
-                //     pagination: {
-                //         el: ".swiper-pagination.pagination_progress",
-                //         clickable: true,
-                //         renderBullet: function(index, className) {
-                //             return '<span class="' + className + '">' + (year[index]) + '</span>';
-                //         },
-                //     },
-                // });
-
-                // historySwiper.controller.control = pagingSwiper;
-                // pagingSwiper.controller.control = historySwiper;
-            });
-        </script>
     </main>
 
 
@@ -668,6 +768,67 @@
 
     <!-- <?php include_once('../include/footer.html') ?> -->
     <!-- --------------------------- FOOTER --------------------------- -->
+
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        $(".his_list .img_wrap").each(function(q) {
+            console.log($(this))
+
+            gsap.to($(this), {
+                scrollTrigger: {
+                    trigger: $(this),
+                    start: "top top",
+                    endTrigger: $(this).parents(".his_list").find(".txt_wrap"),
+                    end: "bottom bottom",
+                    pin: true,
+                    invalidateOnRefresh: true,
+                    // markers: true,
+                },
+            });
+        });
+
+        $(".his_list").each(function(q) {
+            gsap.to($(this).find(".img_area"), {
+                scrollTrigger: {
+                    trigger: $(this),
+                    start: "top top",
+                    end: "+=85%",
+                    //scrub: 1,
+                    scrub: true,
+                    //markers: true,
+                    //invalidateOnRefresh: true,
+                    toggleClass: {
+                        targets: $(".his_list").eq(q),
+                        className: "active"
+                    },
+                    onUpdate: function(self) {
+
+                        if (window.innerWidth >= 1024) {
+                            gsap.to($(".his_list").eq(q).find(".img_wrap .img_area"), 0.5, {
+                                width: 100 - (self.progress.toFixed(3) * 50) + "%"
+                            });
+                        } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+                            gsap.to($(".his_list").eq(q).find(".img_wrap .img_area"), 0.5, {
+                                width: 100 - (self.progress.toFixed(3) * 70) + "%"
+                            });
+                        } else if (window.innerWidth < 768) {
+                            gsap.to($(".his_list").eq(q).find(".img_wrap .img_area"), 0.5, {
+                                width: 100 - (self.progress.toFixed(3) * 83) + "%"
+                            });
+                        } 
+                    },
+                    // onLeave: function() {
+                    //     $(".his_list").eq(q).addClass("on_leave");
+                    // },
+                    // onEnterBack: function() {
+                    //     $(".his_list").eq(q).removeClass("on_leave");
+                    // },
+                },
+            })
+        });
+    </script>
 
 
     <script src="../js/index.js"></script>

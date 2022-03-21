@@ -51,6 +51,7 @@ $color-200 : #98afc7;
 // Top
 @mixin marginTop-120 {margin-top: 120px;}
 @mixin marginTop-100 {margin-top: 100px;}
+@mixin marginTop-80 {margin-top: 80px;}
 @mixin marginTop-70 {margin-top: 70px;}
 @mixin marginTop-40 {margin-top: 40px;}
 @mixin marginTop-30 {margin-top: 30px;}
@@ -1503,7 +1504,7 @@ body {
                             .content_wrap {
                                 display: flex; flex-wrap: wrap;
                                 .content {
-                                    width: 380px; margin-right: 40px;
+                                    width: 400px; margin-right: 80px;
                                     &:last-child {margin-right: 0}
                                     figcaption {
                                         p {
@@ -1536,7 +1537,92 @@ body {
                     }
                 }
 
+                // new_ver
                 &#history {
+                    .sub_section {
+                        &.section_01 {
+                            @include marginTop-120();
+                            .text_wrap {
+                                .text_01 {
+                                    font-size: 32px; font-weight: 300;
+                                    line-height: 1.5; letter-spacing: -2.56px; text-align: center; color: #333;
+                                }
+                            }
+                        }
+                        &.section_02 {
+                            @include marginTop-80();
+                                    
+                            .content_wrap {
+                                .his_list {
+                                    position: relative; min-height: 100vh;
+                                    overflow: hidden;
+                                    &:nth-child(1) .img_area {background: url('../images/history/history_bg_01.png')no-repeat center/cover;}
+                                    &:nth-child(2) .img_area {background: url('../images/history/history_bg_02.png')no-repeat center/cover;}
+                                    &:nth-child(3) .img_area {background: url('../images/history/history_bg_03.png')no-repeat center/cover;}
+                                    &:nth-child(even) .txt_wrap .tit_area {padding-left: 0 !important; padding-right: calc(50% + 80px) !important; }
+                                    &:nth-child(even) .txt_wrap .event_wrap {padding-left: 0 !important; padding-right: calc(50% + 80px) !important;}
+                                    &:nth-child(even) .img_area {left: auto !important; right: 0 !important;}
+
+                                    // &.his_list.active .img_wrap .img_area .txt {opacity: 0;}
+                                    // &.on_leave .img_wrap .img_area .txt {opacity: 0;}
+                                    &.end .img_area {width: 50% !important;}
+
+                                    
+                                    .img_wrap {
+                                        @include absolute-x(0, 0);
+                                        width: 100%; height: 100%; z-index: 1;
+                                        .img_area {
+                                            @include absolute-x(0, 0); z-index: 1;
+                                            @include flexCenter();
+                                            width: 100%; height: 100vh;
+                                            max-width: 100vw; 
+                                            .txt {
+                                                @include transition(.15s);
+                                                font-size: 160px; font-weight: 900; color: #fff; text-align: center;
+                                            }
+                                        }
+                                    }
+
+                                    .txt_wrap {
+                                        .inner {
+                                            padding: 250px 5%;
+                                            .event_wrap {
+                                                padding-left: calc(50% + 80px);
+                                                .list_wrap {
+                                                    @include font-18(); font-weight: bold;
+                                                    display: flex; position: relative;
+                                                    width: 600px;
+                                                    padding: 30px 0;
+                                                    border-bottom: 1px solid #ddd;
+                                                    &:first-child {padding-top: 150vh;}
+
+                                                    .year_wrap {min-width: 100px;}
+
+                                                    .detail_wrap {
+                                                        .list {
+                                                            display: flex; 
+                                                            padding-bottom: 20px;
+                                                            &:last-child {padding-bottom: 0;}
+                                                            .month {min-width: 40px; color: $color-100;}
+                                                            .detail {color: #666; font-weight: 300;}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    
+
+                                }
+                            }
+                        }
+                    }
+                    
+
+                }
+
+
+                &#history_type_02 {
                     .sub_section  { 
                         &.section_01 {
                             @include marginTop-120();
@@ -1624,6 +1710,7 @@ body {
                         }
                     }
                 }
+
             }
 
             &.rnd {

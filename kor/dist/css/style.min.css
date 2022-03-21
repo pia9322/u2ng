@@ -586,7 +586,7 @@ body main.sub_page.about#business .sub_section.section_01 { max-width: 1360px; w
 
 body main.sub_page.about#business .sub_section.section_01 .content_wrap { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-body main.sub_page.about#business .sub_section.section_01 .content_wrap .content { width: 380px; margin-right: 40px; }
+body main.sub_page.about#business .sub_section.section_01 .content_wrap .content { width: 400px; margin-right: 80px; }
 
 body main.sub_page.about#business .sub_section.section_01 .content_wrap .content:last-child { margin-right: 0; }
 
@@ -604,57 +604,103 @@ body main.sub_page.about#business .sub_section.section_01 .content_wrap .content
 
 body main.sub_page.about#business .sub_section.section_01 .content_wrap .content .img_wrap { margin-top: 60px; }
 
-body main.sub_page.about#history .sub_section.section_01 { margin-top: 120px; margin-bottom: 120px; }
+body main.sub_page.about#history .sub_section.section_01 { margin-top: 120px; }
 
-body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap { position: relative; max-width: 1360px; width: 100%; margin: 0 auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; height: 60px; }
+body main.sub_page.about#history .sub_section.section_01 .text_wrap .text_01 { font-size: 32px; font-weight: 300; line-height: 1.5; letter-spacing: -2.56px; text-align: center; color: #333; }
 
-body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-prev, body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-next { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; transition: 0.15s; -webkit-transition: 0.15s; -moz-transition: 0.15s; -ms-transition: 0.15s; -o-transition: 0.15s; cursor: pointer; width: 60px; height: 100%; border: 1px solid #ddd; background-color: #fff; z-index: 2; }
+body main.sub_page.about#history .sub_section.section_02 { margin-top: 80px; }
 
-body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-prev ion-icon, body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-next ion-icon { width: 30px; height: 30px; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list { position: relative; min-height: 100vh; overflow: hidden; }
 
-body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-prev:hover, body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-next:hover { background: #0a4b90; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list:nth-child(1) .img_area { background: url("../images/history/history_bg_01.png") no-repeat center/cover; }
 
-body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-prev:hover ion-icon, body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-next:hover ion-icon { color: #fff; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list:nth-child(2) .img_area { background: url("../images/history/history_bg_02.png") no-repeat center/cover; }
 
-body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-year { position: relative; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list:nth-child(3) .img_area { background: url("../images/history/history_bg_03.png") no-repeat center/cover; }
 
-body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-year::after, body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-year::before { content: ''; position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 1920px; height: 1px; background: #ddd; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list:nth-child(even) .txt_wrap .tit_area { padding-left: 0 !important; padding-right: calc(50% + 80px) !important; }
 
-body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-year::after { left: calc(100% + 40px); }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list:nth-child(even) .txt_wrap .event_wrap { padding-left: 0 !important; padding-right: calc(50% + 80px) !important; }
 
-body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-year::before { right: calc(100% + 40px); }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list:nth-child(even) .img_area { left: auto !important; right: 0 !important; }
 
-body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-year .swiper-pagination-bullet { display: none; width: auto; height: auto; font-family: 'Montserrat'; font-size: 60px; font-weight: bold; color: #0a4b90; line-height: 1; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list.end .img_area { width: 50% !important; }
 
-body main.sub_page.about#history .sub_section.section_01 .swiper-header-wrap .swiper-year .swiper-pagination-bullet.swiper-pagination-bullet-active { display: block; background-color: transparent; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list .img_wrap { position: absolute; left: 0; top: 0; -webkit-transform: translateX(0); transform: translateX(0); width: 100%; height: 100%; z-index: 1; }
 
-body main.sub_page.about#history .sub_section.section_01 .history_swiper { margin-top: 80px; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list .img_wrap .img_area { position: absolute; left: 0; top: 0; -webkit-transform: translateX(0); transform: translateX(0); z-index: 1; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 100%; height: 100vh; max-width: 100vw; }
 
-body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure .img_wrap { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 100%; height: 600px; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list .img_wrap .img_area .txt { transition: 0.15s; -webkit-transition: 0.15s; -moz-transition: 0.15s; -ms-transition: 0.15s; -o-transition: 0.15s; font-size: 160px; font-weight: 900; color: #fff; text-align: center; }
 
-body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure .img_wrap .img_text { font-size: 40px; font-weight: bold; line-height: 1.4; letter-spacing: -3.2px; color: #fff; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list .txt_wrap .inner { padding: 250px 5%; }
 
-body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure figcaption { max-width: 1360px; width: 100%; margin: 0 auto; display: -webkit-box; display: -ms-flexbox; display: flex; margin-top: 100px; background-color: #fff; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list .txt_wrap .inner .event_wrap { padding-left: calc(50% + 80px); }
 
-body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_title { font-family: 'Montserrat'; font-size: 60px; font-weight: bold; color: #0a4b90; line-height: 1; white-space: nowrap; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list .txt_wrap .inner .event_wrap .list_wrap { font-size: 18px; letter-spacing: -0.72px; font-weight: bold; display: -webkit-box; display: -ms-flexbox; display: flex; position: relative; width: 600px; padding: 30px 0; border-bottom: 1px solid #ddd; }
 
-body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_detail { margin-left: 90px; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list .txt_wrap .inner .event_wrap .list_wrap:first-child { padding-top: 150vh; }
 
-body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_detail .text_wrap { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; border-bottom: 1px solid #ddd; padding-bottom: 12.5px; margin-bottom: 12.5px; font-size: 18px; letter-spacing: -0.72px; font-weight: 300; line-height: 1.78; letter-spacing: normal; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list .txt_wrap .inner .event_wrap .list_wrap .year_wrap { min-width: 100px; }
 
-body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_detail .text_wrap .text_01 { margin-right: 10px; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list .txt_wrap .inner .event_wrap .list_wrap .detail_wrap .list { display: -webkit-box; display: -ms-flexbox; display: flex; padding-bottom: 20px; }
 
-body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_detail .text_wrap .text_02 { color: #0a4b90; font-weight: bold; margin-right: 60px; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list .txt_wrap .inner .event_wrap .list_wrap .detail_wrap .list:last-child { padding-bottom: 0; }
 
-body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_detail .text_wrap .text_03 { color: #666; letter-spacing: -1.44px; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list .txt_wrap .inner .event_wrap .list_wrap .detail_wrap .list .month { min-width: 40px; color: #0a4b90; }
 
-body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide.slide_01 .img_wrap { background: url("../images/about/history_01_01.png") no-repeat center/cover; }
+body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list .txt_wrap .inner .event_wrap .list_wrap .detail_wrap .list .detail { color: #666; font-weight: 300; }
 
-body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide.slide_02 .img_wrap { background: url("../images/about/history_01_02.png") no-repeat center/cover; }
+body main.sub_page.about#history_type_02 .sub_section.section_01 { margin-top: 120px; margin-bottom: 120px; }
 
-body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide.slide_03 .img_wrap { background: url("../images/about/history_01_03.png") no-repeat center/cover; }
+body main.sub_page.about#history_type_02 .sub_section.section_01 .swiper-header-wrap { position: relative; max-width: 1360px; width: 100%; margin: 0 auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; height: 60px; }
 
-body main.sub_page.about#history .sub_section.section_01 .history_swiper .swiper-slide.slide_04 .img_wrap { background: url("../images/about/history_01_04.png") no-repeat center/cover; }
+body main.sub_page.about#history_type_02 .sub_section.section_01 .swiper-header-wrap .swiper-prev, body main.sub_page.about#history_type_02 .sub_section.section_01 .swiper-header-wrap .swiper-next { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; transition: 0.15s; -webkit-transition: 0.15s; -moz-transition: 0.15s; -ms-transition: 0.15s; -o-transition: 0.15s; cursor: pointer; width: 60px; height: 100%; border: 1px solid #ddd; background-color: #fff; z-index: 2; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .swiper-header-wrap .swiper-prev ion-icon, body main.sub_page.about#history_type_02 .sub_section.section_01 .swiper-header-wrap .swiper-next ion-icon { width: 30px; height: 30px; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .swiper-header-wrap .swiper-prev:hover, body main.sub_page.about#history_type_02 .sub_section.section_01 .swiper-header-wrap .swiper-next:hover { background: #0a4b90; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .swiper-header-wrap .swiper-prev:hover ion-icon, body main.sub_page.about#history_type_02 .sub_section.section_01 .swiper-header-wrap .swiper-next:hover ion-icon { color: #fff; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .swiper-header-wrap .swiper-year { position: relative; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .swiper-header-wrap .swiper-year::after, body main.sub_page.about#history_type_02 .sub_section.section_01 .swiper-header-wrap .swiper-year::before { content: ''; position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 1920px; height: 1px; background: #ddd; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .swiper-header-wrap .swiper-year::after { left: calc(100% + 40px); }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .swiper-header-wrap .swiper-year::before { right: calc(100% + 40px); }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .swiper-header-wrap .swiper-year .swiper-pagination-bullet { display: none; width: auto; height: auto; font-family: 'Montserrat'; font-size: 60px; font-weight: bold; color: #0a4b90; line-height: 1; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .swiper-header-wrap .swiper-year .swiper-pagination-bullet.swiper-pagination-bullet-active { display: block; background-color: transparent; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .history_swiper { margin-top: 80px; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .history_swiper .swiper-slide figure .img_wrap { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 100%; height: 600px; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .history_swiper .swiper-slide figure .img_wrap .img_text { font-size: 40px; font-weight: bold; line-height: 1.4; letter-spacing: -3.2px; color: #fff; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .history_swiper .swiper-slide figure figcaption { max-width: 1360px; width: 100%; margin: 0 auto; display: -webkit-box; display: -ms-flexbox; display: flex; margin-top: 100px; background-color: #fff; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_title { font-family: 'Montserrat'; font-size: 60px; font-weight: bold; color: #0a4b90; line-height: 1; white-space: nowrap; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_detail { margin-left: 90px; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_detail .text_wrap { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; border-bottom: 1px solid #ddd; padding-bottom: 12.5px; margin-bottom: 12.5px; font-size: 18px; letter-spacing: -0.72px; font-weight: 300; line-height: 1.78; letter-spacing: normal; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_detail .text_wrap .text_01 { margin-right: 10px; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_detail .text_wrap .text_02 { color: #0a4b90; font-weight: bold; margin-right: 60px; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .history_swiper .swiper-slide figure figcaption .text_detail .text_wrap .text_03 { color: #666; letter-spacing: -1.44px; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .history_swiper .swiper-slide.slide_01 .img_wrap { background: url("../images/about/history_01_01.png") no-repeat center/cover; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .history_swiper .swiper-slide.slide_02 .img_wrap { background: url("../images/about/history_01_02.png") no-repeat center/cover; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .history_swiper .swiper-slide.slide_03 .img_wrap { background: url("../images/about/history_01_03.png") no-repeat center/cover; }
+
+body main.sub_page.about#history_type_02 .sub_section.section_01 .history_swiper .swiper-slide.slide_04 .img_wrap { background: url("../images/about/history_01_04.png") no-repeat center/cover; }
 
 body main.sub_page.rnd#project .sub_section .section_title { font-size: 32px; font-weight: 300; line-height: 1.5; letter-spacing: -2.56px; text-align: center; }
 
