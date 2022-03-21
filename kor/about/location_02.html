@@ -63,7 +63,7 @@
 
 <body>
     <!----------------------------- HEADER ----------------------------->
-    <header id="header">
+    <header id="header" class="">
         <nav class="header_wrap">
 
             <!-- HEADER_LEFT -->
@@ -240,18 +240,14 @@
 
 
     <!-- --------------------------- MAIN --------------------------- -->
-    <main class="sub_page product" id="product_list">
+    <main class="sub_page about" id="location">
 
         <!-- SUB_VISUAL & NAVI -->
         <section class="sub_visual" id="sub_visual">
 
             <article class="visual_text">
-                <p class="text_01">PRODUCT</p>
-                <p class="text_02 bold">
-                    세계에서 가장 진보된 방사선 기기로
-                    <br>
-                    방사선 작업자의 건강과 안전을 보호합니다
-                </p>
+                <p class="text_01">회사소개</p>
+                <p class="text_02">Up To the No.1 Global Leader</p>
             </article>
 
             <article class="sub_navi" id="sub_navi">
@@ -268,7 +264,7 @@
                         <ul class="depth_wrap">
 
                             <li class="depth_01">
-                                <a href="#none">PRODUCT</a>
+                                <a href="#none">회사소개</a>
                                 <i><img src="../images/ico/ico_arrow_bottom.svg" alt="메뉴1 네비게이션 화살표"> </i>
                             </li>
 
@@ -285,12 +281,16 @@
                     <nav class="sub_nav sub_nav_02">
                         <ul class="depth_wrap">
                             <li class="depth_01">
-                                <a href="#none">Dosimetery</a>
+                                <a href="#none">회사개요</a>
                                 <i><img src="../images/ico/ico_arrow_bottom.svg" alt="메뉴1 네비게이션 화살표"> </i>
                             </li>
 
                             <ul class="depth_02">
-                                <li class="depth_02_list"><a href="../about/company.html">Dosimetery</a></li>
+                                <li class="depth_02_list"><a href="../about/company.html">회사개요</a></li>
+                                <li class="depth_02_list"><a href="../about/ceo.html">CEO 인사말</a></li>
+                                <li class="depth_02_list"><a href="../about/history.html">연혁</a></li>
+                                <li class="depth_02_list"><a href="../about/certifi.html">인증</a></li>
+                                <li class="depth_02_list"><a href="../about/direction.html">오시는 길</a></li>
                             </ul>
                         </ul>
                     </nav>
@@ -301,45 +301,46 @@
 
 
         <!-- section_01 -->
-        <section class="sub_section section_01 product_tab" id="product_tab">
+        <section class="sub_section section_01">
             <div class="content_wrap">
-                <!-- 
-                    카테고리
-                    a.active = color들어감
-                -->
-                <div class="product_tab_wrap">
-                    <p class="text_wrap">
-                        <a href="#none" class="">전자식 개인 선량계</a>
-                        <a href="">선량계 리더기</a>
-                        <a href="">선량계 교정기</a>
-                    </p>
+
+                <div class="left_content">
+                    <div class="location active"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12938.154083771065!2d129.2870184!3d35.8357966!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd7b7bb9c9ddf21f8!2z6rK97KO87Iqk66eI7Yq466-465SU7Ja07IS87YSw!5e0!3m2!1sko!2skr!4v1645411105344!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+                    <div class="location"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1581.642077642487!2d127.04338202681161!3d37.54836852142651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca4993cf8b16d%3A0x5105561154e8f3d6!2z7ISc7Jq47Yq567OE7IucIOyEseuPmeq1rCDslYTssKjsgrDroZwgMTcgMTUwMe2YuA!5e0!3m2!1sko!2skr!4v1645421838865!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
                 </div>
-            </div>
-        </section>
 
+                <div class="right_content">
 
+                    <div class="location_tab" id="location_tab">
 
-        <section class="sub_section section_02 product_list_wrap" id="product_list_wrap">
-            <div class="content_wrap">
+                        <div class="tab_wrap">
+                            <div class="tab tab_01">
+                                <p class="text_01">경주본사</p>
+                                <p class="text_02"> <ion-icon name="location-sharp"></ion-icon><a href="#none" class="">경북 경주시 경감로 587-18 308호  / 천군동 167-13 308호</a></p>
+                                <p class="text_02"><ion-icon name="call"></ion-icon><a href="tel:054-776-6201" class="a_link">054-776-6201</a> </p>
+                            </div>
+                            <div class="tab tab_02">
+                                <p class="text_01">부설연구소</p>
+                                <p class="text_02"><ion-icon name="location-sharp"></ion-icon><a href="#none" class="">서울 성동구 아차산로17길 48 (성수동2가, 성수SKV1CENTERI) 1동 1501호</a></p>
+                                <p class="text_02"><ion-icon name="call"></ion-icon><a href="tel:054-776-6201" class="a_link">054-776-6201</a></p>
+                            </div>
+                        </div>
 
-                <div class="product_list">
-
-                    <!-- 제품 -->
-                    <figure class="item">
-                        <!-- 제품 썸네일 -->
-                        <div class="thumb"><img src="../images/product/product_01.png" alt="" loading="lazy"> </div>
-
-                        <!-- 제품 간략설명 -->
-                        <figcaption class="type_01">
-                            <!-- 제품명 -->
-                            <p class="text_01">제품명</p>
-                        </figcaption>
-                    </figure>
+                    </div>
 
                 </div>
 
             </div>
         </section>
+
+        <script>
+            $('#location_tab .tab_wrap .tab').click(function() {
+                let idx = $(this).index();
+                $('#location_tab .tab_wrap .tab, .left_content .location').removeClass('active');
+                $('#location_tab .tab_wrap .tab, .left_content .location').eq(idx).addClass('active');
+            })
+        </script>
+
 
     </main>
     <!-- --------------------------- MAIN --------------------------- -->

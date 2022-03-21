@@ -1,17 +1,21 @@
 {
 
-    "certify" : [
+    "certify_01" : [
         {"imgSrc":"certify_01_01", "imgAlt":"인증서01", "imgName":"수출유망중소기업지정증"},
         {"imgSrc":"certify_01_02", "imgAlt":"인증서02", "imgName":"ISO 인증서"},
         {"imgSrc":"certify_01_03", "imgAlt":"인증서03", "imgName":"우수제품지정증서_UTSAD300,198,50,30"},
-        {"imgSrc":"certify_01_04", "imgAlt":"인증서04", "imgName":"TLD무선단말기와 TLD 관리시스템 및 TLD 관리방법"},
-        {"imgSrc":"certify_01_05", "imgAlt":"인증서05", "imgName":"사물인터넷 기반 지능형무선 피폭 선량 안전 관리 시스템"},
-        {"imgSrc":"certify_01_06", "imgAlt":"인증서06", "imgName":"TLD 무선단말기와 TLD 관리 시스템 및 TLD 관리 방법"},
-        {"imgSrc":"certify_01_07", "imgAlt":"인증서07", "imgName":"디자인등록증_열형광 선량계 자동지급기"},
-        {"imgSrc":"certify_01_08", "imgAlt":"인증서08", "imgName":"기업부설연구소 인정서"},
-        {"imgSrc":"certify_01_09", "imgAlt":"인증서09", "imgName":"기술혁신형 중소기업(Inno-Biz) "},
-        {"imgSrc":"certify_01_10", "imgAlt":"인증서10", "imgName":"기술혁신형 중소기업(Inno-Biz)"},
-        {"imgSrc":"certify_01_11", "imgAlt":"인증서11", "imgName":"해외조달시장 진출유망기업(G-PASS기업)지정서"}
+        {"imgSrc":"certify_01_04", "imgAlt":"인증서08", "imgName":"기술혁신형 중소기업(Inno-Biz)"},
+        {"imgSrc":"certify_01_05", "imgAlt":"인증서09", "imgName":"해외조달시장 진출유망기업 (G-PASS기업)지정서"},
+        {"imgSrc":"certify_01_06", "imgAlt":"인증서10", "imgName":"성과공유기업확인서"},
+        {"imgSrc":"certify_01_07", "imgAlt":"인증서11", "imgName":"디자인등록증_열형광 선량계 자동지급기"},
+        {"imgSrc":"certify_01_08", "imgAlt":"인증서12", "imgName":"기업부설연구소 인정서"},
+        {"imgSrc":"certify_01_09", "imgAlt":"인증서13", "imgName":"기술혁신형 중소기업(Inno-Biz)"}
+    ],
+    "certify_02" : [
+        {"imgSrc":"certify_02_01", "imgAlt":"인증서04", "imgName":"TLD무선단말기와 TLD 관리시스템 및 TLD 관리방법"},
+        {"imgSrc":"certify_02_02", "imgAlt":"인증서05", "imgName":"사물인터넷 기반 지능형무선 피폭 선량 안전 관리 시스템"},
+        {"imgSrc":"certify_02_03", "imgAlt":"인증서06", "imgName":"TLD 무선단말기와 TLD 관리 시스템 및 TLD 관리 방법"},
+        {"imgSrc":"certify_02_04", "imgAlt":"인증서07", "imgName":"디자인등록증_열형광 선량계 자동지급기"}
     ]
 
 
