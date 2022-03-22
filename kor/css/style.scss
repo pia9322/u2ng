@@ -126,6 +126,12 @@ body {
     // a link hover effect
     a.a_link {@include transition(.15s);&:hover { color: $color-100; }}
 
+    // icon
+    .ico {
+        display: inline-block; vertical-align: middle;
+        // dots
+        &.ico_01 {width: 4px; height: 4px; background-color: #666; border-radius: 100%} 
+    }
 
     // default
     .btn_01 {
@@ -1139,10 +1145,9 @@ body {
                                     display: flex;
 
                                     .tab_title {
-                                        @include fullsize();
                                         @include flexCenter();
                                         flex-direction: column;
-                                        width: 260px; height: 100%;
+                                        min-width: 260px; height: 100%;
                                         background-color: $color-100;
                                         p {
                                             @include transition(.15s);
@@ -1152,15 +1157,13 @@ body {
                                             font-size: 24px; font-weight: 500; line-height: 1.17; color: $color-200;
                                             &.active, &:hover { color: #fff; }
                                             &:last-child {margin-bottom: 0;}
-
                                             ion-icon {margin-left: 28px; width: 20px; height: 20px;}
-                                            
                                         }
                                     }
 
                                     .tab_detail {
                                         display: flex; justify-content: center; flex-direction: column;
-                                        width: 700px;
+                                        width: 100%;
                                         padding-left: 60px;
                                         background-color: #fff;
                                         .detail_wrap {
@@ -1265,6 +1268,8 @@ body {
             // ------------------------------- subpage_visual & navi -------------------------------
             &.about #sub_visual {background: url('../images/about/mv.png')no-repeat center/cover;}
             &.product #sub_visual {background: url('../images/product/mv.png')no-repeat center/cover;}
+            &.product #sub_visual {background: url('../images/product/mv.png')no-repeat center/cover;}
+            &.product .visual_02#sub_visual {background: url('../images/product/mv_02.png')no-repeat center/cover;}
 
             #sub_visual {
                 position: relative; 
@@ -1647,7 +1652,15 @@ body {
             }
 
             &.product {
+                .sub_section {
+                    @include fixed-layout-subpage();
+                    &:last-child {@include marginBot-120();}
+                    
+                    &.section_01 {@include marginTop-120();}
+                    &.section_02 {@include marginTop-80();}
+                }
                 &#product_list {
+                    
 
                     #product_tab {
                         .content_wrap {
@@ -1675,35 +1688,99 @@ body {
                     #product_list_wrap {
                         .content_wrap {
                             .product_list {
-                                display: flex; 
-                                .item {
-                                    .thumb {
-                                        width: 300px; height: 300px;
-                                        border: 1px solid #ddd;
-                                        img {}
-                                    }
+                                display: flex; flex-wrap: wrap;
 
-                                    .figcaption {
-                                        &.type_01 {
-                                            .text_01 {
+                                a {
+                                    margin: 0 53px 30px 0;
+                                    &:nth-child(4n) { margin: 0 0 30px 0; }
 
+                                    .item {
+                                        &:hover {
+                                            .thumb {border: 3px solid $color-100;}
+                                        }
+                                        .thumb {
+                                            // @include transition(.15s);
+                                            width: 300px; height: 300px;
+                                            border: 1px solid #ddd;
+                                            img {}
+                                        }
+    
+                                        figcaption {
+                                            &.type_01 {
+                                                .text_01 {
+                                                    margin-top: 20px;
+                                                    @include font-18(); font-weight: 500; line-height: 1.78; text-align: center;
+                                                }
                                             }
                                         }
                                     }
                                 }
+                                
 
                             }
                         }
                     }
 
 
-                    .section_01 {
-                        @include marginTop-120();
+                }
+
+                &#product_detail {
+                    // type_01
+                    
+                    #type_01 {
+                        .product_wrap {
+                            display: flex;
+                            .product_img {
+                                .thum {
+                                    width: 560px; height: 560px;
+                                    border: 1px solid #ddd;
+                                }
+                            }
+
+                            .product_info {
+                                width: 100%; 
+                                margin-left: 60px;
+                                .text_wrap {
+                                    span {display: block}
+                                    &.wrap_01 {
+                                        @include font-18();
+                                        padding-bottom: 30px; border-bottom: 1px solid #ddd;
+                                        .text_01 {color: $color-100; font-weight: 500;}
+                                        .text_02 {font-size: 3.2rem; font-weight: bold;}
+                                        .text_03 {margin-top:20px; color: #666;}
+                                    }
+                                    &.wrap_02 {
+                                        .text_01 {
+                                            margin-top: 30px;
+                                            font-size: 20px; font-weight: bold; line-height: 1.6; letter-spacing: -1.6px; }
+                                        .text_02 {
+                                            margin-top: 10px;
+                                            @include font-18();line-height: 1.67;letter-spacing: -1.44px;color: #666;
+                                            .ico_01 { margin-right: 6.5px;}
+                                        }
+                                    }
+                                }
+                                .btn_01 {
+                                    margin-top: 40px;
+                                    width: 200px; height: 60px; background-color: #fff; color: $color-100;
+                                    &:hover {
+                                        background-color: $color-100;
+                                        color: #fff;
+                                        path {fill: #fff !important;}
+                                    }
+                                    span {
+                                        svg {
+                                            width: 27px; height: 27px; margin-right: 5px;
+                                            * {transition: all .15s;}
+                                            path{fill: $color-100;}
+                                        }
+                                        font-size: 18px;font-weight: 600;line-height: 1.56;
+                                    }
+                                }
+                            }
+                        }
                     }
-                    .section_02 {
-                        @include fixed-layout-subpage();
-                        @include marginTop-80();
-                    }
+
                 }
             }
 
