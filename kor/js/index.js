@@ -247,7 +247,7 @@ $(function () {
     function pageCheck() {
         var nowLocation = location.href;
         // location Check
-        (nowLocation.indexOf('index') >= 0) ? console.log('Home') : headerLogo();
+        (nowLocation.indexOf('index.html') >= 0) ? console.log('Home') : headerLogo();
         // let subNaviEvent = $('#sub_navi .content_wrap .text_02').text();
         // let LinkActive = $('.link_wrap a');
         // // link_wrap auto active
