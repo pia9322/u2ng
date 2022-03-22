@@ -2807,6 +2807,10 @@ body main.sub_page.system #table_type .table_wrap.wrap_01 .table_title {
   color: #0a4b90;
 }
 
+body main.sub_page.system #table_type .table_wrap.wrap_01 .table_title.marginTop_60 {
+  margin-top: 60px;
+}
+
 body main.sub_page.system #table_type .table_wrap.wrap_01 .table_detail.marginTop_20 {
   margin-top: 20px;
 }
@@ -2843,6 +2847,35 @@ body main.sub_page.system #table_type .table_wrap.wrap_01 .table_detail table th
 
 body main.sub_page.system #table_type .table_wrap.wrap_01 .table_detail table tbody td {
   font-weight: 400;
+  color: #666;
+}
+
+body main.sub_page.system #table_type .table_wrap.wrap_01 .list_wrap {
+  margin-top: 30px;
+}
+
+body main.sub_page.system #table_type .table_wrap.wrap_01 .list_wrap .list_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main.sub_page.system #table_type .table_wrap.wrap_01 .list_wrap .list_content .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 192px;
+  height: 60px;
+  border: 1px solid #ddd;
+  font-size: 18px;
   color: #666;
 }
 

@@ -792,6 +792,8 @@ body main.sub_page.system #type_01 .product_wrap .product_info .btn_01 span svg 
 
 body main.sub_page.system #table_type .table_wrap.wrap_01 .table_title { font-size: 20px; font-weight: 500; line-height: 1.6; color: #0a4b90; }
 
+body main.sub_page.system #table_type .table_wrap.wrap_01 .table_title.marginTop_60 { margin-top: 60px; }
+
 body main.sub_page.system #table_type .table_wrap.wrap_01 .table_detail.marginTop_20 { margin-top: 20px; }
 
 body main.sub_page.system #table_type .table_wrap.wrap_01 .table_detail.marginTop_40 { margin-top: 40px; }
@@ -807,6 +809,12 @@ body main.sub_page.system #table_type .table_wrap.wrap_01 .table_detail table th
 body main.sub_page.system #table_type .table_wrap.wrap_01 .table_detail table thead th { font-weight: 500; color: #0a4b90; }
 
 body main.sub_page.system #table_type .table_wrap.wrap_01 .table_detail table tbody td { font-weight: 400; color: #666; }
+
+body main.sub_page.system #table_type .table_wrap.wrap_01 .list_wrap { margin-top: 30px; }
+
+body main.sub_page.system #table_type .table_wrap.wrap_01 .list_wrap .list_content { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+body main.sub_page.system #table_type .table_wrap.wrap_01 .list_wrap .list_content .list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 192px; height: 60px; border: 1px solid #ddd; font-size: 18px; color: #666; }
 
 body main.sub_page.rnd .sub_section { max-width: 1360px; width: 100%; margin: 0 auto; }
 

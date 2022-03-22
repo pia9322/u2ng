@@ -1871,7 +1871,10 @@ body {
                 #table_type {
                     .table_wrap {
                         &.wrap_01 {
-                            .table_title {font-size: 20px; font-weight: 500; line-height: 1.6;color: $color-100;}
+                            .table_title {
+                                font-size: 20px; font-weight: 500; line-height: 1.6;color: $color-100;
+                                &.marginTop_60 {margin-top: 60px;}
+                            }
 
                             .table_detail {
                                 &.marginTop_20 { margin-top: 20px; }
@@ -1896,6 +1899,22 @@ body {
                                     }
                                 }
                             }
+
+                            .list_wrap {
+                                margin-top: 30px;
+                                .list_content {
+                                    display: flex; flex-wrap: wrap;
+                                    
+                                    .list {
+                                        @include flexCenter();
+                                        width: 192px; height: 60px;
+                                        border: 1px solid #ddd;
+                                        font-size: 18px; color: #666;
+                                    }
+                                }
+                            }
+
+
                         }
                     }
 
