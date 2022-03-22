@@ -98,7 +98,7 @@ $color-200 : #98afc7;
     @include font-M();
     @include flexCenter();
     margin-left: 6px;
-    width: 48px; height: 48px;
+    width: 50px; height: 50px;
     background-color: $color-100; border-radius: 100%;
 }
 @mixin textTit {
@@ -1978,8 +1978,10 @@ body {
 
                 &#project_backup {
                     .sub_section {
+                        @include not_fixed_layout();
                         .section_title { font-size: 32px; font-weight: 300; line-height: 1.5; letter-spacing: -2.56px; text-align: center;}
                         &.section_01 {
+                            margin-top: 0;
                             padding: 120px 0;
                             background-color: #f4f4f4;
 
@@ -2037,7 +2039,6 @@ body {
                                                 width: 220px;
                                                 position: absolute;
 
-
                                                 // point_circle
                                                 // big
                                                 &::after {
@@ -2067,7 +2068,7 @@ body {
                                                         @include absolute-x(50%, 100%);
                                                         width: 1px; height: 60px;
                                                         background-color: $color-100;
-                                                        animation: mapline_01 2s 1s infinite linear;
+                                                        // animation: mapline_01 2s 1s infinite linear;
                                                     }
 
                                                     // line_circle
@@ -2082,9 +2083,13 @@ body {
                                                     }
                                                 }
 
-                                                &.info_01 {
-                                                    left: 20px; bottom: 244px;
-                                                }
+                                                &.info_01 {left: 20px; bottom: 244px;}
+                                                &.info_02 {right: -35px; bottom: 244px;}
+                                                &.info_03 {right: -70px; bottom: 300px;}
+                                                &.info_04 {right: -95px; top: 240px;}
+                                                &.info_05 {left: 80px; top: 160px;}
+                                                &.info_06 {right: -70px; top: 170px;}
+                                                &.info_07 {right: -65px; top: 250px;}
                                             }
 
 

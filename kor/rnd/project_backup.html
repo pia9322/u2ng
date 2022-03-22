@@ -372,7 +372,7 @@
                         <div class="box">
                             <div class="box_title">
                                 <p class="text_num">05</p>
-                                <p class="text_tit">한국원자력연구소</p>
+                                <p class="text_tit">한국원자력연구원</p>
                             </div>
 
                             <ul class="box_list">
@@ -421,6 +421,54 @@
                                     </div>
                                 </div>
 
+                                <div class="map_info info_02">
+                                    <!-- after,before -->
+                                    <div class="map">
+                                        <p class="text_num"><img src="../images/rnd/ico_map_01.png" alt="img"></p>
+                                        <p class="text_tit">고리원자력발전소</p>
+                                    </div>
+                                </div>
+
+                                <div class="map_info info_03">
+                                    <!-- after,before -->
+                                    <div class="map">
+                                        <p class="text_num"><img src="../images/rnd/ico_map_01.png" alt="img"></p>
+                                        <p class="text_tit">새울원자력발전소</p>
+                                    </div>
+                                </div>
+
+                                <div class="map_info info_04">
+                                    <!-- after,before -->
+                                    <div class="map">
+                                        <p class="text_num"><img src="../images/rnd/ico_map_01.png" alt="img"></p>
+                                        <p class="text_tit">월성원자력발전소</p>
+                                    </div>
+                                </div>
+
+                                <div class="map_info info_05">
+                                    <!-- after,before -->
+                                    <div class="map">
+                                        <p class="text_num"><img src="../images/rnd/ico_map_03.png" alt="img"></p>
+                                        <p class="text_tit">한국원자력연구원</p>
+                                    </div>
+                                </div>
+
+                                <div class="map_info info_06">
+                                    <!-- after,before -->
+                                    <div class="map">
+                                        <p class="text_num"><img src="../images/rnd/ico_map_01.png" alt="img"></p>
+                                        <p class="text_tit">한울원자력발전소</p>
+                                    </div>
+                                </div>
+
+                                <div class="map_info info_07">
+                                    <!-- after,before -->
+                                    <div class="map">
+                                        <p class="text_num"><img src="../images/rnd/ico_map_01.png" alt="img"></p>
+                                        <p class="text_tit">한울원자력발전소</p>
+                                    </div>
+                                </div>
+
                             </figcaption>
                         </figure>
                     </div>
@@ -428,13 +476,26 @@
             </div>
         </section>
 
+
+        <script>
+            $('.map_info_wrap .map_info').hide();
+
+            $('.section_detail .left_box .box').each(function(idx){
+
+                $(this).click(function(){
+                    $('.section_detail .left_box .box').removeClass('active');
+                    $(this).addClass('active');
+
+                    $('.map_info_wrap .map_info').hide();
+                    $('.map_info_wrap .map_info:eq('+idx+')').show();
+                })
+
+            })
+        </script>
     </main>
 
 
     <!-- --------------------------- MAIN --------------------------- -->
-
-    <!-- <?php include_once('../include/footer_banner_01.html') ?> -->
-
 
 
     <!-- --------------------------- FOOTER --------------------------- -->

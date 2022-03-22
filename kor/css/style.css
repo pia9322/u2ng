@@ -2976,6 +2976,12 @@ body main.sub_page.rnd#project_02 .sub_section.section_02 .content_wrap .content
   letter-spacing: -1.44px;
 }
 
+body main.sub_page.rnd#project_backup .sub_section {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 body main.sub_page.rnd#project_backup .sub_section .section_title {
   font-size: 32px;
   font-weight: 300;
@@ -2985,6 +2991,7 @@ body main.sub_page.rnd#project_backup .sub_section .section_title {
 }
 
 body main.sub_page.rnd#project_backup .sub_section.section_01 {
+  margin-top: 0;
   padding: 120px 0;
   background-color: #f4f4f4;
 }
@@ -3061,8 +3068,8 @@ body main.sub_page.rnd#project_backup .sub_section.section_01 .section_detail .l
       -ms-flex-align: center;
           align-items: center;
   margin-left: 6px;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   background-color: #0a4b90;
   border-radius: 100%;
   font-size: 24px;
@@ -3181,8 +3188,8 @@ body main.sub_page.rnd#project_backup .sub_section.section_01 .section_detail .r
       -ms-flex-align: center;
           align-items: center;
   margin-left: 6px;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   background-color: #0a4b90;
   border-radius: 100%;
   background: #fff !important;
@@ -3207,8 +3214,6 @@ body main.sub_page.rnd#project_backup .sub_section.section_01 .section_detail .r
   width: 1px;
   height: 60px;
   background-color: #0a4b90;
-  -webkit-animation: mapline_01 2s 1s infinite linear;
-          animation: mapline_01 2s 1s infinite linear;
 }
 
 body main.sub_page.rnd#project_backup .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info .map::before {
@@ -3230,6 +3235,36 @@ body main.sub_page.rnd#project_backup .sub_section.section_01 .section_detail .r
 body main.sub_page.rnd#project_backup .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info.info_01 {
   left: 20px;
   bottom: 244px;
+}
+
+body main.sub_page.rnd#project_backup .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info.info_02 {
+  right: -35px;
+  bottom: 244px;
+}
+
+body main.sub_page.rnd#project_backup .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info.info_03 {
+  right: -70px;
+  bottom: 300px;
+}
+
+body main.sub_page.rnd#project_backup .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info.info_04 {
+  right: -95px;
+  top: 240px;
+}
+
+body main.sub_page.rnd#project_backup .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info.info_05 {
+  left: 80px;
+  top: 160px;
+}
+
+body main.sub_page.rnd#project_backup .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info.info_06 {
+  right: -70px;
+  top: 170px;
+}
+
+body main.sub_page.rnd#project_backup .sub_section.section_01 .section_detail .right_box .map_wrap .map_info_wrap .map_info.info_07 {
+  right: -65px;
+  top: 250px;
 }
 
 body main.sub_page.community .sub_section {
