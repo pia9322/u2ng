@@ -123,6 +123,7 @@ body {
             width: 100%; height: 100%;
         }
     }
+
     
     /* 
         table_공통 게시판
@@ -1249,6 +1250,8 @@ body {
             
             &.community #sub_visual {background: url('../images/community/mv.png')no-repeat center/cover;}
 
+            &.cscenter #sub_visual {background: url('../images/cscenter/mv.png')no-repeat center/cover;}
+
 
             #sub_visual {
                 position: relative; 
@@ -1629,6 +1632,8 @@ body {
                 }
             }
 
+
+            // ------------------------------- product -------------------------------
             &.product {
                 .sub_section {
                     @include fixed-layout-subpage();
@@ -1762,6 +1767,8 @@ body {
                 }
             }
 
+
+            // ------------------------------- rnd -------------------------------
             &.rnd {
                 .sub_section {
                     @include fixed-layout-subpage();
@@ -1938,6 +1945,7 @@ body {
                 
             }
 
+            // ------------------------------- community -------------------------------
             &.community {
                 .sub_section {
                     @include fixed-layout-subpage();
@@ -2034,6 +2042,91 @@ body {
                 }
                 
 
+            }
+
+            
+            // ------------------------------- community -------------------------------
+            &.cscenter {
+                .sub_section {
+                    @include fixed-layout-subpage();
+                    &.not_fixed_layout {@include not_fixed_layout();}
+                    &:last-child {@include marginBot-120();}
+                    &.section_01 {@include marginTop-120();}
+                    &:not(.section_01) {@include marginTop-80();}
+                }
+
+                &#inquiry {
+                    .sub_section {
+                        &.section_01 {
+                            @include marginTop-120();
+                            .content_wrap {
+                                .input_table  {
+                                    &#type_01 {
+                                        .input_wrap {
+                                            display: flex; flex-wrap: wrap;
+                                            justify-content: space-between;
+
+                                            .input_box {
+                                                position: relative;
+                                                display: flex; align-items: center;
+                                                width: 100%;
+                                                padding: 28px 0 20px;
+                                                border-bottom: 1px solid #ddd;
+                                                &.full_size {width: 100%;}
+                                                &.half_size {width: calc(50% - 15px); margin-right: 15px;}
+                                                &.margin0 {margin: 0;}
+                                                &.textarea_box {align-items: flex-start; height: 300px;}
+    
+                                                #search_box {
+                                                    cursor: pointer;
+                                                    @include flexCenter();
+                                                    width: 85px; height: 40px;
+                                                    position: absolute; top: 50%; right: 0; transform: translateY(-50%);
+                                                    background-color: #000;
+                                                    font-size: 18px; letter-spacing: -0.72px; color: #fff;
+                                                }
+    
+                                                label {
+                                                    vertical-align: top;
+                                                    display: inline-block; width: 50px;
+                                                    &.text_02 {
+                                                        font-size: 18px;line-height: 1.33;letter-spacing: -0.72px; color: #333;
+                                                    }
+                                                }
+                                                
+                                                input, textarea {
+                                                    width: 100%;
+                                                    margin-left: 40px;
+                                                    border: none;
+                                                    &::placeholder {color: #ddd;}
+                                                }
+                                                textarea {width: 100%; height: 100%}
+                                            }
+                                        }
+                                        
+                                         
+                                    }
+
+                                }
+                                         
+                                .submit_box {
+                                    margin-top: 60px; 
+                                    text-align: center;
+                                    .btn_01 {
+                                        cursor: pointer;
+                                        width: 200px; height: 60px;
+                                        background-color: transparent;
+                                        font-size: 18px; font-weight: 500; color: $color-100;
+                                        &:hover {
+                                            background-color: $color-100;
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
 
