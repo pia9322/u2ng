@@ -1810,7 +1810,7 @@ body main.sub_page #sub_visual .visual_text p.text_01 {
 }
 
 body main.sub_page #sub_visual .visual_text p.text_02 {
-  font-size: 42px;
+  font-size: 4.2rem;
   font-weight: 900;
 }
 
@@ -1994,7 +1994,7 @@ body main.sub_page.about#company .sub_section.section_01 figure figcaption {
 }
 
 body main.sub_page.about#company .sub_section.section_01 figure figcaption .text_01 {
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: 300;
   line-height: 1.45;
   letter-spacing: -3.2px;
@@ -2032,7 +2032,7 @@ body main.sub_page.about#company .sub_section.section_01 figure figcaption .text
 body main.sub_page.about#company .sub_section.section_01 figure figcaption .text_03 em:nth-of-type(2) {
   font-family: 'Nanum Brush Script';
   margin-left: 30px;
-  font-size: 60px;
+  font-size: 6rem;
 }
 
 body main.sub_page.about#company .sub_section.section_02 {
@@ -2368,7 +2368,7 @@ body main.sub_page.about#history .sub_section.section_01 {
 }
 
 body main.sub_page.about#history .sub_section.section_01 .text_wrap .text_01 {
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 300;
   line-height: 1.5;
   letter-spacing: -2.56px;
@@ -2561,6 +2561,7 @@ body main.sub_page.product#product_list #product_tab .content_wrap .product_tab_
   font-size: 20px;
   font-weight: 500;
   color: #666;
+  text-align: center;
 }
 
 body main.sub_page.product#product_list #product_tab .content_wrap .product_tab_wrap .text_wrap a.active {
@@ -3079,7 +3080,7 @@ body main.sub_page.rnd#project .project_wrap .project_list .img_wrap.wrap_01 img
 }
 
 body main.sub_page.rnd#project_02 .sub_section.section_01 .text_wrap .text_01 {
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 300;
   line-height: 1.5;
   letter-spacing: -2.56px;
@@ -3161,6 +3162,7 @@ body main.sub_page.rnd#project_02 .sub_section.section_02 .content_wrap .content
 
 body main.sub_page.rnd#project_02 .sub_section.section_02 .content_wrap .content.content_02 .map {
   padding-left: 90px;
+  width: 1100px;
 }
 
 body main.sub_page.rnd#project_02 .sub_section.section_02 .content_wrap .content.content_02 .text_wrap {
@@ -3527,7 +3529,7 @@ body main.sub_page.community#promotion .sub_section:last-child {
 }
 
 body main.sub_page.community#promotion .sub_section.section_01 .text_wrap .text_01 {
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 300;
   line-height: 1.5;
   letter-spacing: -2.56px;

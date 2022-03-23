@@ -82,7 +82,7 @@ $color-200 : #98afc7;
 
 
 @mixin subTextTit_01 {
-    font-size: 32px; font-weight: 300;
+    font-size: 3.2rem; font-weight: 300;
     line-height: 1.5; letter-spacing: -2.56px; text-align: center; 
 }
 
@@ -1302,7 +1302,7 @@ body {
                     color: #fff;
                     p {
                         &.text_01 { font-size: 20px; font-weight: bold; letter-spacing: -1.6px; }
-                        &.text_02 { font-size: 42px; font-weight: 900;
+                        &.text_02 { font-size: 4.2rem; font-weight: 900;
                             &.bold { font-weight: bold;}
                         }
                     }
@@ -1408,7 +1408,7 @@ body {
                                 }
                                 figcaption {
                                     margin-left: 80px;
-                                    .text_01 {font-size: 40px;font-weight: 300;line-height: 1.45;letter-spacing: -3.2px;}
+                                    .text_01 {font-size: 4rem;font-weight: 300;line-height: 1.45;letter-spacing: -3.2px;}
                                     .text_02 {
                                         margin-top: 20px;
                                         font-size: 18px;font-weight: 300;line-height: 1.78;letter-spacing: -1.44px;color: #666;
@@ -1421,7 +1421,7 @@ body {
                                         em:nth-of-type(2){
                                             @include font-Nanum();
                                             margin-left: 30px; 
-                                            font-size: 60px; 
+                                            font-size: 6rem; 
                                         }
                                     }
                                 }
@@ -1701,7 +1701,7 @@ body {
                                         @include transition(.15s);
                                         width: 260px; height: 60px;
                                         border: 1px solid #ddd;
-                                        font-size: 20px; font-weight: 500; color: #666;
+                                        font-size: 20px; font-weight: 500; color: #666; text-align: center;
                                         &.active {
                                             color: #fff;
                                             background-color: $color-100;
@@ -2080,7 +2080,10 @@ body {
 
                                     }
                                     &.content_02 {
-                                        .map {padding-left: 90px;}
+                                        .map {
+                                            padding-left: 90px;
+                                            width: 1100px;
+                                        }
                                         .text_wrap {
                                             position: absolute;
                                             width: 430px; height: 110px;
@@ -2088,12 +2091,8 @@ body {
                                             border-radius:20px; background-color: #fff;
                                             display: flex; align-items: center; 
                                             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
-                                            &.wrap_01 {
-                                                left: -20px; top: 80px;
-                                            }
-                                            &.wrap_02 {
-                                                right: 100px; top: 130px;
-                                            }
+                                            &.wrap_01 {left: -20px; top: 80px;}
+                                            &.wrap_02 {right: 100px; top: 130px;}
 
 
                                             .img_wrap {
