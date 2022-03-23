@@ -520,9 +520,15 @@ body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_01 > i {
 
 body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_01 > i img { transition: all 0.15s; -webkit-transition: all 0.15s; -moz-transition: all 0.15s; -ms-transition: all 0.15s; -o-transition: all 0.15s; }
 
-body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_02 { display: none; position: absolute; left: 0; top: 100%; width: 100%; background: #0a4b90; }
+body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_02 { display: none; position: absolute; left: 0; top: 100%; width: 100%; border: 1px solid #ddd; }
 
-body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_02 .depth_02_list a { transition: all 0.15s; -webkit-transition: all 0.15s; -moz-transition: all 0.15s; -ms-transition: all 0.15s; -o-transition: all 0.15s; display: inline-block; padding: 20px; font-size: 16px; color: #fff; text-transform: uppercase; }
+body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_02 .depth_02_list { transition: 0.15s; -webkit-transition: 0.15s; -moz-transition: 0.15s; -ms-transition: 0.15s; -o-transition: 0.15s; background: #fff; }
+
+body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_02 .depth_02_list:hover { background: #0a4b90; }
+
+body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_02 .depth_02_list:hover a { color: #fff; }
+
+body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_02 .depth_02_list a { transition: all 0.15s; -webkit-transition: all 0.15s; -moz-transition: all 0.15s; -ms-transition: all 0.15s; -o-transition: all 0.15s; display: inline-block; padding: 20px; font-size: 16px; color: #666; text-transform: uppercase; }
 
 body main.sub_page.about#company .sub_section.section_01 { max-width: 1360px; width: 100%; margin: 0 auto; margin-top: 120px; }
 

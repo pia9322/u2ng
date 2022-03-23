@@ -276,7 +276,10 @@ $(function () {
                 return response.json()
             })
             .then((data) => {
+
                 let addList = data.subNavi_system
+                
+                console.log(JSON.stringify(data))
                 
                 for (let i = 0; i < addList.length; i++) {
                     tagList_02 = '<li class="depth_02_list"><a href="' + addList[i].href + '">' + addList[i].title + '</a></li>'
