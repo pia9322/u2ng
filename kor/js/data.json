@@ -15,9 +15,20 @@
         {"imgSrc":"certify_02_02", "imgAlt":"인증서05", "imgName":"[특허] 사물인터넷 기반 지능형무선 피폭 선량 안전 관리 시스템"},
         {"imgSrc":"certify_02_03", "imgAlt":"인증서06", "imgName":"[특허] TLD WIRELESS TERMINAL AND TLD MANAGEMENT SYSTEM, AND TLD MANAGEMENT METHOD"},
         {"imgSrc":"certify_02_04", "imgAlt":"인증서07", "imgName":"[디자인등록] 열형광 선량계(Thermoluminescence Dosimeter) 자동지급기"}
+    ],
+    "subNavi_system" : [
+        {"href":"../system/rca_acs.html", "title":"RCA Access Control System"},
+        {"href":"../system/adr_rs.html", "title":"ADR Reader Station"},
+        {"href":"../system/tld_sms.html", "title":"TLD Storage & Management System"},
+        {"href":"../system/adr_sms.html", "title":"ADR Storage & Management System"},
+        {"href":"../system/wdms.html", "title":"Wireless Dose Monitoring system"},
+        {"href":"../system/tld_pditsms.html", "title":"Personal Dosimeter Integrated type Storage & Management System"},
+        {"href":"../system/rfid_upas.html", "title":"RFID Unauthorized Pass Alarm System"},
+        {"href":"../system/oc_io.html", "title":"Object Check-In & Out System"},
+        {"href":"../system/brk.html", "title":"Biometric Registration Kiosk"}
     ]
 
-
+    
     
     
 

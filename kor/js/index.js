@@ -135,9 +135,9 @@ $(function () {
         // loop: true,
         // touchMoveStopPropagation: true,
         breakpoints: {
-        // 1480: {
-        //     slidesPerView: 2,
-        // },
+            // 1480: {
+            //     slidesPerView: 2,
+            // },
         }
     });
     var personInfo = new Swiper('.person_info.swiper-container', {
@@ -248,6 +248,7 @@ $(function () {
         var nowLocation = location.href;
         // location Check
         (nowLocation.indexOf('index.html') >= 0) ? console.log('Home') : headerLogo();
+        (nowLocation.indexOf('/system') >= 0) ? subNavi_add() : console.log('nop system')
         // let subNaviEvent = $('#sub_navi .content_wrap .text_02').text();
         // let LinkActive = $('.link_wrap a');
         // // link_wrap auto active
@@ -259,6 +260,41 @@ $(function () {
         $('#header_left a img').attr('src', '../images/ico/logo_black.svg');
         headerScroll();
     }
+
+    
+
+    function subNavi_add() {
+        let tagList_01 = '',
+            tagList_02 = '';
+
+
+        fetch('../js/data.json')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('error 01')
+                }
+                return response.json()
+            })
+            .then((data) => {
+                let addList = data.subNavi_system
+                
+                for (let i = 0; i < addList.length; i++) {
+                    tagList_02 = '<li class="depth_02_list"><a href="' + addList[i].href + '">' + addList[i].title + '</a></li>'
+                    $('#sub_nav_02 .depth_02').append(tagList_02);
+                }
+                // $('#sub_nav_02 .depth_02').append(tagList)
+
+            })
+            .catch(() => {
+                console.log('ERROR_02')
+            })
+    }
+
+
+    
+
+
+
     // header function
     // headerScroll()
     headerHover('.header_center > li', '.depth_01');
