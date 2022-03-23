@@ -1809,8 +1809,9 @@ body {
                 // type_01
                 .sub_section {
                     @include fixed-layout-subpage();
+                    @include marginTop-120();
+                    &:last-child {@include marginBot-120()}
                     &.section_01 {@include marginTop-120();}
-                    &.section_02 {margin-top: 160px;}
                 }
                 
                 #type_01 {
@@ -1825,7 +1826,7 @@ body {
 
                         .product_info {
                             width: 100%; 
-                            margin-left: 60px;
+                            margin: 30px 0 0 60px;
                             .text_wrap {
                                 span {display: block}
                                 &.wrap_01 {
@@ -1868,10 +1869,10 @@ body {
                     }
                 }
 
-                #table_type {
-                    .table_wrap {
+                .section_02 {
+                    .content_wrap {
                         &.wrap_01 {
-                            .table_title {
+                            .text_title {
                                 font-size: 20px; font-weight: 500; line-height: 1.6;color: $color-100;
                                 &.marginTop_60 {margin-top: 60px;}
                             }
@@ -1892,7 +1893,10 @@ body {
 
                                     thead { 
                                         background-color: #D9E3ED;
-                                        th {font-weight: 500; color: $color-100;}
+                                        th {
+                                            font-weight: 500; color: $color-100;
+                                            &:nth-child(1) {width: 300px;}
+                                        }
                                     }
                                     tbody {
                                         td {font-weight: 400; color: #666;}
@@ -1909,8 +1913,18 @@ body {
                                         @include flexCenter();
                                         width: 192px; height: 60px;
                                         border: 1px solid #ddd;
-                                        font-size: 18px; color: #666;
+                                        font-size: 18px; color: #666;text-align: center;
                                     }
+                                }
+                            }
+
+                            .img_wrap {
+                                display: flex;
+                                img {
+                                    margin: 20px 20px 20px 0;
+                                    width: 100px; height: 100px;
+                                    border: 1px solid #ddd;
+                                    object-fit: contain;
                                 }
                             }
 
