@@ -40,12 +40,12 @@
     ],
 
     "subNaviDepth_01" : [
-        {"href":"../about/company.html", "title":"about"},
+        {"href":"../about/company.html", "title":"회사소개"},
         {"href":"../system/adr_rs.html", "title":"system"},
         {"href":"../product/product_list.html", "title":"product"},
-        {"href":"../rnd/project.html", "title":"r&d project"},
-        {"href":"../community/notice.html", "title":"contact"},
-        {"href":"../cscenter/inquiry.html", "title":"cscenter"}
+        {"href":"../rnd/project.html", "title":"r&d 프로젝트"},
+        {"href":"../community/notice.html", "title":"홍보센터"},
+        {"href":"../cscenter/inquiry.html", "title":"고객지원"}
     ]
 
 }   

@@ -292,12 +292,6 @@ $(function () {
             headerLogo()
             subNaviDepth_01()
             $('#sub_nav_01 .depth_01 > a').text(subPageName)
-            
-            if ($('#sub_nav_01 .depth_01 > a').text() == '홍보센터') {
-                $('#sub_nav_01 .depth_01 > a').text('CONTACT')
-            } else {
-                null;
-            } 
         }
 
         (nowLocation.indexOf('/system/') >= 0) ? subNavi_add_system() : null;
