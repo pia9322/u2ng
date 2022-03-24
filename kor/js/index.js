@@ -265,7 +265,7 @@ $(function () {
     
 
 
-    // system
+    // about
     function subNavi_add_about() {
         let tagList_01 = '';
 

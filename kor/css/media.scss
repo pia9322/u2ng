@@ -137,9 +137,7 @@ $color-200 : #98afc7;
 // ****************************************1640px****************************************
 @media (max-width: 1640px) {
 
-
-
-    // ****************************************padge css****************************************
+    // ****************************************page css****************************************
     body {
         // opacity: 0;
         main {
@@ -395,8 +393,7 @@ $color-200 : #98afc7;
                 #sub_visual {
                     height: 400px;
                     .visual_text {
-                        padding: 0 5%;
-                        // margin-bottom: 130px;
+                        padding: 0 5%; margin-bottom: 100px;
                         p {
                             // &.text_01 { font-size: 20px;}
                             // &.text_02 { font-size: 42px;}
@@ -453,7 +450,7 @@ $color-200 : #98afc7;
                                     flex-direction: column;
                                     .content {
                                         &.content_01 {
-                                            padding: 40px 0 0 50px;
+                                            padding: 40px 0;
                                             width: auto;
                                             .text_wrap {
                                                 flex-direction: column;
@@ -476,15 +473,17 @@ $color-200 : #98afc7;
                                         }
                                         &.content_02 {
                                             // display: flex;
+                                            width: 1100px;
+                                            margin: 0 auto;
                                             .map {
                                                 padding-left: 0;
-                                                margin: 0 auto;
+                                                text-align: center;
                                             }
                                             .text_wrap {
                                                 width: auto; height: auto;
                                                 padding: 10px 20px;
-                                                &.wrap_01 {left: -20px; top: 80px;}
-                                                &.wrap_02 {right: 100px; top: 130px;}
+                                                &.wrap_01 {left: 0; top: 80px;}
+                                                &.wrap_02 {right: 200px; top: 130px;}
     
                                                 .img_wrap {
                                                     margin-right: 15px;
@@ -508,10 +507,13 @@ $color-200 : #98afc7;
             }
         }
     }
+    // ****************************************page css****************************************
+
 
 }
     
     
+
 // ****************************************1480px****************************************
 @media (max-width: 1480px) {
 
@@ -650,11 +652,10 @@ $color-200 : #98afc7;
     // **************************************** header, footer ****************************************
 
 
-    // ****************************************padge css****************************************
+    // ****************************************page css****************************************
     body {
     
         main {
-
             // INDEX MAIN
             &#main_page {
                 .main_section {
@@ -878,12 +879,9 @@ $color-200 : #98afc7;
             
         }
     }
-    // ****************************************padge css****************************************
-
-    
-        
-
+    // ****************************************page css****************************************
 }
+
 
 // u2ng 1360 layout
 @media (max-width: 1360px) {
@@ -911,9 +909,22 @@ $color-200 : #98afc7;
     @mixin marginBot-120 {margin-bottom: calc(120px * .7);}
 
 
-    
+    // system mixin
+    @mixin boxTitle {height: 50px;}
+
+    @mixin textNum {
+        margin-left: 5px;
+        width: 40px; height: 40px;
+        font-size: 20px;
+    }
+    @mixin textTit {
+        margin-left: 10px;
+        font-size: 16px;
+    }
 
 
+
+    // ==================================== page css ====================================
     body {
         main {
 
@@ -1355,6 +1366,49 @@ $color-200 : #98afc7;
                         }
                     }
     
+                    &#project_01 {
+                        .sub_section {
+                            .section_title { @include subTextTit_01()}
+                            &.section_01 {
+                                padding: 80px 5%;
+                                .section_detail {
+                                    justify-content: center;
+                                    .left_box {
+                                        margin-top: 60px; width: 100%;
+                                        .box {
+                                            width: calc(50% - 10px); margin: 0 20px 30px 0;
+                                            &:nth-child(2n) {margin: 0 0 30px 0;}
+
+                                            // active reset
+                                            &.active {
+                                                .box_title {
+                                                    background-color: #fff;
+                                                    .text_num {color: #fff; background-color: $color-100; }
+                                                    .text_tit {color: #333;}
+                                                }
+                                            }
+    
+                                            .box_title {
+                                                @include boxTitle();
+                                                .text_num {@include textNum();}
+                                                .text_tit {@include textTit();}
+                                            }
+    
+                                            .box_list {
+                                                margin: 10px 0 0 5px;
+                                                li { margin-right: 15px;font-size: 16px;}
+                                            }
+    
+    
+                                        }
+                                    }
+    
+                                    .right_box {display: none;}
+                                }
+                            }
+                        }
+    
+                    }
                     // about_ 회사소개로 이전 
                     &#project_02 {
                         .sub_section {
@@ -1394,21 +1448,22 @@ $color-200 : #98afc7;
                                         }
                                         &.content_02 {
                                             // display: flex;
+                                            width: 700px;
                                             .map {padding-left: 0;}
                                             .text_wrap {
                                                 width: auto; height: auto;
-                                                padding: 10px 20px;
-                                                &.wrap_01 {left: -20px; top: 80px;}
+                                                padding: 5px 10px;
+                                                &.wrap_01 {left: 0; top: 40px;}
                                                 &.wrap_02 {right: 100px; top: 130px;}
     
                                                 .img_wrap {
-                                                    margin-right: 15px;
+                                                    display: none;
                                                     img{}
                                                 }
     
                                                 figcaption {
-                                                    .text_01 {font-size: 22px;font-weight: 500;line-height: 1.45;letter-spacing: -0.88px;color: $color-100;}
-                                                    .text_02 {font-size: 18px; font-weight: 300; line-height: 1.78; letter-spacing: -1.44px;}
+                                                    .text_01 {font-size: 18px;}
+                                                    .text_02 {font-size: 16px;}
                                                 }
                                             }
                                         }
@@ -1423,133 +1478,6 @@ $color-200 : #98afc7;
     
                     }
     
-                    &#project_backup {
-                        .sub_section {
-                            @include not_fixed_layout();
-                            .section_title { font-size: 32px; font-weight: 300; line-height: 1.5; letter-spacing: -2.56px; text-align: center;}
-                            &.section_01 {
-                                margin-top: 0;
-                                padding: 120px 0;
-                                background-color: #f4f4f4;
-    
-                                .section_detail {
-                                    @include fixed-layout-subpage();
-                                    display: flex;
-                                    .left_box {
-                                        margin-top: 80px;
-                                        display: flex; flex-wrap: wrap;
-                                        width: 800px;
-                                        .box {
-                                            width: 380px;
-                                            margin: 0 20px 30px 0;
-                                            &.active {
-                                                .box_title {
-                                                    background-color: $color-100;
-                                                    .text_num {color: $color-100; background-color: #fff; }
-                                                    .text_tit {color: #fff;}
-                                                }
-                                            }
-    
-                                            .box_title {
-                                                @include boxTitle();
-                                                .text_num {
-                                                    @include textNum();
-                                                    font-size: 24px; font-weight: bold; line-height: 1.67; letter-spacing: normal; color: #fff;
-                                                }
-                                                .text_tit {
-                                                    @include textTit();
-                                                }
-                                            }
-    
-                                            .box_list {
-                                                margin: 10px 0 0 6px;
-                                                display: flex; flex-wrap: wrap;
-                                                li {
-                                                    margin-right: 20px;
-                                                    font-size: 20px;font-weight: 300;line-height: 1.9;letter-spacing: -1.6px;color: #666;
-                                                }
-                                            }
-    
-    
-                                        }
-                                    }
-    
-                                    .right_box {
-                                        .map_wrap {
-                                            position: relative;
-                                            img {}
-    
-                                            .map_info_wrap {
-                                                position: absolute; left: 0; top: 0;
-                                                width: 100%; height: 100%;
-                                                .map_info {
-                                                    width: 220px;
-                                                    position: absolute;
-    
-                                                    // point_circle
-                                                    // big
-                                                    &::after {
-                                                        @include map-circle(52px);
-                                                        top: calc(100% + 35px);
-                                                        background: rgba(10, 75, 144, 0.06);
-                                                        animation: mapCircle_01 2s infinite linear;
-                                                    }
-                                                    // small
-                                                    &::before {
-                                                        @include map-circle(20px);
-                                                        top: calc(100% - -52px);
-                                                        background-color: rgba(10, 75, 144, 0.2);
-                                                        animation: mapCircle_01 2s .3s infinite linear;
-                                                    }
-    
-                                                    .map {
-                                                        @include boxTitle();
-                                                        position: relative;
-                                                        background-color: $color-100 !important;
-                                                        .text_num {@include textNum(); background: #fff !important;}
-                                                        .text_tit {@include textTit(); color: #fff !important; font-weight: 500 !important;}
-    
-                                                        // line
-                                                        &::after {
-                                                            content: '';
-                                                            @include absolute-x(50%, 100%);
-                                                            width: 1px; height: 60px;
-                                                            background-color: $color-100;
-                                                            // animation: mapline_01 2s 1s infinite linear;
-                                                        }
-    
-                                                        // line_circle
-                                                        &::before {
-                                                            content: '';
-                                                            @include absolute-x(50%, 100%);
-                                                            top: calc(100% + 60px);
-                                                            width: 5px; height: 5px;
-                                                            border-radius: 100%;
-                                                            background-color: $color-100;
-                                                            animation: mapCircle_01 2s .5s infinite linear;
-                                                        }
-                                                    }
-    
-                                                    &.info_01 {left: 20px; bottom: 244px;}
-                                                    &.info_02 {right: -35px; bottom: 244px;}
-                                                    &.info_03 {right: -70px; bottom: 300px;}
-                                                    &.info_04 {right: -95px; top: 240px;}
-                                                    &.info_05 {left: 80px; top: 160px;}
-                                                    &.info_06 {right: -70px; top: 170px;}
-                                                    &.info_07 {right: -65px; top: 250px;}
-                                                }
-    
-    
-    
-                                            }
-                                        }
-    
-                                    }
-                                }
-                            }
-                        }
-    
-                    }
                     
     
                     
@@ -1558,31 +1486,14 @@ $color-200 : #98afc7;
                 // ------------------------------- community -------------------------------
                 &.community {
                     .sub_section {
-                        @include fixed-layout-subpage();
+                        @include padding_5per();
                         &:last-child {@include marginBot-120();}
                         &.section_01 {@include marginTop-120();}
                         &:not(.section_01) {@include marginTop-80();}
                     }
     
-                    &#notice {}
-                    &#notice_more {
-                        #table_default_more {
-                            .table_notice {
-                                thead {
-                                    tr {
-                                        &:first-child {
-                                            background-color: #F4F4F4;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-    
                     &#promotion {
                         .sub_section {
-                            &:last-child {margin-bottom: 0}
-    
                             &.section_01 {
                                 .text_wrap {
                                     .text_01 {@include subTextTit_01();}
@@ -1590,20 +1501,14 @@ $color-200 : #98afc7;
                             }
                             &.section_02 {
                                 .content_wrap {
-                                    display: flex; flex-wrap: wrap;
                                     .content {
-                                        &.content_01 {
-                                            width: 980px; height: 650px;
-                                            border: 1px solid #ddd;
-                                            margin-right: 80px;
-                                        }
+                                        &.content_01 { width: 100%; height: 300px; margin-right: 0; }
                                         &.content_02 {
-                                            display: flex; flex-direction: column;
+                                            margin-top: 20px; flex-direction: row;
                                             .sub_video {
-                                                width: 300px; height: 200px;
-                                                border: 1px solid #ddd;
-                                                margin-bottom: 26px;
-                                                &:last-child {margin-bottom: 0;}
+                                                width: 150px; height: 150px;
+                                                margin: 0 20px 20px 0;
+                                                &:last-child {margin: 0 20px 20px 0;}
                                             }
                                         }
                                     }
@@ -1612,36 +1517,21 @@ $color-200 : #98afc7;
                             }
     
                             &.section_03 {
-                                @include not_fixed_layout();
                                 @include marginTop-80();
-                                background: #F4F4F4;
                                 .content_wrap {
-                                    @include fixed-layout-subpage();
-                                    padding: 110px 0;
+                                    padding: 60px 0;
                                     figure {
-                                        display: flex; flex-wrap: wrap;
-                                        .img_wrap {
-                                            width: 520px;
-                                            margin-right: 60px;
-                                        }
+                                        .img_wrap {width: calc(50% - 20px); margin-right: 20px;}
                                         .text_wrap {
-                                            .text_01 {font-size: 24px;font-weight: 500;line-height: 1.5;letter-spacing: -1.92px;}
-                                            .text_02 {margin-top: 15px;@include font-18(); letter-spacing: -1.44px; color: #666;}
+                                            width: 50%;
+                                            .text_01 {font-size: 20px;}
+                                            .text_02 {margin-top: 10px; @include font-18();}
                                             .btn_01 {
-                                                margin-top: 30px;
-                                                width: 200px; height: 60px; background-color: transparent; color: $color-100;
-                                                &:hover {
-                                                    background-color: $color-100;
-                                                    color: #fff;
-                                                    path {fill: #fff !important;}
-                                                }
+                                                margin-top: 20px;
+                                                width: auto; height: auto; padding: 5px 10px;
                                                 span {
-                                                    font-size: 18px;font-weight: 600;line-height: 1.56;
-                                                    svg {
-                                                        width: 27px; height: 27px; margin-right: 5px;
-                                                        * {transition: all .15s;}
-                                                        path{fill: $color-100;}
-                                                    }
+                                                    font-size: 16px;
+                                                    svg {width: 20px; height: 20px; }
                                                 }
                                             }   
                                         }
@@ -1659,7 +1549,7 @@ $color-200 : #98afc7;
                 // ------------------------------- community -------------------------------
                 &.cscenter {
                     .sub_section {
-                        @include fixed-layout-subpage();
+                        @include padding_5per();
                         &:last-child {@include marginBot-120();}
                         &.section_01 {@include marginTop-120();}
                         &:not(.section_01) {@include marginTop-80();}
@@ -1673,44 +1563,20 @@ $color-200 : #98afc7;
                                     .input_table  {
                                         &#type_01 {
                                             .input_wrap {
-                                                display: flex; flex-wrap: wrap;
-                                                justify-content: space-between;
-    
                                                 .input_box {
-                                                    position: relative;
-                                                    display: flex; align-items: center;
-                                                    width: 100%;
-                                                    padding: 28px 0 20px;
-                                                    border-bottom: 1px solid #ddd;
-                                                    &.full_size {width: 100%;}
-                                                    &.half_size {width: calc(50% - 15px); margin-right: 15px;}
-                                                    &.margin0 {margin: 0;}
-                                                    &.textarea_box {align-items: flex-start; height: 300px;}
-        
-                                                    #search_box {
-                                                        cursor: pointer;
-                                                        @include flexCenter();
-                                                        width: 85px; height: 40px;
-                                                        position: absolute; top: 50%; right: 0; transform: translateY(-50%);
-                                                        background-color: #000;
-                                                        font-size: 18px; letter-spacing: -0.72px; color: #fff;
-                                                    }
+                                                    width: 100%; padding: 20px 0;
+                                                    &.half_size {width: calc(50% - 5px); margin-right: 5px;}
+                                                    &.textarea_box {align-items: flex-start; height: 200px;}
         
                                                     label {
-                                                        vertical-align: top;
-                                                        display: inline-block; width: 50px;
-                                                        &.text_02 {
-                                                            font-size: 18px;line-height: 1.33;letter-spacing: -0.72px; color: #333;
-                                                        }
+                                                        width: 40px;
+                                                        &.text_02 {font-size: 16px;}
                                                     }
                                                     
                                                     input, textarea {
-                                                        width: 100%;
-                                                        margin-left: 40px;
-                                                        border: none;
-                                                        &::placeholder {color: #ddd;}
+                                                        margin-left: 20px;
+                                                        &::placeholder {font-size: 12px;}
                                                     }
-                                                    textarea {width: 100%; height: 100%}
                                                 }
                                             }
                                             
@@ -1720,18 +1586,8 @@ $color-200 : #98afc7;
                                     }
                                              
                                     .submit_box {
-                                        margin-top: 60px; 
-                                        text-align: center;
-                                        .btn_01 {
-                                            cursor: pointer;
-                                            width: 200px; height: 60px;
-                                            background-color: transparent;
-                                            font-size: 18px; font-weight: 500; color: $color-100;
-                                            &:hover {
-                                                background-color: $color-100;
-                                                color: #fff;
-                                            }
-                                        }
+                                        margin-top: 40px; 
+                                        .btn_01 {font-size: 16px; width: auto; height: auto; padding: 5px 10px;}
                                     }
                                 }
                             }
@@ -1741,6 +1597,8 @@ $color-200 : #98afc7;
             }
         }
     }
+    // ==================================== page css ====================================
+
 }
 
 
@@ -1930,7 +1788,7 @@ $color-200 : #98afc7;
             
         #footer {
             padding: 40px 5%;
-            margin-top: 80px;
+            // margin-top: 80px;
             .footer_wrap {
                 .footer_section_01 {
                     flex-direction: column;
@@ -1957,12 +1815,6 @@ $color-200 : #98afc7;
         }
     }
     // **************************************** header, footer ****************************************
-
-    
-
-
-
-
 }
 
 
@@ -1972,24 +1824,38 @@ $color-200 : #98afc7;
     // Margin
     @mixin marginTop-120 {margin-top: 80px;}
     @mixin marginTop-100 {margin-top: 70px;}
-    @mixin marginTop-70 {margin-top: 50px;}
+    @mixin marginTop-80 {margin-top: 60px;}
+    @mixin marginTop-70 {margin-top: 40px;}
     @mixin marginTop-40 {margin-top: 20px;}
     @mixin marginTop-30 {margin-top: 10px;}
+
+    @mixin marginBot-120 {margin-bottom: 60px;}
+
 
     // Padding
     @mixin paddingTop-70 {padding-top: 70px;}
     @mixin paddingTop-40 {padding-top: 40px;}
 
 
-    @mixin font-M {font-family: 'Montserrat';}
-
-
-
     @mixin font-40 { font-size: 30px;}
-    @mixin font-18 { font-size: 16px;}
+    @mixin font-18 { font-size: 14px;}
 
     @mixin section-Title-01 {font-size: 30px;}
     @mixin section-Title-02 { font-size: 16px;}
+
+
+    // // system mixin
+    // @mixin boxTitle {height: 50px;}
+
+    // @mixin textNum {
+    //     margin-left: 5px;
+    //     width: 40px; height: 40px;
+    //     font-size: 20px;
+    // }
+    // @mixin textTit {
+    //     margin-left: 10px;
+    //     font-size: 16px;
+    // }
 
 
     // ****************************************default css****************************************
@@ -2003,6 +1869,30 @@ $color-200 : #98afc7;
                 .img_wrap { svg {width: 20px;} } 
                 .text_01 {display: none;}
             }
+        }
+        // table_공통 게시판
+        #table_default {
+            #table_header {
+                // search
+                .table_text_search {
+                    .search_form {
+                        fieldset {
+                            // form
+                            .form_02_selectbox {
+                                select, .nice-select { width: auto;  }
+                                input[type=text] {margin: 0;}
+                            }
+                        }
+                    }
+                }
+            }
+
+            #table_body {
+                .table_num, .table_state, .table_hits {display: none;}
+                .table_data {width: 20% !important;}
+            }
+
+            #table_footer {margin-top: 60px;}
         }
     }
     // ****************************************default css****************************************
@@ -2038,7 +1928,7 @@ $color-200 : #98afc7;
     // **************************************** header, footer ****************************************
 
 
-    // ****************************************padge css****************************************
+    // ****************************************page css****************************************
     body {
         main {
 
@@ -2274,7 +2164,7 @@ $color-200 : #98afc7;
 
         }
     }
-    // ****************************************padge css****************************************
+    // ****************************************page css****************************************
 
     
 
@@ -2283,42 +2173,6 @@ $color-200 : #98afc7;
 
 // ****************************************479****************************************
 @media (max-width: 479px) {
-
-
-    
-    // ****************************************default css****************************************
-    body {
-        // table_공통 게시판
-        #table_default {
-            #table_header {
-                // search
-                .table_text_search {
-                    .search_form {
-                        fieldset {
-                            // form
-                            .form_02_selectbox {
-                                select, .nice-select { width: auto;  }
-                                input[type=text] {margin: 0;}
-                            }
-                        }
-                    }
-                }
-            }
-
-            #table_body {
-                .table_num {display: none;}
-                .table_state {display: none;}
-                .table_data {width: 20% !important;}
-            }
-
-            #table_footer {margin-top: 60px;}
-
-        }
-    }
-    // ****************************************default css****************************************
-        
-    
-
     // **************************************** header, footer ****************************************
     body {
             
@@ -2358,11 +2212,6 @@ $color-200 : #98afc7;
         }
     }
     // **************************************** header, footer ****************************************
-
-
-    
-
-
 }
 
 

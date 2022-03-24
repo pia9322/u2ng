@@ -822,9 +822,9 @@ body {
 
 
 
-// ==================================== padge css ====================================
-// ==================================== padge css ====================================
-// ==================================== padge css ====================================
+// ==================================== page css ====================================
+// ==================================== page css ====================================
+// ==================================== page css ====================================
 body {
     // opacity: 0;
     main {
@@ -1552,6 +1552,7 @@ body {
                     }
                 }
 
+                // ------ business ------
                 &#business {
                     .sub_section {
                         &.section_01 {
@@ -1595,6 +1596,7 @@ body {
                 }
 
                 // new_ver
+                // ------ history ------
                 &#history {
                     .sub_section {
                         &.section_01 {
@@ -1689,6 +1691,7 @@ body {
                     &.section_02 {@include marginTop-80();}
                 }
                 
+                // ------ product_list ------
                 &#product_list {
                     #product_tab {
                         .content_wrap {
@@ -1752,6 +1755,7 @@ body {
 
                 }
 
+                // ------ product_detail ------
                 &#product_detail {
                     // type_01
                     
@@ -1952,6 +1956,7 @@ body {
                     &.section_02 {}
                 }
 
+                // ------ project ------
                 &#project {
                     .sub_section {
                         &:last-child {@include marginBot-120()}
@@ -2026,101 +2031,13 @@ body {
                     }
                 }
 
-                // about_ 회사소개로 이전 
-                &#project_02 {
-                    .sub_section {
-                        &.section_01 {
-                            .text_wrap {
-                                .text_01 {@include subTextTit_01();}
-                            }
-                        }
-
-                        &.section_02 {
-                            @include marginTop-80();
-                            max-width: 1920px;
-
-                            .content_wrap {
-                                display: flex;
-
-                                .content {
-                                    position: relative;
-                                    &.content_01 {
-                                        $size: 100px;
-
-                                        width: 740px;
-                                        background-color: #f4f4f4;
-                                        padding: 80px 0 0 280px;
-
-                                        .text_wrap {
-                                            display: flex; align-items: center;
-                                            .text_01 {
-                                                @include flexCenter();
-                                                position: relative; 
-                                                margin-right: 40px;
-                                                width: $size; height: $size;
-                                                background: url('../images/rnd/circle_01.svg')no-repeat center/cover;
-                                                font-size: 24px; font-weight: bold; line-height: 1.67; color: #fff;
-                                            }
-
-                                            .text_02 {
-                                                p {
-                                                    line-height: 1.45;letter-spacing: -1.76px;
-                                                    &:nth-child(1){ font-size: 22px;font-weight: 500;color: #0a4b90;}
-                                                    &:nth-child(2){ font-size: 18px;font-weight: 300;}
-                                                }
-
-                                            }
-                                        }
-
-                                        .arrow_wrap {
-                                            margin: 18px 0;
-                                            width: $size;
-                                            text-align: center;
-                                        }
-
-                                    }
-                                    &.content_02 {
-                                        .map {
-                                            padding-left: 90px;
-                                            width: 1100px;
-                                        }
-                                        .text_wrap {
-                                            position: absolute;
-                                            width: 430px; height: 110px;
-                                            padding: 25px 0 25px 30px;
-                                            border-radius:20px; background-color: #fff;
-                                            display: flex; align-items: center; 
-                                            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
-                                            &.wrap_01 {left: -20px; top: 80px;}
-                                            &.wrap_02 {right: 100px; top: 130px;}
-
-
-                                            .img_wrap {
-                                                margin-right: 15px;
-                                                img{}
-                                            }
-
-                                            figcaption {
-                                                .text_01 {font-size: 22px;font-weight: 500;line-height: 1.45;letter-spacing: -0.88px;color: $color-100;}
-                                                .text_02 {font-size: 18px; font-weight: 300; line-height: 1.78; letter-spacing: -1.44px;}
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-
-
-
-
-                }
-
-                &#project_backup {
+                
+                // about 으로 이동
+                // ------ project_01 ------
+                &#project_01 {
                     .sub_section {
                         @include not_fixed_layout();
-                        .section_title { font-size: 32px; font-weight: 300; line-height: 1.5; letter-spacing: -2.56px; text-align: center;}
+                        .section_title { @include subTextTit_01()}
                         &.section_01 {
                             margin-top: 0;
                             padding: 120px 0;
@@ -2244,9 +2161,95 @@ body {
                     }
 
                 }
-                
 
-                
+                // about 으로 이동
+                // ------ project_02 ------
+                &#project_02 {
+                    .sub_section {
+                        &.section_01 {
+                            .text_wrap {
+                                .text_01 {@include subTextTit_01();}
+                            }
+                        }
+
+                        &.section_02 {
+                            @include marginTop-80();
+                            max-width: 1920px;
+
+                            .content_wrap {
+                                display: flex;
+
+                                .content {
+                                    position: relative;
+                                    &.content_01 {
+                                        $size: 100px;
+
+                                        width: 740px;
+                                        background-color: #f4f4f4;
+                                        padding: 80px 0 0 280px;
+
+                                        .text_wrap {
+                                            display: flex; align-items: center;
+                                            .text_01 {
+                                                @include flexCenter();
+                                                position: relative; 
+                                                margin-right: 40px;
+                                                width: $size; height: $size;
+                                                background: url('../images/rnd/circle_01.svg')no-repeat center/cover;
+                                                font-size: 24px; font-weight: bold; line-height: 1.67; color: #fff;
+                                            }
+
+                                            .text_02 {
+                                                p {
+                                                    line-height: 1.45;letter-spacing: -1.76px;
+                                                    &:nth-child(1){ font-size: 22px;font-weight: 500;color: #0a4b90;}
+                                                    &:nth-child(2){ font-size: 18px;font-weight: 300;}
+                                                }
+
+                                            }
+                                        }
+
+                                        .arrow_wrap {
+                                            margin: 18px 0;
+                                            width: $size;
+                                            text-align: center;
+                                        }
+
+                                    }
+                                    &.content_02 {
+                                        .map {padding-left: 90px;}
+                                        .text_wrap {
+                                            position: absolute;
+                                            width: 430px; height: 110px;
+                                            padding: 25px 0 25px 30px;
+                                            border-radius:20px; background-color: #fff;
+                                            display: flex; align-items: center; 
+                                            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+                                            &.wrap_01 {left: -20px; top: 80px;}
+                                            &.wrap_02 {right: 100px; top: 130px;}
+
+
+                                            .img_wrap {
+                                                margin-right: 15px;
+                                                img{}
+                                            }
+
+                                            figcaption {
+                                                .text_01 {font-size: 22px;font-weight: 500;line-height: 1.45;letter-spacing: -0.88px;color: $color-100;}
+                                                .text_02 {font-size: 18px; font-weight: 300; line-height: 1.78; letter-spacing: -1.44px;}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+
+
+
+
+                }
             }
 
             // ------------------------------- community -------------------------------
@@ -2439,9 +2442,9 @@ body {
         }
     }
 }
-// ==================================== padge css ====================================
-// ==================================== padge css ====================================
-// ==================================== padge css ====================================
+// ==================================== page css ====================================
+// ==================================== page css ====================================
+// ==================================== page css ====================================
 
 
 
