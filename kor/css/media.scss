@@ -2214,10 +2214,10 @@ $color-200 : #98afc7;
             &.sub_page {
 
                 #sub_visual {
-                    height: 275px;
+                    height: 250px;
                     .visual_text {
                         @include padding_5per();
-                        margin-bottom: calc(50px + 10px);
+                        margin-bottom: calc(40px + 10px);
                         p {
                             &.text_01 { font-size: 14px;}
                             &.text_02 { font-size: 22px;}
@@ -2451,7 +2451,7 @@ $color-200 : #98afc7;
                             .content_wrap {
                                 .product_tab_wrap {
                                     .text_wrap {
-                                        a {width: auto; height: auto;padding: 10px 20px;@include font-18();}
+                                        a {@include font-18(); padding: 5px 10px;}
                                     }
                                 }
                             }
@@ -2462,10 +2462,11 @@ $color-200 : #98afc7;
                                 .product_list {
                                     a {
                                         // reset
-                                        margin: 0 20px 20px 0;
-                                        width: calc(33% - 12px); text-align: center;
-                                        &:nth-child(4n) {margin: 0;}
-                                        &:nth-child(3n) {margin: 0 0 20px 0;}
+                                        margin: 0 10px 20px 0;
+                                        width: calc(50% - 5px);
+                                        &:nth-child(3n) {margin: 0 10px 20px 0;}
+                                        &:nth-child(4n) {margin: 0 0 20px 0;}
+                                        &:nth-child(2n) {margin: 0 0 20px 0;}
     
                                         .item {
                                             &:hover {
@@ -2532,6 +2533,7 @@ $color-200 : #98afc7;
                 }
     
     
+                // ------------------------------- system -------------------------------
                 &.system {
                     // type_01
                     .sub_section {
