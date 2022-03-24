@@ -1037,7 +1037,7 @@ $color-200 : #98afc7;
                                                     }
                                                 }
                                                 .text_03 {
-                                                    &.btn_01 {width: 100px; height: 40px;}
+                                                    &.btn_01 {width: auto; height: auto; padding: 5px 10px;}
                                                     a {
                                                         font-size: 16px;
                                                         ion-icon {margin-left: 5px; width: 15px; height: 15px;}
@@ -2339,33 +2339,24 @@ $color-200 : #98afc7;
                                 @include marginBot-120();
                                 .content_wrap {
                                     .content_01 {
-                                        // margin-top: 60px; padding-bottom: 60px;
-                                        flex-direction: column;
-                                        &:first-child {margin-top: 0;}
-                                        .content_title {
-                                            width: auto;
-                                            // .text_01 {font-size: 3.2rem;}
-                                        }
+                                        margin-top: 40px; padding-bottom: 40px;
                                         .content_detail {
-                                            width: 100%;
                                             .text_wrap {
-                                                margin-top: 20px;
+                                                flex-direction: column;
                                                 .text_01 {
                                                     @include font-18();
                                                     p {
-                                                        span {width: 70px;}
-                                                        ion-icon {width: 15px; height: 15px; margin-right: 5px;}
+                                                        flex-direction: column; align-items: flex-start;
+                                                        ion-icon {display: none;}
                                                     }
+                                                    
                                                 }
                                                 .text_03 {
-                                                    &.btn_01 {width: 100px; height: 40px;}
-                                                    a {
-                                                        font-size: 16px;
-                                                        ion-icon {margin-left: 5px; width: 15px; height: 15px;}
-                                                    }
+                                                    &.btn_01 {margin-top: 10px;}
+                                                    a {font-size: 14px;}
                                                 }
                                             }
-                                            .map_wrap {margin-top: 20px;height: 300px;}
+                                            .map_wrap {height: auto;}
                                         }
                                     }
         
@@ -2374,7 +2365,8 @@ $color-200 : #98afc7;
                             }
                         }
                     }
-    
+
+                    // ------ business ------
                     &#business {
                         .sub_section {
                             @include padding_5per();
@@ -2409,7 +2401,7 @@ $color-200 : #98afc7;
                     }
     
                     // new_ver
-                    
+                    // ------ history ------
                     &#history {
                         .sub_section {
                             &.section_01 {@include marginTop-120();}
