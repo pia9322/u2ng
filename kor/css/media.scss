@@ -2375,32 +2375,30 @@ $color-200 : #98afc7;
                                 @include marginBot-120();
                                 .content_wrap {
                                     .content {
-                                        width: calc(33% - 12px); margin-right: 20px;
+                                        width: 100%; margin: 0 0 60px 0;
+                                        text-align: center;
+                                        &:last-child {margin: 0;}
                                         figcaption {
                                             p {
-                                                &.text_01 { 
-                                                    font-size: 24px;
-                                                    height: 85px; // 780 px에 높이안맞아서 조절
-                                                    // padding-bottom: 15px; 
-                                                }
-                                                &.text_02 {  
-                                                    height: 100px;
-                                                    margin-top: 20px; @include font-18();  }
+                                                &.text_01 { font-size: 20px; height: auto; padding-bottom: 5px; }
+                                                &.text_02 { @include font-18(); height: auto; margin-top: 10px;}
                                                 &.text_03 {
-                                                    margin-top: 10px;
+                                                    margin-top: 5px;
                                                     a { @include font-18(); ion-icon {width: 15px; height: 15px; }}
                                                 }
                                             }
                                         }
     
-                                        .img_wrap {margin-top: 30px;}
+                                        .img_wrap {
+                                            margin-top: 20px;
+                                            img {max-height: 175px}
+                                        }
                                     }
                                 }
                             }
                         }
                     }
     
-                    // new_ver
                     // ------ history ------
                     &#history {
                         .sub_section {
@@ -2492,38 +2490,31 @@ $color-200 : #98afc7;
     
                     &#product_detail {
                         // type_01
-                        
                         #type_01 {
                             .product_wrap {
-                                display: flex;
+                                flex-direction: column;
                                 .product_img {
-                                    .thum {width: auto; height: auto;}
+                                    .thum { max-width: 250px; margin: 0 auto; }
                                 }
     
                                 .product_info {
-                                    margin-left: 30px;
+                                    margin: 20px 0 0 0;
+                                    text-align: center;
                                     .text_wrap {
+                                        text-align: left;
                                         &.wrap_01 {
                                             @include font-18();
-                                            padding-bottom: 20px;
+                                            padding-bottom: 10px;
                                             // .text_02 {font-size: 3.2rem;}
-                                            .text_03 {margin-top:10px;}
                                         }
                                         &.wrap_02 {
-                                            .text_01 {margin-top: 10px;font-size: 20px;}
-                                            .text_02 { @include font-18();
-                                                .ico_01 { margin-right: 3px;}
-                                            }
+                                            .text_01 { font-size: 18px; }
+                                            .text_02 { @include font-18();}
                                         }
                                     }
                                     .btn_01 {
                                         margin-top: 20px;
-                                        width: auto; height: auto; 
-                                        padding: 5px 10px;
-                                        span {
-                                            font-size: 16px;
-                                            svg {width: 20px; height: 20px;}
-                                        }
+                                        span {font-size: 14px;}
                                     }
                                 }
                             }
@@ -2546,35 +2537,29 @@ $color-200 : #98afc7;
                     // product_info 부분만 다름 btn 안씀
                     #type_01 {
                         .product_wrap {
-                            display: flex;
+                            flex-direction: column;
                             .product_img {
-                                .thum {width: auto; height: auto;}
+                                .thum { max-width: 250px; margin: 0 auto; }
                             }
-    
+
                             .product_info {
-                                margin: 0 0 0 30px;
+                                margin: 20px 0 0 0;
+                                text-align: center;
                                 .text_wrap {
+                                    text-align: left;
                                     &.wrap_01 {
                                         @include font-18();
-                                        padding-bottom: 20px;
+                                        padding-bottom: 10px;
                                         // .text_02 {font-size: 3.2rem;}
-                                        .text_03 {margin-top:10px;}
                                     }
                                     &.wrap_02 {
-                                        .text_01 {margin-top: 10px;font-size: 20px;}
-                                        .text_02 { @include font-18();
-                                            .ico_01 { margin-right: 3px;}
-                                        }
+                                        .text_01 { font-size: 18px; }
+                                        .text_02 { @include font-18();}
                                     }
                                 }
                                 .btn_01 {
                                     margin-top: 20px;
-                                    width: auto; height: auto; 
-                                    padding: 5px 10px;
-                                    span {
-                                        font-size: 16px;
-                                        svg {width: 20px; height: 20px;}
-                                    }
+                                    span {font-size: 14px;}
                                 }
                             }
                         }
@@ -2583,31 +2568,24 @@ $color-200 : #98afc7;
                     .section_02 {
                         .content_wrap {
                             &.wrap_01 {
-                                .text_title {
-                                    font-size: 18px; // 767 에서 font18() 넣기
-                                    &.marginTop_60 {margin-top: 40px;}
-                                }
-    
+
                                 .table_detail {
-                                    &.marginTop_20 { margin-top: 10px; }
-                                    &.marginTop_40 { margin-top: 20px; }
+                                    overflow: auto;
                                     table {
-                                        tr {height: 30px; @include font-18();}
-                                        thead { 
-                                            th { &:nth-child(1) {width: auto;} }
-                                        }
+                                        min-width: 600px;
+                                        tr {@include font-18();}
                                     }
                                 }
     
                                 .list_wrap {
-                                    margin-top: 20px;
+                                    margin-top: 10px;
                                     .list_content {
-                                        .list { width: auto; height: auto; font-size: 16px; padding: 5px 10px;}
+                                        .list { font-size: 14px;}
                                     }
                                 }
     
                                 .img_wrap {
-                                    img { margin: 10px 10px 10px 0;width: 75px; height: 75px;}
+                                    img { margin: 5px 5px 5px 0;width: 50px; height: 50px;}
                                 }
     
     
@@ -2747,10 +2725,6 @@ $color-200 : #98afc7;
     
     
                     }
-    
-                    
-    
-                    
                 }
     
                 // ------------------------------- community -------------------------------

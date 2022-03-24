@@ -417,13 +417,15 @@
   body main.sub_page.about#location .sub_section.section_01 .content_wrap .content_01 .content_detail .map_wrap { height: auto; }
   body main.sub_page.about#business .sub_section { padding: 0 2.5%; }
   body main.sub_page.about#business .sub_section.section_01 { margin-top: 60px; margin-bottom: 60px; }
-  body main.sub_page.about#business .sub_section.section_01 .content_wrap .content { width: calc(33% - 12px); margin-right: 20px; }
-  body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_01 { font-size: 24px; height: 85px; }
-  body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_02 { height: 100px; margin-top: 20px; font-size: 14px; }
-  body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_03 { margin-top: 10px; }
+  body main.sub_page.about#business .sub_section.section_01 .content_wrap .content { width: 100%; margin: 0 0 60px 0; text-align: center; }
+  body main.sub_page.about#business .sub_section.section_01 .content_wrap .content:last-child { margin: 0; }
+  body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_01 { font-size: 20px; height: auto; padding-bottom: 5px; }
+  body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_02 { font-size: 14px; height: auto; margin-top: 10px; }
+  body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_03 { margin-top: 5px; }
   body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_03 a { font-size: 14px; }
   body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_03 a ion-icon { width: 15px; height: 15px; }
-  body main.sub_page.about#business .sub_section.section_01 .content_wrap .content .img_wrap { margin-top: 30px; }
+  body main.sub_page.about#business .sub_section.section_01 .content_wrap .content .img_wrap { margin-top: 20px; }
+  body main.sub_page.about#business .sub_section.section_01 .content_wrap .content .img_wrap img { max-height: 175px; }
   body main.sub_page.about#history .sub_section.section_01 { margin-top: 60px; }
   body main.sub_page.about#history .sub_section.section_02 { margin-top: 60px; }
   body main.sub_page.about#history .sub_section.section_02 .content_wrap .his_list:nth-child(even) .txt_wrap .tit_area { padding-right: calc(17% + 20px) !important; }
@@ -444,40 +446,33 @@
   body main.sub_page.product#product_list #product_list_wrap .content_wrap .product_list a .item:hover .thumb { border: 1px solid #0a4b90; }
   body main.sub_page.product#product_list #product_list_wrap .content_wrap .product_list a .item .thumb { width: 100%; height: 100%; }
   body main.sub_page.product#product_list #product_list_wrap .content_wrap .product_list a .item figcaption.type_01 .text_01 { margin-top: 10px; font-size: 14px; }
-  body main.sub_page.product#product_detail #type_01 .product_wrap { display: -webkit-box; display: -ms-flexbox; display: flex; }
-  body main.sub_page.product#product_detail #type_01 .product_wrap .product_img .thum { width: auto; height: auto; }
-  body main.sub_page.product#product_detail #type_01 .product_wrap .product_info { margin-left: 30px; }
-  body main.sub_page.product#product_detail #type_01 .product_wrap .product_info .text_wrap.wrap_01 { font-size: 14px; padding-bottom: 20px; }
-  body main.sub_page.product#product_detail #type_01 .product_wrap .product_info .text_wrap.wrap_01 .text_03 { margin-top: 10px; }
-  body main.sub_page.product#product_detail #type_01 .product_wrap .product_info .text_wrap.wrap_02 .text_01 { margin-top: 10px; font-size: 20px; }
+  body main.sub_page.product#product_detail #type_01 .product_wrap { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+  body main.sub_page.product#product_detail #type_01 .product_wrap .product_img .thum { max-width: 250px; margin: 0 auto; }
+  body main.sub_page.product#product_detail #type_01 .product_wrap .product_info { margin: 20px 0 0 0; text-align: center; }
+  body main.sub_page.product#product_detail #type_01 .product_wrap .product_info .text_wrap { text-align: left; }
+  body main.sub_page.product#product_detail #type_01 .product_wrap .product_info .text_wrap.wrap_01 { font-size: 14px; padding-bottom: 10px; }
+  body main.sub_page.product#product_detail #type_01 .product_wrap .product_info .text_wrap.wrap_02 .text_01 { font-size: 18px; }
   body main.sub_page.product#product_detail #type_01 .product_wrap .product_info .text_wrap.wrap_02 .text_02 { font-size: 14px; }
-  body main.sub_page.product#product_detail #type_01 .product_wrap .product_info .text_wrap.wrap_02 .text_02 .ico_01 { margin-right: 3px; }
-  body main.sub_page.product#product_detail #type_01 .product_wrap .product_info .btn_01 { margin-top: 20px; width: auto; height: auto; padding: 5px 10px; }
-  body main.sub_page.product#product_detail #type_01 .product_wrap .product_info .btn_01 span { font-size: 16px; }
-  body main.sub_page.product#product_detail #type_01 .product_wrap .product_info .btn_01 span svg { width: 20px; height: 20px; }
+  body main.sub_page.product#product_detail #type_01 .product_wrap .product_info .btn_01 { margin-top: 20px; }
+  body main.sub_page.product#product_detail #type_01 .product_wrap .product_info .btn_01 span { font-size: 14px; }
   body main.sub_page.system .sub_section { margin-top: 60px; padding: 0 2.5%; }
   body main.sub_page.system .sub_section:last-child { margin-bottom: 60px; }
   body main.sub_page.system .sub_section.section_01 { margin-top: 60px; }
-  body main.sub_page.system #type_01 .product_wrap { display: -webkit-box; display: -ms-flexbox; display: flex; }
-  body main.sub_page.system #type_01 .product_wrap .product_img .thum { width: auto; height: auto; }
-  body main.sub_page.system #type_01 .product_wrap .product_info { margin: 0 0 0 30px; }
-  body main.sub_page.system #type_01 .product_wrap .product_info .text_wrap.wrap_01 { font-size: 14px; padding-bottom: 20px; }
-  body main.sub_page.system #type_01 .product_wrap .product_info .text_wrap.wrap_01 .text_03 { margin-top: 10px; }
-  body main.sub_page.system #type_01 .product_wrap .product_info .text_wrap.wrap_02 .text_01 { margin-top: 10px; font-size: 20px; }
+  body main.sub_page.system #type_01 .product_wrap { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+  body main.sub_page.system #type_01 .product_wrap .product_img .thum { max-width: 250px; margin: 0 auto; }
+  body main.sub_page.system #type_01 .product_wrap .product_info { margin: 20px 0 0 0; text-align: center; }
+  body main.sub_page.system #type_01 .product_wrap .product_info .text_wrap { text-align: left; }
+  body main.sub_page.system #type_01 .product_wrap .product_info .text_wrap.wrap_01 { font-size: 14px; padding-bottom: 10px; }
+  body main.sub_page.system #type_01 .product_wrap .product_info .text_wrap.wrap_02 .text_01 { font-size: 18px; }
   body main.sub_page.system #type_01 .product_wrap .product_info .text_wrap.wrap_02 .text_02 { font-size: 14px; }
-  body main.sub_page.system #type_01 .product_wrap .product_info .text_wrap.wrap_02 .text_02 .ico_01 { margin-right: 3px; }
-  body main.sub_page.system #type_01 .product_wrap .product_info .btn_01 { margin-top: 20px; width: auto; height: auto; padding: 5px 10px; }
-  body main.sub_page.system #type_01 .product_wrap .product_info .btn_01 span { font-size: 16px; }
-  body main.sub_page.system #type_01 .product_wrap .product_info .btn_01 span svg { width: 20px; height: 20px; }
-  body main.sub_page.system .section_02 .content_wrap.wrap_01 .text_title { font-size: 18px; }
-  body main.sub_page.system .section_02 .content_wrap.wrap_01 .text_title.marginTop_60 { margin-top: 40px; }
-  body main.sub_page.system .section_02 .content_wrap.wrap_01 .table_detail.marginTop_20 { margin-top: 10px; }
-  body main.sub_page.system .section_02 .content_wrap.wrap_01 .table_detail.marginTop_40 { margin-top: 20px; }
-  body main.sub_page.system .section_02 .content_wrap.wrap_01 .table_detail table tr { height: 30px; font-size: 14px; }
-  body main.sub_page.system .section_02 .content_wrap.wrap_01 .table_detail table thead th:nth-child(1) { width: auto; }
-  body main.sub_page.system .section_02 .content_wrap.wrap_01 .list_wrap { margin-top: 20px; }
-  body main.sub_page.system .section_02 .content_wrap.wrap_01 .list_wrap .list_content .list { width: auto; height: auto; font-size: 16px; padding: 5px 10px; }
-  body main.sub_page.system .section_02 .content_wrap.wrap_01 .img_wrap img { margin: 10px 10px 10px 0; width: 75px; height: 75px; }
+  body main.sub_page.system #type_01 .product_wrap .product_info .btn_01 { margin-top: 20px; }
+  body main.sub_page.system #type_01 .product_wrap .product_info .btn_01 span { font-size: 14px; }
+  body main.sub_page.system .section_02 .content_wrap.wrap_01 .table_detail { overflow: auto; }
+  body main.sub_page.system .section_02 .content_wrap.wrap_01 .table_detail table { min-width: 600px; }
+  body main.sub_page.system .section_02 .content_wrap.wrap_01 .table_detail table tr { font-size: 14px; }
+  body main.sub_page.system .section_02 .content_wrap.wrap_01 .list_wrap { margin-top: 10px; }
+  body main.sub_page.system .section_02 .content_wrap.wrap_01 .list_wrap .list_content .list { font-size: 14px; }
+  body main.sub_page.system .section_02 .content_wrap.wrap_01 .img_wrap img { margin: 5px 5px 5px 0; width: 50px; height: 50px; }
   body main.sub_page.rnd .sub_section { padding: 0 2.5%; }
   body main.sub_page.rnd .sub_section.section_01 { margin-top: 60px; }
   body main.sub_page.rnd#project .sub_section:last-child { margin-bottom: 60px; }

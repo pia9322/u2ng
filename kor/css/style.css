@@ -1918,6 +1918,9 @@ body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_01 {
 body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_01 > a {
   font-size: 18px;
   letter-spacing: -1.44px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_01 > i {
@@ -2338,6 +2341,7 @@ body main.sub_page.about#business .sub_section.section_01 .content_wrap .content
 }
 
 body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_03 {
+  display: none;
   margin-top: 15px;
 }
 

@@ -1350,7 +1350,9 @@ body {
                             .depth_01 {
                                 display: flex; justify-content: space-between;
                                 padding: 0 20px; width: 100%;
-                                > a { font-size: 18px;letter-spacing: -1.44px;}
+                                > a { font-size: 18px;letter-spacing: -1.44px;
+                                    @include  board_text();
+                                }
 
                                 > i {
                                     display: flex; align-items: center;
@@ -1577,6 +1579,8 @@ body {
                                                 @include font-18(); color: #666; font-weight: 300; line-height: 1.56; letter-spacing: -1.44px;
                                             }
                                             &.text_03 {
+                                                // 잠시만 안녕~
+                                                display: none;
                                                 margin-top: 15px;
                                                 a {
                                                     display: flex; align-items: center;

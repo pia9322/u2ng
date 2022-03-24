@@ -516,7 +516,7 @@ body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap { display: -web
 
 body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_01 { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding: 0 20px; width: 100%; }
 
-body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_01 > a { font-size: 18px; letter-spacing: -1.44px; }
+body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_01 > a { font-size: 18px; letter-spacing: -1.44px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
 
 body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_01 > i { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
@@ -640,7 +640,7 @@ body main.sub_page.about#business .sub_section.section_01 .content_wrap .content
 
 body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_02 { margin-top: 40px; font-size: 18px; letter-spacing: -0.72px; color: #666; font-weight: 300; line-height: 1.56; letter-spacing: -1.44px; }
 
-body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_03 { margin-top: 15px; }
+body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_03 { display: none; margin-top: 15px; }
 
 body main.sub_page.about#business .sub_section.section_01 .content_wrap .content figcaption p.text_03 a { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-size: 18px; letter-spacing: -0.72px; color: #666; font-weight: 500; }
 

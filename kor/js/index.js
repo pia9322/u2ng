@@ -1,7 +1,15 @@
 $(function () {
     // common_js_start
     console.log('common_js_start');
-    AOS.init();
+
+    // ======================================= AOS ======================================= 
+    AOS.init({
+        duration : 700 
+    });
+    // ======================================= AOS ======================================= 
+
+
+    
     // ======================================= swiper ======================================= 
     // main_visual
     var mainSwiper = new Swiper('.main_visual', {
@@ -43,6 +51,7 @@ $(function () {
         //     },
         // }
     });
+
     // main_bis
     var swiper02 = new Swiper('.main_section_02 .product_item .swiper-container', {
         slidesPerView: 5,
@@ -70,6 +79,7 @@ $(function () {
             }
         }
     });
+    
     // // productThumb
     // let productThumb = new Swiper('.product_thum.swiper-container', {
     //     slidesPerView: 1,
@@ -85,6 +95,7 @@ $(function () {
     //         type: 'bullets',
     //     },
     // });
+
     // productMore
     var productMore = new Swiper('.product_more.swiper-container', {
         slidesPerView: 5,
@@ -113,6 +124,7 @@ $(function () {
     });
     // person swiper
     var name = ['기술팀', '기술 영업팀', '솔루션 개발팀'];
+
     var teamTab = new Swiper(".team_info.swiper-container", {
         autoHeight: true,
         effect: "fade",
@@ -129,6 +141,7 @@ $(function () {
             },
         },
     });
+
     var teamSlide = new Swiper('.team.swiper-container', {
         slidesPerView: 'auto',
         // centeredSlides: true,
@@ -140,6 +153,7 @@ $(function () {
             // },
         }
     });
+
     var personInfo = new Swiper('.person_info.swiper-container', {
         slidesPerView: '4',
         // centeredSlides: true,
@@ -168,8 +182,18 @@ $(function () {
     });
     // person swiper
     // ======================================= swiper ======================================= 
+
+    let nowLocation = location.href,
+        subPageName = $('.visual_text .text_01').text();
+
+    
     // header_default 
-    var header = document.querySelector('#header'), header_ham = document.querySelector('.header_ham'), header_full = document.querySelector('.header_full'), depth_01 = document.querySelectorAll('.header_full_list > li');
+    let header = document.querySelector('#header'), 
+        header_ham = document.querySelector('.header_ham'), 
+        header_full = document.querySelector('.header_full'), 
+        depth_01 = document.querySelectorAll('.header_full_list > li');
+
+    
     // header hover event
     function headerHover(target01, target02) {
         $(target01).hover(function () {
@@ -178,12 +202,14 @@ $(function () {
             $(this).children(target02).stop().slideToggle("fast");
         });
     }
+
     // header click event
     function headerClick(target01, target02) {
         $(target01).click(function () {
             $(this).children(target02).slideToggle("fast");
         });
     }
+
     // header Scroll event 
     function headerScroll() {
         $(window).scroll(function () {
@@ -196,12 +222,15 @@ $(function () {
         //        $('#header_left img').attr('src','../images/ico/logo.svg')
         //    }
     }
+
     // window resize reload
     function windowResize() {
         window.addEventListener('resize', function () {
             location.reload();
         });
     }
+
+
     // header search box
     function headerSearch() {
         $('#header_search_btn').click(function () {
@@ -210,6 +239,8 @@ $(function () {
             });
         });
     }
+
+
     // header Full depth
     function headerFullslide() {
         for (var i = 0; i < depth_01.length; i++) {
@@ -220,6 +251,8 @@ $(function () {
             });
         }
     }
+
+
     // header Right click, header_full.active event.
     function headerRight() {
         header_ham.addEventListener('click', function () {
@@ -243,16 +276,22 @@ $(function () {
             }
         });
     }
+
+
     // page check header active
     function pageCheck() {
         // location Check
-        var nowLocation = location.href;
+
+
         
+
         if(nowLocation.indexOf('index.html') >= 0) {
             console.log('Home') 
         } else {
+            console.log('subPage') 
             headerLogo()
             subNaviDepth_01()
+            $('#sub_nav_01 .depth_01 > a').text(subPageName)
         }
 
         (nowLocation.indexOf('/system/') >= 0) ? subNavi_add_system() : null;
@@ -342,14 +381,10 @@ $(function () {
 
                 let addList = data.subNavi_system
                 
-                console.log(JSON.stringify(data, subNavi_system))
-                
                 for (let i = 0; i < addList.length; i++) {
                     tagList_01 = '<li class="depth_02_list"><a href="' + addList[i].href + '">' + addList[i].title + '</a></li>'
                     $('#sub_nav_02 .depth_02').append(tagList_01);
                 }
-                // $('#sub_nav_02 .depth_02').append(tagList)
-
             })
             .catch(() => {
                 console.log('ERROR_02')
