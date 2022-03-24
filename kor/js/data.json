@@ -26,10 +26,18 @@
         {"href":"../system/rfid_upas.html", "title":"RFID Unauthorized Pass Alarm System"},
         {"href":"../system/oc_io.html", "title":"Object Check-In & Out System"},
         {"href":"../system/brk.html", "title":"Biometric Registration Kiosk"}
+    ],
+    
+    "subNavi_about" : [
+        {"href":"../about/company.html", "title":"U2NG소개"},
+        {"href":"../about/business.html", "title":"사업분야"},
+        {"href":"../about/project_01.html", "title":"국내수출실적"},
+        {"href":"../about/project_02.html", "title":"해외수출실적"},
+        {"href":"../about/history.html", "title":"연혁"},
+        {"href":"../about/certify.html", "title":"보유인증"},
+        {"href":"../about/direction.html", "title":"오시는 길"}
     ]
 
-    
-    
     
 
 }   

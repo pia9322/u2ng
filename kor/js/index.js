@@ -248,7 +248,8 @@ $(function () {
         var nowLocation = location.href;
         // location Check
         (nowLocation.indexOf('index.html') >= 0) ? console.log('Home') : headerLogo();
-        (nowLocation.indexOf('/system') >= 0) ? subNavi_add() : console.log('nop system')
+        (nowLocation.indexOf('/system/') >= 0) ? subNavi_add_system() : null;
+        (nowLocation.indexOf('/about/') >= 0) ? subNavi_add_about() : null;
         // let subNaviEvent = $('#sub_navi .content_wrap .text_02').text();
         // let LinkActive = $('.link_wrap a');
         // // link_wrap auto active
@@ -263,10 +264,37 @@ $(function () {
 
     
 
-    function subNavi_add() {
-        let tagList_01 = '',
-            tagList_02 = '';
 
+    // system
+    function subNavi_add_about() {
+        let tagList_01 = '';
+
+        fetch('../js/data.json')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('error 01')
+                }
+                return response.json()
+            })
+            .then((data) => {
+
+                let addList = data.subNavi_about
+                
+                for (let i = 0; i < addList.length; i++) {
+                    tagList_01 = '<li class="depth_02_list"><a href="' + addList[i].href + '">' + addList[i].title + '</a></li>'
+                    $('#sub_nav_02 .depth_02').append(tagList_01);
+                }
+                // $('#sub_nav_02 .depth_02').append(tagList)
+
+            })
+            .catch(() => {
+                console.log('ERROR_02')
+            })
+    }
+
+    // system
+    function subNavi_add_system() {
+        let tagList_01 = '';
 
         fetch('../js/data.json')
             .then((response) => {
@@ -282,8 +310,8 @@ $(function () {
                 console.log(JSON.stringify(data, subNavi_system))
                 
                 for (let i = 0; i < addList.length; i++) {
-                    tagList_02 = '<li class="depth_02_list"><a href="' + addList[i].href + '">' + addList[i].title + '</a></li>'
-                    $('#sub_nav_02 .depth_02').append(tagList_02);
+                    tagList_01 = '<li class="depth_02_list"><a href="' + addList[i].href + '">' + addList[i].title + '</a></li>'
+                    $('#sub_nav_02 .depth_02').append(tagList_01);
                 }
                 // $('#sub_nav_02 .depth_02').append(tagList)
 
@@ -292,6 +320,8 @@ $(function () {
                 console.log('ERROR_02')
             })
     }
+    
+
 
 
     
