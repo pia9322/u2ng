@@ -1569,7 +1569,7 @@ $color-200 : #98afc7;
                                                     &.textarea_box {align-items: flex-start; height: 200px;}
         
                                                     label {
-                                                        width: 40px;
+                                                        min-width: 40px;
                                                         &.text_02 {font-size: 16px;}
                                                     }
                                                     
@@ -2610,32 +2610,29 @@ $color-200 : #98afc7;
                         }
                         .project_wrap {
                             .project_list {
-                                width: 50%; height: 350px;
-                                margin: 0;
+                                width: 100%; height: auto;
                                 padding: 30px 20px;
-                                &:nth-child(3n) {margin: 0;}
+                                margin: 20px 0 0 0;
+                                &:nth-child(3n) {margin: 20px 0 0 0}
                                 // hover, active
-    
                                 // .flex-wrap {position: relative;display: flex; justify-content: space-between; align-items: flex-end;}
     
                                 .text_wrap {
                                     &.wrap_01 {
-                                        .text_01 { font-size: 20px;}
+                                        .text_01 { font-size: 18px;}
                                         .text_02 { margin-top: 5px; @include font-18();  }
                                     }
                                     &.wrap_02 {
                                         @include font-18();
                                         .text_01 {
-                                            // var
-                                            $height: 30px;
-                                            width: 90px; height: $height; line-height: $height;
+                                            margin-top: 20px;
                                         }
-                                        .text_02 {margin-top: 5px;}
+                                        .text_02 {margin-top: 10px;}
                                     }
                                 }
                                 .img_wrap {
                                     &.wrap_01 {
-                                        img {max-height: 100px;}
+                                        img {max-height: 75px;}
                                     }
                                 }
                             }
@@ -2808,30 +2805,11 @@ $color-200 : #98afc7;
                                         &#type_01 {
                                             .input_wrap {
                                                 .input_box {
-                                                    width: 100%; padding: 20px 0;
-                                                    &.half_size {width: calc(50% - 5px); margin-right: 5px;}
-                                                    &.textarea_box {align-items: flex-start; height: 200px;}
-        
-                                                    label {
-                                                        width: 40px;
-                                                        &.text_02 {font-size: 16px;}
-                                                    }
-                                                    
-                                                    input, textarea {
-                                                        margin-left: 20px;
-                                                        &::placeholder {font-size: 12px;}
-                                                    }
+                                                    &.half_size {width: 100%; margin: 0;}
+                                                    input, textarea {margin-left: 10px;}
                                                 }
                                             }
-                                            
-                                             
                                         }
-    
-                                    }
-                                             
-                                    .submit_box {
-                                        margin-top: 40px; 
-                                        .btn_01 {font-size: 16px; width: auto; height: auto; padding: 5px 10px;}
                                     }
                                 }
                             }

@@ -1017,7 +1017,7 @@
     height: 200px;
   }
   body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .input_table#type_01 .input_wrap .input_box label {
-    width: 40px;
+    min-width: 40px;
   }
   body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .input_table#type_01 .input_wrap .input_box label.text_02 {
     font-size: 16px;
@@ -1788,16 +1788,16 @@
     margin-bottom: 60px;
   }
   body main.sub_page.rnd#project .project_wrap .project_list {
-    width: 50%;
-    height: 350px;
-    margin: 0;
+    width: 100%;
+    height: auto;
     padding: 30px 20px;
+    margin: 20px 0 0 0;
   }
   body main.sub_page.rnd#project .project_wrap .project_list:nth-child(3n) {
-    margin: 0;
+    margin: 20px 0 0 0;
   }
   body main.sub_page.rnd#project .project_wrap .project_list .text_wrap.wrap_01 .text_01 {
-    font-size: 20px;
+    font-size: 18px;
   }
   body main.sub_page.rnd#project .project_wrap .project_list .text_wrap.wrap_01 .text_02 {
     margin-top: 5px;
@@ -1807,15 +1807,13 @@
     font-size: 14px;
   }
   body main.sub_page.rnd#project .project_wrap .project_list .text_wrap.wrap_02 .text_01 {
-    width: 90px;
-    height: 30px;
-    line-height: 30px;
+    margin-top: 20px;
   }
   body main.sub_page.rnd#project .project_wrap .project_list .text_wrap.wrap_02 .text_02 {
-    margin-top: 5px;
+    margin-top: 10px;
   }
   body main.sub_page.rnd#project .project_wrap .project_list .img_wrap.wrap_01 img {
-    max-height: 100px;
+    max-height: 75px;
   }
   body main.sub_page.rnd#project_01 .sub_section .section_title {
     font-size: 3.2rem;
@@ -1975,49 +1973,12 @@
   body main.sub_page.cscenter#inquiry .sub_section.section_01 {
     margin-top: 60px;
   }
-  body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .input_table#type_01 .input_wrap .input_box {
-    width: 100%;
-    padding: 20px 0;
-  }
   body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .input_table#type_01 .input_wrap .input_box.half_size {
-    width: calc(50% - 5px);
-    margin-right: 5px;
-  }
-  body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .input_table#type_01 .input_wrap .input_box.textarea_box {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    height: 200px;
-  }
-  body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .input_table#type_01 .input_wrap .input_box label {
-    width: 40px;
-  }
-  body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .input_table#type_01 .input_wrap .input_box label.text_02 {
-    font-size: 16px;
+    width: 100%;
+    margin: 0;
   }
   body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .input_table#type_01 .input_wrap .input_box input, body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .input_table#type_01 .input_wrap .input_box textarea {
-    margin-left: 20px;
-  }
-  body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .input_table#type_01 .input_wrap .input_box input::-webkit-input-placeholder, body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .input_table#type_01 .input_wrap .input_box textarea::-webkit-input-placeholder {
-    font-size: 12px;
-  }
-  body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .input_table#type_01 .input_wrap .input_box input:-ms-input-placeholder, body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .input_table#type_01 .input_wrap .input_box textarea:-ms-input-placeholder {
-    font-size: 12px;
-  }
-  body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .input_table#type_01 .input_wrap .input_box input::-ms-input-placeholder, body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .input_table#type_01 .input_wrap .input_box textarea::-ms-input-placeholder {
-    font-size: 12px;
-  }
-  body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .input_table#type_01 .input_wrap .input_box input::placeholder, body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .input_table#type_01 .input_wrap .input_box textarea::placeholder {
-    font-size: 12px;
-  }
-  body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .submit_box {
-    margin-top: 40px;
-  }
-  body main.sub_page.cscenter#inquiry .sub_section.section_01 .content_wrap .submit_box .btn_01 {
-    font-size: 16px;
-    width: auto;
-    height: auto;
-    padding: 5px 10px;
+    margin-left: 10px;
   }
 }
 
