@@ -1989,7 +1989,6 @@ body {
                                         .text_02 {color: #cfdae4}
                                     }
                                     &.wrap_02 {
-                                        @include font-18();
                                         .text_01 {background-color: #fff; color: $color-100;}
                                         .text_02 {color: #cfdae4;}
                                     }
