@@ -1278,6 +1278,8 @@ body {
             position: relative;
             // ------------------------------- subpage_visual & navi -------------------------------
             &.about #sub_visual {background: url('../images/about/mv.png')no-repeat center/cover;}
+            &.rnd .about_visual#sub_visual {background: url('../images/about/mv.png')no-repeat center/cover;}
+            
             &.product #sub_visual {background: url('../images/product/mv.png')no-repeat center/cover;}
             &.product .visual_02#sub_visual {background: url('../images/product/mv_02.png')no-repeat center/cover;}
             
@@ -1374,6 +1376,7 @@ body {
                                         @include transition(all .15s);
                                         display: inline-block; padding: 20px;
                                         font-size: 16px; color: #666; text-transform: uppercase; 
+                                        width: 100%;
                                         // font-size: 16px; color: $color-100; text-transform: uppercase; 
                                     }
                                 }

@@ -1817,12 +1817,61 @@ $color-200 : #98afc7;
     // **************************************** header, footer ****************************************
 }
 
+@media (max-width: 1024px) {
+    body {
+        main {
+            &.sub_page {
+                &.about {
+                    &#history {
+                        .sub_section {
+                            &.section_01 {@include marginTop-120();}
+                            &.section_02 {
+                                @include marginTop-80();
+                                .content_wrap {
+                                    .his_list {
+                                        &:nth-child(even) .txt_wrap .tit_area {padding-right: calc(30% + 40px) !important; }
+                                        &:nth-child(even) .txt_wrap .event_wrap {padding-right: calc(30% + 40px) !important;}
+                
+                                        // &.active, &.on_leave {
+                                        //     .txt {opacity: 0;}
+                                        // }
+                                        .img_wrap {
+                                            .img_area {
+                                                .txt {
+                                                    font-size: 60px;
+                                                    @include transition(all 1s);
+                                                }
+                                            }
+                                        }
+                
+                                        .txt_wrap {
+                                            .inner {
+                                                .event_wrap {padding-left: calc(30% + 40px);}
+                                            }
+                                        }
+                                        
+                
+                                    }
+                                }
+                            }
+                        }
+                        
+                
+                    }
+                }
+
+            }
+        }
+    }
+    
+}
+
 
 // ****************************************767****************************************
 @media (max-width: 767px) {
 
     // Margin
-    @mixin marginTop-120 {margin-top: 80px;}
+    @mixin marginTop-120 {margin-top: 60px;}
     @mixin marginTop-100 {margin-top: 70px;}
     @mixin marginTop-80 {margin-top: 60px;}
     @mixin marginTop-70 {margin-top: 40px;}
@@ -1838,24 +1887,22 @@ $color-200 : #98afc7;
 
 
     @mixin font-40 { font-size: 30px;}
+    @mixin font-32 { font-size: 20px;}
     @mixin font-18 { font-size: 14px;}
 
+
+        
     @mixin section-Title-01 {font-size: 30px;}
     @mixin section-Title-02 { font-size: 16px;}
 
+    @mixin padding_5per {padding: 0 2.5%;}
 
-    // // system mixin
-    // @mixin boxTitle {height: 50px;}
 
-    // @mixin textNum {
-    //     margin-left: 5px;
-    //     width: 40px; height: 40px;
-    //     font-size: 20px;
-    // }
-    // @mixin textTit {
-    //     margin-left: 10px;
-    //     font-size: 16px;
-    // }
+
+    // system mixin
+    @mixin boxTitle {height: 40px;}
+    @mixin textNum {width: 30px; height: 30px;font-size: 18px;}
+    @mixin textTit {font-size: 18px;}
 
 
     // ****************************************default css****************************************
@@ -1931,6 +1978,7 @@ $color-200 : #98afc7;
     // ****************************************page css****************************************
     body {
         main {
+        
 
             // INDEX MAIN
             &#main_page {
@@ -2162,6 +2210,668 @@ $color-200 : #98afc7;
                 }
             }
 
+            
+            &.sub_page {
+
+                #sub_visual {
+                    height: 275px;
+                    .visual_text {
+                        @include padding_5per();
+                        margin-bottom: calc(50px + 10px);
+                        p {
+                            &.text_01 { font-size: 14px;}
+                            &.text_02 { font-size: 22px;}
+                        }
+                    }
+                }
+
+                
+                // SUBPAGE_NAVI
+                #sub_navi {
+                    height: 40px; 
+                    .sub_navi_wrap {
+                        .sub_ico {width: auto; padding: 10px}
+                        
+                        .sub_nav {
+                            // width: 260px; 에서 수정
+                            .depth_wrap {
+                                .depth_01 {
+                                    > a { font-size: 16px;}
+                                }
+                                
+                                .depth_02 {
+                                    .depth_02_list {
+                                        // hover 
+                                        a {
+                                            font-size: 14px;
+                                            padding: 5px 10px;
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            // sub_nav hover,active
+                            
+                        }
+                    }
+                    
+
+                }
+    
+                // ------------------------------- Page_CSS -------------------------------
+                // ------------------------------- about -------------------------------
+                &.about {
+    
+                    // ------ company ------
+                    &#company {
+                        .sub_section {
+                            
+                            &.section_01 {
+                                @include marginTop-120();
+                                @include padding_5per();
+                                figure {
+                                    flex-direction: column;
+                                    .img_wrap {
+                                        img {width: 100%;height: 200px;object-fit: cover;}
+                                    }
+                                    figcaption {
+                                        margin: 20px 0 0 0;
+                                        .text_02 {margin-top: 20px; font-size: 16px;}
+                                        .text_03 {justify-content: flex-end;margin: 10px 0 0 0;}
+                                    }
+                                }
+                            }
+        
+                            &.section_02 {
+                                @include marginTop-120();
+                                padding: 40px 0;
+                                .content_wrap {
+                                    .text_wrap {
+                                        .text_01 {@include font-32();}
+                                        .text_02 {font-size: 16px;}
+                                        .text_bar {
+                                            height: 40px;
+                                            margin: 20px auto;
+                                        }
+                                    }
+                                }
+         
+                            }
+                        }
+                    }
+    
+                    // ------ certify ------
+                    &#certify {
+                        .sub_section {
+                            @include padding_5per();
+                            &.section_01 {
+                                @include marginTop-120();
+                                padding-bottom: 30px;
+
+                                .content_wrap {
+                                    justify-content: center;
+                                    figure {
+                                        width: calc(50% - 20px); margin: 0 10px 20px 0;
+                                        text-align: center;
+                                        &:last-child {margin: 0;}
+                                        &:nth-of-type(3n) {margin: 0 10px 20px 0;}
+                                        &:nth-of-type(4n) {margin: 0 0 20px 0;}
+                                        &:nth-of-type(2n) {margin: 0 0 20px 0;}
+
+                                        .img_wrap { img {max-height: 250px;}}
+                                        figcaption {
+                                            padding-top: 20px; 
+                                            .text_01 {@include font-18(); }
+                                        }
+                                    }
+                                }
+                            }
+                            // &.section_02 {margin-top: 60px}
+                        }
+                    }
+    
+                    // ------ location ------
+                    &#location {
+                        .sub_section {
+                            @include padding_5per();
+                            &.section_01 {
+                                @include marginTop-120();
+                                @include marginBot-120();
+                                .content_wrap {
+                                    .content_01 {
+                                        // margin-top: 60px; padding-bottom: 60px;
+                                        flex-direction: column;
+                                        &:first-child {margin-top: 0;}
+                                        .content_title {
+                                            width: auto;
+                                            // .text_01 {font-size: 3.2rem;}
+                                        }
+                                        .content_detail {
+                                            width: 100%;
+                                            .text_wrap {
+                                                margin-top: 20px;
+                                                .text_01 {
+                                                    @include font-18();
+                                                    p {
+                                                        span {width: 70px;}
+                                                        ion-icon {width: 15px; height: 15px; margin-right: 5px;}
+                                                    }
+                                                }
+                                                .text_03 {
+                                                    &.btn_01 {width: 100px; height: 40px;}
+                                                    a {
+                                                        font-size: 16px;
+                                                        ion-icon {margin-left: 5px; width: 15px; height: 15px;}
+                                                    }
+                                                }
+                                            }
+                                            .map_wrap {margin-top: 20px;height: 300px;}
+                                        }
+                                    }
+        
+                                }
+      
+                            }
+                        }
+                    }
+    
+                    &#business {
+                        .sub_section {
+                            @include padding_5per();
+                            &.section_01 {
+                                @include marginTop-120();
+                                @include marginBot-120();
+                                .content_wrap {
+                                    .content {
+                                        width: calc(33% - 12px); margin-right: 20px;
+                                        figcaption {
+                                            p {
+                                                &.text_01 { 
+                                                    font-size: 24px;
+                                                    height: 85px; // 780 px에 높이안맞아서 조절
+                                                    // padding-bottom: 15px; 
+                                                }
+                                                &.text_02 {  
+                                                    height: 100px;
+                                                    margin-top: 20px; @include font-18();  }
+                                                &.text_03 {
+                                                    margin-top: 10px;
+                                                    a { @include font-18(); ion-icon {width: 15px; height: 15px; }}
+                                                }
+                                            }
+                                        }
+    
+                                        .img_wrap {margin-top: 30px;}
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    // new_ver
+                    
+                    &#history {
+                        .sub_section {
+                            &.section_01 {@include marginTop-120();}
+                            &.section_02 {
+                                @include marginTop-80();
+                                .content_wrap {
+                                    .his_list {
+                                        &:nth-child(even) .txt_wrap .tit_area {padding-right: calc(17% + 20px) !important; }
+                                        &:nth-child(even) .txt_wrap .event_wrap {padding-right: calc(17% + 20px) !important;}
+                                        &.active, &.on_leave {
+                                            .txt {opacity: 0;}
+                                        }
+                                        .txt_wrap {
+                                            .inner {
+                                                .event_wrap {
+                                                    padding-left: calc(17% + 20px);
+                                                    .list_wrap {
+                                                        @include font-18();
+                                                        .year_wrap {font-size: 18px;}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        
+    
+                                    }
+                                }
+                            }
+                        }
+                        
+    
+                    }
+                }
+    
+    
+                // ------------------------------- product -------------------------------
+                &.product {
+                    .sub_section {
+                        @include padding_5per();
+                        &:last-child {@include marginBot-120();}
+    
+                        &.section_01 {@include marginTop-120();}
+                        &.section_02 {@include marginTop-80();}
+                    }
+                    &#product_list {
+                        #product_tab {
+                            .content_wrap {
+                                .product_tab_wrap {
+                                    .text_wrap {
+                                        a {width: auto; height: auto;padding: 10px 20px;@include font-18();}
+                                    }
+                                }
+                            }
+                        }
+    
+                        #product_list_wrap {
+                            .content_wrap {
+                                .product_list {
+                                    a {
+                                        // reset
+                                        margin: 0 20px 20px 0;
+                                        width: calc(33% - 12px); text-align: center;
+                                        &:nth-child(4n) {margin: 0;}
+                                        &:nth-child(3n) {margin: 0 0 20px 0;}
+    
+                                        .item {
+                                            &:hover {
+                                                .thumb {border: 1px solid $color-100;}
+                                            }
+                                            .thumb {width: 100%; height: 100%;}
+        
+                                            figcaption {
+                                                &.type_01 {
+                                                    .text_01 { margin-top: 10px; @include font-18(); }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    
+    
+                                }
+                            }
+                        }
+    
+    
+                    }
+    
+                    &#product_detail {
+                        // type_01
+                        
+                        #type_01 {
+                            .product_wrap {
+                                display: flex;
+                                .product_img {
+                                    .thum {width: auto; height: auto;}
+                                }
+    
+                                .product_info {
+                                    margin-left: 30px;
+                                    .text_wrap {
+                                        &.wrap_01 {
+                                            @include font-18();
+                                            padding-bottom: 20px;
+                                            // .text_02 {font-size: 3.2rem;}
+                                            .text_03 {margin-top:10px;}
+                                        }
+                                        &.wrap_02 {
+                                            .text_01 {margin-top: 10px;font-size: 20px;}
+                                            .text_02 { @include font-18();
+                                                .ico_01 { margin-right: 3px;}
+                                            }
+                                        }
+                                    }
+                                    .btn_01 {
+                                        margin-top: 20px;
+                                        width: auto; height: auto; 
+                                        padding: 5px 10px;
+                                        span {
+                                            font-size: 16px;
+                                            svg {width: 20px; height: 20px;}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+    
+                    }
+                }
+    
+    
+                &.system {
+                    // type_01
+                    .sub_section {
+                        @include marginTop-120();
+                        @include padding_5per();
+                        &:last-child {@include marginBot-120()}
+                        &.section_01 {@include marginTop-120();}
+                    }
+                    
+                    // product_info 부분만 다름 btn 안씀
+                    #type_01 {
+                        .product_wrap {
+                            display: flex;
+                            .product_img {
+                                .thum {width: auto; height: auto;}
+                            }
+    
+                            .product_info {
+                                margin: 0 0 0 30px;
+                                .text_wrap {
+                                    &.wrap_01 {
+                                        @include font-18();
+                                        padding-bottom: 20px;
+                                        // .text_02 {font-size: 3.2rem;}
+                                        .text_03 {margin-top:10px;}
+                                    }
+                                    &.wrap_02 {
+                                        .text_01 {margin-top: 10px;font-size: 20px;}
+                                        .text_02 { @include font-18();
+                                            .ico_01 { margin-right: 3px;}
+                                        }
+                                    }
+                                }
+                                .btn_01 {
+                                    margin-top: 20px;
+                                    width: auto; height: auto; 
+                                    padding: 5px 10px;
+                                    span {
+                                        font-size: 16px;
+                                        svg {width: 20px; height: 20px;}
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    .section_02 {
+                        .content_wrap {
+                            &.wrap_01 {
+                                .text_title {
+                                    font-size: 18px; // 767 에서 font18() 넣기
+                                    &.marginTop_60 {margin-top: 40px;}
+                                }
+    
+                                .table_detail {
+                                    &.marginTop_20 { margin-top: 10px; }
+                                    &.marginTop_40 { margin-top: 20px; }
+                                    table {
+                                        tr {height: 30px; @include font-18();}
+                                        thead { 
+                                            th { &:nth-child(1) {width: auto;} }
+                                        }
+                                    }
+                                }
+    
+                                .list_wrap {
+                                    margin-top: 20px;
+                                    .list_content {
+                                        .list { width: auto; height: auto; font-size: 16px; padding: 5px 10px;}
+                                    }
+                                }
+    
+                                .img_wrap {
+                                    img { margin: 10px 10px 10px 0;width: 75px; height: 75px;}
+                                }
+    
+    
+                            }
+                        }
+    
+                    }
+    
+                }
+    
+                // ------------------------------- rnd -------------------------------
+                &.rnd {
+                    .sub_section {
+                        @include padding_5per();
+                        &.section_01 {@include marginTop-120()}
+                        &.section_02 {}
+                    }
+    
+                    &#project {
+                        .sub_section {
+                            &:last-child {@include marginBot-120()}
+                        }
+                        .project_wrap {
+                            .project_list {
+                                width: 50%; height: 350px;
+                                margin: 0;
+                                padding: 30px 20px;
+                                &:nth-child(3n) {margin: 0;}
+                                // hover, active
+    
+                                // .flex-wrap {position: relative;display: flex; justify-content: space-between; align-items: flex-end;}
+    
+                                .text_wrap {
+                                    &.wrap_01 {
+                                        .text_01 { font-size: 20px;}
+                                        .text_02 { margin-top: 5px; @include font-18();  }
+                                    }
+                                    &.wrap_02 {
+                                        @include font-18();
+                                        .text_01 {
+                                            // var
+                                            $height: 30px;
+                                            width: 90px; height: $height; line-height: $height;
+                                        }
+                                        .text_02 {margin-top: 5px;}
+                                    }
+                                }
+                                .img_wrap {
+                                    &.wrap_01 {
+                                        img {max-height: 100px;}
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    &#project_01 {
+                        .sub_section {
+                            .section_title { @include subTextTit_01()}
+                            &.section_01 {
+                                padding: 60px 5%;
+                                .section_detail {
+                                    .left_box {
+                                        margin-top: 40px;
+                                        .box {
+                                            width: 100%;
+                                            margin: 20px 0 0 0;
+                                            &:nth-child(2n) {margin: 20px 0 0 0;}
+    
+                                            .box_title {
+                                                @include boxTitle();
+                                                .text_num {@include textNum();}
+                                                .text_tit {@include textTit();}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+    
+                    }
+
+                    &#project_02 {
+                        .sub_section {
+                            &.section_01 {
+                                .text_wrap {
+                                    // .text_01 {@include subTextTit_01();}
+                                }
+                            }
+    
+                            &.section_02 {
+                                @include marginTop-80();
+                                .content_wrap {
+                                    .content {
+                                        &.content_01 {
+                                            .text_wrap {
+                                                .text_01 {font-size: 18px;}
+    
+                                                .text_02 {
+                                                    p {
+                                                        &:nth-child(1){ font-size: 18px;}
+                                                        &:nth-child(2){ font-size: 16px;}
+                                                    }
+    
+                                                }
+                                            }
+                                            .arrow_wrap {margin: 10px auto;}
+                                        }
+                                        &.content_02 {
+                                            // display: flex;
+                                            width: 350px;
+                                            .map {
+                                                overflow: hidden;
+                                                img{
+                                                    transform: scale(2) translate(35px, 30px);
+                                                }
+                                            }
+                                            .text_wrap {
+                                                &.wrap_01 {left: 0; top: 5px;}
+                                                &.wrap_02 {right: 0; bottom: 0; top: auto;}
+
+                                            
+    
+                                                figcaption {
+                                                    .text_01 {font-size: 16px;}
+                                                    .text_02 {font-size: 14px;}
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+    
+    
+    
+    
+    
+                    }
+    
+                    
+    
+                    
+                }
+    
+                // ------------------------------- community -------------------------------
+                &.community {
+                    .sub_section {
+                        @include padding_5per();
+                        &:last-child {@include marginBot-120();}
+                        &.section_01 {@include marginTop-120();}
+                        &:not(.section_01) {@include marginTop-80();}
+                    }
+    
+                    &#promotion {
+                        .sub_section {
+                            &.section_01 {
+                                .text_wrap {
+                                    .text_01 {@include subTextTit_01();}
+                                }
+                            }
+                            &.section_02 {
+                                .content_wrap {
+                                    .content {
+                                        &.content_01 { width: 100%; height: 300px; margin-right: 0; }
+                                        &.content_02 {
+                                            margin-top: 20px; flex-direction: row;
+                                            .sub_video {
+                                                width: 150px; height: 150px;
+                                                margin: 0 20px 20px 0;
+                                                &:last-child {margin: 0 20px 20px 0;}
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                            }
+    
+                            &.section_03 {
+                                @include marginTop-80();
+                                .content_wrap {
+                                    padding: 60px 0;
+                                    figure {
+                                        .img_wrap {width: calc(50% - 20px); margin-right: 20px;}
+                                        .text_wrap {
+                                            width: 50%;
+                                            .text_01 {font-size: 20px;}
+                                            .text_02 {margin-top: 10px; @include font-18();}
+                                            .btn_01 {
+                                                margin-top: 20px;
+                                                width: auto; height: auto; padding: 5px 10px;
+                                                span {
+                                                    font-size: 16px;
+                                                    svg {width: 20px; height: 20px; }
+                                                }
+                                            }   
+                                        }
+                                    }
+                                }
+                            }
+    
+                        }
+                    }
+                    
+    
+                }
+    
+                
+                // ------------------------------- community -------------------------------
+                &.cscenter {
+                    .sub_section {
+                        @include padding_5per();
+                        &:last-child {@include marginBot-120();}
+                        &.section_01 {@include marginTop-120();}
+                        &:not(.section_01) {@include marginTop-80();}
+                    }
+    
+                    &#inquiry {
+                        .sub_section {
+                            &.section_01 {
+                                @include marginTop-120();
+                                .content_wrap {
+                                    .input_table  {
+                                        &#type_01 {
+                                            .input_wrap {
+                                                .input_box {
+                                                    width: 100%; padding: 20px 0;
+                                                    &.half_size {width: calc(50% - 5px); margin-right: 5px;}
+                                                    &.textarea_box {align-items: flex-start; height: 200px;}
+        
+                                                    label {
+                                                        width: 40px;
+                                                        &.text_02 {font-size: 16px;}
+                                                    }
+                                                    
+                                                    input, textarea {
+                                                        margin-left: 20px;
+                                                        &::placeholder {font-size: 12px;}
+                                                    }
+                                                }
+                                            }
+                                            
+                                             
+                                        }
+    
+                                    }
+                                             
+                                    .submit_box {
+                                        margin-top: 40px; 
+                                        .btn_01 {font-size: 16px; width: auto; height: auto; padding: 5px 10px;}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
         }
     }
     // ****************************************page css****************************************
@@ -2178,7 +2888,6 @@ $color-200 : #98afc7;
             
         #footer {
             padding: 40px 5%;
-            margin-top: 60px;
             .footer_wrap {
                 .footer_section_01 {
                     .footer_right {

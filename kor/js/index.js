@@ -245,11 +245,21 @@ $(function () {
     }
     // page check header active
     function pageCheck() {
-        var nowLocation = location.href;
         // location Check
-        (nowLocation.indexOf('index.html') >= 0) ? console.log('Home') : headerLogo();
+        var nowLocation = location.href;
+        
+        if(nowLocation.indexOf('index.html') >= 0) {
+            console.log('Home') 
+        } else {
+            headerLogo()
+            subNaviDepth_01()
+        }
+
         (nowLocation.indexOf('/system/') >= 0) ? subNavi_add_system() : null;
         (nowLocation.indexOf('/about/') >= 0) ? subNavi_add_about() : null;
+        // (nowLocation.indexOf('index.html') >= 0) ? console.log('Home') :  headerLogo();
+
+
         // let subNaviEvent = $('#sub_navi .content_wrap .text_02').text();
         // let LinkActive = $('.link_wrap a');
         // // link_wrap auto active
@@ -263,7 +273,32 @@ $(function () {
     }
 
     
+    // sub_page_navi
+    function subNaviDepth_01() {
+        let tagList_01 = '';
 
+        fetch('../js/data.json')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('error 01')
+                }
+                return response.json()
+            })
+            .then((data) => {
+
+                let addList = data.subNaviDepth_01
+                
+                for (let i = 0; i < addList.length; i++) {
+                    tagList_01 = '<li class="depth_02_list"><a href="' + addList[i].href + '">' + addList[i].title + '</a></li>'
+                    $('#sub_nav_01 .depth_02').append(tagList_01);
+                }
+                // $('#sub_nav_02 .depth_02').append(tagList)
+
+            })
+            .catch(() => {
+                console.log('ERROR_02')
+            })
+    }
 
     // about
     function subNavi_add_about() {

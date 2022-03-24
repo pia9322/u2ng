@@ -470,6 +470,8 @@ body main.sub_page { position: relative; }
 
 body main.sub_page.about #sub_visual { background: url("../images/about/mv.png") no-repeat center/cover; }
 
+body main.sub_page.rnd .about_visual#sub_visual { background: url("../images/about/mv.png") no-repeat center/cover; }
+
 body main.sub_page.product #sub_visual { background: url("../images/product/mv.png") no-repeat center/cover; }
 
 body main.sub_page.product .visual_02#sub_visual { background: url("../images/product/mv_02.png") no-repeat center/cover; }
@@ -528,7 +530,7 @@ body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_02 .dept
 
 body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_02 .depth_02_list:hover a { color: #fff; }
 
-body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_02 .depth_02_list a { transition: all 0.15s; -webkit-transition: all 0.15s; -moz-transition: all 0.15s; -ms-transition: all 0.15s; -o-transition: all 0.15s; display: inline-block; padding: 20px; font-size: 16px; color: #666; text-transform: uppercase; }
+body main.sub_page #sub_navi .sub_navi_wrap .sub_nav .depth_wrap .depth_02 .depth_02_list a { transition: all 0.15s; -webkit-transition: all 0.15s; -moz-transition: all 0.15s; -ms-transition: all 0.15s; -o-transition: all 0.15s; display: inline-block; padding: 20px; font-size: 16px; color: #666; text-transform: uppercase; width: 100%; }
 
 body main.sub_page.about#company .sub_section.section_01 { max-width: 1360px; width: 100%; margin: 0 auto; margin-top: 120px; }
 

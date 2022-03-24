@@ -16,6 +16,7 @@
         {"imgSrc":"certify_02_03", "imgAlt":"인증서06", "imgName":"[특허] TLD WIRELESS TERMINAL AND TLD MANAGEMENT SYSTEM, AND TLD MANAGEMENT METHOD"},
         {"imgSrc":"certify_02_04", "imgAlt":"인증서07", "imgName":"[디자인등록] 열형광 선량계(Thermoluminescence Dosimeter) 자동지급기"}
     ],
+    
     "subNavi_system" : [
         {"href":"../system/rca_acs.html", "title":"RCA Access Control System"},
         {"href":"../system/adr_rs.html", "title":"ADR Reader Station"},
@@ -36,9 +37,16 @@
         {"href":"../about/history.html", "title":"연혁"},
         {"href":"../about/certify.html", "title":"보유인증"},
         {"href":"../about/direction.html", "title":"오시는 길"}
-    ]
+    ],
 
-    
+    "subNaviDepth_01" : [
+        {"href":"../about/company.html", "title":"about"},
+        {"href":"../system/adr_rs.html", "title":"system"},
+        {"href":"../product/product_list.html", "title":"product"},
+        {"href":"../rnd/project.html", "title":"r&d project"},
+        {"href":"../community/notice.html", "title":"contact"},
+        {"href":"../cscenter/inquiry.html", "title":"cscenter"}
+    ]
 
 }   
 
